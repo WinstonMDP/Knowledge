@@ -3,6 +3,7 @@
 ## Substantive:
 **A:**
 - Der Abend - вечер.
+- Der Apfel - яблоко.
 
 **B:**
 - Die Biene - пчела.
@@ -24,6 +25,7 @@
 - Der Junge - юноша.
 
 **K:**
+- Der Kater - кот.
 - Die Katze - кошка.
 - Das Kind - ребёнок.
 
@@ -36,8 +38,15 @@
 **N:**
 - Die Nacht - ночь.
 
+**O:**
+- Die Orange - апельсин.
+
 **P:**
 - Das Pferd - лошадь.
+- Der Pinguin - пингвин.
+
+**S:**
+- Der Student - студент.
 
 **T:**
 - Der Tag - день.
@@ -45,6 +54,10 @@
 
 **W:**
 - Das Wiedersehen - свидание.
+
+**Z:**
+- Die Zeitung - газета.
+- Die Zitrone - лимон.
 
 ## Adjektive:
 **G:**
@@ -62,6 +75,9 @@
 
 **G:**
 - Gut - хорошо.
+
+**D:**
+- Da - там.
 
 **H:**
 - Hier - здесь.
