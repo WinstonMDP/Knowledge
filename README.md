@@ -1,6 +1,9 @@
 # das Wörterbuch
 
 ## Substantive:
+**A:**
+- Der Abend - вечер.
+
 **B:**
 - Die Biene - пчела.
 - Das Buch - книга.
@@ -27,13 +30,21 @@
 **M:**
 - Der Mann - мужчина.
 - Der Mensch - человек.
+- Der Morgen - утро.
 - Das Mädchen - девочка.
+
+**N:**
+- Die Nacht - ночь.
 
 **P:**
 - Das Pferd - лошадь.
 
 **T:**
+- Der Tag - день.
 - Das Tier - животное.
+
+**W:**
+- Das Wiedersehen - свидание.
 
 ## Adjektive:
 **G:**
@@ -46,6 +57,9 @@
 **A:**
 - Auch - тоже.
 
+**B:**
+- Bald - скоро.
+
 **G:**
 - Gut - хорошо.
 
@@ -53,5 +67,17 @@
 - Hier - здесь.
 
 ## Interjektionen:
+**A:**
+- Auf Wiedersehen - до свидания.
+
+**B:**
+- Bitte - пожалуйста.
+
+**D:**
+- Danke - спасибо.
+
 **H:**
 - Hallo - привет.
+
+**T:**
+- Tschüss - пока.
