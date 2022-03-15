@@ -13,8 +13,8 @@
 - Die Eule - сова.
 
 **F:**
-- Die Frau - госпожa; женщина.
-- Der Freund - друг.
+- Die Frau (die Frauen) - госпожa; женщина.
+- Der Freund (die Freunde) - друг.
 - Die Freundin - подруга.
 
 **H:**
@@ -22,18 +22,18 @@
 - Der Hund - собака.
 
 **J:**
-- Der Junge - юноша.
+- Der Junge (die Jungen) - юноша.
 
 **K:**
 - Der Kater - кот.
 - Die Katze - кошка.
-- Das Kind - ребёнок.
+- Das Kind (die Kinder) - ребёнок.
 
 **M:**
-- Der Mann - мужчина.
+- Der Mann (die Männer) - мужчина.
 - Der Mensch - человек.
 - Der Morgen - утро.
-- Das Mädchen - девочка.
+- Das Mädchen (die Mädchen) - девочка.
 
 **N:**
 - Die Nacht - ночь.
