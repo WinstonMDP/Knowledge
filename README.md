@@ -59,9 +59,40 @@
 - Die Zeitung - газета.
 - Die Zitrone - лимон.
 
+## Verben:
+**A:**
+- Arbeiten - работать.
+
+**H:**
+- Heißen - зваться.
+
+**K:**
+- Kommen - прийти.
+
+**L:**
+- Leben - жить.
+- Lernen - учиться.
+
+**S:**
+- Schreiben - писать.
+- Sprechen (stark) - говорить.
+- Studieren - изучать.
+
+**W:**
+- Wohnen - проживать.
+
 ## Adjektive:
+**D:**
+- Deutsch - немецкий.
+
+**E:**
+- Englisch - английский.
+
 **G:**
 - Gut - хороший.
+
+**R:**
+- Russisch - русский.
 
 **S:**
 - Schön - красивый.
