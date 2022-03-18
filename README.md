@@ -4,20 +4,27 @@
 **A:**
 - Der Abend - вечер.
 - Der Apfel - яблоко.
+- Das Auto (die Autos) - машина.
 
 **B:**
+- Die Banane - банан.
 - Die Biene - пчела.
+- Der Brief - письмо.
+- Das Brot - хлеб.
 - Das Buch - книга.
 
 **E:**
+- Die Eltern - родители.
 - Die Eule - сова.
 
 **F:**
+- Der Fisch - рыба.
 - Die Frau (die Frauen) - госпожa; женщина.
 - Der Freund (die Freunde) - друг.
 - Die Freundin - подруга.
 
 **H:**
+- Das Haus - дом.
 - Der Herr - господин.
 - Der Hund - собака.
 
@@ -28,10 +35,15 @@
 - Der Kater - кот.
 - Die Katze - кошка.
 - Das Kind (die Kinder) - ребёнок.
+- Der Kuli - ручка.
+
+**L:**
+- Das Leben - жизнь.
 
 **M:**
 - Der Mann (die Männer) - мужчина.
 - Der Mensch - человек.
+- Die Milch - молоко.
 - Der Morgen - утро.
 - Das Mädchen (die Mädchen) - девочка.
 
@@ -50,9 +62,11 @@
 
 **T:**
 - Der Tag - день.
+- Die Tasche - сумка.
 - Das Tier - животное.
 
 **W:**
+- Das Wasser - вода.
 - Das Wiedersehen - свидание.
 
 **Z:**
@@ -82,6 +96,9 @@
 - Wohnen - проживать.
 
 ## Adjektive:
+**A:**
+- Alt - старый.
+
 **D:**
 - Deutsch - немецкий.
 
@@ -89,13 +106,24 @@
 - Englisch - английский.
 
 **G:**
+- Gross - большой.
 - Gut - хороший.
+
+**J:**
+- Jung - молодой.
+
+**K:**
+- Klein - маленький.
+
+**N:**
+- Neu - новый.
 
 **R:**
 - Russisch - русский.
 
 **S:**
 - Schön - красивый.
+- Schlecht - плохой.
 
 ## Adverbien:
 **A:**
@@ -112,6 +140,9 @@
 
 **H:**
 - Hier - здесь.
+
+**S:**
+- Sehr - очень.
 
 ## Interjektionen:
 **A:**
