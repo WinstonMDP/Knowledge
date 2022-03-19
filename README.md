@@ -3,46 +3,47 @@
 ## Substantive:
 **A:**
 - Der Abend - вечер.
-- Der Apfel - яблоко.
+- Der Apfel (die Äpfel) - яблоко.
 - Das Auto (die Autos) - машина.
 
 **B:**
 - Die Banane - банан.
-- Die Biene - пчела.
-- Der Brief - письмо.
+- Die Biene (die Bienen) - пчела.
+- Der Brief (die Briefe) - письмо.
 - Das Brot - хлеб.
-- Das Buch - книга.
+- Das Buch (die Bücher) - книга.
 
 **E:**
 - Die Eltern - родители.
-- Die Eule - сова.
+- Die Eule (die Eulen) - сова.
 
 **F:**
 - Der Fisch - рыба.
 - Die Frau (die Frauen) - госпожa; женщина.
 - Der Freund (die Freunde) - друг.
-- Die Freundin - подруга.
+- Die Freundin (die Freundinnen) - подруга.
 
 **H:**
-- Das Haus - дом.
+- Das Haus (die Häuser) - дом.
 - Der Herr - господин.
-- Der Hund - собака.
+- Der Hund (die Hunde) - собака.
 
 **J:**
 - Der Junge (die Jungen) - юноша.
 
 **K:**
-- Der Kater - кот.
-- Die Katze - кошка.
+- Der Kater (die Kater) - кот.
+- Die Katze (die Katzen) - кошка.
 - Das Kind (die Kinder) - ребёнок.
-- Der Kuli - ручка.
+- Der Kuli (die Kulis) - ручка.
 
 **L:**
 - Das Leben - жизнь.
+- Der Lehrer (die Lehrer) - учиель
 
 **M:**
 - Der Mann (die Männer) - мужчина.
-- Der Mensch - человек.
+- Der Mensch (die Menschen) - человек.
 - Die Milch - молоко.
 - Der Morgen - утро.
 - Das Mädchen (die Mädchen) - девочка.
@@ -51,27 +52,27 @@
 - Die Nacht - ночь.
 
 **O:**
-- Die Orange - апельсин.
+- Die Orange (die Orangen) - апельсин.
 
 **P:**
-- Das Pferd - лошадь.
-- Der Pinguin - пингвин.
+- Das Pferd (die Pferde) - лошадь.
+- Der Pinguin (die Pinguine) - пингвин.
 
 **S:**
-- Der Student - студент.
+- Der Student (die Studenten) - студент.
 
 **T:**
 - Der Tag - день.
-- Die Tasche - сумка.
-- Das Tier - животное.
+- Die Tasche (die Taschen) - сумка.
+- Das Tier (die Tiere) - животное.
 
 **W:**
 - Das Wasser - вода.
 - Das Wiedersehen - свидание.
 
 **Z:**
-- Die Zeitung - газета.
-- Die Zitrone - лимон.
+- Die Zeitung (die Zeitungen) - газета.
+- Die Zitrone  (die Zitronen) - лимон.
 
 ## Verben:
 **A:**
