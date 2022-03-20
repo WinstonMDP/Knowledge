@@ -26,7 +26,11 @@
 **H:**
 - Das Haus (die Häuser) - дом.
 - Der Herr - господин.
+- Die Hilfe - помощь.
 - Der Hund (die Hunde) - собака.
+
+**I:**
+- Die Idee (die Ideen) - идея.
 
 **J:**
 - Der Junge (die Jungen) - юноша.
@@ -57,6 +61,7 @@
 **P:**
 - Das Pferd (die Pferde) - лошадь.
 - Der Pinguin (die Pinguine) - пингвин.
+- Das Problem (die Probleme) - проблема.
 
 **S:**
 - Der Student (die Studenten) - студент.
@@ -78,7 +83,11 @@
 **A:**
 - Arbeiten - работать.
 
+**B:**
+- Brauchen - нуждаться.
+
 **H:**
+- Haben (stark) - иметь.
 - Heißen - зваться.
 
 **K:**
@@ -87,9 +96,14 @@
 **L:**
 - Leben - жить.
 - Lernen - учиться.
+- Lesen (stark) - читать.
+
+**M:**
+- Mögen (stark) - нравится.
 
 **S:**
 - Schreiben - писать.
+- Sehe (stark) - видеть.
 - Sprechen (stark) - говорить.
 - Studieren - изучать.
 
