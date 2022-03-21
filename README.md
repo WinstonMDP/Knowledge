@@ -11,6 +11,7 @@
 - Die Biene (die Bienen) - пчела.
 - Der Brief (die Briefe) - письмо.
 - Das Brot - хлеб.
+- Der Bruder (die Brüder) - брат.
 - Das Buch (die Bücher) - книга.
 
 **E:**
@@ -18,8 +19,9 @@
 - Die Eule (die Eulen) - сова.
 
 **F:**
+- Die Familie - семья.
 - Der Fisch - рыба.
-- Die Frau (die Frauen) - госпожa; женщина.
+- Die Frau (die Frauen) - госпожa; женщина; жена.
 - Der Freund (die Freunde) - друг.
 - Die Freundin (die Freundinnen) - подруга.
 
@@ -46,10 +48,11 @@
 - Der Lehrer (die Lehrer) - учиель
 
 **M:**
-- Der Mann (die Männer) - мужчина.
+- Der Mann (die Männer) - мужчина; муж.
 - Der Mensch (die Menschen) - человек.
 - Die Milch - молоко.
 - Der Morgen - утро.
+- Die Mutter - мама.
 - Das Mädchen (die Mädchen) - девочка.
 
 **N:**
@@ -64,12 +67,18 @@
 - Das Problem (die Probleme) - проблема.
 
 **S:**
+- Die Schwester (die Schwestern) - сестра.
 - Der Student (die Studenten) - студент.
+- Der Sohn (die Söhne) - сын.
 
 **T:**
 - Der Tag - день.
 - Die Tasche (die Taschen) - сумка.
 - Das Tier (die Tiere) - животное.
+- Die Tochter (die Töchter) - дочь.
+
+**V:**
+- Der Vater - отец.
 
 **W:**
 - Das Wasser - вода.
