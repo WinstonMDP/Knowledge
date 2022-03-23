@@ -3,6 +3,7 @@
 ## Substantive:
 **A:**
 - Der Abend - вечер.
+- Die Antwort - ответ.
 - Der Apfel (die Äpfel) - яблоко.
 - Das Auto (die Autos) - машина.
 
@@ -15,7 +16,7 @@
 - Der Bruder (die Brüder) - брат.
 - Das Buch (die Bücher) - книга.
 - Die Butter - сливочное масло.
-- das Brötchen (die Brötchen) - булочка.
+- Das Brötchen (die Brötchen) - булочка.
 
 **E:**
 - Das Ei - яйцо.
@@ -28,6 +29,7 @@
 - Die Familie - семья.
 - Der Fisch - рыба.
 - Das Fleisch - мясо.
+- Die Frage (die Fragen) - вопрос.
 - Die Frau (die Frauen) - госпожa; женщина; жена.
 - Der Freund (die Freunde) - друг.
 - Die Freundin (die Freundinnen) - подруга.
@@ -118,10 +120,14 @@
 
 ## Verben:
 **A:**
+- Antworten - отвечать.
 - Arbeiten - работать.
 
 **B:**
 - Brauchen - нуждаться.
+
+**D:**
+- Denken - думать.
 
 **E:**
 - Essen (stark) - есть.
@@ -162,6 +168,7 @@
 - Englisch - английский.
 
 **F:**
+- Falsch - неправильный.
 - Frisch - свежий.
 
 **G:**
@@ -178,11 +185,15 @@
 - Neu - новый.
 
 **R:**
+- Richtig - правильный.
 - Russisch - русский.
 
 **S:**
 - Schön - красивый.
 - Schlecht - плохой.
+
+**W:**
+- Wissen (stark) - знать.
 
 ## Adverbien:
 **A:**
@@ -193,6 +204,9 @@
 
 **D:**
 - Da - там.
+
+**E:**
+- Eigentlich - на самом деле; собственно говоря.
 
 **G:**
 - Gut - хорошо.
