@@ -10,6 +10,7 @@
 **B:**
 - Die Banane - банан.
 - Die Biene (die Bienen) - пчела.
+- Das Bier - пиво
 - Die Birne - груша.
 - Der Brief (die Briefe) - письмо.
 - Das Brot - хлеб.
@@ -28,6 +29,7 @@
 **F:**
 - Die Familie - семья.
 - Der Fisch - рыба.
+- Die Flasche (die Flaschen) - бутылка.
 - Das Fleisch - мясо.
 - Die Frage (die Fragen) - вопрос.
 - Die Frau (die Frauen) - госпожa; женщина; жена.
@@ -36,6 +38,8 @@
 
 **G:**
 - Das Gemüse (kollektives) - овощи.
+- Der Getränk (die Getränke) - напиток.
+- Das Glas (die Gläser) - стакан.
 - Die Gurke (die Gurken) - огурец.
 
 **H:**
@@ -51,6 +55,7 @@
 - Der Junge (die Jungen) - юноша.
 
 **K:**
+- Der Kaffee - кофе.
 - Die Kartoffel (die Kartoffeln) - картошка.
 - Der Kater (die Kater) - кот.
 - Die Katze (die Katzen) - кошка.
@@ -88,6 +93,7 @@
 - Der Reis - рис.
 
 **S:**
+- Der Saft - сок.
 - Der Salat - салат.
 - Das Salz - соль.
 - Die Schokolade - шоколад.
@@ -100,6 +106,8 @@
 **T:**
 - Der Tag - день.
 - Die Tasche (die Taschen) - сумка.
+- Die Tasse (die Tassen) - чашка.
+- Der Tee - чай.
 - Das Tier (die Tiere) - животное.
 - Die Tochter (die Töchter) - дочь.
 - Die Tomate (die Tomaten) - помидор.
@@ -109,6 +117,7 @@
 
 **W:**
 - Das Wasser - вода.
+- Der Wein - вино.
 - Das Wiedersehen - свидание.
 - Die Wurst - колбаса.
 
@@ -124,6 +133,7 @@
 - Arbeiten - работать.
 
 **B:**
+- Bestellen - заказывать.
 - Brauchen - нуждаться.
 
 **D:**
@@ -155,6 +165,7 @@
 - Studieren - изучать.
 
 **W:**
+- Wissen (stark) - знать.
 - Wohnen - проживать.
 
 ## Adjektive:
@@ -191,9 +202,6 @@
 **S:**
 - Schön - красивый.
 - Schlecht - плохой.
-
-**W:**
-- Wissen (stark) - знать.
 
 ## Adverbien:
 **A:**
