@@ -142,6 +142,9 @@
 **E:**
 - Essen (stark) - есть.
 
+**F:**
+- Fragen - спрашивать.
+
 **H:**
 - Haben (stark) - иметь.
 - Heißen - зваться.
@@ -151,6 +154,7 @@
 
 **L:**
 - Leben - жить.
+- Lieben - любить.
 - Lernen - учиться.
 - Lesen (stark) - читать.
 
@@ -163,6 +167,9 @@
 - Sehe (stark) - видеть.
 - Sprechen (stark) - говорить.
 - Studieren - изучать.
+
+**V:**
+- Verstehen (stark) - понимать.
 
 **W:**
 - Wissen (stark) - знать.
