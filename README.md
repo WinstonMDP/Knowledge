@@ -52,6 +52,7 @@
 - Die Idee (die Ideen) - идея.
 
 **J:**
+- Das Jahr (die Jahre) - год.
 - Der Junge (die Jungen) - юноша.
 
 **K:**
@@ -123,7 +124,7 @@
 
 **Z:**
 - Die Zeitung (die Zeitungen) - газета.
-- Die Zitrone  (die Zitronen) - лимон.
+- Die Zitrone (die Zitronen) - лимон.
 - Der Zucker - сахар.
 - Die Zwiebel - лук.
 
@@ -187,6 +188,7 @@
 
 **F:**
 - Falsch - неправильный.
+- Fertig - готовый.
 - Frisch - свежий.
 
 **G:**
@@ -232,6 +234,22 @@
 **S:**
 - Sehr - очень.
 
+**V:**
+- Viel - много.
+
+**W:**
+- Wenig - мало.
+
+## Partikel
+**F:**
+- Fast - почти.
+
+**G:**
+- Genau - ровно; точно.
+
+**U:**
+- Ungefähr - приблизительно.
+
 ## Interjektionen:
 **A:**
 - Auf Wiedersehen - до свидания.
@@ -266,3 +284,8 @@
 
 **lernen** - учиться чему-то, учить что-то.</br>
 **studieren** - изучать что-то в формальном смысле; обучаться в высшем учебном заведении.
+
+## Ketten:
+**Gradpartikel:**
+
+Ungefähr-fast-genau: приблизительно-почти-точно.
