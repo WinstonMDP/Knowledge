@@ -3,6 +3,7 @@
 ## Substantive:
 **A:**
 - Der Abend - вечер.
+- Die Adresse - адрес.
 - Die Antwort - ответ.
 - Der Apfel (die Äpfel) - яблоко.
 - Das Auto (die Autos) - машина.
@@ -11,6 +12,7 @@
 - Die Banane - банан.
 - Die Biene (die Bienen) - пчела.
 - Das Bier - пиво
+- Das Bild (die Bilder) - изображение.
 - Die Birne - груша.
 - Der Brief (die Briefe) - письмо.
 - Das Brot - хлеб.
@@ -18,6 +20,9 @@
 - Das Buch (die Bücher) - книга.
 - Die Butter - сливочное масло.
 - Das Brötchen (die Brötchen) - булочка.
+
+**C:**
+- Der Computer - компьютер.
 
 **E:**
 - Das Ei - яйцо.
@@ -31,19 +36,23 @@
 - Der Fisch - рыба.
 - Die Flasche (die Flaschen) - бутылка.
 - Das Fleisch - мясо.
+- Der Foto (die Fotos) - фото.
 - Die Frage (die Fragen) - вопрос.
 - Die Frau (die Frauen) - госпожa; женщина; жена.
 - Der Freund (die Freunde) - друг.
 - Die Freundin (die Freundinnen) - подруга.
 
 **G:**
+- Das Geld - деньги.
 - Das Gemüse (kollektives) - овощи.
 - Der Getränk (die Getränke) - напиток.
 - Das Glas (die Gläser) - стакан.
 - Die Gurke (die Gurken) - огурец.
 
 **H:**
+- Das Handy - мобильный телефон.
 - Das Haus (die Häuser) - дом.
+- Die Hausadresse - домашний адрес.
 - Der Herr - господин.
 - Die Hilfe - помощь.
 - Der Hund (die Hunde) - собака.
@@ -74,7 +83,7 @@
 - Der Mensch (die Menschen) - человек.
 - Die Milch - молоко.
 - Der Morgen - утро.
-- Die Mutter - мама.
+- Die Mutter (die Mütter) - мама.
 - Das Mädchen (die Mädchen) - девочка.
 
 **N:**
@@ -94,12 +103,14 @@
 - Der Reis - рис.
 
 **S:**
+- Die Sache (die Sachen) - вещь.
 - Der Saft - сок.
 - Der Salat - салат.
 - Das Salz - соль.
 - Die Schokolade - шоколад.
 - Die Schwester (die Schwestern) - сестра.
 - Der Student (die Studenten) - студент.
+- Der Stuhl (die Stühle) - стул.
 - Das Stück - кусок.
 - Der Sohn (die Söhne) - сын.
 - Die Suppe - суп.
@@ -109,7 +120,10 @@
 - Die Tasche (die Taschen) - сумка.
 - Die Tasse (die Tassen) - чашка.
 - Der Tee - чай.
+- Das Telefon (die Telefone) - телефон.
+- Die Telefonnummer (die Telefonnummern) - телефонный номер.
 - Das Tier (die Tiere) - животное.
+- Der Tisch (die Tische) - стол.
 - Die Tochter (die Töchter) - дочь.
 - Die Tomate (die Tomaten) - помидор.
 
