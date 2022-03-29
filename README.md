@@ -62,6 +62,7 @@
 
 **J:**
 - Das Jahr (die Jahre) - год.
+- Die Jeans - джинсы.
 - Der Junge (die Jungen) - юноша.
 
 **K:**
@@ -194,6 +195,9 @@
 **A:**
 - Alt - старый.
 
+**B:**
+- Billig - дешёвый.
+
 **D:**
 - Deutsch - немецкий.
 
@@ -206,25 +210,52 @@
 - Frisch - свежий.
 
 **G:**
+- Gesund - здоровый.
 - Gross - большой.
 - Gut - хороший.
+
+**H:**
+- Heiß - горячий; жаркий.
 
 **J:**
 - Jung - молодой.
 
 **K:**
+- Kalt - холодный.
+- Klar - прозрачный; понятный.
 - Klein - маленький.
+- Krank - больной.
+
+**L:**
+- Langsam - медленный.
+- Leicht - лёгкая.
+
+**M:**
+- Möglich - возможный.
+- Müde - усталый.
 
 **N:**
 - Neu - новый.
+- Normal - нормальный.
 
 **R:**
 - Richtig - правильный.
 - Russisch - русский.
 
 **S:**
-- Schön - красивый.
 - Schlecht - плохой.
+- Schnell - быстрый.
+- Schwach - слабый.
+- Schwer - тяжёлый.
+- Schön - красивый.
+- Stark - сильный.
+
+**T:**
+- Teuer - дорогой.
+
+**W:**
+- Warm - тёплый.
+- Wichtig - важный.
 
 ## Adverbien und vielleicht Partikel:
 **A:**
@@ -249,8 +280,12 @@
 **H:**
 - Hier - здесь.
 
+**N:**
+- Noch - ещё.
+
 **S:**
 - Sehr - очень.
+- So - так.
 
 **V:**
 - Viel - много.
@@ -260,6 +295,9 @@
 
 **W:**
 - Wenig - мало.
+
+**Z:**
+- Zu - слишком.
 
 ## Interjektionen:
 **A:**
