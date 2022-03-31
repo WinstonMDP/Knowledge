@@ -33,6 +33,7 @@
 
 **F:**
 - Die Familie - семья.
+- Das Fahrrad - велосипед.
 - Der Fisch - рыба.
 - Die Flasche (die Flaschen) - бутылка.
 - Das Fleisch - мясо.
@@ -55,6 +56,7 @@
 - Die Hausadresse - домашний адрес.
 - Der Herr - господин.
 - Die Hilfe - помощь.
+- Das Hobby (die Hobbys) - хобби.
 - Der Hund (die Hunde) - собака.
 
 **I:**
@@ -84,6 +86,7 @@
 - Der Mensch (die Menschen) - человек.
 - Die Milch - молоко.
 - Der Morgen - утро.
+- Die Musik - музыка.
 - Die Mutter (die Mütter) - мама.
 - Das Mädchen (die Mädchen) - девочка.
 
@@ -101,6 +104,7 @@
 - Das Problem (die Probleme) - проблема.
 
 **R:**
+- Das Rad - колесо.
 - Der Reis - рис.
 
 **S:**
@@ -159,28 +163,43 @@
 - Essen (stark) - есть.
 
 **F:**
+- Fahren (stark) - ездить.
+- Fernsehen (zusammengesetzt) - смотреть телевизор.
 - Fragen - спрашивать.
+
+**G:**
+- Gehen (stark) - идти.
 
 **H:**
 - Haben (stark) - иметь.
 - Heißen - зваться.
+- Hören - слушать.
 
 **K:**
 - Kommen - прийти.
+- Können - уметь.
 
 **L:**
+- Laufen (stark) - бежать.
 - Leben - жить.
 - Lieben - любить.
 - Lernen - учиться.
 - Lesen (stark) - читать.
 
 **M:**
+- Malen - рисовать.
 - Mögen (stark) - нравится.
+
+**R:**
+- Radfahren (zusammengesetzt) - кататься на велосипеде.
 
 **S:**
 - Schreiben - писать.
 - Schmeсken - дегустировать.
+- Schwimmen - плавать.
 - Sehe (stark) - видеть.
+- Singen - петь.
+- Spazieren - гулять.
 - Sprechen (stark) - говорить.
 - Studieren - изучать.
 
@@ -206,6 +225,7 @@
 
 **F:**
 - Falsch - неправильный.
+- Fern - далёкий.
 - Fertig - готовый.
 - Frisch - свежий.
 
@@ -275,6 +295,7 @@
 
 **G:**
 - Genau - ровно; точно.
+- Gern - охотно.
 - Gut - хорошо.
 
 **H:**
