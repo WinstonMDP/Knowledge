@@ -9,6 +9,7 @@
 - Das Auto (die Autos) - машина.
 
 **B:**
+- Der Ball - мяч.
 - Die Banane - банан.
 - Die Biene (die Bienen) - пчела.
 - Das Bier - пиво
@@ -33,7 +34,7 @@
 
 **F:**
 - Die Familie - семья.
-- Das Fahrrad - велосипед.
+- Das Fahrrad (die Fahrräder) - велосипед.
 - Der Fisch - рыба.
 - Die Flasche (die Flaschen) - бутылка.
 - Das Fleisch - мясо.
@@ -42,6 +43,7 @@
 - Die Frau (die Frauen) - госпожa; женщина; жена.
 - Der Freund (die Freunde) - друг.
 - Die Freundin (die Freundinnen) - подруга.
+- Der Fußball - футбол.
 
 **G:**
 - Das Geld - деньги.
@@ -72,6 +74,7 @@
 - Die Kartoffel (die Kartoffeln) - картошка.
 - Der Kater (die Kater) - кот.
 - Die Katze (die Katzen) - кошка.
+- Das Klavier - пианино.
 - Das Kind (die Kinder) - ребёнок.
 - Der Kuchen - пирог.
 - Der Kuli (die Kulis) - ручка.
@@ -79,7 +82,8 @@
 
 **L:**
 - Das Leben - жизнь.
-- Der Lehrer (die Lehrer) - учиель
+- Der Lehrer (die Lehrer) - учитель
+- Das Lied (die Lieder) - песня.
 
 **M:**
 - Der Mann (die Männer) - мужчина; муж.
@@ -104,7 +108,7 @@
 - Das Problem (die Probleme) - проблема.
 
 **R:**
-- Das Rad - колесо.
+- Das Rad (die Räder) - колесо.
 - Der Reis - рис.
 
 **S:**
@@ -114,10 +118,12 @@
 - Das Salz - соль.
 - Die Schokolade - шоколад.
 - Die Schwester (die Schwestern) - сестра.
+- Der Ski (die Ski) - лыжа.
 - Der Student (die Studenten) - студент.
 - Der Stuhl (die Stühle) - стул.
 - Das Stück - кусок.
 - Der Sohn (die Söhne) - сын.
+- Der Sport - спорт.
 - Die Suppe - суп.
 
 **T:**
@@ -134,6 +140,7 @@
 
 **V:**
 - Der Vater - отец.
+- Der Volleyball - волейбол.
 
 **W:**
 - Das Wasser - вода.
@@ -165,6 +172,7 @@
 **F:**
 - Fahren (stark) - ездить.
 - Fernsehen (zusammengesetzt) - смотреть телевизор.
+- Finden (stark) - найти.
 - Fragen - спрашивать.
 
 **G:**
@@ -187,6 +195,7 @@
 - Lesen (stark) - читать.
 
 **M:**
+- Machen - делать.
 - Malen - рисовать.
 - Mögen (stark) - нравится.
 
@@ -200,8 +209,12 @@
 - Sehe (stark) - видеть.
 - Singen - петь.
 - Spazieren - гулять.
+- Spielen - играть.
 - Sprechen (stark) - говорить.
 - Studieren - изучать.
+
+**T:**
+- Tanzen - танцевать.
 
 **V:**
 - Verstehen (stark) - понимать.
@@ -222,6 +235,7 @@
 
 **E:**
 - Englisch - английский.
+- Einfach - простой.
 
 **F:**
 - Falsch - неправильный.
@@ -237,6 +251,9 @@
 **H:**
 - Heiß - горячий; жаркий.
 
+**I:**
+- Interessant - интересный.
+
 **J:**
 - Jung - молодой.
 
@@ -248,7 +265,8 @@
 
 **L:**
 - Langsam - медленный.
-- Leicht - лёгкая.
+- Langweilig - скучный.
+- Leicht - лёгкий.
 
 **M:**
 - Möglich - возможный.
@@ -267,6 +285,7 @@
 - Schnell - быстрый.
 - Schwach - слабый.
 - Schwer - тяжёлый.
+- Schwierig - трудный.
 - Schön - красивый.
 - Stark - сильный.
 
