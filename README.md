@@ -1,12 +1,12 @@
 # das Wörterbuch
 ## Inhaltsverzeichnis
-1. [Substantive](Substantive).
-2. [Verben](Verben).
-3. [Adjektive](Adjektive).
-4. [Adverbien und vielleicht Partikel](AdverbienUndVielleichtPartikel).
-5. [Interjektionen](Interjektionen).
-6. [Unterscheiden](Unterscheiden).
-7. [Ketten](Ketten).
+1. [Substantive](#Substantive).
+2. [Verben](#Verben).
+3. [Adjektive](#Adjektive).
+4. [Adverbien und vielleicht Partikel](#AdverbienUndVielleichtPartikel).
+5. [Interjektionen](#Interjektionen).
+6. [Unterscheiden](#Unterscheiden).
+7. [Ketten](#Ketten).
 
 ## <a name = "Substantive">Substantive:</a>
 **A:**
