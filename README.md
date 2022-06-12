@@ -1,6 +1,14 @@
 # das Wörterbuch
+## Inhaltsverzeichnis
+1. [Substantive](Substantive).
+2. [Verben](Verben).
+3. [Adjektive](Adjektive).
+4. [Adverbien und vielleicht Partikel](AdverbienUndVielleichtPartikel).
+5. [Interjektionen](Interjektionen).
+6. [Unterscheiden](Unterscheiden).
+7. [Ketten](Ketten).
 
-## Substantive:
+## <a name = "Substantive">Substantive:</a>
 **A:**
 - Der Abend - вечер.
 - Die Adresse - адрес.
@@ -154,7 +162,7 @@
 - Der Zucker - сахар.
 - Die Zwiebel - лук.
 
-## Verben:
+## <a name = "Verben">Verben:</a>
 **A:**
 - Antworten - отвечать.
 - Arbeiten - работать.
@@ -223,7 +231,7 @@
 - Wissen (stark) - знать.
 - Wohnen - проживать.
 
-## Adjektive:
+## <a name = "Adjektive">Adjektive:</a>
 **A:**
 - Alt - старый.
 
@@ -296,7 +304,7 @@
 - Warm - тёплый.
 - Wichtig - важный.
 
-## Adverbien und vielleicht Partikel:
+## <a name = "AdverbienUndVielleichtPartikel">Adverbien und vielleicht Partikel:</a>
 **A:**
 - Auch - тоже.
 
@@ -339,7 +347,7 @@
 **Z:**
 - Zu - слишком.
 
-## Interjektionen:
+## <a name = "Interjektionen">Interjektionen:</a>
 **A:**
 - Auf Wiedersehen - до свидания.
 
@@ -355,7 +363,7 @@
 **T:**
 - Tschüss - пока.
 
-## Unterscheiden:
+## <a name = "Unterscheiden">Unterscheiden:</a>
 **hier, dort, da:**
 
 Все отвечают на вопрос где?, а не куда?.
@@ -374,7 +382,7 @@
 **lernen** - учиться чему-то, учить что-то.</br>
 **studieren** - изучать что-то в формальном смысле; обучаться в высшем учебном заведении.
 
-## Ketten:
+## <a name = "Ketten">Ketten:</a>
 
 **Мера точности:**
 
