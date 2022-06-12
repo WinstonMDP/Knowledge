@@ -185,6 +185,7 @@
 
 **G:**
 - Gehen (stark) - идти.
+- Gehören - принадлежать.
 
 **H:**
 - Haben (stark) - иметь.
