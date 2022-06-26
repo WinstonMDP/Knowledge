@@ -184,6 +184,8 @@
 - Fragen - спрашивать.
 
 **G:**
+- Geben (stark) - давать.
+- Gefallen (stark) - нравиться.
 - Gehen (stark) - идти.
 - Gehören - принадлежать.
 
