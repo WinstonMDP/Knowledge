@@ -33,6 +33,9 @@
 **C:**
 - Der Computer - компьютер.
 
+**D:**
+- Die Dame (die Damen) - дама.
+
 **E:**
 - Das Ei - яйцо.
 - Das Eis - мороженое.
@@ -64,7 +67,7 @@
 - Das Handy - мобильный телефон.
 - Das Haus (die Häuser) - дом.
 - Die Hausadresse - домашний адрес.
-- Der Herr - господин.
+- Der Herr (die Herren) - господин.
 - Die Hilfe - помощь.
 - Das Hobby (die Hobbys) - хобби.
 - Der Hund (die Hunde) - собака.
@@ -361,11 +364,22 @@
 **D:**
 - Danke - спасибо.
 
+**E:**
+- Entshuldigung - извините.
+
+**G:**
+- Gern geschehen - не стоит благодарности.
+- Guten Appetit - приятного аппетита.
+- Gute Reise - счастливого пути.
+
 **H:**
 - Hallo - привет.
 
 **T:**
 - Tschüss - пока.
+
+**W:**
+- Willkommen - добро пожаловать.
 
 ## <a name = "Unterscheiden">Unterscheiden:</a>
 **hier, dort, da:**
