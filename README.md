@@ -214,7 +214,8 @@
 - Radfahren (zusammengesetzt) - кататься на велосипеде.
 
 **S:**
-- Schreiben - писать.
+- Schenken - дарить.
+- Schreiben (stark) - писать.
 - Schmeсken - дегустировать.
 - Schwimmen - плавать.
 - Sehe (stark) - видеть.
