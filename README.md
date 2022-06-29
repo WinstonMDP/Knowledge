@@ -14,6 +14,7 @@
 - Die Adresse - адрес.
 - Die Antwort - ответ.
 - Der Apfel (die Äpfel) - яблоко.
+- Das Auge (die Augen) - глаз.
 - Das Auto (die Autos) - машина.
 
 **B:**
@@ -23,6 +24,7 @@
 - Das Bier - пиво
 - Das Bild (die Bilder) - изображение.
 - Die Birne - груша.
+- Die Blume (die Blumen) - цветок.
 - Der Brief (die Briefe) - письмо.
 - Das Brot - хлеб.
 - Der Bruder (die Brüder) - брат.
@@ -46,10 +48,12 @@
 **F:**
 - Die Familie - семья.
 - Das Fahrrad (die Fahrräder) - велосипед.
+- Die Farbe - цвет; краска.
 - Der Fisch - рыба.
+- Die Flagge (die Flaggen) - флаг.
 - Die Flasche (die Flaschen) - бутылка.
 - Das Fleisch - мясо.
-- Der Foto (die Fotos) - фото.
+- Das Foto (die Fotos) - фото.
 - Die Frage (die Fragen) - вопрос.
 - Die Frau (die Frauen) - госпожa; женщина; жена.
 - Der Freund (die Freunde) - друг.
@@ -64,6 +68,7 @@
 - Die Gurke (die Gurken) - огурец.
 
 **H:**
+- Das Haar (die Haare) - волос.
 - Das Handy - мобильный телефон.
 - Das Haus (die Häuser) - дом.
 - Die Hausadresse - домашний адрес.
@@ -95,6 +100,7 @@
 - Das Leben - жизнь.
 - Der Lehrer (die Lehrer) - учитель
 - Das Lied (die Lieder) - песня.
+- Das Licht (die Lichter) - свет; огонь-освещение.
 
 **M:**
 - Der Mann (die Männer) - мужчина; муж.
@@ -127,6 +133,7 @@
 - Der Saft - сок.
 - Der Salat - салат.
 - Das Salz - соль.
+- Der Schatten (die Schatten) - тень.
 - Die Schokolade - шоколад.
 - Die Schwester (die Schwestern) - сестра.
 - Der Ski (die Ski) - лыжа.
@@ -244,9 +251,13 @@
 
 **B:**
 - Billig - дешёвый.
+- Blau - синий.
+- Braun - коричневый.
+- Bunt - пёстрый; разноцветный.
 
 **D:**
 - Deutsch - немецкий.
+- Dunkel - тёмный.
 
 **E:**
 - Englisch - английский.
@@ -259,12 +270,16 @@
 - Frisch - свежий.
 
 **G:**
+- Gelb - жёлтый.
 - Gesund - здоровый.
 - Gross - большой.
+- Grau - серый.
+- Grün - зелёный.
 - Gut - хороший.
 
 **H:**
 - Heiß - горячий; жаркий.
+- Hell - светлый; яркий.
 
 **I:**
 - Interessant - интересный.
@@ -282,6 +297,7 @@
 - Langsam - медленный.
 - Langweilig - скучный.
 - Leicht - лёгкий.
+- Lila - фиолетовый.
 
 **M:**
 - Möglich - возможный.
@@ -291,14 +307,20 @@
 - Neu - новый.
 - Normal - нормальный.
 
+**O:**
+- Orange - оранжевый.
+
 **R:**
 - Richtig - правильный.
+- Rosa - розовый.
+- Rot - красный.
 - Russisch - русский.
 
 **S:**
 - Schlecht - плохой.
 - Schnell - быстрый.
 - Schwach - слабый.
+- Schwarz - чёрный.
 - Schwer - тяжёлый.
 - Schwierig - трудный.
 - Schön - красивый.
@@ -309,6 +331,7 @@
 
 **W:**
 - Warm - тёплый.
+- Weiß - белый.
 - Wichtig - важный.
 
 ## <a name = "AdverbienUndVielleichtPartikel">Adverbien und vielleicht Partikel:</a>
