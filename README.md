@@ -20,6 +20,7 @@
 **B:**
 - Der Ball - мяч.
 - Die Banane - банан.
+- Der Basketball - баскетбол.
 - Die Biene (die Bienen) - пчела.
 - Das Bier - пиво
 - Das Bild (die Bilder) - изображение.
