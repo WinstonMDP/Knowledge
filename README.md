@@ -157,6 +157,9 @@
 - Die Tochter (die Töchter) - дочь.
 - Die Tomate (die Tomaten) - помидор.
 
+**U:**
+- Die Uhr (die Uhren) - час.
+
 **V:**
 - Der Vater - отец.
 - Der Volleyball - волейбол.
@@ -168,6 +171,7 @@
 - Die Wurst - колбаса.
 
 **Z:**
+- Die Zeit - время.
 - Die Zeitung (die Zeitungen) - газета.
 - Die Zitrone (die Zitronen) - лимон.
 - Der Zucker - сахар.
@@ -350,6 +354,7 @@
 
 **F:**
 - Fast - почти.
+- Früh - рано.
 
 **G:**
 - Genau - ровно; точно.
@@ -358,13 +363,30 @@
 
 **H:**
 - Hier - здесь.
+- Häufig - часто.
+
+**I:**
+- Immer - всегда.
+
+**J:**
+- Jetzt - сейчас.
+
+**M:**
+- Manchmal - иногда.
 
 **N:**
+- Nie - никогда.
 - Noch - ещё.
+
+**O:**
+- Oft - часто.
 
 **S:**
 - Sehr - очень.
+- Selten - редко.
+- Schon - уже.
 - So - так.
+- Spät - поздно.
 
 **V:**
 - Viel - много.
@@ -374,6 +396,7 @@
 
 **W:**
 - Wenig - мало.
+- Wieder - снова.
 
 **Z:**
 - Zu - слишком.
@@ -429,3 +452,7 @@
 **Мера точности:**
 
 Ungefähr-fast-genau: приблизительно-почти-точно.
+
+**Мера частотности:**
+
+Nie - selten-manchmal-oft, häufig-immer: никогда-редко-иногда-часто-всегда.
