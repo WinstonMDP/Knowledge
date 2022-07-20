@@ -165,7 +165,7 @@
 - Der Volleyball - волейбол.
 
 **W:**
-- Das Wasser - вода.
+- Dazs Wasser - вода.
 - Der Wein - вино.
 - Das Wiedersehen - свидание.
 - Die Wurst - колбаса.
@@ -187,6 +187,7 @@
 - Brauchen - нуждаться.
 
 **D:**
+- Danken - благодарить.
 - Denken - думать.
 
 **E:**
@@ -196,6 +197,7 @@
 - Fahren (stark) - ездить.
 - Fernsehen (zusammengesetzt) - смотреть телевизор.
 - Finden (stark) - найти.
+- Folgen - следовать.
 - Fragen - спрашивать.
 
 **G:**
@@ -203,6 +205,7 @@
 - Gefallen (stark) - нравиться.
 - Gehen (stark) - идти.
 - Gehören - принадлежать.
+- Gratulieren - поздравлять.
 
 **H:**
 - Haben (stark) - иметь.
@@ -351,6 +354,7 @@
 
 **E:**
 - Eigentlich - на самом деле; собственно говоря.
+- Einige - некоторый.
 
 **F:**
 - Fast - почти.
@@ -373,6 +377,7 @@
 
 **M:**
 - Manchmal - иногда.
+- Mehrere - несколько.
 
 **N:**
 - Nie - никогда.
@@ -455,4 +460,8 @@ Ungefähr-fast-genau: приблизительно-почти-точно.
 
 **Мера частотности:**
 
-Nie - selten-manchmal-oft, häufig-immer: никогда-редко-иногда-часто-всегда.
+Nie-selten-manchmal-oft, häufig-immer: никогда-редко-иногда-часто-всегда.
+
+**Мера ограничения множества:**
+
+Mehrere-einige-viel: несколько-некоторый-много
