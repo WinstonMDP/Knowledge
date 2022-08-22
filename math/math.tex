@@ -1,0 +1,303 @@
+\documentclass[oneside]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{parskip}
+\usepackage[fleqn]{amsmath}
+
+\setlength{\parskip}{0.03\textheight}
+
+\title{Математика}
+\date{\today}
+\author{Мы}
+
+\begin{document}
+	\maketitle
+	\chapter{Логика}
+	\textbf{Из посылки A вытекает вывод B:}
+	\begin{flalign*}
+		A\longrightarrow B
+	\end{flalign*}
+	A - достаточное условие для B.
+	\\
+	B - необходимое условие для А.
+
+	\textbf{Эквивалентные утверждения A и B} - это утверждения,
+	при которых из посылки A
+	вытекает вывод B и из посылки B вытекает
+	вывод A.
+
+	\textbf{Обратное утверждениe:}
+	\begin{flalign*}
+		B\longrightarrow A
+	\end{flalign*}
+	\begin{math}
+		A\longrightarrow B
+	\end{math}
+
+	\textbf{Противоположное утверждениe:}
+	\begin{flalign*}
+		\overline{A}\longrightarrow \overline{B}
+	\end{flalign*}
+	\begin{math}
+		A\longrightarrow B
+	\end{math}
+
+	\textbf{Утверждение, противоположное обратному:}
+	\begin{flalign*}
+		\overline{B}\longrightarrow \overline{A}
+	\end{flalign*}
+	\begin{math}
+		A\longrightarrow B
+	\end{math}
+
+	Утверждение A и утверждение, обратное
+	противоположному A, эквивалентны.
+
+	\textbf{Доказательство от противного:}
+	\\
+	Чтобы доказать
+	\begin{math}
+		A\longrightarrow B
+	\end{math}
+	, надо доказать
+	\begin{math}
+		A\land\overline{\overline{B}}
+	\end{math}
+
+	\textbf{Метод математической индукции для натуральных чисел:}
+	\\
+	Чтобы доказать
+	\begin{math}
+		f(x) = g(x)
+	\end{math}
+	, надо
+	доказать
+	\begin{math}
+		f(1) = g(1)\land f(n + 1) = g(n + 1),
+	\end{math}
+	приняв
+	\begin{math}
+		f(n) = g(n)
+	\end{math}
+	.
+	\chapter{Числа}
+	\textbf{Числовое кольцо} - это множество чисел,
+	результат суммы, разности, произведения любых чисел которого
+	принадлежит ему тоже.
+
+	\textbf{Числовое поле} - это множество чисел,
+	результат выполнения рациональных действий над любыми
+	числами которого принадлежит ему тоже.
+
+	\section{Натуральные числа (N)}
+
+	\textbf{Свойства сложения и умножения:}
+	\begin{enumerate}
+		\item Переместительное.
+		\begin{flalign*}
+			a + b = b + a
+		\end{flalign*}
+		\begin{flalign*}
+			ab = ba
+		\end{flalign*}
+		\item Сочетательное (ассоциативное).
+		\begin{flalign*}
+			(a + b) + c = a + (b + c)
+		\end{flalign*}
+		\begin{flalign*}
+			(ab)c = a(bc)
+		\end{flalign*}
+		\item Распределительнoe.
+		\begin{flalign*}
+			c(a + b) = ac + cb
+		\end{flalign*}
+	\end{enumerate}
+
+	\textbf{Делитель a} - это число, на которое
+	a делится без остатка.
+	
+	\textbf{Кратное a} - это всякое число, которое
+	делится на a без остатка.
+
+	\textbf{Простое число} - это число, не имеющее
+	никаких других делителей, кроме
+	единицы и себя. (
+	\begin{math}
+		\overline{\textbf{\text{составное число}}}
+	\end{math}
+	)
+
+	Простых чисел имеется бесконечное множество.
+
+	Разложение числа на простые множители взаимно однозначно.
+
+	\textbf{Взаимно простые числа} - это числа,
+	не имеющие общих делителей.
+
+	\textbf{Чётное число} - это число, кратное 2. (
+	\begin{math}
+		\overline{\textbf{\text{нечётное число}}}
+	\end{math}
+	)
+
+	Число 2 - единственное чётное простое число.
+
+	\textbf{Признаки делимости в 10-й системе счисления:}
+	\begin{enumerate}
+		\item Признак делимости на 2: последняя цифра в записи числа выражает чётное число.
+		\item Признак делимости на 3: сумма цифр записи числа делится на 3.
+		\item Признак делимости на 4: последние две цифры в записи числа выражают число, делящееся на 4.
+		\item Признак делимости на 5: последняя цифра в записи числа является 0 или 5.
+		\item Признак делимости на 9: сумма цифр записи числа делится на 9.
+	\end{enumerate}
+
+	\textbf{Наибольший общий делитель (НОД) a и b:}
+	\begin{flalign*}
+		( a, b )
+	\end{flalign*}
+	
+	\textbf{Наименьшее общее кратное (НОК) a и b:}
+	\begin{flalign*}
+		[  a, b ] 
+	\end{flalign*}
+
+	\begin{flalign*}
+		( a, b ) [ a, b ] = ab
+	\end{flalign*}
+
+	\section{Целые числа (Z)}
+
+	\begin{flalign*}
+		N \in Z
+	\end{flalign*}
+
+	\textbf{Положительное число} - это число,
+	большее нуля.
+
+	\textbf{Отрицательное число} - это число,
+	меньшее нуля.
+
+	\textbf{Противоположные числа} - это числа,
+	отличающиеся знаком.
+
+	\begin{flalign*}
+		a - b = a + (-b)
+	\end{flalign*}
+	\begin{flalign*}
+		a(-b) = -ab
+	\end{flalign*}
+
+	\textbf{Абсолютная величина (модуль) x:}
+	\begin{flalign*}
+		\left[
+			\begin{aligned}
+			\left\{
+				\begin{aligned}
+				x
+				\\
+				x \geq 0
+				\end{aligned}				
+			\right.
+			\\
+			\left\{
+				\begin{aligned}
+				-x
+				\\
+				x < 0
+				\end{aligned}
+			\right.
+			\end{aligned}
+		\right.
+	\end{flalign*}
+
+	\section{Рациональные числа (Q)}
+
+	\begin{flalign*}
+		Z \in Q
+	\end{flalign*}
+
+	\textbf{Рациональное число} - это число,
+	представимое в виде
+	\begin{math}
+		\frac{a}{b}
+	\end{math}
+	, где числитель
+	\begin{math}
+		a \in Z
+	\end{math}
+	, а знаменатель
+	\begin{math}
+		b \in N
+	\end{math}
+	.
+
+	Рациональные числа образуют поле.
+
+	\textbf{Дробное число} - это рациональное число,
+	числитель которого не делится на знаменатель нацело.
+
+	\textbf{Целая часть числа} - это наибольшее
+	целое число, не превосходящее данного (
+	\begin{math}
+		\left[x\right] 	
+	\end{math}
+	)
+	.
+
+	\textbf{Дробная часть числа} - это разность
+	между данным числом и его целой
+	частью (
+	\begin{math}
+		(x)
+	\end{math}
+	)
+	.
+
+	\begin{flalign*}
+		x - \left[x\right] \geq 0
+	\end{flalign*}
+	\begin{flalign*}
+		x - \left[x\right] < 1
+	\end{flalign*}
+
+	Разложение рационального числа
+	на сумму целой и дробной частей
+	взаимно однозначно.
+
+	\textbf{Десятичная дробь} - это дробь,
+	у которой знаменатель представляет
+	собой натуральную степень числа 10.
+
+	Всякое рациональное число может
+	быть представленно бесконечной
+	десятичной периодической дробью
+	взаимно однозначно.
+
+	\section{Иррациональные числа (I)}
+
+	Всякое иррациональное число может
+	быть представленно бесконечной
+	десятичной непериодической дробью
+	взаимно однозначно.
+
+	\section{Действительные числа (R)}
+
+	\begin{flalign*}
+		Q \in R
+	\end{flalign*}
+	\begin{flalign*}
+		I \in R
+	\end{flalign*}
+
+	Действительные числа образуют поле.
+
+	Множество действительных чисел упорядочено.
+
+	Множество действительных чисел непрерывно.
+
+	Всякое деятичное число
+	определяет действительное число
+	взаимно однозначно.
+\end{document}
