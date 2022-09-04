@@ -1,7 +1,7 @@
 # Vocabulary
 ## <a name = "Verb">Verb</a>
 **S:**
-- say - сказать что-то короткое.
+- say - сказать что-то околокороткое более менее дословно.
   - say to somebody.
 - speak - поговорить на "вы"; издавать звук; говорить на языке.
   - speak to\with somebody.
