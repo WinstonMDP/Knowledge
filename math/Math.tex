@@ -167,6 +167,93 @@
         a^2 - ab + b^2
     \end{flalign*}
 
+	Многочлен
+	\begin{math}
+		Q(x)
+	\end{math}
+	является частным и многочлен
+	\begin{math}
+		R(x)
+	\end{math}
+	является остатком при делении многочлена 
+	\begin{math}
+		P_n(x)
+	\end{math}
+	на 
+	\begin{math}
+		S_m(x)
+	\end{math}
+	, если
+	\begin{math}
+		P_n(x) = S_m(x)Q(x) + R(x)
+	\end{math}
+	и степень
+	\begin{math}
+		R(x)
+	\end{math}
+	меньше степени
+	\begin{math}
+		S_m(x)
+	\end{math}
+	.
+
+	Если
+	степень
+	\begin{math}
+		P_n(x)
+	\end{math}
+	больше степени
+	\begin{math}
+		S_m(x)
+	\end{math}
+	, степень частного от деления
+	\begin{math}
+		P_n(x)
+	\end{math}
+	на
+	\begin{math}
+		S_m(x)
+	\end{math}
+	равна разности степеней
+	\begin{math}
+		P_n(x)
+	\end{math}
+	и
+	\begin{math}
+		S_m(x)
+	\end{math}
+	, иначе частное равно нулю.
+
+	Остаток от деления многочлена
+	\begin{math}
+		P_n(x)
+	\end{math}
+	на двучлен вида
+	\begin{math}
+		x - \alpha 
+	\end{math}
+	равен значению многочлена при
+	\begin{math}
+		x = \alpha 
+	\end{math}
+	.
+
+	\textbf{Теорема Безу:}
+	\\
+	Многочлен
+	\begin{math}
+		P_n(x)
+	\end{math}
+	делится без остатка на двучлен
+	\begin{math}
+		x - \alpha
+	\end{math}
+	, только если
+	\begin{math}
+		\alpha 
+	\end{math}
+	- корень многочлена.
+
 	\chapter{Измерения}
 	\textbf{Величина} - это
 	объект, который может быть охарактеризован числом в результате
@@ -621,6 +708,17 @@
 		\end{flalign*}
 	\end{enumerate}
 
+	q является частным и r является остатком при делении а на b,
+	если
+	\begin{math}
+		a = bq + r
+	\end{math}
+	и
+	\begin{math}
+		r < b
+	\end{math}
+	.
+
 	\textbf{Делитель a} - это число, на которое
 	a делится без остатка.
 	
@@ -837,6 +935,18 @@
 	Всякое деятичное число
 	определяет действительное число
 	взаимно однозначно.
+
+	Многочлен с действительными
+	коэффициентами разлагается в произведение
+	линейных двучленов вида
+	\begin{math}
+		x - a
+	\end{math}
+	и квадратных трёхчленов вида
+	\begin{math}
+		x^2 + px + q
+	\end{math}
+	.
 
 	\textbf{n-ая степень числа a} - это произведение
 	n сомножителей, равных а. (
@@ -1110,16 +1220,87 @@
 		z\overline{z} = a^2 + b^2
 	\end{flalign*}
 
-	\textbf{Абсолютная величина (модуль) z:}
-	\begin{flalign*}
-		\left\lvert z\right\rvert = \sqrt{z\overline{z}}
-	\end{flalign*}
-
 	\begin{flalign*}
 		\overline{z_1} + \overline{z_2} = \overline{(z_1 + z_2)}
 	\end{flalign*}
 	\begin{flalign*}
 		\overline{z_1}\overline{z_2} = \overline{(z_1z_2)}
+	\end{flalign*}
+
+	Значения многочлена при комплексного
+	сопряжённых значениях
+	комплексно сопряжены между собой.
+
+	Если многочлен имеет комплексный корень,
+	то и сопряжённое число является его корнем.
+
+	Если
+	\begin{math}
+		P_n(z) = (z - \alpha)^k P_{n - k}(z)
+	\end{math}
+	,
+	\begin{math}
+		P_{n - k}
+	\end{math}
+	не делится на
+	\begin{math}
+		z - \alpha
+	\end{math}
+	нацело, то k - кратность корня
+	\begin{math}
+		\alpha
+	\end{math}
+	.
+
+	Сумма кратности корней равна степени многочлена.
+
+	Если
+	\begin{math}
+		P_n(z) = (z - \alpha)^k P_{n - k}(z)
+	\end{math}
+	,
+	\begin{math}
+		P_{n - k}
+	\end{math}
+	не делится на
+	\begin{math}
+		z - \alpha
+	\end{math}
+	нацело и
+	\begin{math}
+		k = 1
+	\end{math}
+	, то корень
+	\begin{math}
+		\alpha
+	\end{math}
+	однократный (простой).
+	
+	Если
+	\begin{math}
+		P_n(z) = (z - \alpha)^k P_{n - k}(z)
+	\end{math}
+	,
+	\begin{math}
+		P_{n - k}
+	\end{math}
+	не делится на
+	\begin{math}
+		z - \alpha
+	\end{math}
+	нацело и
+	\begin{math}
+		k > 1
+	\end{math}
+	, то корень
+	\begin{math}
+		\alpha
+	\end{math}
+	кратный.
+
+	\textbf{Абсолютная величина (модуль) z:}
+	\begin{flalign*}
+		\left\lvert z\right\rvert = \sqrt{z\overline{z}}
 	\end{flalign*}
 
 	\textbf{Алгебраическая форма комплексного числа:}
