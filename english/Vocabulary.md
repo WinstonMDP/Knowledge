@@ -3,6 +3,12 @@
 **L:**
 - loan - кредит.
 
+**P:**
+- prompt - подсказка.
+
+**R:**
+- rumour - слух.
+
 **S:**
 - suggestion - предложение-совет.
 
@@ -112,9 +118,23 @@
 - to tell the future - предсказать будущее.
 - to tell the difference - отличать.
 - to tell the time - сказать время.
-- to establish raport - установить взаимопонимание.
+- to establish rapport - установить взаимопонимание.
 - to maintain status - поддерживать статус.
 - to exhibit knowlege - демонстрировать знания.
 - to display similarities - демонстрировать сходство.
 - to negotiate relationship - наладить отношения.
 - a outlining problem - определение проблемы.
+- get in touch with somebody - связаться с кем-то.
+- to track down - отслеживать.
+- to bump into - столкнуться.
+- to lose touch with somebody - потерять контакт с кем-то.
+- to stay in touch with somebody - поддерживать отношения с кем-то.
+- to keep track of something - отслеживать что-то.
+- catch up with somebody - догнать кого-то.
+- actions speak louder than words - не по словам судят, да по делам.
+- think before you speak - слово не воробей - вылетит, не поймаешь.
+- to get a word in edgeways - вставить словечко.
+- to hear it on the grapevine - узнать слух из других уст.
+- to be on the same wavelength - быть на одной волне.
+- to get straight to the point - перейти сразу к делу.
+- to have a quick word with somebody - перекинуться с кем-то словами.
