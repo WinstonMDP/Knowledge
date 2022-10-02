@@ -1,18 +1,22 @@
 # Vocabulary
 ## <a name = "Verb">Verb</a>
 **A:**
-- ask - спросить.
+- ask
+  - ask - спросить.
   - ask somebody out - пригласить на свидание.
 
 **B:**
-- be - быть.
+- be
+  - be - быть.
   - be after something - пытаться получить что-то.
   - be away - отсутствовать.
   - be on\of - быть включённым\выключенным.
-- blow - дуть.
+- blow
+  - blow - дуть.
   - blow out - гаснуть.
   - blow up - взрываться.
-- break - сломать
+- break
+  - break - сломать
   - break down - сломаться.
   - break in - вломиться; вмешаться в разговор.
   - break into - вломиться.
@@ -21,7 +25,8 @@
   - break up - расстаться.
 
 **С:**
-- call - звать; звонить.
+- call
+  - call - звать; звонить.
   - call at\by\on - остановиться в месте.
   - call somebody back - перезвонить кому-то.
   - call for - призывать.
@@ -30,18 +35,21 @@
 - calm (down) - успокоить.
 
 **S:**
-- say - сказать что-то околокороткое более менее дословно.
+- say
+  - say - сказать что-то околокороткое более менее дословно.
   - say to somebody.
-- speak - поговорить на "вы"; издавать звук; говорить на языке.
+- speak
+  - speak - поговорить на "вы"; издавать звук; говорить на языке.
   - speak against\in favor of something.
   - speak of\about something.
   - speak to\with somebody.
 
 **T:**
-- talk - поговорить на "ты"; иметь влияние; предавать огласке лишнее.
+- talk
+  - talk - поговорить на "ты"; иметь влияние; предавать огласке лишнее.
   - talk to somebody.
   - talk something - обсуждать что-то.
-- tell.
+- tell
   - tell somebody - пересказать, передать смысл чего-то длинного-объёмного кому-то.
   - tell something from something - отличить одно от другого.
 
