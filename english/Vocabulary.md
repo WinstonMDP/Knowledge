@@ -1,4 +1,11 @@
 # Vocabulary
+## <a name = "Noun">Noun</a>
+**L:**
+- loan - кредит.
+
+**S:**
+- suggestion - предложение-совет.
+
 ## <a name = "Verb">Verb</a>
 **A:**
 - ask
@@ -105,3 +112,9 @@
 - to tell the future - предсказать будущее.
 - to tell the difference - отличать.
 - to tell the time - сказать время.
+- to establish raport - установить взаимопонимание.
+- to maintain status - поддерживать статус.
+- to exhibit knowlege - демонстрировать знания.
+- to display similarities - демонстрировать сходство.
+- to negotiate relationship - наладить отношения.
+- a outlining problem - определение проблемы.
