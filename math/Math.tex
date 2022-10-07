@@ -20,80 +20,109 @@
 	\tableofcontents
 
 	\chapter{Логика}
-	\textbf{Из посылки A вытекает вывод B:}
 	\begin{flalign*}
-		A\longrightarrow B
+		\forall A, \ B \
+		\left(
+		A \longrightarrow B
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&\text{Из посылки} \ A \ \text{вытекает вывод} \ B. \\
+			&A - \text{достаточное условие для} \ B. \\
+			&B - \text{необходимое условие для} \ A. \\
+		\end{aligned}
+		\right.
+		\right)
 	\end{flalign*}
-	A - достаточное условие для B.
-	\\
-	B - необходимое условие для А.
 
-	\textbf{Эквивалентные утверждения A и B} - это утверждения,
-	при которых из посылки A
-	вытекает вывод B и из посылки B вытекает
-	вывод A.
-
-	\textbf{Обратное утверждениe:}
 	\begin{flalign*}
-		B\longrightarrow A
+		\forall A, \ B \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A \longrightarrow B \\
+			&B \longrightarrow A
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A \ \text{и} \ B - \text{логически эквивалентные утверждения.}
+		\right)
 	\end{flalign*}
-	\begin{math}
-		A\longrightarrow B
-	\end{math}
 
-	\textbf{Противоположное утверждениe:}
 	\begin{flalign*}
-		\overline{A}\longrightarrow \overline{B}
+		\forall A, \ B \
+		(
+		(A \longrightarrow B) \ - \ \text{прямое утверждение}.
+		\Leftrightarrow
+		(B \longrightarrow A) \ - \ \text{обратное утверждение}.
+		)
 	\end{flalign*}
-	\begin{math}
-		A\longrightarrow B
-	\end{math}
 
-	\textbf{Утверждение, противоположное обратному:}
 	\begin{flalign*}
-		\overline{B}\longrightarrow \overline{A}
+		\forall A, \ B \
+		(
+		(A \longrightarrow B) \ - \ \text{прямое утверждение}.
+		\Leftrightarrow
+		(\overline{A} \longrightarrow \overline{B}) \ - \ \text{противоположное утверждение}.
+		)
 	\end{flalign*}
-	\begin{math}
-		A\longrightarrow B
-	\end{math}
 
-	Утверждение A и утверждение, обратное
-	противоположному A, эквивалентны.
+	\begin{flalign*}
+		\forall A, \ B \
+		(
+		(A \longrightarrow B) \ - \ \text{прямое утверждение}.
+		\Leftrightarrow
+		(\overline{B} \longrightarrow \overline{A}) \ - \ \text{противоположное обратному утверждение}.
+		)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A - \text{прямое утверждение.} \\
+			&B - \text{обратное противоположному утверждение.}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		A \Leftrightarrow B
+		\right)
+	\end{flalign*}
 
 	\textbf{Доказательство от противного:}
-	\\
-	Чтобы доказать
-	\begin{math}
-		A\longrightarrow B
-	\end{math}
-	, надо доказать
-	\begin{math}
-		A\land\overline{\overline{B}}
-	\end{math}
+	\begin{flalign*}
+		\forall A \ \exists B \ (
+		B \wedge (\overline{A} \longrightarrow \overline{B})
+		\longrightarrow
+		A
+		)
+	\end{flalign*}
 
-	\textbf{Метод математической индукции для натуральных чисел:}
-	\\
-	Чтобы доказать
-	\begin{math}
-		f(x) = g(x)
-	\end{math}
-	, надо
-	доказать
-	\begin{math}
-		f(1) = g(1)\land f(n + 1) = g(n + 1),
-	\end{math}
-	приняв
-	\begin{math}
-		f(n) = g(n)
-	\end{math}
-	.
+	\textbf{Метод математической индукции:}
+	\begin{flalign*}
+		\forall F \
+		\left(
+		\forall n \
+		\left\{
+		\begin{aligned}
+			&n \in N \\
+			&F(1) \\
+			&F(n) \longrightarrow F(n + 1)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\forall n
+		F(n)
+		\right)
+	\end{flalign*}
 
 	\chapter{Алгебраические выражения}
 	\textbf{Алгебраическое выражение} - это
 	выражение, состоящее из чисел,
 	буквенных величин и алгебраических
 	операций над ними.
-	
+
 	\textbf{Область допустимых значений (ОДЗ)} - это
 	множество всех наборов числовых
 	значений букв, входящих
@@ -102,7 +131,7 @@
 	\textbf{Тождественно равные алгебраические выражения} - это
 	алгебраические выражения, имеющие равные ОДЗ и равные
 	числовые значения на этом ОДЗ.
-	
+
 	\textbf{Одночлен} - это
 	алгебраическое выражение,
 	состоящее из произведения числового коэффициента
