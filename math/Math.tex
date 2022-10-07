@@ -82,7 +82,7 @@
 		\left\{
 		\begin{aligned}
 			&A - \text{прямое утверждение.} \\
-			&B - \text{обратное противоположному утверждение.}
+			&B - \text{противоположное обратному утверждение.}
 		\end{aligned}
 		\right.
 		\longrightarrow
@@ -170,7 +170,7 @@
         \begin{math}
             a^2 - b^2 = (a - b)(a + b)
         \end{math}
-        
+
         \item Куб суммы.
         \\
         \begin{math}
@@ -186,7 +186,7 @@
         \item Бином Ньютона.
         \\
         \begin{math}
-            (a + b)^n = 
+            (a + b)^n =
 			\sum\limits_{i = 0}^n \frac{a^{n-i}b^in!}{i!(n - i)!} =
 			\sum\limits_{i = 0}^n \frac{a^{n-i}b^i\prod\limits_{k = 0}^{i - 1}n - k}{i!}
         \end{math}
@@ -205,15 +205,15 @@
 	\begin{math}
 		R(x)
 	\end{math}
-	является остатком при делении многочлена 
+	является остатком при делении многочлена
 	\begin{math}
 		P_n(x)
 	\end{math}
-	на 
+	на
 	\begin{math}
 		S_m(x)
-	\end{math}
-	, если
+	\end{math},
+	если
 	\begin{math}
 		P_n(x) = S_m(x)Q(x) + R(x)
 	\end{math}
@@ -224,8 +224,7 @@
 	меньше степени
 	\begin{math}
 		S_m(x)
-	\end{math}
-	.
+	\end{math}.
 
 	Если
 	степень
@@ -235,8 +234,8 @@
 	больше степени
 	\begin{math}
 		S_m(x)
-	\end{math}
-	, степень частного от деления
+	\end{math},
+	степень частного от деления
 	\begin{math}
 		P_n(x)
 	\end{math}
@@ -251,8 +250,8 @@
 	и
 	\begin{math}
 		S_m(x)
-	\end{math}
-	, иначе частное равно нулю.
+	\end{math},
+	иначе частное равно нулю.
 
 	Остаток от деления многочлена
 	\begin{math}
@@ -260,13 +259,12 @@
 	\end{math}
 	на двучлен вида
 	\begin{math}
-		x - \alpha 
+		x - \alpha
 	\end{math}
 	равен значению многочлена при
 	\begin{math}
-		x = \alpha 
-	\end{math}
-	.
+		x = \alpha
+	\end{math}.
 
 	\textbf{Теорема Безу:}
 	\\
@@ -277,10 +275,10 @@
 	делится без остатка на двучлен
 	\begin{math}
 		x - \alpha
-	\end{math}
-	, только если
+	\end{math},
+	только если
 	\begin{math}
-		\alpha 
+		\alpha
 	\end{math}
 	- корень многочлена.
 
@@ -300,7 +298,7 @@
 	\textbf{Область изменения} - это
 	множество значений, принимаемых переменной
 	величиной.
-	
+
 	\chapter{Функции}
 	\textbf{Функция}
 	\begin{math}
@@ -312,190 +310,234 @@
 	в соответствие по определённому закону
 	значение y.
 
-	\begin{flalign*}
-		y = f(x)
-	\end{flalign*}
-	y - функция (зависимая переменная).
-	\\
-	x - аргумент (независимая переменная).
-	\\
-	\begin{math}
-		f(x) 
-	\end{math}
-	- закон соответствия между y и x.
-
 	\textbf{Область определения функции, задаваемой законом соответствия}
-	\begin{math}
-		\mathbf{f(x)}
-	\end{math}
-	,
-	\begin{math}
-		\mathbf{D(f)}
-	\end{math}
 	- это область изменения независимой переменной функции.
 
 	\textbf{Область значений функции, задаваемой законом соответствия}
-	\begin{math}
-		\mathbf{f(x)}
-	\end{math}
-	,
-	\begin{math}
-		\mathbf{E(f)}
-	\end{math}- это
-	область изменения функции.
+	- это область изменения функции.
 
-	\textbf{Математический анализ} - это
-	область математики, иследующая функции.
-
-	\textbf{Равные (совпадающие) функции} - это
-	функции, область определения которых равны
-	и значения которых при любых одинаковых
-	значениях аргумента равны.
-
-	\textbf{Нуль (корень) функции} - это
-	значение независимой переменной,
-	при котором значение функции равно нулю.
-
-	\textbf{Чётная функция:}
 	\begin{flalign*}
-		f(-x) = f(x)
+		\forall y, \ x, \ f \
+		\left(
+		y = f(x)
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&y - \text{функция (зависимая переменная)}. \\
+			&x - \text{аргумент (независимая переменная)}. \\
+			&f - \text{закон соответствия (функция)}. \\
+			&D(f) - \text{область определения функции.} \\
+			&x \in D(f) \\
+			&E(f) - \text{область значений функции.} \\
+			&y \in E(f)
+		\end{aligned}
+		\right.
+		\right)
 	\end{flalign*}
-	\begin{math}
-		\left[
+
+	\begin{flalign*}
+		\forall f, \ g \
+		\left(
+		\forall x \
+		\left\{
+		\begin{aligned}
+			&D(f) = D(g) \\
+			&f(x) = g(x)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f \ \text{и} \ g - \text{совпадающие функции.}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall x, \ f \
+		(
+		f(x) = 0
+		\Leftrightarrow
+		x - \text{нуль (корень) функции f.}
+		)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f(-x) = f(x) \\
+			&\exists a \
+			\left[
 			\begin{aligned}
-				&D(f) = (-a; a)
-				\\
+				&D(f) = (-a; a) \\
 				&D(f) = [-a; a]
 			\end{aligned}
+			\right.
+		\end{aligned}
 		\right.
-	\end{math}
-	
-	\textbf{Нечётная функция:}
-	\begin{flalign*}
-		f(-x) = -f(x)
+		\Leftrightarrow
+		f - \text{чётная функция}.
+		\right)
 	\end{flalign*}
-	\begin{math}
-		\left[
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f(-x) = -f(x) \\
+			&\exists a \
+			\left[
 			\begin{aligned}
-				&D(f) = (-a; a)
-				\\
+				&D(f) = (-a; a) \\
 				&D(f) = [-a; a]
 			\end{aligned}
+			\right.
+		\end{aligned}
 		\right.
-	\end{math}
+		\Leftrightarrow
+		f - \text{нечётная функция}.
+		\right)
+	\end{flalign*}
 
-	\textbf{Функция общего вида} - это
-	функция, которая не является
-	чётной или нечётной.
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&\overline{f - \text{чётная функция}.} \\
+			&\overline{f - \text{нечётная функция}.}
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{общего вида функция}.
+		\right)
+	\end{flalign*}
 
-	\textbf{Возрастающая функция на некотором промежутке (интервале)} - это
-	функция, для любых двух значений независимой переменной
-	\begin{math}
-		x_1
-	\end{math}
-	и
-	\begin{math}
-		x_2
-	\end{math}
-	которой на этом промежутке
-	из неравенства
-	\begin{math}
-		x_1 < x_2
-	\end{math}
-	следует
-	\begin{math}
-		f(x_1) < f(x_2)
-	\end{math}
-	при том, что этот интервал
-	лежит в её области определения. (
-	\begin{math}
-		\overline{\textbf{\text{невозрастающая функция на некотором промежутке (интервале)}}}
-	\end{math}
-	)
+	\begin{flalign*}
+		\forall f, \ A \
+		\left(
+		\forall x_1, \ x_2 \
+		\left\{
+		\begin{aligned}
+			&x_1 \in A \\
+			&x_2 \in A \\
+			&x_1 < x_2 \longrightarrow f(x_1) < f(x_2)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			f - \text{возрастающая функция на} \ A.
+		\end{aligned}
+		\right)
+	\end{flalign*}
 
-	\textbf{Убывающая функция на некотором промежутке (интервале)} - это
-	функция, для любых двух значений независимой переменной
-	\begin{math}
-		x_1
-	\end{math}
-	и
-	\begin{math}
-		x_2
-	\end{math}
-	которой на этом промежутке
-	из неравенства
-	\begin{math}
-		x_1 < x_2
-	\end{math}
-	следует
-	\begin{math}
-		f(x_1) > f(x_2)
-	\end{math}
-	при том, что этот интервал
-	лежит в её области определения. (
-	\begin{math}
-		\overline{\textbf{\text{неубывающая функция на некотором промежутке (интервале)}}}
-	\end{math}
-	)
+	\begin{flalign*}
+		\forall f, \ A \
+		\left(
+		\forall x_1, \ x_2 \
+		\left\{
+		\begin{aligned}
+			&x_1 \in A \\
+			&x_2 \in A \\
+			&x_1 < x_2 \longrightarrow f(x_1) \geq f(x_2)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{невозрастающая функция на} \ A.
+		\right)
+	\end{flalign*}
 
-	\textbf{Интервал монотонности} - это
-	интервал, на котором функция возрастает
-	или убывает.
+	\begin{flalign*}
+		\forall f, \ A \
+		\left(
+		\forall x_1, \ x_2 \
+		\left\{
+		\begin{aligned}
+			&x_1 \in A \\
+			&x_2 \in A \\
+			&x_1 < x_2 \longrightarrow f(x_1) > f(x_2)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{убывающая функция на} \ A.
+		\right)
+	\end{flalign*}
 
-	\textbf{Точка минимума функции, задаваемой законом соответствия}
-	\begin{math}
-		\mathbf{f(x)}
-	\end{math}
-	,- это точка функции
-	\begin{math}
-		x_0
-	\end{math}
-	, определённой в самой этой точке и
-	в некоторой окрестности точки
-	\begin{math}
-		x_0
-	\end{math}
-	при том, что множество значений этой окрестности
-	равно области изменения
-	\begin{math}
-		x'
-	\end{math}
-	,
-	для которой выполняется
-	неравенство
-	\begin{math}
-		f(x_0) \leq f(x')
-	\end{math}
-	.
+	\begin{flalign*}
+		\forall f, \ A \
+		\left(
+		\forall x_1, \ x_2 \
+		\left\{
+		\begin{aligned}
+			&x_1 \in A \\
+			&x_2 \in A \\
+			&x_1 < x_2 \longrightarrow f(x_1) \leq f(x_2)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{неубывающая функция на} \ A.
+		\right)
+	\end{flalign*}
 
-	\textbf{Точка максимума функции, задаваемой законом соответствия}
-	\begin{math}
-		\mathbf{f(x)}
-	\end{math}
-	,- это точка функции
-	\begin{math}
-		x_0
-	\end{math}
-	, определённой в самой этой точке и
-	в некоторой окрестности точки
-	\begin{math}
-		x_0
-	\end{math}
-	при том, что множество значений этой окрестности
-	равно области изменения
-	\begin{math}
-		x'
-	\end{math}
-	,
-	для которой выполняется
-	неравенство
-	\begin{math}
-		f(x_0) \geq f(x')
-	\end{math}
-	.
+	\begin{flalign*}
+		\forall A, \ f \
+		\left(
+		\left[
+		\begin{aligned}
+			&f - \text{функция убывающая на} \ A. \\
+			&f - \text{функция возрастающая на} \ A.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A - \text{интервал монотонности} \ f.
+		\right)
+	\end{flalign*}
 
-	\textbf{Экстремум} - это точка
-	минимума или максимума функции.
+	\begin{flalign*}
+		\forall f, \ x_0 \
+		\left(
+		\exists A \ \forall x \
+		\left\{
+		\begin{aligned}
+			&\text{область изменения} \ x = A \\
+			&x_0 \in A \\
+			&f(x_0) \leq f(x)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		x_0 - \text{точка минимума} \ f.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ x_0 \
+		\left(
+		\exists A \ \forall x \
+		\left\{
+		\begin{aligned}
+			&\text{область изменения} \ x = A \\
+			&x_0 \in A \\
+			&f(x_0) \geq f(x)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		x_0 - \text{точка максимума} \ f.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall x, \ f \
+		\left(
+		\left[
+		\begin{aligned}
+			&x - \text{точка минимума} \ f. \\
+			&x - \text{точка минимума} \ f.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		x - \text{экстремум} \ f.
+		\right)
+	\end{flalign*}
 
 	\textbf{Асимптота} - это прямая линия,
 	к которой график функции неограниченно
@@ -513,27 +555,25 @@
 		\item Асимптоты функции.
 	\end{enumerate}
 
-	\textbf{Сложная функция} - это
-	функция, аргумент которой равен
-	другой функции.
-
-	\textbf{Обратная функция}
-	\begin{math}
-		\mathbf{y = f(x)}
-	\end{math}
-	\textbf{функции}
-	\begin{math}
-		\mathbf{u = g(x)}
-	\end{math}
-	\textbf{:}
 	\begin{flalign*}
-		f(g(a)) = a
+		\forall y, \ f, \ g \
+		(
+		\forall x \
+		y = f(g(x))
+		\Leftrightarrow
+		y - \text{сложная функция}.
+		)
 	\end{flalign*}
-	\begin{math}
-		a \in D(g)
-		\\
-		g(a) \in D(f)
-	\end{math}
+
+	\begin{flalign*}
+		\forall f, \ g \
+		(
+		\forall x \
+		f(g(x)) = x
+		\Leftrightarrow
+		f - \text{обратная} \ g \ \text{функция}.
+		)
+	\end{flalign*}
 
 	\textbf{Алгебраическая функция} - это
 	функция, закон соответствия которой
@@ -551,111 +591,117 @@
 	\textbf{Основные элементарные функции:}
 	\begin{enumerate}
 		\item Степенные.
-		\\
-		\begin{math}
-			f(x) = x^k
-			\\
-			k \in R
-		\end{math}
+		\begin{flalign*}
+		\left\{
+		\begin{aligned}
+			&f(x) = x^k \\
+			&k \in R
+		\end{aligned}
+		\right.
+		\end{flalign*}
 
 		\item Показательные.
-		\\
-		\begin{math}
-			f(x) = a^x
-			\\
-			a \in R
-			\\
-			a > 0
-			\\
-			a \neq 1
-		\end{math}
+		\begin{flalign*}
+		\left\{
+		\begin{aligned}
+			&f(x) = a^x \\
+			&a \in R \\
+			&a > 0 \\
+			&a \neq 1
+		\end{aligned}
+		\right.
+		\end{flalign*}
 
 		\item Логарифмические.
-		\\
-		\begin{math}
-			f(x) = \log_a^x
-			\\
-			a \in R
-			\\
-			a > 0
-			\\
-			a \neq 1
-		\end{math}
+		\begin{flalign*}
+		\left\{
+		\begin{aligned}
+			&f(x) = \log_a^x \\
+			&a \in R \\
+			&a > 0 \\
+			&a \neq 1
+		\end{aligned}
+		\right.
+		\end{flalign*}
 
 		\item Тригонометрические.
-		\\
-		\begin{math}
-			f(x) = \sin x
-		\end{math}
-		\\
-		или
-		\\
-		\begin{math}
-			f(x) = \cos x
-		\end{math}
-		\\
-		или
-		\\
-		\begin{math}
-			f(x) = \tan x
-		\end{math}
-		\\
-		или
-		\\
-		\begin{math}
-			f(x) = \cot x 
-		\end{math}
+		\begin{flalign*}
+		\left[
+		\begin{aligned}
+			&f(x) = \sin x \\
+			&f(x) = \cos x \\
+			&f(x) = \tan x \\
+			&f(x) = \cot x
+		\end{aligned}
+		\right.
+		\end{flalign*}
 
 		\item Обратные тригонометрические функции.
-		\\
-		\begin{math}
-			f(x) = \arcsin x
-		\end{math}
-		\\
-		или
-		\\
-		\begin{math}
-			f(x) = \arccos x
-		\end{math}
-		\\
-		или
-		\\
-		\begin{math}
-			f(x) = \arctan x
-		\end{math}
-		\\
-		или
-		\\
-		\begin{math}
+		\begin{flalign*}
+		\left[
+		\begin{aligned}
+			f(x) = \arcsin x \\
+			f(x) = \arccos x \\
+			f(x) = \arctan x \\
 			f(x) = \operatorname{arccot} x
-		\end{math}
+		\end{aligned}
+		\right.
+		\end{flalign*}
 	\end{enumerate}
 
-	\textbf{Целая рациональная функция (многочлен от переменной x) (ЦРФ) степени n}:
 	\begin{flalign*}
-		y = P_n(x) = \sum_{i = 0}^n a_ix^{n-i}
+		\forall y, \ P_n, \ n, \
+		\left(
+		\forall x \
+		\left\{
+		\begin{aligned}
+			&y = P_n(x) = \sum_{i = 0}^n a_ix^{n-i} \\
+			&a_0 \neq 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&y - \text{целая рациональная функция} \\
+			&\text{(многочлен от переменной} \ x \text{) (ЦРФ) степени} \ n.
+		\end{aligned}
+		\right)
 	\end{flalign*}
-	\begin{math}
-		a_0 \neq 0
-	\end{math}
 
-	y прямо пропорционально x и между x и y прямо пропорциональная зависимость, если
-	\begin{math}
-		y = ax
-	\end{math}
-	, при
-	\begin{math}
-		a \neq 0
-	\end{math}
-	.
-
-	\textbf{Линейная ЦРФ (линейная функция):}
 	\begin{flalign*}
-		y = ax + b
+		\forall y, \ f, \ x, \ a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&y = f(x) = ax \\
+			&a \neq 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&y \ \text{прямо пропорционально} \ x. \\
+			&\text{между} \ y \ \text{и} \ x \ \text{прямо пропорциональная зависимость}.
+		\end{aligned}
+		\right.
+		\right)
 	\end{flalign*}
-	\begin{math}
-		a \neq 0
-	\end{math}
+
+	\begin{flalign*}
+		\forall y, \ f, \ a, \ b \
+		\left(
+		\forall x \
+		\left\{
+		\begin{aligned}
+			&y = f(x) = ax + b \\
+			&a \neq 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&y - \text{линейная ЦРФ (линейная функция)}. \\
+		\end{aligned}
+		\right)
+	\end{flalign*}
 
 	\textbf{Квадратичная ЦРФ (квадратный (квадратичный) трёхчлен):}
 	\begin{flalign*}
