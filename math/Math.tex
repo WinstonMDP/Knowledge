@@ -10,6 +10,8 @@
 
 \setlength{\parskip}{0.03\textheight}
 
+\newcommand{\meta}[1]{\text{<}#1\text{>}}
+
 \title{Математика}
 \date{\today}
 \author{Мы}
@@ -18,6 +20,10 @@
 	\maketitle
 
 	\tableofcontents
+
+	\chapter{Примечания}
+	Чтобы понять, что означают '<', '>',
+	попробуйте их убрать.
 
 	\chapter{Логика}
 	\begin{flalign*}
@@ -317,15 +323,15 @@
 	- это область изменения функции.
 
 	\begin{flalign*}
-		\forall y, \ x, \ f \
+		\forall \meta{y}, \ \meta{x}, \ f \
 		\left(
 		y = f(x)
 		\Leftrightarrow
 		\left\{
 		\begin{aligned}
-			&y - \text{функция (зависимая переменная)}. \\
-			&x - \text{аргумент (независимая переменная)}. \\
-			&f - \text{закон соответствия (функция)}. \\
+			&\meta{y} - \text{функция (зависимая переменная)}. \\
+			&\meta{x} - \text{аргумент (независимая переменная)}. \\
+			&f - \text{функция (закон соответствия)}. \\
 			&D(f) - \text{область определения функции.} \\
 			&x \in D(f) \\
 			&E(f) - \text{область значений функции.} \\
@@ -351,7 +357,7 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall x, \ f \
+		\forall f, \ x \
 		(
 		f(x) = 0
 		\Leftrightarrow
@@ -362,6 +368,7 @@
 	\begin{flalign*}
 		\forall f \
 		\left(
+		\forall x \
 		\left\{
 		\begin{aligned}
 			&f(-x) = f(x) \\
@@ -382,6 +389,7 @@
 	\begin{flalign*}
 		\forall f \
 		\left(
+		\forall x \
 		\left\{
 		\begin{aligned}
 			&f(-x) = -f(x) \\
@@ -480,7 +488,7 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall A, \ f \
+		\forall f, \ A \
 		\left(
 		\left[
 		\begin{aligned}
@@ -499,7 +507,7 @@
 		\exists A \ \forall x \
 		\left\{
 		\begin{aligned}
-			&\text{область изменения} \ x = A \\
+			&x \in A \\
 			&x_0 \in A \\
 			&f(x_0) \leq f(x)
 		\end{aligned}
@@ -515,7 +523,7 @@
 		\exists A \ \forall x \
 		\left\{
 		\begin{aligned}
-			&\text{область изменения} \ x = A \\
+			&x \in A \\
 			&x_0 \in A \\
 			&f(x_0) \geq f(x)
 		\end{aligned}
@@ -526,7 +534,7 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall x, \ f \
+		\forall f, \ x \
 		\left(
 		\left[
 		\begin{aligned}
@@ -556,12 +564,12 @@
 	\end{enumerate}
 
 	\begin{flalign*}
-		\forall y, \ f, \ g \
+		\forall \meta{y}, \ f, \ g \
 		(
 		\forall x \
 		y = f(g(x))
 		\Leftrightarrow
-		y - \text{сложная функция}.
+		\meta{y} - \text{сложная функция}.
 		)
 	\end{flalign*}
 
@@ -590,18 +598,25 @@
 
 	\textbf{Основные элементарные функции:}
 	\begin{enumerate}
-		\item Степенные.
+		\item
 		\begin{flalign*}
+		\forall \meta{x}, \ f, \ a \
+		\left(
 		\left\{
 		\begin{aligned}
-			&f(x) = x^k \\
-			&k \in R
+			&f(x) = x^a \\
+			&a \in R
 		\end{aligned}
 		\right.
+		\Leftrightarrow
+		f - \text{степенная функция}.
+		\right)
 		\end{flalign*}
 
-		\item Показательные.
+		\item
 		\begin{flalign*}
+		\forall \meta{x}, \ f, \ a \
+		\left(
 		\left\{
 		\begin{aligned}
 			&f(x) = a^x \\
@@ -610,10 +625,15 @@
 			&a \neq 1
 		\end{aligned}
 		\right.
+		\Leftrightarrow
+		f - \text{показательная функция}.
+		\right)
 		\end{flalign*}
 
-		\item Логарифмические.
+		\item
 		\begin{flalign*}
+		\forall \meta{x}, \ f, \ a \
+		\left(
 		\left\{
 		\begin{aligned}
 			&f(x) = \log_a^x \\
@@ -622,10 +642,15 @@
 			&a \neq 1
 		\end{aligned}
 		\right.
+		\Leftrightarrow
+		f - \text{логарифмическая функция}.
+		\right)
 		\end{flalign*}
 
-		\item Тригонометрические.
+		\item
 		\begin{flalign*}
+		\forall \meta{x}, \ f \
+		\left(
 		\left[
 		\begin{aligned}
 			&f(x) = \sin x \\
@@ -634,25 +659,35 @@
 			&f(x) = \cot x
 		\end{aligned}
 		\right.
+		\Leftrightarrow
+		f - \text{тригонометрическая функция}.
+		\right)
 		\end{flalign*}
 
-		\item Обратные тригонометрические функции.
+		\item
 		\begin{flalign*}
+		\forall \meta{x}, \ f \
+		\left(
 		\left[
 		\begin{aligned}
-			f(x) = \arcsin x \\
-			f(x) = \arccos x \\
-			f(x) = \arctan x \\
-			f(x) = \operatorname{arccot} x
+			&f(x) = \arcsin x \\
+			&f(x) = \arccos x \\
+			&f(x) = \arctan x \\
+			&f(x) = \operatorname{arccot} x
 		\end{aligned}
 		\right.
+		\Leftrightarrow
+		f - \text{обратная тригонометрическая функция}.
+		\right)
 		\end{flalign*}
 	\end{enumerate}
 
 	\begin{flalign*}
-		\forall y, \ P_n, \ n, \
+		\begin{aligned}
+			&\forall \meta{y}, \ \meta{x}, \ P_i, \ n, \\
+			&a_0, \ a_1, \ \ldots \ , \ a_n
+		\end{aligned} \
 		\left(
-		\forall x \
 		\left\{
 		\begin{aligned}
 			&y = P_n(x) = \sum_{i = 0}^n a_ix^{n-i} \\
@@ -661,14 +696,14 @@
 		\right.
 		\Leftrightarrow
 		\begin{aligned}
-			&y - \text{целая рациональная функция} \\
-			&\text{(многочлен от переменной} \ x \text{) (ЦРФ) степени} \ n.
+			&\meta{y} - \text{целая рациональная функция} \\
+			&\text{(многочлен от переменной} \ \meta{x} \text{) (ЦРФ) степени} \ n.
 		\end{aligned}
 		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall y, \ f, \ x, \ a \
+		\forall \meta{y}, \ \meta{x}, \ f, \ a \
 		\left(
 		\left\{
 		\begin{aligned}
@@ -679,17 +714,16 @@
 		\Leftrightarrow
 		\left\{
 		\begin{aligned}
-			&y \ \text{прямо пропорционально} \ x. \\
-			&\text{между} \ y \ \text{и} \ x \ \text{прямо пропорциональная зависимость}.
+			&\meta{y} \ \text{прямо пропорционально} \ \meta{x}. \\
+			&\text{между} \ \meta{y} \ \text{и} \ \meta{x} \ \text{прямо пропорциональная зависимость}.
 		\end{aligned}
 		\right.
 		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall y, \ f, \ a, \ b \
+		\forall \meta{y}, \ \meta{x}, \ f, \ a, \ b \
 		\left(
-		\forall x \
 		\left\{
 		\begin{aligned}
 			&y = f(x) = ax + b \\
@@ -697,49 +731,69 @@
 		\end{aligned}
 		\right.
 		\Leftrightarrow
+		\meta{y} - \text{линейная ЦРФ (линейная функция)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{y}, \ \meta{x}, \ f, \ a, \ b \
+		\left(
+		\left\{
 		\begin{aligned}
-			&y - \text{линейная ЦРФ (линейная функция)}. \\
+			&y = f(x) = ax^2 + bx + c \\
+			&a \neq 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&\meta{y} - \text{квадратичная ЦРФ} \\
+			&\text{(квадратный (квадратичный) трёхчлен)}.
 		\end{aligned}
 		\right)
 	\end{flalign*}
 
-	\textbf{Квадратичная ЦРФ (квадратный (квадратичный) трёхчлен):}
 	\begin{flalign*}
-		y = ax^2 + bx + c
+		\forall \meta{y}, \ \meta{x}, \ f, \ a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&y = f(x) = \frac{a}{x} \\
+			&a \neq 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&\meta{y} \ \text{обратно пропорционально} \ \meta{x}. \\
+			&\text{между} \ \meta{y} \ \text{и} \ \meta{x} \ \text{обратно пропорциональная зависимость}.
+		\end{aligned}
+		\right.
+		\right)
 	\end{flalign*}
-	\begin{math}
-		a \neq 0
-	\end{math}
 
-	y обратно пропорционально x и между x и y обратно пропорциональная зависимость, если
-	\begin{math}
-		y = \frac{a}{x}
-	\end{math}
-	, при
-	\begin{math}
-		a \neq 0
-	\end{math}
-	.
-
-	\textbf{Дробно-рациональная функция (ДРФ):}
 	\begin{flalign*}
+		\forall \meta{y}, \ x \
+		\left(
 		y = \frac{P_n(x)}{Q_m(x)}
+		\Leftrightarrow
+		\meta{y} - \text{дробно-рациональная функция (ДРФ)}.
+		\right)
 	\end{flalign*}
-	\begin{math}
-		P_n(x) \text{ - закон соответствия ЦРФ.}
-		\\
-		Q_m(x) \text{ - закон соответствия ЦРФ.}
-	\end{math}
 
-	\textbf{Дробно-линейная функция:}
 	\begin{flalign*}
-		y = \frac{ax + b}{cx + d} = \frac{a}{c} + \frac{\frac{bc - ad}{c^2}}{x + \frac{d}{c}}
+		\forall \meta{y}, \ \meta{x}, \ a, \ b, \ c, \ d \
+		\left(
+		\left\{
+		\begin{aligned}
+			&y = f(x) = \frac{ax + b}{cx + d} = \frac{a}{c} + \frac{\frac{bc - ad}{c^2}}{x + \frac{d}{c}} \\
+			&c \neq 0 \\
+			&ad - bc \neq 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\meta{y} - \text{дробно-линейная функция}.
+		\right)
 	\end{flalign*}
-	\begin{math}
-		c \neq 0
-		\\
-		ad - bc \neq 0
-	\end{math}
 
 	\textbf{Алгебраическая иррациональная функция} - это
 	функция, закон соответствия которой содержит
