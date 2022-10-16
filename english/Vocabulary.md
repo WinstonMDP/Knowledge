@@ -10,6 +10,7 @@
 - rumour - слух.
 
 **S:**
+- self-confidence - самоуверенность.
 - self-control - самоконтроль.
 - self-defence - самозащита.
 - self-development - саморазвитие.
