@@ -1,6 +1,18 @@
 # Vocabulary
 ## <a name = "Noun">Noun</a>
+**A:**
+- agility - ловкость.
+
+**С:**
+- Calm - спокойствие.
+- Coordination - координация.
+- Courtesy - вежливость.
+
+**F:**
+- flexibility - гибкость-подвижность.
+
 **L:**
+- leaflet - листовка.
 - loan - кредит.
 
 **P:**
@@ -17,6 +29,12 @@
 - self-discipline - самодисциплина.
 - self-respect - самоуважение.
 - suggestion - предложение-совет.
+
+**T:**
+- tolerance - толерантность.
+
+**W:**
+- willpower - силу воли.
 
 ## <a name = "Verb">Verb</a>
 **A:**
@@ -75,6 +93,7 @@
   - go through - пройти через (испытания)\изучить.
   - go up - подниматься\взорваться.
   - go with - подходить\сопровождать\быть в отношениях.
+- guide - руководить.
 
 **S:**
 - say
@@ -94,6 +113,10 @@
 - tell
   - tell somebody - пересказать, передать смысл чего-то длинного-объёмного кому-то.
   - tell something from something - отличить одно от другого.
+
+## <a name = "Adjectives">Adjectives</a>
+**I:**
+- innocent - невинный.
 
 ## Stable phrases
 - to say hello - поздороваться.
