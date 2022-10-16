@@ -7,10 +7,13 @@
 \usepackage{parskip}
 \usepackage[fleqn]{amsmath}
 \usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 
 \setlength{\parskip}{0.03\textheight}
 
 \newcommand{\meta}[1]{\text{<}#1\text{>}}
+\newcommand{\sequence}[1]{\left\{#1\right\}}
 
 \title{Математика}
 \date{\today}
@@ -305,6 +308,414 @@
 	множество значений, принимаемых переменной
 	величиной.
 
+	\chapter{Последовательности}
+	\begin{flalign*}
+		\forall \sequence{x_n}
+		\left(
+		\forall k, \ l \
+		(k < l \longrightarrow x_k < x_l)
+		\Leftrightarrow
+		\sequence{x_n} - \text{возрастающая последовательность}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}
+		\left(
+		\forall k, \ l \
+		(k < l \longrightarrow x_k \geq x_l)
+		\Leftrightarrow
+		\sequence{x_n} - \text{невозрастающая последовательность}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}
+		\left(
+		\forall k, \ l \
+		(k < l \longrightarrow x_k > x_l)
+		\Leftrightarrow
+		\sequence{x_n} - \text{убывающая последовательность}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}
+		\left(
+		\forall k, \ l \
+		(k < l \longrightarrow x_k \leq x_l)
+		\Leftrightarrow
+		\sequence{x_n} - \text{неубывающая последовательность}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ M \
+		(
+		\forall k \
+		\left\lvert x_k \right\rvert \leq M
+		\Leftrightarrow
+		\sequence{x_n} - \text{ограниченная последовательность значением} \ M.
+		)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ M \
+		(
+		\forall k \
+		x_k \leq M
+		\Leftrightarrow
+		\sequence{x_n} - \text{ограниченная сверху последовательность значением} \ M.
+		)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ M \
+		(
+		\forall k \
+		x_k \geq M
+		\Leftrightarrow
+		\sequence{x_n} - \text{ограниченная снизу последовательность значением} \ M.
+		)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a \
+		\left(
+		\sequence{x_n} \rightrightarrows a
+		\Leftrightarrow
+		\sequence{x_n} - \text{последовательность, стабилизирующаяся к} \ a.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a \
+		\left(
+		\exists k \ \forall m, \ l \
+		\left\{
+		\begin{aligned}
+			&x_m \in \mathbb{Z} \\
+			&l > k \\
+			&x_l = a
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\sequence{x_n} \rightrightarrows a
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ M \
+		\left(
+		\forall m \
+		\left\{
+		\begin{aligned}
+			&x_m \in \mathbb{Z} \\
+			&\sequence{x_n} - \text{неубывающая последовательность}. \\
+			&\sequence{x_n} - \text{ограниченная сверху последовательность значением} \ M.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\exists a \
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{Z} \\
+			&a \leq M \\
+			&\sequence{x_n} \rightrightarrows a
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ M, \ a \
+		\left(
+		\forall m \
+		\left\{
+		\begin{aligned}
+			&x_m \in \mathbb{R} \\
+			&\sequence{x_n} - \text{ограниченная сверху последовательность значением} \ M. \\
+			&\text{каждая соответствующая цифра} \ \sequence{x_n} \\
+			&\rightrightarrows \\
+			&\text{каждая соответствующая цифра} \ a \\
+		\end{aligned}
+		\longrightarrow
+		\sequence{x_n} \rightrightarrows a
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a, \ b \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&b \in \mathbb{R} \\
+			&\sequence{x_n} = \sequence{a^{(n)} + b^{(n)}}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\sequence{x_n} \rightrightarrows a + b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a, \ b \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&b \in \mathbb{R} \\
+			&a > b > 0 \\
+			&\sequence{x_n} = \sequence{a^{(n)} - (b^{(n)} + 10^{-n})}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\sequence{x_n} \rightrightarrows a - b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a, \ b \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&b \in \mathbb{R} \\
+			&\sequence{x_n} = \sequence{{a^{(n)}b^{(n)}}^{(n)}}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\sequence{x_n} \rightrightarrows ab
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&b \in \mathbb{R} \\
+			&\sequence{x_n} = \sequence{\left(\frac{a^{(n)}}{b^{(n)} + 10^{-n}}\right)^{(n)}}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\sequence{x_n} \rightrightarrows \frac{a}{b}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a \
+		\left(
+		\lim_{n \longrightarrow \infty} x_n = a
+		\Leftrightarrow
+		\sequence{x_n} \ \text{стремится к} \ a \ \text{как к своему пределу}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a \
+		\left(
+		\lim_{n \longrightarrow \infty} x_n = a
+		\Leftrightarrow
+		\forall e \ \exists l \ \forall k \
+		\left\{
+		\begin{aligned}
+			&\left\lvert a - x_k \right\rvert < e \\
+			&k > l
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ M \
+		\left(
+		\forall m \
+		\left\{
+		\begin{aligned}
+			&x_m \in \mathbb{R} \\
+			&x_m > 0 \\
+			&\sequence{x_n} - \text{неубывающая последовательность}. \\
+			&\sequence{x_n} - \text{ограниченная сверху} \\
+			&\text{последовательность значением} \ M.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\exists a \
+		\left\{
+		\begin{aligned}
+			&a \leq M \\
+			&\lim_{n \longrightarrow \infty} x_n = a \\
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a, \ m \
+		\left\{
+		\begin{aligned}
+			&x_m \in \mathbb{R} \\
+			&\sequence{x_n} = a^{(n)} \\
+			&\lim_{n \longrightarrow \infty} x_n = a
+		\end{aligned}
+		\right.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}
+		\left(
+		\exists a \
+		\lim_{n \longrightarrow \infty} x_n = a
+		\longrightarrow
+		\sequence{x_n} - \text{ограниченная последовательность}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a \
+		\left(
+		\lim_{n \longrightarrow \infty} x_n = a
+		\longrightarrow
+		\exists l \ \forall k \
+		\left[
+		\begin{aligned}
+			&k > l \\
+			&\left\{
+			\begin{aligned}
+				&a > 0 \\
+				&x_k > \frac{a}{2}
+			\end{aligned}
+			\right. \\
+			&\left\{
+			\begin{aligned}
+				&a < 0 \\
+				&x_k < \frac{a}{2}
+			\end{aligned}
+			\right.
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ \sequence{y_n}, \ a, \ b \
+		\left(
+		\forall k \
+		\left\{
+		\begin{aligned}
+			&\lim_{n \longrightarrow \infty} x_n = a \\
+			&\lim_{n \longrightarrow \infty} y_n = b \\
+			&x_k \leq y_k
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a \leq b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ \sequence{y_n}, \ \sequence{z_n}, \ a \
+		\left(
+		\forall k \
+		\left\{
+		\begin{aligned}
+			&\lim_{n \longrightarrow \infty} x_n = a \\
+			&\lim_{n \longrightarrow \infty} z_n = a \\
+			&x_k \leq y_k \leq z_k
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\lim_{n \longrightarrow \infty} y_n = a
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ a \
+		\left(
+		\lim_{n \longrightarrow \infty} x_n = a
+		\longrightarrow
+		\lim_{n \longrightarrow \infty} \left\lvert x_n \right\rvert = \left\lvert a \right\rvert
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&b \in \mathbb{R} \\
+			&\left\lvert a + b \right\rvert \leq \left\lvert a \right\rvert  + \left\lvert b \right\rvert
+		\end{aligned}
+		\right.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&b \in \mathbb{R} \\
+			&\left\lvert a - b \right\rvert \geq \left\lvert \left\lvert a \right\rvert - \left\lvert b \right\rvert  \right\rvert
+		\end{aligned}
+		\right.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ M \
+		\left(
+		M = \sup A
+		\Leftrightarrow
+		M - \text{точная верхняя граница} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ M \
+		\left(
+		M = \inf A
+		\Leftrightarrow
+		M - \text{точная нижняя граница} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ M \
+		\left(
+		\forall x, \ M' \ \exists y \
+		\left\{
+		\begin{aligned}
+			&x \in A \\
+			&x \leq M \\
+			&y \in A \\
+			&M' < y \leq M
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		M = \sup A
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ M \
+		\left(
+		\forall x, \ M' \ \exists y \
+		\left\{
+		\begin{aligned}
+			&x \in A \\
+			&x \geq M \\
+			&y \in A \\
+			&M' > y \geq M
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		M = \inf A
+		\right)
+	\end{flalign*}
+
 	\chapter{Функции}
 	\textbf{Функция}
 	\begin{math}
@@ -321,6 +732,35 @@
 
 	\textbf{Область значений функции, задаваемой законом соответствия}
 	- это область изменения функции.
+
+	\begin{flalign*}
+		\forall \meta{x}, \ f \
+		\left(
+		f(x)
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&\meta{x} - \text{аргумент (независимая переменная)} \ f. \\
+			&f - \text{функция от} \ \meta{x}. \\
+			&x \in D(f).
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{y}, \ f, \ x \
+		\left(
+		y = f(x)
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&\meta{y} - \text{функция (зависимая переменная)} \ f. \\
+			&y \in E(f)
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
 
 	\begin{flalign*}
 		\forall \meta{y}, \ \meta{x}, \ f \
@@ -851,7 +1291,7 @@
 
 	\textbf{Делитель a} - это число, на которое
 	a делится без остатка.
-	
+
 	\textbf{Кратное a} - это всякое число, которое
 	делится на a без остатка.
 
@@ -891,7 +1331,7 @@
 	\begin{flalign*}
 		( a, b )
 	\end{flalign*}
-	
+
 	\textbf{Наименьшее общее кратное (НОК) a и b:}
 	\begin{flalign*}
 		[  a, b ] 
@@ -1062,7 +1502,7 @@
 
 	Множество действительных чисел непрерывно.
 
-	Всякое деятичное число
+	Всякое десятичное число
 	определяет действительное число
 	взаимно однозначно.
 
@@ -1100,9 +1540,9 @@
 
 	\textbf{Корень n-ой степени из числа a} - это
 	число, n-ая степень которого равна a. (
-		\begin{math}
-			\sqrt[n]{a} 
-		\end{math}
+	\begin{math}
+		\sqrt[n]{a}
+	\end{math}
 	)
 
 	\textbf{Извлечение корня степени из a} - это
@@ -1115,23 +1555,23 @@
 
 	\begin{flalign*}
 		\left[
-			\begin{aligned}
-			&\left\{
-				\begin{aligned}
-					&\sqrt[n]{a^n} = a
-					\\
-					&n \text{ - нечётное.}
-				\end{aligned}
-			\right.
+		\begin{aligned}
+		&\left\{
+		\begin{aligned}
+			&\sqrt[n]{a^n} = a
 			\\
-			&\left\{
-				\begin{aligned}
-					&\sqrt[n]{a^n} = \left\lvert a\right\rvert  
-					\\
-					&n \text{ - чётное.}
-				\end{aligned}
-			\right.
-			\end{aligned}
+			&n \text{ - нечётное.}
+		\end{aligned}
+		\right.
+		\\
+		&\left\{
+		\begin{aligned}
+			&\sqrt[n]{a^n} = \left\lvert a\right\rvert
+			\\
+			&n \text{ - чётное.}
+		\end{aligned}
+		\right.
+		\end{aligned}
 		\right.
 	\end{flalign*}
 
@@ -1146,24 +1586,24 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\sqrt[b]{x^a} = x^\frac{a}{b}  
+		\sqrt[b]{x^a} = x^\frac{a}{b}
 	\end{flalign*}
 
 	\textbf{Логарифм числа N по основанию a} - это
 	показатель степени, в которую
 	нужно возвести a, чтобы получить N.
-	
+
 	\begin{flalign*}
 		\left\{
-			\begin{aligned}
-				&a^{\log_a N} = N
-				\\
-				&N > 0
-				\\
-				&a > 0
-				\\
-				&a \neq 1
-			\end{aligned}
+		\begin{aligned}
+			&a^{\log_a N} = N
+			\\
+			&N > 0
+			\\
+			&a > 0
+			\\
+			&a \neq 1
+		\end{aligned}
 		\right.
 	\end{flalign*}
 
@@ -1195,7 +1635,7 @@
 
 	\textbf{Мантиса} - это
 	дробная часть десятичного логарифма.
-	
+
 	\textbf{Открытый интервал (a; b)} - это
 	множество действительных чисел x, удовлетворяющих
 	неравествам
@@ -1280,7 +1720,7 @@
 		x \in R
 	\end{math}
 	соответственно.
-	
+
 	\section{Комплексные числа (C)}
 	\begin{flalign*}
 		R \in C
