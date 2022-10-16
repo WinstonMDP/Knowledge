@@ -10,6 +10,11 @@
 - rumour - слух.
 
 **S:**
+- self-control - самоконтроль.
+- self-defence - самозащита.
+- self-development - саморазвитие.
+- self-discipline - самодисциплина.
+- self-respect - самоуважение.
 - suggestion - предложение-совет.
 
 ## <a name = "Verb">Verb</a>
