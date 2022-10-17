@@ -717,34 +717,76 @@
 	\end{flalign*}
 
 	\chapter{Функции}
-	\textbf{Функция}
-	\begin{math}
-		\mathbf{y = f(x)}
-	\end{math}
-	- это переменная y,
-	при которой каждому значению x
-	из области изменения x поставлено
-	в соответствие по определённому закону
-	значение y.
-
-	\textbf{Область определения функции, задаваемой законом соответствия}
-	- это область изменения независимой переменной функции.
-
-	\textbf{Область значений функции, задаваемой законом соответствия}
-	- это область изменения функции.
+	\begin{flalign*}
+		\forall X, \ Y \
+		X \times Y - \text{декартово произведение} \ X \ \text{и} \ Y.
+	\end{flalign*}
 
 	\begin{flalign*}
-		\forall \meta{x}, \ f \
+		\forall X, \ Y \
+		\left(
+		X \times Y
+		\Leftrightarrow
+		\forall \meta{x}, \ \meta{y} \
+		\left\{
+		\begin{aligned}
+			&x \in X \\
+			&y \in Y \\
+			&X \times Y = \sequence{(x, y)}
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{x}, \ \meta{y}, \ f, \ X, \ Y \
+		\left(
+		\forall z, \ w \
+		\left\{
+		\begin{aligned}
+			&X = \sequence{x} \\
+			&Y = \sequence{y} \\
+			&z \in X \\
+			&w \in Y \\
+			&x = z \longrightarrow y = w \\
+			&f = X \times Y
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		y = f(x)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		D(f) - \text{область определения} \ f.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		E(f) - \text{область значений} \ f.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{x}, \ f, \ X \
 		\left(
 		f(x)
 		\Leftrightarrow
 		\left\{
 		\begin{aligned}
 			&\meta{x} - \text{аргумент (независимая переменная)} \ f. \\
-			&f - \text{функция от} \ \meta{x}. \\
-			&x \in D(f).
+			&f - \text{функция от} \ \meta{x}.
 		\end{aligned}
 		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{x}, \ f, \ X \
+		\left(
+		f(x)
+		\Leftrightarrow
+		X = \sequence{x} \longrightarrow X = D(f)
 		\right)
 	\end{flalign*}
 
@@ -753,12 +795,16 @@
 		\left(
 		y = f(x)
 		\Leftrightarrow
-		\left\{
-		\begin{aligned}
-			&\meta{y} - \text{функция (зависимая переменная)} \ f. \\
-			&y \in E(f)
-		\end{aligned}
-		\right.
+		\meta{y} - \text{функция (зависимая переменная)} \ f.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{y}, \ f, \ Y, \ x \
+		\left(
+		y = f(x)
+		\Leftrightarrow
+		Y = \sequence{y} \longrightarrow Y = E(f)
 		\right)
 	\end{flalign*}
 
@@ -769,17 +815,191 @@
 		\Leftrightarrow
 		\left\{
 		\begin{aligned}
-			&\meta{y} - \text{функция (зависимая переменная)}. \\
-			&\meta{x} - \text{аргумент (независимая переменная)}. \\
-			&f - \text{функция (закон соответствия)}. \\
-			&D(f) - \text{область определения функции.} \\
-			&x \in D(f) \\
-			&E(f) - \text{область значений функции.} \\
-			&y \in E(f)
+			&y - \text{образ} \ x. \\
+			&x - \text{прообраз} \ y.
 		\end{aligned}
 		\right.
 		\right)
 	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ X, \ Y \
+		\left(
+		f: X \longrightarrow Y
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&X = D(f) \\
+			&Y = E(f)
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ X, \ Y \
+		\left(
+		f: X \longrightarrow Y
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&Y - \text{образ} \ X. \\
+			&X - \text{прообраз} \ Y.
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ A \
+		\left(
+		\forall y
+		\left\{
+		\begin{aligned}
+			&A = \sequence{y} \\
+			&y \in E(f)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{сюръекция (накрытие)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\forall x, \ y \
+		(f(x) = f(y) \longrightarrow x = y)
+		\Leftrightarrow
+		f - \text{инъекция (вложение)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{сюръекция (накрытие)}. \\
+			&f - \text{инъекция (вложение)}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{биекция (взаимно-однозначное соответствие)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		\left(
+		A \thicksim B
+		\Leftrightarrow
+		A \ \text{и} \ B - \text{равномощные}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ A, \ B \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f: A \longrightarrow B \\
+			&f - \text{биекция}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A \thicksim B
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A A \thicksim A
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B, \ C \
+		\left(
+		A \thicksim B
+		\Leftrightarrow
+		B \thicksim A
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A \thicksim B \\
+			&B \thicksim C
+		\end{aligned}
+		\right.
+		\longrightarrow
+		A \thicksim C
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		A \thicksim \mathbb{N}
+		\Leftrightarrow
+		A - \text{счётное множество}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		\left(
+		\forall a, \ b \
+		\left\{
+		\begin{aligned}
+			&a \in A \\
+			&b \in B \\
+			&a \leq b \\
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A \ \text{лежит левее} \ B.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B, \ c \
+		\left(
+		\forall a, \ b \
+		\left\{
+		\begin{aligned}
+			&a \in A \\
+			&b \in B \\
+			&c \geq a \\
+			&c \leq b
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		c \ \text{разделяет} \ A \ \text{и} \ B.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\forall B, \ C \ \exists a \
+		\left\{
+		\begin{aligned}
+			&B \subset A \\
+			&C \subset A \\
+			&a \in A \\
+			&a \ \text{разделяет} \ B \ \text{и} \ C.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A - \text{полное}.
+		\right)
+	\end{flalign*}
+
+	Если разделяющих элементов в полном множестве больше одного,
+	то их бесконечно много.
 
 	\begin{flalign*}
 		\forall f, \ g \
@@ -1334,7 +1554,7 @@
 
 	\textbf{Наименьшее общее кратное (НОК) a и b:}
 	\begin{flalign*}
-		[  a, b ] 
+		[  a, b ]
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -1366,7 +1586,7 @@
 		a(-b) = -ab
 	\end{flalign*}
 
-	
+
 	\begin{flalign*}
 		\left[
 			\begin{aligned}
@@ -1434,7 +1654,7 @@
 	\textbf{Целая часть числа} - это наибольшее
 	целое число, не превосходящее данного (
 	\begin{math}
-		\left[x\right] 	
+		\left[ x \right] 
 	\end{math}
 	)
 	.
@@ -1501,6 +1721,45 @@
 	Множество действительных чисел упорядочено.
 
 	Множество действительных чисел непрерывно.
+
+	\begin{flalign*}
+		\mathbb{R} - \text{полное}.
+	\end{flalign*}
+
+	\textbf{Аксиома Архимеда:}
+	\begin{flalign*}
+		\forall a \exists n \
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&n \in \mathbb{N} \\
+			&na \geq 1
+		\end{aligned}
+		\right.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall x, \ y \
+		\left(
+		\left\{
+		\begin{aligned}
+			&x < y \\
+			&x \in \mathbb{R} \\
+			&y \in \mathbb{R}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\exists z, \ w \
+		\left\{
+		\begin{aligned}
+			&z \in \mathbb{Q} \\
+			&w \in \mathbb{I} \\
+			&x < z < y \\
+			&x < w < y
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
 
 	Всякое десятичное число
 	определяет действительное число
