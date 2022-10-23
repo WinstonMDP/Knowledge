@@ -310,6 +310,35 @@
 
 	\chapter{Последовательности}
 	\begin{flalign*}
+		\forall f \
+		\left(
+		\exists A \
+		f: \mathbb{N} \longrightarrow A
+		\Leftrightarrow
+		f - \text{последовательность}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{n}, \meta{x_n}, \ f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{последовательность}. \\
+			&f(n) = x_n
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\sequence{x_n}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{x_n} \
+		\sequence{x_n} - \text{последовательность}.
+	\end{flalign*}
+
+	\begin{flalign*}
 		\forall \sequence{x_n}
 		\left(
 		\forall k, \ l \
@@ -446,6 +475,20 @@
 	\end{flalign*}
 
 	\begin{flalign*}
+		\forall \meta{n}, \meta{x_n}, \ a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&\sequence{x_n} \\
+			&x_n = a^{(n)}
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\sequence{x_n} - \text{последовательность десятичных приближений} \ a.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
 		\forall \sequence{x_n}, \ a, \ b \
 		\left(
 		\left\{
@@ -555,14 +598,18 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall \sequence{x_n}, \ a, \ m \
+		\forall \sequence{x_n}, \ a \
+		\left(
+		\forall m \
 		\left\{
 		\begin{aligned}
 			&x_m \in \mathbb{R} \\
-			&\sequence{x_n} = a^{(n)} \\
-			&\lim_{n \longrightarrow \infty} x_n = a
+			&\sequence{x_n} = \sequence{a^{(n)}}
 		\end{aligned}
 		\right.
+		\longrightarrow
+		\lim_{n \longrightarrow \infty} x_n = a
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -644,24 +691,30 @@
 
 	\begin{flalign*}
 		\forall a, \ b \
+		\left(
 		\left\{
 		\begin{aligned}
 			&a \in \mathbb{R} \\
 			&b \in \mathbb{R} \\
-			&\left\lvert a + b \right\rvert \leq \left\lvert a \right\rvert  + \left\lvert b \right\rvert
 		\end{aligned}
+		\longrightarrow
+		\left\lvert a + b \right\rvert \leq \left\lvert a \right\rvert  + \left\lvert b \right\rvert
 		\right.
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
 		\forall a, \ b \
+		\left(
 		\left\{
 		\begin{aligned}
 			&a \in \mathbb{R} \\
 			&b \in \mathbb{R} \\
-			&\left\lvert a - b \right\rvert \geq \left\lvert \left\lvert a \right\rvert - \left\lvert b \right\rvert  \right\rvert
 		\end{aligned}
 		\right.
+		\longrightarrow
+		\left\lvert a - b \right\rvert \geq \left\lvert \left\lvert a \right\rvert - \left\lvert b \right\rvert  \right\rvert
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -713,6 +766,94 @@
 		\right.
 		\Leftrightarrow
 		M = \inf A
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\forall B, \ C \
+		\left\{
+		\begin{aligned}
+			&B \in A \\
+			&C \in A \\
+			&\left[
+			\begin{aligned}
+				&B \subset C \\
+				&C \subset B
+			\end{aligned}
+			\right.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A - \text{система вложенных отрезков}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{A_n} \
+		\left(
+		\forall i, \ j \
+		\left\{
+		\begin{aligned}
+			&i < j \\
+			&A_j \subset A_i
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\sequence{A_n} - \text{послeдовательность вложенных отрезков}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{A_n}
+		\left(
+		\forall e \ \exists i \
+		\left\{
+		\begin{aligned}
+			&e \in \mathbb{R} \\
+			&e > 0 \\
+			&\sequence{A_n} - \text{последовательность} \\
+			&\text{вложенных отрезков}. \\
+			&\left\lvert A_i \right\rvert < e
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&\sequence{A_n} - \text{стягивающаяся последовательность}\\
+			&\text{вложенных отрезков}.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		A - \text{система вложенных отрезков}.
+		\longrightarrow
+		\exists x \ \forall B \
+		\left\{
+		\begin{aligned}
+			&B \in A \\
+			&x \in B
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\textbf{Принцип полноты Кантора:}
+	\begin{flalign*}
+		\forall \sequence{A_n} \
+		\left(
+		\sequence{A_n} - \text{стягивающаяся послeдовательность вложенных отрезков}.
+		\longrightarrow
+		\exists x \ \forall i \
+		\left\{
+		\begin{aligned}
+			&x \in A_i \\
+			&x \ \text{единственен}.
+		\end{aligned}
+		\right.
 		\right)
 	\end{flalign*}
 
@@ -1563,7 +1704,7 @@
 
 	\section{Целые числа (Z)}
 	\begin{flalign*}
-		N \in Z
+		\mathbb{N} \in \mathbb{Z}
 	\end{flalign*}
 
 	\textbf{Целое алгебраическое выражение} - это
@@ -1611,7 +1752,7 @@
 
 	\section{Рациональные числа (Q)}
 	\begin{flalign*}
-		Z \in Q
+		\mathbb{Z} \subset \mathbb{Q}
 	\end{flalign*}
 
 	\textbf{Рациональное число} - это число,
@@ -1630,6 +1771,10 @@
 	.
 
 	Рациональные числа образуют поле.
+
+	\begin{flalign*}
+		\mathbb{Q} \ \text{всюду плотно в} \ \mathbb{R}.
+	\end{flalign*}
 
 	\textbf{Арифметические (рациональные) действия:}
 	сложение, вычитание, умножение, деление.
@@ -1654,7 +1799,7 @@
 	\textbf{Целая часть числа} - это наибольшее
 	целое число, не превосходящее данного (
 	\begin{math}
-		\left[ x \right] 
+		\left[ x \right]
 	\end{math}
 	)
 	.
@@ -1710,10 +1855,10 @@
 
 	\section{Действительные числа (R)}
 	\begin{flalign*}
-		Q \in R
+		Q \subset R
 	\end{flalign*}
 	\begin{flalign*}
-		I \in R
+		I \subset R
 	\end{flalign*}
 
 	Действительные числа образуют поле.
@@ -1895,7 +2040,7 @@
 	\textbf{Мантиса} - это
 	дробная часть десятичного логарифма.
 
-	\textbf{Открытый интервал (a; b)} - это
+	\textbf{Открытый интервал (интервал) (a; b)} - это
 	множество действительных чисел x, удовлетворяющих
 	неравествам
 	\begin{math}
@@ -1917,7 +2062,12 @@
 	\end{math}
 	.
 
-	\textbf{Замкнутый интервал [a; b]} - это
+	\begin{flalign*}
+		\forall a, \ e \
+		(a - e; a) \cup (a; a + e) - \text{проколотая} \ e\text{-окрестность точки} \ a.
+	\end{flalign*}
+
+	\textbf{Замкнутый интервал (отрезок) [a; b]} - это
 	множество действительных чисел x,
 	удовлетворяющих неравенствам
 	\begin{math}
@@ -1978,11 +2128,58 @@
 	\begin{math}
 		x \in R
 	\end{math}
-	соответственно.
+	соответственно. (
+	\begin{math}
+		\overline{\textbf{\text{конечный интервал}}}
+	\end{math}
+	)
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left\lvert [a; b] \right\rvert - \text{длина отрезка} \ [a; b].
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left\lvert [a; b] \right\rvert = b - a
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ a, \ b \
+		\left(
+		A = [a; b]
+		\longrightarrow
+		\overline{A - \text{счётное множество}.}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\text{Мощность} \ [0; 1] - \text{мощность континуума}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall C, \ B \
+		\left(
+		\left(
+		\forall A, \ a \
+		\left\{
+		\begin{aligned}
+			&A - \text{интервал}. \\
+			&A \subset B \\
+			&a \in A \\
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a \in C
+		\right)
+		\Leftrightarrow
+		C \ \text{всюду плотно в} \ B.
+		\right)
+	\end{flalign*}
 
 	\section{Комплексные числа (C)}
 	\begin{flalign*}
-		R \in C
+		\mathbb{R} \subset \mathbb{C}
 	\end{flalign*}
 
 	Комплексные числа образуют поле.
@@ -2032,7 +2229,7 @@
 	число, у которого действительная часть
 	равна нулю.
 
-	\textbf{Комплексно сопряжённые числа z и 
+	\textbf{Комплексно сопряжённые числа z и
 	\begin{math}
 		\overline{\textbf{z}}
 	\end{math}
@@ -2104,7 +2301,7 @@
 		\alpha
 	\end{math}
 	однократный (простой).
-	
+
 	Если
 	\begin{math}
 		P_n(z) = (z - \alpha)^k P_{n - k}(z)
@@ -2227,7 +2424,7 @@
 		\forall i \wedge i \in N \wedge i \leq m \wedge \forall j \wedge j \in N \wedge j \leq n \ [A]_{i j} = 0
 	\end{math}
 	.
-	
+
 	\textbf{Единичная матрица (Е):}
 	\begin{flalign*}
 		AE = EA = A
@@ -2262,7 +2459,7 @@
 				\ [A]_{i j} = [B]_{i j}
 			\end{aligned}
 		\right.
-		\longrightarrow 
+		\longrightarrow
 		A = B
 	\end{flalign*}
 
@@ -2297,7 +2494,7 @@
 			(A + B) + C = A + (B + C)
 		\end{flalign*}
 	\end{enumerate}
-	
+
 	\begin{flalign*}
 		\forall i \wedge i \in N \wedge i \leq m \wedge \forall j \wedge j \in N \wedge j \leq n
 		\ [\lambda A]_{i j} = \lambda [A]_{i j}
@@ -2355,7 +2552,7 @@
 			единичную матрицу,
 			где i строку или столбец умножили на эту константу,
 			умножить на матрицу.
-			
+
 			\item Умножить столбец i на константу, отличную от нуля, - это
 			умножить матрицу на единичную матрицу,
 			где i строку или столбец умножили на эту константу.
