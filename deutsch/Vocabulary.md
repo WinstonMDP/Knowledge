@@ -29,6 +29,7 @@
 - Der Brief (die Briefe) - письмо.
 - Das Brot - хлеб.
 - Der Bruder (die Brüder) - брат.
+- Der Bus (die Busse) - автобус.
 - Das Buch (die Bücher) - книга.
 - Die Butter - сливочное масло.
 - Das Brötchen (die Brötchen) - булочка.
@@ -136,6 +137,7 @@
 - Das Salz - соль.
 - Der Schatten (die Schatten) - тень.
 - Die Schokolade - шоколад.
+- Die Schweiz - Швецария.
 - Die Schwester (die Schwestern) - сестра.
 - Der Ski (die Ski) - лыжа.
 - Der Student (die Studenten) - студент.
