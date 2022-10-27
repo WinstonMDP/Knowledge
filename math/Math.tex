@@ -1639,30 +1639,42 @@
 		\end{flalign*}
 	\end{enumerate}
 
-	q является частным и r является остатком при делении а на b,
-	если
-	\begin{math}
-		a = bq + r
-	\end{math}
-	и
-	\begin{math}
-		r < b
-	\end{math}
-	.
-
 	\textbf{Делитель a} - это число, на которое
 	a делится без остатка.
 
 	\textbf{Кратное a} - это всякое число, которое
 	делится на a без остатка.
 
-	\textbf{Простое число} - это число, не имеющее
-	никаких других делителей, кроме
-	единицы и себя. (
-	\begin{math}
-		\overline{\textbf{\text{составное число}}}
-	\end{math}
-	)
+	\begin{flalign*}
+		\forall a \
+		\left(
+		\forall b \
+		\left\{
+		\begin{aligned}
+			&a > 1 \\
+			&b | a
+			\longrightarrow
+			\left[
+			\begin{aligned}
+				&b = \pm 1 \\
+				&b = \pm a
+			\end{aligned}
+			\right.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		a - \text{простое}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a \
+		\left(
+		\overline{a - \text{простое}}.
+		\Leftrightarrow
+		a - \text{составное}.
+		\right)
+	\end{flalign*}
 
 	Простых чисел имеется бесконечное множество.
 
@@ -1695,7 +1707,7 @@
 
 	\textbf{Наименьшее общее кратное (НОК) a и b:}
 	\begin{flalign*}
-		[  a, b ]
+		[ a, b ]
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -1704,7 +1716,7 @@
 
 	\section{Целые числа (Z)}
 	\begin{flalign*}
-		\mathbb{N} \in \mathbb{Z}
+		\mathbb{N} \subset \mathbb{Z}
 	\end{flalign*}
 
 	\textbf{Целое алгебраическое выражение} - это
@@ -1727,27 +1739,161 @@
 		a(-b) = -ab
 	\end{flalign*}
 
+	
 
 	\begin{flalign*}
-		\left[
-			\begin{aligned}
-			&\left\{
-				\begin{aligned}
-				&\left\lvert x \right\rvert = x
-				\\
-				&x \geq 0
-				\end{aligned}
-			\right.
-			\\
-			&\left\{
-				\begin{aligned}
-				&\left\lvert x \right\rvert = -x
-				\\
-				&x < 0
-				\end{aligned}
-			\right.
-			\end{aligned}
+		\forall a, \ b \
+		\left(
+		a | b
+		\Leftrightarrow
+		a \ \text{делит} \ b.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		a | b
+		\Leftrightarrow
+		\exists c \
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{Z} \\
+			&b \in \mathbb{Z} \\
+			&c \in \mathbb{Z} \\
+			&b = ac
+		\end{aligned}
 		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a | a
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a | b \\
+			&b | a
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a = \pm b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a | b \\
+			&b | c
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a | c
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a | b \\
+			&a | c
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a | (b \pm c)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a | b \\
+			&a | (b \pm c)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a | c
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{N} \\
+			&b \in \mathbb{N} \\
+			&b \neq 0
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\exists! c, \ d \
+		\left\{
+		\begin{aligned}
+			&d \in \mathbb{N} \\
+			&c \in \mathbb{N} \\
+			&a = bd + c \\
+			&0 \leq c < \left\lvert b\right\rvert
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c \
+		\left(
+		a \equiv b \ (mod \ c)
+		\Leftrightarrow
+		c | (a - b)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c \
+		\left(
+		a \equiv b \ (mod \ c)
+		\Leftrightarrow
+		a \% c = b \% c
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c, \ d, \ i \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \equiv b \ (mod \ i) \\
+			&c \equiv d \ (mod \ i)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\left\{
+		\begin{aligned}
+			&a + c \equiv b + d \ (mod \ i) \\
+			&ac \equiv bd \ (mod \ i)
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c, \ d \
+		\left(
+		a \equiv b \ (mod \ c)
+		\longrightarrow
+		a^d \equiv b^d \ (mod \ c)
+		\right)
 	\end{flalign*}
 
 	\section{Рациональные числа (Q)}
@@ -1909,6 +2055,34 @@
 	Всякое десятичное число
 	определяет действительное число
 	взаимно однозначно.
+
+	\begin{flalign*}
+		\forall a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&a \geq 0
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\left\lvert a\right\rvert = a
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \in \mathbb{R} \\
+			&a < 0
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\left\lvert a\right\rvert = -a
+		\right)
+	\end{flalign*}
 
 	Многочлен с действительными
 	коэффициентами разлагается в произведение
