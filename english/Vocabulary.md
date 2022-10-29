@@ -4,9 +4,9 @@
 - agility - ловкость.
 
 **С:**
-- Calm - спокойствие.
-- Coordination - координация.
-- Courtesy - вежливость.
+- calm - спокойствие.
+- coordination - координация.
+- courtesy - вежливость.
 
 **F:**
 - flexibility - гибкость-подвижность.
