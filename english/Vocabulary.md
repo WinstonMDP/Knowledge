@@ -167,3 +167,10 @@
 - to be on the same wavelength - быть на одной волне.
 - to get straight to the point - перейти сразу к делу.
 - to have a quick word with somebody - перекинуться с кем-то словами.
+- to be on the goal - быть на высоте.
+- to move the goalposts - менять правила.
+- to take your eyes off the ball - отвлечься.
+- a level playing field - равные условия.
+- a whole new ball game - совсем другое дело.
+- to score an own goal - навредить себе же.
+- to start the ball rolling - начать что-то делать.
