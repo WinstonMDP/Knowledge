@@ -8,8 +8,17 @@
 - coordination - координация.
 - courtesy - вежливость.
 
+**D:**
+- determination - целеустремлённость.
+
+**E:**
+- extremes - крайности.
+
 **F:**
 - flexibility - гибкость-подвижность.
+
+**I:**
+- intensity - напряжённость.
 
 **L:**
 - leaflet - листовка.
@@ -99,6 +108,8 @@
 - say
   - say - сказать что-то околокороткое более менее дословно.
   - say to somebody.
+- set
+  - set apart - отделить.
 - speak
   - speak - поговорить на "вы"; издавать звук; говорить на языке.
   - speak against\in favor of something.
@@ -117,6 +128,9 @@
 ## <a name = "Adjectives">Adjectives</a>
 **I:**
 - innocent - невинный.
+
+**O:**
+- obsessive - одержимый.
 
 ## Stable phrases
 - to say hello - поздороваться.
@@ -174,3 +188,4 @@
 - a whole new ball game - совсем другое дело.
 - to score an own goal - навредить себе же.
 - to start the ball rolling - начать что-то делать.
+- to make sacrifices - приносить жертвы.
