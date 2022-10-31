@@ -4,12 +4,21 @@
 - agility - ловкость.
 
 **С:**
-- Calm - спокойствие.
-- Coordination - координация.
-- Courtesy - вежливость.
+- calm - спокойствие.
+- coordination - координация.
+- courtesy - вежливость.
+
+**D:**
+- determination - целеустремлённость.
+
+**E:**
+- extremes - крайности.
 
 **F:**
 - flexibility - гибкость-подвижность.
+
+**I:**
+- intensity - напряжённость.
 
 **L:**
 - leaflet - листовка.
@@ -99,6 +108,8 @@
 - say
   - say - сказать что-то околокороткое более менее дословно.
   - say to somebody.
+- set
+  - set apart - отделить.
 - speak
   - speak - поговорить на "вы"; издавать звук; говорить на языке.
   - speak against\in favor of something.
@@ -117,6 +128,9 @@
 ## <a name = "Adjectives">Adjectives</a>
 **I:**
 - innocent - невинный.
+
+**O:**
+- obsessive - одержимый.
 
 ## Stable phrases
 - to say hello - поздороваться.
@@ -167,3 +181,11 @@
 - to be on the same wavelength - быть на одной волне.
 - to get straight to the point - перейти сразу к делу.
 - to have a quick word with somebody - перекинуться с кем-то словами.
+- to be on the goal - быть на высоте.
+- to move the goalposts - менять правила.
+- to take your eyes off the ball - отвлечься.
+- a level playing field - равные условия.
+- a whole new ball game - совсем другое дело.
+- to score an own goal - навредить себе же.
+- to start the ball rolling - начать что-то делать.
+- to make sacrifices - приносить жертвы.
