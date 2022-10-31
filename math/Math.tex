@@ -116,7 +116,7 @@
 		\left\{
 		\begin{aligned}
 			&n \in N \\
-			&F(1) \\
+			&F(0) \\
 			&F(n) \longrightarrow F(n + 1)
 		\end{aligned}
 		\right.
@@ -1054,7 +1054,47 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall A A \thicksim A
+		\forall f \
+		\left(
+		\forall a, \ b \
+		f(a, b) = f(b, a)
+		\longrightarrow
+		\begin{aligned}
+			&f - \text{фунция, обладающая коммутативным} \\
+			&\text{(переместительным) свойством}.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\forall a, \ b, \ c \
+		f(f(a, b), c) = f(a, f(b, c))
+		\longrightarrow
+		\begin{aligned}
+			&f - \text{фунция, обладающая ассоциативным} \\
+			&\text{(сочетательным) свойством}.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g \
+		\left(
+		\forall a, \ b, \ c \
+		f(a, g(b, c)) = g(f(a, b), g(a, c))
+		\longrightarrow
+		\begin{aligned}
+			&f - \text{фунция, обладающая дистрибутивным} \\
+			&\text{(распределительным) свойством c} \ g.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		A \thicksim A
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -1634,10 +1674,27 @@
 		\end{flalign*}
 
 		\item Распределительнoe.
-		\begin{flalign*}
-			c(a + b) = ac + cb
-		\end{flalign*}
 	\end{enumerate}
+
+	\begin{flalign*}
+		+ - \text{операция на числах, обладающая коммутативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		+ - \text{операция на числах, обладающая ассоциативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		* - \text{операция на числах, обладающая коммутативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		* - \text{операция на числах, обладающая ассоциативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		* - \text{операция на числах, обладающая дистрибутивным свойством c +.}
+	\end{flalign*}
 
 	\textbf{Делитель a} - это число, на которое
 	a делится без остатка.
@@ -1738,8 +1795,6 @@
 	\begin{flalign*}
 		a(-b) = -ab
 	\end{flalign*}
-
-	
 
 	\begin{flalign*}
 		\forall a, \ b \
@@ -2548,164 +2603,267 @@
 	\end{flalign*}
 
 	\chapter{Матрицы}
-	\textbf{Матрица}
-	\begin{math}
-		\mathbf{A_{m\times n}}
-	\end{math}
-	\textbf{:}
 	\begin{flalign*}
-		\begin{pmatrix*}[r]
+		\forall A, \ m, \ n \
+		A_{m \times n} - \text{матрица размера (порядка)} \ m \ \text{на} \ n.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ m, \ n \
+		\left(
+		A
+		=
+		\left(
+		\begin{array}{rrrr}
 			a_{1 1} & a_{1 2} & \ldots & a{1 n} \\
 			a_{2 1} & a_{2 2} & \ldots & a{2 n} \\
 			\vdots  & \vdots  & \ddots & \vdots \\
 			a_{m 1} & a_{m 2} & \ldots & a_{m n}
-		\end{pmatrix*}
+		\end{array}
+		\right)
+		\Leftrightarrow
+		A = A_{m \times n}
+		\right)
 	\end{flalign*}
 
-	\begin{math}
-		\mathbf{[A]_{i j}}
-	\end{math}
-	- это элемент матрицы с индексами i и j.
-
-	\textbf{Матрица строка} - это
-	матрица
-	\begin{math}
-		A_{1\times n}
-	\end{math}
-	.
-
-	\textbf{Матрица столбец} - это
-	матрица
-	\begin{math}
-		A_{m\times 1}
-	\end{math}
-	.
-
-	\textbf{Квадратная матрица} - это
-	матрица
-	\begin{math}
-		A_{n\times n}
-	\end{math}
-	.
-
-	\textbf{Нулевая матрица} - это
-	матрица
-	\begin{math}
-		A_{m\times n}
-	\end{math}
-	, в которой
-	\begin{math}
-		\forall i \wedge i \in N \wedge i \leq m \wedge \forall j \wedge j \in N \wedge j \leq n \ [A]_{i j} = 0
-	\end{math}
-	.
-
-	\textbf{Единичная матрица (Е):}
 	\begin{flalign*}
-		AE = EA = A
-	\end{flalign*}
-
-	У единичной матрицы элементы главной диагонали - единицы,
-	а остальные - нули.
-
-	\textbf{Матричная единичка}
-	\begin{math}
-		\mathbf{E_{i j}}
-	\end{math}
-	- это матрица, у которой на i j месте расположена
-	единица, а всё остальное - нули.
-
-	\textbf{Скалярная (диагональная) матрица A:}
-	\begin{flalign*}
-		A = \lambda E
-	\end{flalign*}
-
-	\textbf{Нильпотентная матрица} - это
-	матрица, для которой существует степень,
-	в которую её надо возвести, чтобы
-	получить нулевую матрицу.
-
-	\begin{flalign*}
+		\forall A, \ i, \ j \
+		\left(
+		\exists m, \ n \
 		\left\{
-			\begin{aligned}
-				&A_{m\times n} \\
-				&B_{m \times n} \\
-				&\forall i \wedge i \in N \wedge i \leq m \wedge \forall j \wedge j \in N \wedge j \leq n
-				\ [A]_{i j} = [B]_{i j}
-			\end{aligned}
+		\begin{aligned}
+			&A = A_{m \times n} \\
+			&i \in \mathbb{N} \\
+			&i \leq m \\
+			&j \in \mathbb{N} \\
+			&j \leq n
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		[A]_{i j} - \text{элемент матрицы с индексами i и j}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ n \
+		\left[
+		\begin{aligned}
+			&A_n - \text{столбец} \ n \ \text{матрицы} \ A. \\
+			&A_n - \text{строка} \ n \ \text{матрицы} \ A.
+		\end{aligned}
+		\right.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ m \
+		A_{m \times 1} - \text{матрица-строка (вектор-строка)}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ n \
+		A_{n \times 1} - \text{матрица-столбец (вектор-столбец)}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ m \
+		A_{m \times m} - \text{квадратная}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ m \
+		A_{m \times m}
+		\Leftrightarrow
+		A - \text{порядка} \ m.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		A = 0
+		\Leftrightarrow
+		A - \text{нулевая}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\forall i, \ j \
+		[A]_{i j} = 0
+		\Leftrightarrow
+		A = 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall B \
+		\left(
+		\forall A \
+		AB = BA = A
+		\Leftrightarrow
+		B - \text{единичная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		E - \text{единичная матрица}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall i, \ j \
+		\left(
+		i \neq j \Leftrightarrow [E]_{i j} = 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall i, \ j \
+		\left(
+		i = j \Leftrightarrow [E]_{i j} = 1
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall i, \ j \
+		E_{i j} - \text{матричная единичка}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall i, \ j, \ k, \ l \
+		\left(
+		\left\{
+		\begin{aligned}
+			&k \neq i \\
+			&l \neq j
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		[E_{i j}]_{k l} = 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall i, \ j, \ k, \ l \
+		\left(
+		\left\{
+		\begin{aligned}
+			&k = i \\
+			&l = j
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		[E_{i j}]_{k l} = 1
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \
+		\left(
+		\exists \lambda \
+		A = \lambda E
+		\Leftrightarrow
+		A - \text{скалярная (диагональная)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists n
+		A^n = 0
+		\Leftrightarrow
+		A - \text{нильпотентная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B, \ m, \ n \
+		\left(
+		\forall i, \ j \
+		\left\{
+		\begin{aligned}
+			&A_{m\times n} \\
+			&B_{m \times n} \\
+			&[A]_{i j} = [B]_{i j}
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A = B
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		A^T - \text{транспонированная}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		\left(
+		\forall i, \ j \
+		[A]_{i j} = [B]_{j i}
+		\Leftrightarrow
+		B = A^T
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		(A B)^T = B^T A^T
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B, \ i, \ j \
+		[A + B]_{i j} = [A]_{i j} + [B]_{i j}
+	\end{flalign*}
+
+	\begin{flalign*}
+		+ - \text{операция на матрицах, обладающая коммутативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		+ - \text{операция на матрицах, обладающая ассоциативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ \lambda, \ i, \ j \
+		\left(
+		\lambda \in \mathbb{F}
+		\longrightarrow
+		[\lambda A]_{i j} = \lambda [A]_{i j}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		* - \text{операция на матрице и числе, обладающая ассоциативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		&* - \text{операция на матрице и числе, обладающая дистрибутивным свойством} \\
+		&\text{(относительно матриц и относительно чисел) c +.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B, \ m, \ r, \ n, \ i, \ j \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A = A_{m \times r} \\
+			&B = B_{r \times n}
+		\end{aligned}
 		\right.
 		\longrightarrow
-		A = B
-	\end{flalign*}
-
-	\textbf{Транспонированная матрица}
-	\begin{math}
-		\mathbf{A^t}
-	\end{math}
-	\textbf{:}
-	\begin{flalign*}
-		\forall i \wedge i \in N \wedge i \leq m \wedge \forall j \wedge j \in N \wedge j \leq n
-		\ [A^t]_{i j} = [A]_{j i}
+		[A B]_{i j} = \sum_{k = 1}^r [A]_{i k} [B]_{k j}
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
-		(A B)^t = B^t A^t
+		* - \text{операция на матрицах, обладающая ассоциативным свойством.}
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall i \wedge i \in N \wedge i \leq m \wedge \forall j \wedge j \in N \wedge j \leq n
-		\ [A + B]_{i j} = [A]_{i j} + [B]_{i j}
+		* - \text{операция на матрицах, обладающая дистрибутивным свойством c +.}
 	\end{flalign*}
-
-	\textbf{Свойства сложения матриц:}
-	\begin{enumerate}
-		\item Переместительное.
-		\begin{flalign*}
-			A + B = B + A
-		\end{flalign*}
-
-		\item Сочетательное (ассоциативное).
-		\begin{flalign*}
-			(A + B) + C = A + (B + C)
-		\end{flalign*}
-	\end{enumerate}
-
-	\begin{flalign*}
-		\forall i \wedge i \in N \wedge i \leq m \wedge \forall j \wedge j \in N \wedge j \leq n
-		\ [\lambda A]_{i j} = \lambda [A]_{i j}
-	\end{flalign*}
-
-	\textbf{Свойства умножения матрицы на число:}
-	\begin{enumerate}
-		\item Сочетательное (ассоциативное).
-		\begin{flalign*}
-			(\lambda \mu) A = \lambda (\mu A)
-		\end{flalign*}
-
-		\item Распределительное относительно чисел.
-		\begin{flalign*}
-			(\lambda + \mu) A = A (\lambda + \mu)
-		\end{flalign*}
-
-		\item Распределительнoe относительно матриц.
-		\begin{flalign*}
-			(A + B) \lambda = \lambda (A + B)
-		\end{flalign*}
-	\end{enumerate}
-
-	\begin{flalign*}
-		\forall i \wedge i \in N \wedge i \leq m \wedge \forall j \wedge j \in N \wedge j \leq n
-		\ [A B]_{i j} = \sum_{k = 1}^r [A]_{i k} [B]_{k j}
-	\end{flalign*}
-
-	\textbf{Свойства умножения матриц:}
-	\begin{enumerate}
-		\item Переместительное.
-		\begin{flalign*}
-			(A B) C = A (B C)
-		\end{flalign*}
-	\end{enumerate}
-
-	Диагональные матрицы умножаются покомпонентно.
 
 	\textbf{Элементарные преобразования матриц:}
 	\begin{enumerate}
@@ -2760,6 +2918,208 @@
 	элементы - единицы, над которыми в столбце все
 	элементы - нули.
 
-	Любую прямоугольную матрицу элементарными преобразованиями
-	можно привести к ступенчатому виду.
+	Любую матрицу элементарными преобразованиями
+	можно привести к улучшенному ступенчатому виду.
+
+	\begin{flalign*}
+		\forall \sequence{a_r}, \ a, \ n \
+		\left(
+		\forall k, \ l \
+		\left\{
+		\begin{aligned}
+			&a_k \in \mathbb{N} \\
+			&a_k \neq n \\
+			&k \neq l \longrightarrow a_k \neq a_l \\
+			&a = a_1, a_2, \ldots, a_n
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		a - \text{перестановка}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ n \
+		\left(
+		\left\{
+		\begin{aligned}
+			&(f(1), f(2), \ldots, f(n)) - \text{перестановка}. \\
+			&f
+			=
+			\left(
+			\begin{array}{rrrr}
+				1    & 2    & \ldots & n    \\
+				f(1) & f(2) & \ldots & f(n)
+			\end{array}
+			\right)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{подстановка}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ n \
+		\left(
+		n - \text{сумма инверсий первой и второй строки подстановки} \ f.
+		\longrightarrow
+		sgn f = (-1)^n
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{подстановка}. \\
+			&\text{Сумма инверсий первой и второй строки} \ f \ \text{чётна}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{чётная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{подстановка}. \\
+			&g - \text{подстановка}.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		fg - \text{умножение (композиция) подстановок}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{подстановка}. \\
+			&g - \text{подстановка}.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		fg
+		=
+		\left(
+		\begin{array}{rrrr}
+			1       & 2       & \ldots & n       \\
+			g(f(1)) & g(f(2)) & \ldots & g(f(n))
+		\end{array}
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{подстановка}. \\
+			&g - \text{подстановка}.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		sgn(fg) = sgn f * sgn g
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		f - \text{подстановка}.
+		\longrightarrow
+		\left\{
+		\begin{aligned}
+			&d(f) - \text{декремент}. \\
+			&d(f) = \text{длина} \ f - \\
+			&(\text{число независимых циклов} \ f + \\
+			&\text{количество символов, оставляемых на месте}). \\
+			&d(f) = \text{количество действительно перемещаемых символов} - \\
+			&\text{количество независимых циклов}. \\
+			&d(f) = \text{сумма длин циклов} - \text{количество циклов}.
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		f - \text{подстановка}.
+		\longrightarrow
+		sgn f = (-1)^{d(f)}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		id - \text{подстановка}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		id - \text{тождественная}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		id
+		=
+		\left(
+		\begin{array}{rrrr}
+			1 & 2 & \ldots & n \\
+			1 & 2 & \ldots & n
+		\end{array}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		f^{-1}
+		=
+		\left(
+		\begin{array}{rrrr}
+			f(1) & f(2) & \ldots & f(n) \\
+			1    & 2    & \ldots & n
+		\end{array}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall n, \ k \
+		\left(
+		k \in \mathbb{N}
+		\longrightarrow
+		(a_1, a_2, \ldots, a_n)^{nk} = id
+		\right)
+	\end{flalign*}
+
+	При возведении подстановки в степень,
+	кратную НОКу длин всех её циклов,
+	будет получаться тождественная
+	подстановка.
+
+	\begin{flalign*}
+		\forall A \
+		det A - \text{определитель} \ A.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ n \
+		\left(
+		A_{n \times n}
+		\longrightarrow
+		det A = \sum_{f \in S_n} sgn f * [A]_{1 f(1)} * [A]_{2 f(2)} * \ldots * [A]_{n f(n)}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		det A^T = det A
+	\end{flalign*}
 \end{document}
