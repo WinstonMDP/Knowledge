@@ -9,8 +9,11 @@
 \usepackage{mathtools}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{graphicx}
 
 \setlength{\parskip}{0.03\textheight}
+
+\graphicspath{{images/}}
 
 \newcommand{\meta}[1]{\text{<}#1\text{>}}
 \newcommand{\sequence}[1]{\left\{#1\right\}}
@@ -2844,6 +2847,15 @@
 	\end{flalign*}
 
 	\begin{flalign*}
+		\forall \sequence{A_n}, \ \sequence{\lambda_n} \ B \
+		\left(
+		B = \lambda_1 A_1 + \lambda_2 A_2 + \ldots + A_k
+		\longrightarrow
+		B - \text{линейная комбинация}.
+		\right.
+	\end{flalign*}
+
+	\begin{flalign*}
 		\forall A, \ B, \ m, \ r, \ n, \ i, \ j \
 		\left(
 		\left\{
@@ -3121,5 +3133,224 @@
 	\begin{flalign*}
 		\forall A \
 		det A^T = det A
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ A', \ i \
+		det (A_1, \ldots, A_i' + A_i'', \ldots, A_n)
+		=
+		det (A_1, \ldots, A_i', \ldots, A_n)
+		+
+		det (A_1, \ldots, A_i'', \ldots, A_n)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ A', \ i, \ \lambda \
+		det (A_1, \ldots, \lambda A_i', \ldots, A_n)
+		=
+		\lambda det (A_1, \ldots, A_i', \ldots, A_n)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ i, \ j \
+		det (A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)
+		=
+		-det (A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists i \
+		A_i = 0
+		\longrightarrow
+		det A = 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists k, \ l \
+		A_k = A_l
+		\longrightarrow
+		det A = 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists i \
+		A_i - \text{линейная комбинация остальных}.
+		\longrightarrow
+		det A = 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		&\forall \sequence{\lambda_n}, \ A \
+		det (A_1, A_2, \ldots, A_i, \ldots, A_n)
+		= \\
+		&det (A_1, A_2, \ldots, A_i + (\lambda_1 A_1 + \lambda_2 A_2 + \ldots + \lambda_{i - 1} A_{i - 1} + \lambda_{i + 1} A_{i + 1} + \ldots + \lambda_n A_n), \ldots, A_n)
+	\end{flalign*}
+
+	\begin{flalign*}
+		det E = 1
+	\end{flalign*}
+
+	\textbf{Разложение по строке:}
+	\begin{flalign*}
+		\forall A, \ j, \ n \
+		\left(
+		A = A_{n \times n}
+		\longrightarrow
+		det A = \sum_{i = 1}^n [A]_{i j} A_{i j}
+		\right)
+	\end{flalign*}
+
+	\textbf{Разложение по столбцу:}
+	\begin{flalign*}
+		\forall A, \ i, \ n \
+		\left(
+		A = A_{n \times n}
+		\longrightarrow
+		det A = \sum_{j = 1}^n [A]_{i j} A_{i j}
+		\right)
+	\end{flalign*}
+
+	\textbf{Фальшивое разложение:}
+
+	\begin{flalign*}
+		\forall A, \ n \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A = A_{n \times n} \\
+			&\text{Под главной диагональю} \ A \ \text{только нули}.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		det A = \prod_{i = 1}^n [A]_{i i}
+		\right)
+	\end{flalign*}
+
+	\includegraphics[width=\textwidth]{matrixProperty.JPG}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A \in M_n(\mathbb{R}) \\
+			&A - \text{квадратная}. \\
+			&B \in M_n(\mathbb{R}) \\
+			&B - \text{квадратная}.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		det (A B) = det A \ det B
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		det(A^{-1}) = det(A)^{-1}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a - \text{СЛАУ}. \\
+			&a - \text{имеет решение}.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a - \text{совместная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a - \text{СЛАУ}. \\
+			&a - \text{не имеет решений}.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a - \text{несовместная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ X, \ B \
+		\left(
+		AX = B - \text{СЛАУ}.
+		\longrightarrow
+		\forall i \
+		\left\{
+		\begin{aligned}
+			&\Delta_i = det(A_1, A_2, \ldots, A_{i - 1}, B, A{i + 1}, \ldots, A_n) \\
+			&\Delta = det A \\
+			&[X]_{i 1} = \frac{\Delta_i}{\Delta}
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ X, \ B \
+		\left(
+		\exists i \
+		\left\{
+		\begin{aligned}
+			&AX = B - \text{СЛАУ}. \\
+			&\Delta = 0 \\
+			&\Delta_{i} \neq 0
+		\end{aligned}
+		\right.
+		\longrightarrow
+		AX = B - \text{несовместная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ X, \ B \
+		\left(
+		\left\{
+		\begin{aligned}
+			&AX = B - \text{СЛАУ}. \\
+			&\Delta \neq 0
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\left\{
+		\begin{aligned}
+			&AX = B - \text{совместная}. \\
+			&AX = B - \text{имеет единственное решение}.
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ n \
+		\left(
+		A = A_{n \times n}
+		\longrightarrow
+		\widetilde{A}
+		=
+		\left(
+		\begin{array}{rrrr}
+			A_{1 1} & A_{1 2} & \ldots & A_{1 n} \\
+			A_{2 1} & A_{2 2} & \ldots & A_{2 n} \\
+			\vdots  & \vdots  & \ddots & \vdots  \\
+			A_{n 1} & A_{n 2} & \ldots & A_{n n}
+		\end{array}
+		\right)^T
+		\right)
 	\end{flalign*}
 \end{document}
