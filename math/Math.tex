@@ -2607,8 +2607,73 @@
 
 	\chapter{Матрицы}
 	\begin{flalign*}
+		\forall m, \ n \
+		\left(
+		\left\{
+		\begin{aligned}
+			&m \in \mathbb{N} \\
+			&n \in \mathbb{N}
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		M_{m \times n} - \text{множество матриц размера (порядка)} \ m \ \text{на} \ n.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
 		\forall A, \ m, \ n \
-		A_{m \times n} - \text{матрица размера (порядка)} \ m \ \text{на} \ n.
+		\left(
+		\left\{
+		\begin{aligned}
+			&m \in \mathbb{N} \\
+			&n \in \mathbb{N} \\
+			&A - \text{множество}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&M_{m \times n}(A) - \text{множество матриц размера (порядка)} \ m \ \text{на} \ n \text{,} \\
+			&\text{элементы которых принадлежат} \ A.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall n \
+		M_{n} = M_n
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall n \
+		M_n - \text{множество квадратных матриц размера (порядка)} \ n.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ n \
+		M_n(A) = M_{n}(A)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A,\ n \
+		M_n(A) - \text{множество квадратных матриц размера (порядка)} \ n \text{, элементы которых принадлежат} \ A.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ m, \ n \
+		\left(
+		A \in M_{m \times n}
+		\Leftrightarrow
+		A = A_{m \times n}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		A \in M_{n}
+		\Leftrightarrow
+		A_n = A_{n}
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -2618,14 +2683,14 @@
 		=
 		\left(
 		\begin{array}{rrrr}
-			a_{1 1} & a_{1 2} & \ldots & a{1 n} \\
-			a_{2 1} & a_{2 2} & \ldots & a{2 n} \\
+			a_{1 1} & a_{1 2} & \ldots & a_{1 n} \\
+			a_{2 1} & a_{2 2} & \ldots & a_{2 n} \\
 			\vdots  & \vdots  & \ddots & \vdots \\
 			a_{m 1} & a_{m 2} & \ldots & a_{m n}
 		\end{array}
 		\right)
 		\Leftrightarrow
-		A = A_{m \times n}
+		A \in M_{m \times n}
 		\right)
 	\end{flalign*}
 
@@ -2635,7 +2700,7 @@
 		\exists m, \ n \
 		\left\{
 		\begin{aligned}
-			&A = A_{m \times n} \\
+			&A \in M_{m \times n} \\
 			&i \in \mathbb{N} \\
 			&i \leq m \\
 			&j \in \mathbb{N} \\
@@ -2658,25 +2723,23 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall A, \ m \
-		A_{m \times 1} - \text{матрица-строка (вектор-строка)}.
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall A, \ n \
-		A_{n \times 1} - \text{матрица-столбец (вектор-столбец)}.
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall A, \ m \
-		A_{m \times m} - \text{квадратная}.
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall A, \ m \
-		A_{m \times m}
+		\forall A \
+		\left(
+		\exists m \
+		A \in M_{m \times 1}
 		\Leftrightarrow
-		A - \text{порядка} \ m.
+		A - \text{матрица-строка (вектор-строка)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists n \
+		A \in M_{1 \times n}
+		\Leftrightarrow
+		A - \text{матрица-столбец (вектор-столбец)}.
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -2760,7 +2823,7 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall A, \
+		\forall A \
 		\left(
 		\exists \lambda \
 		A = \lambda E
@@ -2772,7 +2835,7 @@
 	\begin{flalign*}
 		\forall A \
 		\left(
-		\exists n
+		\exists n \
 		A^n = 0
 		\Leftrightarrow
 		A - \text{нильпотентная}.
@@ -2816,8 +2879,17 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall A, \ B, \ i, \ j \
+		\forall A, \ B, \ m, \ n, \ i, \ j \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A \in M_{m \times n} \\
+			&B \in M_{m \times n}
+		\end{aligned}
+		\right.
+		\longrightarrow
 		[A + B]_{i j} = [A]_{i j} + [B]_{i j}
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -2847,12 +2919,52 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall \sequence{A_n}, \ \sequence{\lambda_n} \ B \
+		\forall \sequence{\lambda_n} \ A, \ B, \ i, \ j \
 		\left(
-		B = \lambda_1 A_1 + \lambda_2 A_2 + \ldots + A_k
+		B = \lambda_i A_i + \ldots + \lambda_j A_j
 		\longrightarrow
-		B - \text{линейная комбинация}.
+		B - \text{линейная комбинация} \ A_i, \ldots, A_j.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{\lambda_n}, \ A, \ B, \ i, \ j \
+		\left(
+		\exists k \
+		\left\{
+		\begin{aligned}
+			&B = \lambda_i A_i + \ldots + \lambda_j A_j \\
+			&\lambda_k \neq 0
+		\end{aligned}
 		\right.
+		\longrightarrow
+		B - \text{нетривиальная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ i, \ j \
+		\left(
+		\exists B \
+		\left\{
+		\begin{aligned}
+			&B - \text{линейная комбинация} \ A_i, \ldots, A_j. \\
+			&B - \text{нетривиальная}. \\
+			&B = 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A_i, \ldots, A_j - \text{линейно зависимые}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ i, \ j \
+		\left(
+		\overline{A_i, \ldots, A_j - \text{линейно зависимые}}.
+		\Leftrightarrow
+		A_i, \ldots, A_j - \text{линейно независимые}.
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -2860,8 +2972,8 @@
 		\left(
 		\left\{
 		\begin{aligned}
-			&A = A_{m \times r} \\
-			&B = B_{r \times n}
+			&A \in M_{m \times r} \\
+			&B \in M_{r \times n}
 		\end{aligned}
 		\right.
 		\longrightarrow
@@ -2968,6 +3080,44 @@
 		\right.
 		\Leftrightarrow
 		f - \text{подстановка}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall n \
+		\left(
+		n \in \mathbb{N}
+		\longrightarrow
+		S_n - \text{множество подстановок длины} \ n.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\forall i \ \exists n \
+		\left\{
+		\begin{aligned}
+			&f \in S_n \\
+			&f(f(\ldots f(i) \ldots)) = i
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{цикл (циклическая подстановка)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f \in S_2 \\
+			&f - \text{цикл}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{транспозиция}.
 		\right)
 	\end{flalign*}
 
@@ -3124,9 +3274,27 @@
 	\begin{flalign*}
 		\forall A, \ n \
 		\left(
-		A_{n \times n}
+		A_{n}
 		\longrightarrow
 		det A = \sum_{f \in S_n} sgn f * [A]_{1 f(1)} * [A]_{2 f(2)} * \ldots * [A]_{n f(n)}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		det A = 0
+		\longrightarrow
+		A - \text{вырожденная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		det A \neq 0
+		\longrightarrow
+		A - \text{невырожденная}.
 		\right)
 	\end{flalign*}
 
@@ -3203,7 +3371,7 @@
 	\begin{flalign*}
 		\forall A, \ j, \ n \
 		\left(
-		A = A_{n \times n}
+		A = A_{n}
 		\longrightarrow
 		det A = \sum_{i = 1}^n [A]_{i j} A_{i j}
 		\right)
@@ -3213,20 +3381,46 @@
 	\begin{flalign*}
 		\forall A, \ i, \ n \
 		\left(
-		A = A_{n \times n}
+		A = A_{n}
 		\longrightarrow
 		det A = \sum_{j = 1}^n [A]_{i j} A_{i j}
 		\right)
 	\end{flalign*}
 
 	\textbf{Фальшивое разложение:}
+	\begin{flalign*}
+		\forall A, \ n, \ k, \ i \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A \in M_n \\
+			&k \neq i
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\sum_{j = 0}^n [A]_{i j} A_{k j} = 0
+		\right)
+	\end{flalign*}
+	\begin{flalign*}
+		\forall A, \ n, \ k, \ i \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A \in M_n \\
+			&k \neq j
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\sum_{i = 0}^n [A]_{i j} A_{i k} = 0
+		\right)
+	\end{flalign*}
 
 	\begin{flalign*}
 		\forall A, \ n \
 		\left(
 		\left\{
 		\begin{aligned}
-			&A = A_{n \times n} \\
+			&A = A_{n} \\
 			&\text{Под главной диагональю} \ A \ \text{только нули}.
 		\end{aligned}
 		\right.
@@ -3242,19 +3436,39 @@
 		\left(
 		\left\{
 		\begin{aligned}
-			&A \in M_n(\mathbb{R}) \\
-			&A - \text{квадратная}. \\
-			&B \in M_n(\mathbb{R}) \\
-			&B - \text{квадратная}.
+			&A \in M_n \\
+			&B \in M_n
 		\end{aligned}
 		\right.
 		\longrightarrow
-		det (A B) = det A \ det B
+		det(A B) = det A \ det B
 		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
 		det(A^{-1}) = det(A)^{-1}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\begin{array}{|rrrr|}
+			1      & x_1    & \ldots & x_1^{n - 1} \\
+			1      & x_2    & \ldots & x_2^{n - 1} \\
+			\vdots & \vdots & \ddots & \vdots      \\
+			1      & x_n    & \ldots & x_n^{n - 1}
+		\end{array}
+		-
+		\text{определитель Вандермонда}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\begin{array}{|rrrr|}
+			1      & x_1    & \ldots & x_1^{n - 1} \\
+			1      & x_2    & \ldots & x_2^{n - 1} \\
+			\vdots & \vdots & \ddots & \vdots      \\
+			1      & x_n    & \ldots & x_n^{n - 1}
+		\end{array}
+		=
+		\prod_{1 \leq j < i \leq n}(x_i - x_j)
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -3286,51 +3500,51 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall A, \ X, \ B \
+		\forall A, \ x, \ b \
 		\left(
-		AX = B - \text{СЛАУ}.
+		Ax = b - \text{СЛАУ}.
 		\longrightarrow
 		\forall i \
 		\left\{
 		\begin{aligned}
 			&\Delta_i = det(A_1, A_2, \ldots, A_{i - 1}, B, A{i + 1}, \ldots, A_n) \\
 			&\Delta = det A \\
-			&[X]_{i 1} = \frac{\Delta_i}{\Delta}
+			&x_i = \frac{\Delta_i}{\Delta}
 		\end{aligned}
 		\right.
 		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall A, \ X, \ B \
+		\forall A, \ x, \ b \
 		\left(
 		\exists i \
 		\left\{
 		\begin{aligned}
-			&AX = B - \text{СЛАУ}. \\
+			&Ax = b - \text{СЛАУ}. \\
 			&\Delta = 0 \\
 			&\Delta_{i} \neq 0
 		\end{aligned}
 		\right.
 		\longrightarrow
-		AX = B - \text{несовместная}.
+		Ax = b - \text{несовместная}.
 		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall A, \ X, \ B \
+		\forall A, \ x, \ b \
 		\left(
 		\left\{
 		\begin{aligned}
-			&AX = B - \text{СЛАУ}. \\
+			&Ax = b - \text{СЛАУ}. \\
 			&\Delta \neq 0
 		\end{aligned}
 		\right.
 		\longrightarrow
 		\left\{
 		\begin{aligned}
-			&AX = B - \text{совместная}. \\
-			&AX = B - \text{имеет единственное решение}.
+			&Ax = b - \text{совместная}. \\
+			&Ax = b - \text{имеет единственное решение}.
 		\end{aligned}
 		\right.
 		\right)
@@ -3339,7 +3553,7 @@
 	\begin{flalign*}
 		\forall A, \ n \
 		\left(
-		A = A_{n \times n}
+		A = A_{n}
 		\longrightarrow
 		\widetilde{A}
 		=
@@ -3352,5 +3566,272 @@
 		\end{array}
 		\right)^T
 		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		A B = E
+		\Leftrightarrow
+		B - \text{обратная к} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		\left(
+		B = A^{-1}
+		\Leftrightarrow
+		B - \text{обратная к} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		A - \text{обратная}.
+		\longrightarrow
+		\exists n \
+		A = A_{n}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists B \
+		B = A^{-1}
+		\Leftrightarrow
+		det A \neq 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		A^{-1} = \frac{\widetilde{A}}{det A}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B \
+		(A B)^{-1} = B^{-1} A^{-1}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall B, \ M, \ k \
+		\left(
+		\exists A \
+		\left\{
+		\begin{aligned}
+			&A - \text{матрица из элементов матрицы} \ B \text{,} \\
+			&\text{стоящих на пересечении} \ k \ \text{строк и} \ k \ \text{столбцов}. \\
+			&M = det A
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		M - \text{минор} \ k \ \text{порядка матрицы} \ B.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall B, \ M \
+		\left(
+		\exists A \
+		\left\{
+		\begin{aligned}
+			&A - \text{матрица, на главной диагонали которой стоят} \\
+			&\text{только все или не все элементы} \\
+			&\text{главной диагонали} \ B. \\
+			&M = det A
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		M - \text{главный минор матрицы} \ B.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		Rg A - \text{ранг} \ A.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		Rg A = \text{наибольший порядок отличного от} \ 0 \ \text{минора матрицы} \ A.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		&Rg A
+		= \\
+		&\text{максимальное число линейно независимых строк}
+		= \\
+		&\text{максимальное число линейно независимых столбцов}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ A' \
+		\left(
+		A' - \text{матрица, полученная из} \ A \ \text{элементарными преобразованиями}.
+		\longrightarrow
+		Rg A = Rg A'
+		\right)
+	\end{flalign*}
+
+	\textbf{Теорема Кронекера-Капелли:}
+	\begin{flalign*}
+		\forall A, \ b \
+		\left(
+		Rg A = Rg(A | b)
+		\Leftrightarrow
+		\exists x \
+		Ax = b - \text{совместная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists n \
+		\left\{
+		\begin{aligned}
+			&A \in M_n \\
+			&Rg A = n
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		det A \neq 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists n \
+		\left\{
+		\begin{aligned}
+			&A \in M_n \\
+			&A_1, A_2, \ldots, A_n - \text{линейно независимыe}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		det A \neq 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ M \
+		\left(
+		\left\{
+		\begin{aligned}
+			&M - \text{минор порядка} \ Rg A \ \text{матрицы} \ A. \\
+			&M \neq 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		M - \text{базисный минор матрицы} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ i \
+		\left(
+		A_i - \text{то, из чего составлен базисный минор матрицы} \ A.
+		\longrightarrow
+		A_i - \text{базисный}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ i \
+		\left(
+		\overline{A_i - \text{базисный}}.
+		\longrightarrow
+		A_i - \text{линейная комбинация базисных матрицы} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall M, \ M' \
+		\left(
+		\exists A \
+		\left\{
+		\begin{aligned}
+			&M - \text{минор матрицы} \ A. \\
+			&M' - \text{минор, составленный} \\
+			&\text{из тех же строк и столбцов, что и} \ M \text{,} \\
+			&\text{и добавленных одной строки и одного столбца} \\
+			&\text{матрицы} \ A.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		M' - \text{окаймляющий минор} \ M.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B, \ M \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A - \text{матрица из элементов матрицы} \ B \text{,} \\
+			&\text{кроме строк и столбцов} \ B \text{,} \\
+			&\text{из которых составлен минор} \ M. \\
+			&M' = det A
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		M' - \text{дополнительный минор к минору} \ M.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall M, \ M^* \
+		\left(
+		\exists A, \ \alpha, \ n \
+		\left\{
+		\begin{aligned}
+			&A = A_{n} \\
+			&\alpha = \text{сумма номеров строк и столбцов} \ A \text{,} \\
+			&\text{из которых составлен минор} \ M. \\
+			&M' - \text{дополнительный минор к минору} \ M. \\
+			&M^* = (-1)^\alpha M'
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&M^* - \text{алгебраическое дополнение} \\
+			&\text{к минору} \ M.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ i, \ j \
+		M_{i j} - \text{минор элемента} \ [A]_{i j} \ \text{матрицы} \ A.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ n, \ i, \ j \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A = A_{n} \\
+			&A - \text{матрица из элементов матрицы} \ B \text{,} \\
+			&\text{кроме строки} \ i \ \text{и столбца} \ j.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		det A = M_{i j}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ i, \ j \
+		A_{i j} - \text{алгебраическое дополнение элемента} \ [A]_{i j}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A,\ i, \ j \
+		A_{i j} = (-1)^{i + j} M_{i j}
 	\end{flalign*}
 \end{document}
