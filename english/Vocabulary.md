@@ -1,57 +1,92 @@
 # Vocabulary
+
 ## <a name = "Noun">Noun</a>
+
 **A:**
+
 - agility - ловкость.
+- anaesthetist - анестезиолог.
+- antibiotic - антибиотик.
+- Alzheimer's - болезнь Альцгеймера.
+- arthritis - артрит.
 
 **С:**
+
 - calm - спокойствие.
+- cancer - рак.
 - coordination - координация.
 - courtesy - вежливость.
 
 **D:**
+
+- diabetes - диабет.
 - determination - целеустремлённость.
 
 **E:**
+
 - extremes - крайности.
 
 **F:**
+
 - flexibility - гибкость-подвижность.
 
 **I:**
+
+- injection - инъекция.
 - intensity - напряжённость.
 
 **L:**
+
 - leaflet - листовка.
 - loan - кредит.
 
+**M:**
+
+- midwife - акушерка.
+- morphine - морфин.
+
 **P:**
+
+- painkiller - обезболивающие.
+- pharmacist - фармацевт.
+- physiotherapy - физиотерапия.
 - prompt - подсказка.
+- psychiatrist - психиатр.
 
 **R:**
+
+- radiologist - радиолог.
 - rumour - слух.
 
 **S:**
+
 - self-confidence - самоуверенность.
 - self-control - самоконтроль.
-- self-defence - самозащита.
+- self-defense - самозащита.
 - self-development - саморазвитие.
 - self-discipline - самодисциплина.
 - self-respect - самоуважение.
 - suggestion - предложение-совет.
+- surgeon - хирург.
 
 **T:**
+
 - tolerance - толерантность.
 
 **W:**
+
 - willpower - силу воли.
 
 ## <a name = "Verb">Verb</a>
+
 **A:**
+
 - ask
   - ask - спросить.
   - ask somebody out - пригласить на свидание.
 
 **B:**
+
 - be
   - be - быть.
   - be after something - пытаться получить что-то.
@@ -66,11 +101,12 @@
   - break down - сломаться.
   - break in - вломиться; вмешаться в разговор.
   - break into - вломиться.
-  - break off - разорвать; рассторгнуть.
+  - break off - разорвать; расторгнуть.
   - break out - вырваться.
   - break up - расстаться.
 
 **С:**
+
 - call
   - call - звать; звонить.
   - call at\by\on - остановиться в месте.
@@ -81,18 +117,19 @@
 - calm (down) - успокоить.
 
 **G:**
+
 - go
   - go - идти.
   - go about - ходить-распространяться.
   - go about something - прогуливаться-рассматривать.
   - go about with somebody - иметь дело с кем-то.
-  - go after somehing - следовать за чем-то\пытаться достичь что-то.
+  - go after something - следовать за чем-то\пытаться достичь что-то.
   - go against - идти против.
   - go ahead - работать-делать.
   - go along with something - сопровождаться с чем-то\соглашаться с чем-то.
   - go away - уходить\исчезнуть.
-  - go back - вернуться\знать друг-дурга.
-  - go beyound - превзойти.
+  - go back - вернуться\знать друг друга.
+  - go beyond - превзойти.
   - go down - падать\садиться (солнце)\ломаться.
   - go for - иметь значение\выбрать.
   - go in - войти\быть понятным.
@@ -105,6 +142,7 @@
 - guide - руководить.
 
 **S:**
+
 - say
   - say - сказать что-то околокороткое более менее дословно.
   - say to somebody.
@@ -117,6 +155,7 @@
   - speak to\with somebody.
 
 **T:**
+
 - talk
   - talk - поговорить на "ты"; иметь влияние; предавать огласке лишнее.
   - talk to somebody.
@@ -124,15 +163,48 @@
 - tell
   - tell somebody - пересказать, передать смысл чего-то длинного-объёмного кому-то.
   - tell something from something - отличить одно от другого.
+- transplant - пересаживать.
 
 ## <a name = "Adjectives">Adjectives</a>
+
+**A:**
+
+- authoritative - авторитетный.
+
+**E:**
+
+- efficient - эффективный.
+
 **I:**
+
 - innocent - невинный.
 
+**K:**
+
+- knowledgeable - знающий.
+
 **O:**
+
 - obsessive - одержимый.
+- objective - объективный.
+- open-minded - способный к плюрализму.
+
+**P:**
+
+- patient - терпеливый.
+
+**R:**
+
+- reassuring - обнадёживающий.
+
+**S:**
+
+- sensitive - чувствительный.
+- sociable - социальный.
+- sympathetic - сердобольный.
 
 ## Stable phrases
+
 - to say hello - поздороваться.
 - to say goodbye - попрощаться.
 - to say nothing - промолчать.
@@ -163,7 +235,7 @@
 - to tell the time - сказать время.
 - to establish rapport - установить взаимопонимание.
 - to maintain status - поддерживать статус.
-- to exhibit knowlege - демонстрировать знания.
+- to exhibit knowledge - демонстрировать знания.
 - to display similarities - демонстрировать сходство.
 - to negotiate relationship - наладить отношения.
 - a outlining problem - определение проблемы.
