@@ -111,21 +111,73 @@
 		)
 	\end{flalign*}
 
-	\textbf{Метод математической индукции:}
+	\textbf{Принцип математической индукции (ПМИ):}
 	\begin{flalign*}
-		\forall F \
+		\forall f \
 		\left(
 		\forall n \
 		\left\{
 		\begin{aligned}
-			&n \in N \\
-			&F(0) \\
-			&F(n) \longrightarrow F(n + 1)
+			&f: \mathbb{N} \longrightarrow Bool \\
+			&f(0) \\
+			&f(n) \longrightarrow f(n + 1)
 		\end{aligned}
 		\right.
 		\longrightarrow
-		\forall n
-		F(n)
+		\forall n \
+		f(n)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		Prog(f) - \text{прогрессивность свойства} \ f.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f: \mathbb{N} \longrightarrow Bool \\
+			&g: \mathbb{N} \longrightarrow Bool \\
+			&f(g) = \forall n \ \left(\forall m \ \left(m < n \longrightarrow g(m)\right) \longrightarrow g(n)\right)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f = Prog(g)
+		\right)
+	\end{flalign*}
+
+	\textbf{Принцип сильной индукции (ПСИ):}
+	\begin{flalign*}
+		\forall f \
+		\left(
+		Prog(f)
+		\longrightarrow
+		\forall n \ f(n)
+		\right)
+	\end{flalign*}
+
+	\textbf{Принцип наименьшего числа (ПНЧ):}
+	\begin{flalign*}
+		\forall f \
+		\left(
+		\exists m \
+		\left\{
+		\begin{aligned}
+			&f: \mathbb{N} \longrightarrow Bool \\
+			&f(m)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\exists n \ \forall a \
+		\left\{
+		\begin{aligned}
+			&f(n) \\
+			&a < n \longrightarrow \overline{f(a)}
+		\end{aligned}
+		\right.
 		\right)
 	\end{flalign*}
 
@@ -1738,18 +1790,57 @@
 
 	Простых чисел имеется бесконечное множество.
 
-	Разложение числа на простые множители взаимно однозначно.
+	\begin{flalign*}
+		&\forall n, \ \sequence{p_n} \
+		\left(
+		\exists \sequence{\alpha_n} \ \forall i \
+		\left(
+		\left\{
+		\begin{aligned}
+			&i \in \mathbb{N} \\
+			&\alpha_i \in \mathbb{N}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\left\{
+		\begin{aligned}
+			&\sequence{p_n} - \text{все попарно различные простые числа}. \\
+			&n \in \mathbb{N} \\
+			&n \neq 0 \\
+			&n = p_1^{\alpha_1} p_2^{\alpha_2} \ldots
+		\end{aligned}
+		\right.
+		\right)
+		\Leftrightarrow
+		\right. \\
+		&\left.
+		p_1^{\alpha_1} p_2^{\alpha_2} \ldots - \text{разложениена простые множители} \ n.
+		\right)
+	\end{flalign*}
 
-	\textbf{Взаимно простые числа} - это числа,
-	не имеющие общих делителей.
+	\textbf{Основная теорема арифметики:}
+	\begin{flalign*}
+		\exists! \meta{n} \
+		\meta{n} - \text{разложение на простые множители} \ n.
+	\end{flalign*}
 
-	\textbf{Чётное число} - это число, кратное 2. (
-	\begin{math}
-		\overline{\textbf{\text{нечётное число}}}
-	\end{math}
-	)
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		\text{НОД}(a, b) = 1
+		\Leftrightarrow
+		a, b - \text{взаимно однозначные}.
+		\right)
+	\end{flalign*}
 
-	Число 2 - единственное чётное простое число.
+	\begin{flalign*}
+		\forall a \
+		\left(
+		a | 2
+		\Leftrightarrow
+		a - \text{чётное}.
+		\right)
+	\end{flalign*}
 
 	\textbf{Признаки делимости в 10-й системе счисления:}
 	\begin{enumerate}
@@ -1760,18 +1851,9 @@
 		\item Признак делимости на 9: сумма цифр записи числа делится на 9.
 	\end{enumerate}
 
-	\textbf{Наибольший общий делитель (НОД) a и b:}
 	\begin{flalign*}
-		( a, b )
-	\end{flalign*}
-
-	\textbf{Наименьшее общее кратное (НОК) a и b:}
-	\begin{flalign*}
-		[ a, b ]
-	\end{flalign*}
-
-	\begin{flalign*}
-		( a, b ) [ a, b ] = ab
+		\forall a, \ b \
+		\text{НОД}(a, b) \ \text{НОК}(a, b) = ab
 	\end{flalign*}
 
 	\section{Целые числа (Z)}
@@ -1826,7 +1908,28 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall a | a
+		\forall a, \ b \
+		\left(
+		a | b
+		\Leftrightarrow
+		\exists \sequence{\alpha_n}, \ \sequence{\beta_n} \
+		\left(
+		\exists \sequence{p_n}
+		\left\{
+		\begin{aligned}
+			&p_1^{\alpha_1} p_2^{\alpha_2} \ldots - \text{разложение на простые множители} \ a \\
+			&p_1^{\beta_1} p_2^{\beta_2} \ldots - \text{разложение на простые множители} \ b
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\forall i \
+		\alpha_i \leq \beta_i
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a \ a | a
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -1872,21 +1975,7 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		\forall a, \ b, \ c \
-		\left(
-		\left\{
-		\begin{aligned}
-			&a | b \\
-			&a | (b \pm c)
-		\end{aligned}
-		\right.
-		\longrightarrow
-		a | c
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall a, \ b, \
+		\forall a, \ b \
 		\left(
 		\left\{
 		\begin{aligned}
@@ -1902,7 +1991,7 @@
 			&d \in \mathbb{N} \\
 			&c \in \mathbb{N} \\
 			&a = bd + c \\
-			&0 \leq c < \left\lvert b\right\rvert
+			&0 \leq c < \left\lvert b \right\rvert
 		\end{aligned}
 		\right.
 		\right)
@@ -1951,6 +2040,265 @@
 		a \equiv b \ (mod \ c)
 		\longrightarrow
 		a^d \equiv b^d \ (mod \ c)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ d \
+		\left(
+		\left\{
+		\begin{aligned}
+			&d | a \\
+			&d | b \\
+			&\forall d' \
+			\left\{
+			\begin{aligned}
+				&d' | a \\
+				&d' | b \\
+			\end{aligned}
+			\right.
+			\longrightarrow
+			d' | d
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		d - \text{НОД}(a, b).
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\begin{aligned}
+			&\forall \sequence{p_n}, \ \sequence{\alpha_n}, \\
+			&\sequence{\beta_n}, \ a, \ b
+		\end{aligned} \
+		\left(
+		\left\{
+		\begin{aligned}
+			&p_1^{\alpha_1} p_2^{\alpha_2} \ldots - \text{разложение на простые} \\
+			&\text{множители} \ a \\
+			&p_1^{\beta_1} p_2^{\beta_2} \ldots - \text{разложение на простые} \\
+			&\text{множители} \ b
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\text{НОД}(a, b) = p_1^{min(\alpha_1, \beta_1)} p_2^{min(\alpha_2, \beta_2)} \ldots
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ d \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a | d \\
+			&b | d \\
+			&\forall d' \
+			\left\{
+			\begin{aligned}
+				&a | d' \\
+				&b | d' \\
+			\end{aligned}
+			\right.
+			\longrightarrow
+			d | d'
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		d - \text{НОК}(a, b).
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\text{НОД}(0, 0) = 0
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a \
+		\text{НОД}(a, 0) = a
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ q \
+		q \in \mathbb{Z}
+		\longrightarrow
+		\text{НОД}(a + bq, b) = \text{НОД}(a, b)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\text{НОД}(a \% b, b) = \text{НОД}(a, b)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\text{НОД}\left(\frac{a}{\text{НОД}(a, b)}, \frac{b}{\text{НОД}(a, b)}\right)
+		=
+		1
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ c \
+		\left(
+		\exists b \
+		\left\{
+		\begin{aligned}
+			&a | bc \\
+			&\text{НОД}(a, b) = 1
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a | c
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall x, \ y, \ m \
+		\left(
+		\exists a \
+		\left\{
+		\begin{aligned}
+			&\text{НОД}(a, m) = 1 \\
+			&ax \equiv ay \ (mod \ m)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		x \equiv y \ (mod \ m)
+		\right)
+	\end{flalign*}
+
+	\textbf{Тождество Безу:}
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		\text{НОД}(a, b) = 1
+		\longrightarrow
+		\exists x, \ y \
+		ax + by = 1
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		\exists x, \ y \
+		\left\{
+		\begin{aligned}
+			&x \in \mathbb{Z} \\
+			&y \in \mathbb{Z}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		ax + by = \text{НОД}(a, b)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ m \
+		\left(
+		\forall \meta{x} \
+		ax \equiv 1 \ (mod \ m) - \text{имеет решение}.
+		\Leftrightarrow
+		\text{НОД}(a, m) = 1
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{x} \
+		\varphi(x) - \text{функция Эйлера}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{x} \
+		\varphi(x) = \text{количество чисел взаимно простых с} \ x \ {среди чисел} \ 1, 2, \ldots, x - 1.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall x \
+		\left(
+		x - \text{простое}.
+		\longrightarrow
+		\varphi(x) = x - 1
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		\text{НОД}(a, b) = 1
+		\longrightarrow
+		\varphi(a, b) = \varphi(a) \varphi(b)
+		\right)
+	\end{flalign*}
+
+	\textbf{Теорема Эйлера:}
+	\begin{flalign*}
+		\forall a, \ x \
+		\left(
+		\left\{
+		\begin{aligned}
+			&\text{НОД}(a, x) = 1 \\
+			&x > 1
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a^{\varphi(x)} \equiv 1 \ (mod \ x)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall x, \ y, \ a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&x \equiv y \ (mod \ \varphi(x)) \\
+			&a \in \mathbb{Z}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a^x \equiv a^y \ (mod \ x)
+		\right)
+	\end{flalign*}
+
+	\textbf{Малая теорема Ферма:}
+	\begin{flalign*}
+		\forall a, \ p \
+		\left(
+		\left\{
+		\begin{aligned}
+			&p - \text{простое}. \\
+			&\text{НОД}(a, p) = 1
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a^{p - 1} \equiv 1 \ (mod \ p)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall p, \ a \
+		\left(
+		p - \text{простое}.
+		\longrightarrow
+		a^p \equiv a \ (mod \ p)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\begin{aligned}
+			&\forall \sequence{p_n}, \ \sequence{\alpha_n}, \\
+			&\sequence{\beta_n}, \ a, \ b
+		\end{aligned} \
+		\left(
+		\left\{
+		\begin{aligned}
+			&p_1^{\alpha_1} p_2^{\alpha_2} \ldots - \text{разложение на простые} \\
+			&\text{множители} \ a \\
+			&p_1^{\beta_1} p_2^{\beta_2} \ldots - \text{разложение на простые} \\
+			&\text{множители} \ b
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\text{НОК}(a, b) = p_1^{max(\alpha_1, \beta_1)} p_2^{max(\alpha_2, \beta_2)} \ldots
 		\right)
 	\end{flalign*}
 
