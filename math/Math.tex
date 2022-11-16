@@ -2250,12 +2250,15 @@
 		\left(
 		\left\{
 		\begin{aligned}
-			&x \equiv y \ (mod \ \varphi(x)) \\
-			&a \in \mathbb{Z}
+			&a \in \mathbb{Z} \\
+			&x \geq 0 \\
+			&y \geq 0 \\
+			&\text{НОД}(a, m) = 1 \\
+			&x \equiv y \ (mod \ \varphi(m))
 		\end{aligned}
 		\right.
 		\longrightarrow
-		a^x \equiv a^y \ (mod \ x)
+		a^x \equiv a^y \ (mod \ m)
 		\right)
 	\end{flalign*}
 
