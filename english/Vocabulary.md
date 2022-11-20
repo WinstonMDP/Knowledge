@@ -10,17 +10,27 @@
 - Alzheimer's - болезнь Альцгеймера.
 - arthritis - артрит.
 
+**B:**
+
+- breast - молочная железа.
+
 **С:**
 
 - calm - спокойствие.
 - cancer - рак.
+- complication - осложнение.
+- consistency - консистенция.
 - coordination - координация.
+- counterpart - аналог.
 - courtesy - вежливость.
 
 **D:**
 
-- diabetes - диабет.
+- deficiency - дефицит.
 - determination - целеустремлённость.
+- diabetes - диабет.
+- diagnosis - диагноз.
+- drug - лекарство\наркотик.
 
 **E:**
 
@@ -33,6 +43,8 @@
 
 **I:**
 
+- infection - инфекция.
+- infectivity - заразность.
 - injection - инъекция.
 - intensity - напряжённость.
 
@@ -46,10 +58,21 @@
 - midwife - акушерка.
 - morphine - морфин.
 
+**N:**
+
+- nutrition - питание.
+
+**O:**
+
+- objective - цель.
+
 **P:**
 
 - painkiller - обезболивающие.
+- parasite - паразит.
+- patient - пациент.
 - pharmacist - фармацевт.
+- physician - врач.
 - physiotherapy - физиотерапия.
 - prompt - подсказка.
 - psychiatrist - психиатр.
@@ -74,15 +97,24 @@
 
 - tip - совет.
 - tolerance - толерантность.
+- tumor - опухоль.
+
+**V:**
+
+- vaccine - прививка.
 
 **W:**
 
-- willpower - силу воли.
+- willpower - сила воли.
 
 ## <a name = "Verb">Verb</a>
 
 **A:**
 
+- apply
+  - apply for something - подать заявление на что-то.
+- agree
+  - agree with something - согласиться с чем-то.
 - ask
   - ask - спросить.
   - ask somebody out - пригласить на свидание.
@@ -94,10 +126,7 @@
   - be after something - пытаться получить что-то.
   - be away - отсутствовать.
   - be on\of - быть включённым\выключенным.
-- blow
-  - blow - дуть.
-  - blow out - гаснуть.
-  - blow up - взрываться.
+- blow - дуть.
 - break
   - break - сломать
   - break down - сломаться.
@@ -117,6 +146,25 @@
   - call off - отменить.
   - call out - позвать\крикнуть\позвать на помощь.
 - calm (down) - успокоить.
+- care
+  - care for something - заботиться о чём-то.
+- complain
+  - complain about something - жаловаться на что-то.
+
+**D:**
+
+- deal
+  - deal with something - иметь дело с чем-то.
+
+**E:**
+
+- embrace - обнять\принять что-то с энтузиазмом.
+- emerge - появиться.
+
+**F:**
+
+- focus
+  - focus on something - сосредоточиться на чём-то.
 
 **G:**
 
@@ -139,9 +187,22 @@
   - go on - продолжать\происходить\давай.
   - go out - выйти\встречаться (отношения).
   - go through - пройти через (испытания)\изучить.
-  - go up - подниматься\взорваться.
   - go with - подходить\сопровождать\быть в отношениях.
 - guide - руководить.
+
+**L:**
+
+- lessen - уменьшить.
+
+**P:**
+
+- protect
+  - protect from something - защищаться от чего-то.
+
+**R:**
+
+- recover
+  - recover from something - оправиться от чего-то.
 
 **S:**
 
@@ -155,6 +216,10 @@
   - speak against\in favor of something.
   - speak of\about something.
   - speak to\with somebody.
+- specialise
+  - specialise in something - специализироваться в чём-то.
+- succeed
+  - succeed in something - преуспеть в чём-то.
 
 **T:**
 
@@ -167,6 +232,11 @@
   - tell something from something - отличить одно от другого.
 - transplant - пересаживать.
 
+**W:**
+
+- worry
+  - worry about something - беспокоиться о чём-то.
+
 ## <a name = "Adjectives">Adjectives</a>
 
 **A:**
@@ -176,6 +246,14 @@
 **E:**
 
 - efficient - эффективный.
+
+**F:**
+
+- former - первый из упомянутых.
+
+**G:**
+
+- gradual - постепенный.
 
 **I:**
 
@@ -189,7 +267,7 @@
 
 - obsessive - одержимый.
 - objective - объективный.
-- open-minded - способный к плюрализму.
+- open-minded - открытый к познанию.
 
 **P:**
 
@@ -198,12 +276,19 @@
 **R:**
 
 - reassuring - обнадёживающий.
+- rely
+  - rely on something - полагаться на что-то.
 
 **S:**
 
 - sensitive - чувствительный.
 - sociable - социальный.
+- soothing - успокаивающий.
 - sympathetic - сердобольный.
+
+**T:**
+
+- tangible - реальный.
 
 ## Stable phrases
 
@@ -263,3 +348,5 @@
 - to score an own goal - навредить себе же.
 - to start the ball rolling - начать что-то делать.
 - to make sacrifices - приносить жертвы.
+- to take care of something - заботиться о чём-то.
+- to familiarize yourself with something - познакомиться-узнать с чем-то.
