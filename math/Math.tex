@@ -246,20 +246,74 @@
         \begin{math}
             a^3 + b^3 = (a + b)(a^2 - ab + b^2)
         \end{math}
-
-        \item Бином Ньютона.
-        \\
-        \begin{math}
-            (a + b)^n =
-			\sum\limits_{i = 0}^n \frac{a^{n-i}b^in!}{i!(n - i)!} =
-			\sum\limits_{i = 0}^n \frac{a^{n-i}b^i\prod\limits_{k = 0}^{i - 1}n - k}{i!}
-        \end{math}
     \end{enumerate}
 
     \textbf{Неполный квадрат разности:}
     \begin{flalign*}
         a^2 - ab + b^2
     \end{flalign*}
+
+	\begin{flalign*}
+		\forall n, \ k \
+		\left(
+		\left\{
+		\begin{aligned}
+			&n \in \mathbb{N} \\
+			&k \in \mathbb{N} \\
+			&k \leq n
+		\end{aligned}
+		\right.
+		\longrightarrow
+		C_n^k = \frac{n!}{k! (n - k)!}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall n, \ k \
+		\left(
+		\left\{
+		\begin{aligned}
+			&n \in \mathbb{C} \\
+			&k \in \mathbb{N} \\
+			&k \leq n
+		\end{aligned}
+		\right.
+		\longrightarrow
+		C_n^k = \frac{\prod_{i = 0}^{k - 1} (n - i)}{k!}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall n \
+		C_n^0 = 1
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall n \
+		C_n^n = 1
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall n, \ k \
+		C_n^k = C_n^{n - k}
+	\end{flalign*}
+
+	\begin{flalign*}
+		C_n^k = C_{n - 1}^{k - 1} + C_{n - 1}^k
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall x, \ n \
+		(1 + x)^n = \sum_{k = 0}^n C_n^k x^k
+	\end{flalign*}
+
+	\textbf{Бином Ньютона:}
+	\begin{flalign*}
+		\forall a, \ b, \ n \
+		(a + b)^n
+		=
+		\sum_{k = 0}^n C_n^k a^k b^{n - k}
+	\end{flalign*}
 
 	Многочлен
 	\begin{math}
@@ -672,6 +726,16 @@
 		\left(
 		\exists a \
 		\lim_{n \longrightarrow \infty} x_n = a
+		\Leftrightarrow
+		\sequence{x_n} - \text{сходящаяся последовательность}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}
+		\left(
+		\exists a \
+		\lim_{n \longrightarrow \infty} x_n = a
 		\longrightarrow
 		\sequence{x_n} - \text{ограниченная последовательность}.
 		\right)
@@ -909,6 +973,70 @@
 			&x \ \text{единственен}.
 		\end{aligned}
 		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ \sequence{y_n} \
+		\left(
+		\left\{
+		\begin{aligned}
+			&\lim_{n \longrightarrow \infty} x_n = 0 \\
+			&\sequence{y_n} - \text{ограниченная}.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\lim_{n \longrightarrow \infty} x_n y_n = 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ \sequence{y_n} \
+		\lim_{n \longrightarrow \infty}(x_n + y_n)
+		=
+		\lim_{n \longrightarrow \infty}x_n
+		+
+		\lim_{n \longrightarrow \infty}y_n
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ \sequence{y_n} \
+		\lim_{n \longrightarrow \infty}x_n y_n
+		=
+		\lim_{n \longrightarrow \infty}x_n
+		\lim_{n \longrightarrow \infty}y_n
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \sequence{x_n}, \ \sequence{y_n} \
+		\lim_{n \longrightarrow \infty}\frac{x_n}{y_n}
+		=
+		\frac
+		{\lim_{n \longrightarrow \infty}x_n}
+		{\lim_{n \longrightarrow \infty}y_n}
+	\end{flalign*}
+
+	\textbf{Второй замечательный предел:}
+	\begin{flalign*}
+		\lim_{n \longrightarrow \infty}\left(1 + \frac{1}{n}\right)^n
+		=
+		e
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ a \
+		\left(
+		\exists \sequence{x_n} \
+		\forall n \
+		\left\{
+		\begin{aligned}
+			&x_n \in A \\
+			&x_n \neq a \\
+			&\lim_{n \longrightarrow \infty} x_n = a
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		a - \text{предельная точка} \ A.
 		\right)
 	\end{flalign*}
 
@@ -1696,6 +1824,116 @@
 	извлечение корня целой степени из алгебраического выражения,
 	содержащего аргумент.
 
+	\textbf{Определение предела функции по Гейне:}
+	\begin{flalign*}
+		\forall f, \ a, \ b \
+		\left(
+		\forall \sequence{x_n} \
+		\left(
+		\forall i \
+		\left\{
+		\begin{aligned}
+			&x_i \in D(f) \\
+			&x_i \neq a \\
+			&\lim_{k \longrightarrow \infty} x_k = a
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\lim_{k \longrightarrow \infty} f(x_k) = b
+		\right)
+		\Leftrightarrow
+		\lim_{x \longrightarrow a} f(x) = b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ a, \ b \
+		\left(
+		\forall \sequence{x_n} \
+		\left(
+		\forall i \
+		\left\{
+		\begin{aligned}
+			&x_i \in D(f) \\
+			&x_i < a \\
+			&\lim_{k \longrightarrow \infty} x_k = a
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\lim_{k \longrightarrow \infty} f(x_k) = b
+		\right)
+		\Leftrightarrow
+		\lim_{x \longrightarrow a-} f(x) = b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ a, \ b \
+		\left(
+		\forall \sequence{x_n} \
+		\left(
+		\forall i \
+		\left\{
+		\begin{aligned}
+			&x_i \in D(f) \\
+			&a < x_i \\
+			&\lim_{k \longrightarrow \infty} x_k = a
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\lim_{k \longrightarrow \infty} f(x_k) = b
+		\right)
+		\Leftrightarrow
+		\lim_{x \longrightarrow a+} f(x) = b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g, \ a \
+		\lim_{x \longrightarrow a} \left(f(x) + g(x)\right)
+		=
+		\lim_{x \longrightarrow a} f(x)
+		+
+		\lim_{x \longrightarrow a} g(x)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g, \ a \
+		\lim_{x \longrightarrow a} \left(f(x) g(x)\right)
+		=
+		\lim_{x \longrightarrow a} f(x)
+		\lim_{x \longrightarrow a} g(x)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g, \ a \
+		\lim_{x \longrightarrow a} \frac{f(x)}{g(x)}
+		=
+		\frac
+		{\lim_{x \longrightarrow a} f(x)}
+		{\lim_{x \longrightarrow a} g(x)}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall g, \ a, \ b \
+		\left(
+		\exists f, \ h \
+		\forall i \
+		\left\{
+		\begin{aligned}
+			&\lim_{x \longrightarrow a} f(x)
+			=
+			\lim_{x \longrightarrow a} h(x)
+			=
+			b \\
+			&f(i) \leq g(i) \leq h(i)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\lim_{x \longrightarrow a} g(x) = b
+		\right)
+	\end{flalign*}
+
 	\chapter{Числа}
 	\textbf{Числовое кольцо} - это множество чисел,
 	результат суммы, разности, произведения любых чисел которого
@@ -1879,6 +2117,23 @@
 	\end{flalign*}
 	\begin{flalign*}
 		a(-b) = -ab
+	\end{flalign*}
+
+	\textbf{Неравенство Бернули:}
+	\begin{flalign*}
+		\forall x, \ n \
+		\left(
+		\left\{
+		\begin{aligned}
+			&x \in \mathbb{Z} \\
+			&x \geq -1 \\
+			&n \in \mathbb{N} \\
+			&n \neq 0
+		\end{aligned}
+		\right.
+		\longrightarrow
+		(1 + x)^n \geq 1 + nx
+		\right)
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -2384,13 +2639,13 @@
 	собой натуральную степень числа 10.
 
 	Всякое рациональное число может
-	быть представленно бесконечной
+	быть представлено бесконечной
 	десятичной периодической дробью
 	взаимно однозначно.
 
 	\section{Иррациональные числа (I)}
 	Всякое иррациональное число может
-	быть представленно бесконечной
+	быть представлено бесконечной
 	десятичной непериодической дробью
 	взаимно однозначно.
 
@@ -2538,7 +2793,7 @@
 	\textbf{Арифметический корень (арифметическое значение корня)} - это
 	положительный корень чётной степени из положительного числа.
 
-	Корень чётной степени по умолчанию aрифметический.
+	Корень чётной степени по умолчанию арифметический.
 
 	\begin{flalign*}
 		\left[
@@ -2620,12 +2875,12 @@
 	\textbf{Характеристика} - это
 	целая часть десятичного логарифма.
 
-	\textbf{Мантиса} - это
+	\textbf{Мантисса} - это
 	дробная часть десятичного логарифма.
 
 	\textbf{Открытый интервал (интервал) (a; b)} - это
 	множество действительных чисел x, удовлетворяющих
-	неравествам
+	неравенствам
 	\begin{math}
 		a < x \leq b
 	\end{math}
