@@ -1934,6 +1934,206 @@
 		\right)
 	\end{flalign*}
 
+	\begin{flalign*}
+		\forall a \
+		\left(
+		\lim_{x \longrightarrow a} f(x) = 0
+		\Leftrightarrow
+		\lim_{x \longrightarrow a} \frac{1}{f(x)} = \infty
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g, \ a, \ c \
+		\left(
+		\exists b \
+		\left\{
+		\begin{aligned}
+			&\lim_{x \longrightarrow a} f(x) = b \\
+			&\lim_{x \longrightarrow b} g(x) = c
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\lim_{x \longrightarrow a} g(f(x)) = c
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ a \
+		\left(
+		\left[
+		\begin{aligned}
+			&\lim_{x \longrightarrow a} f(x) = f(a) \\
+			&\overline{a - \text{предельная} \ D(f)}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{непрерывна в точке} \ a.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\exists \delta \
+		\forall x \
+		\left(
+		\exists a \
+		\left\{
+		\begin{aligned}
+			&f - \text{непрерывная в} \ a. \\
+			&\delta > 0 \\
+			&x \in O_\delta(a)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\exists b \
+		\left\lvert f(x) \right\rvert \leq b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f \
+		\exists \delta \
+		\forall x \
+		\left(
+		\exists a \
+		\left\{
+		\begin{aligned}
+			&f - \text{непрерывна в} \ a. \\
+			&f(a) \neq 0 \\
+			&x \in O_\delta(a)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		f(x) \neq 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g, \ h, \ a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{непрерывная в} \ a. \\
+			&g - \text{непрерываня в} \ a. \\
+			&h(x) = f(x) + g(x)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		h(x) - \text{непрерывная в} \ a.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g, \ h, \ a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{непрерывная в} \ a. \\
+			&g - \text{непрерываня в} \ a. \\
+			&h(x) = f(x) g(x)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		h(x) - \text{непрерывная в} \ a.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ g, \ h, \ a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{непрерывная в} \ a. \\
+			&g - \text{непрерываня в} \ a. \\
+			&g(a) \neq 0 \\
+			&h(x) = \frac{f(x)}{g(x)}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		h(x) - \text{непрерывная в} \ a.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall h, \ a \
+		\left(
+		\exists f, \ g \
+		\left\{
+		\begin{aligned}
+			&f - \text{непрерывная в} \ a. \\
+			&g - \text{непрерывная в} \ f(a). \\
+			&h(x) = g(f(x))
+		\end{aligned}
+		\right.
+		\longrightarrow
+		h - \text{непрерывная в} \ a.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ d \
+		\exists c \
+		\left(
+		\exists a, \ b \
+		\left\{
+		\begin{aligned}
+			&f \ \text{непрерывна на} \ [a, b] \\
+			&c \in (a, b) \\
+			&d \ \text{между} \ f(a) \ \text{и} \ f(b)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		d = f(c)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ a \
+		\left(
+		\exists b, \ c \
+		\left\{
+		\begin{aligned}
+			&f - \text{разрывная в} \ a. \\
+			&\lim_{x \longrightarrow a-} f(x) \neq \infty \\
+			&\lim_{x \longrightarrow a-} f(x) = b \\
+			&\lim_{x \longrightarrow a+} f(x) \neq \infty \\
+			&\lim_{x \longrightarrow a+} f(x) = c
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		a - \text{точка разрыва первого рода} \ f.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\left(
+		\exists b \
+		\left\{
+		\begin{aligned}
+			&a - \text{точка разрыва первого рода}. \\
+			&\lim_{x \longrightarrow a} f(x) = b
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		a - \text{точка устранимого разрыв}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ a \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{разрывная в} \ a. \\
+			&\overline{a - \text{точка разрыва первого рода}}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		a - \text{точка разрыва второго рода} \ f.
+		\right)
+	\end{flalign*}
+
 	\chapter{Числа}
 	\textbf{Числовое кольцо} - это множество чисел,
 	результат суммы, разности, произведения любых чисел которого
