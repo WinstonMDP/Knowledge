@@ -5,20 +5,27 @@
 **A:**
 
 - agility - ловкость.
+- airbag - подушка безопасности.
+- alteration - изменение.
+- Alzheimer's - болезнь Альцгеймера.
 - anaesthetist - анестезиолог.
 - antibiotic - антибиотик.
-- Alzheimer's - болезнь Альцгеймера.
 - arthritis - артрит.
 
 **B:**
 
+- belt - ремень.
+- brake - тормоз.
 - breast - молочная железа.
 
 **С:**
 
 - calm - спокойствие.
 - cancer - рак.
+- charge - плата.
+- closure - закрытие\замыкание.
 - complication - осложнение.
+- congestion - затор.
 - consistency - консистенция.
 - coordination - координация.
 - counterpart - аналог.
@@ -50,7 +57,9 @@
 
 **L:**
 
+- lane - полоса движения.
 - leaflet - листовка.
+- limit - предел.
 - loan - кредит.
 
 **M:**
@@ -81,6 +90,7 @@
 
 - radiologist - радиолог.
 - rumour - слух.
+- runway - взлётная полоса.
 
 **S:**
 
@@ -95,9 +105,13 @@
 
 **T:**
 
+- tail - хвост.
+- tide - течение.
 - tip - совет.
 - tolerance - толерантность.
+- traction - тяга.
 - tumor - опухоль.
+- turbulence - турбулентность.
 
 **V:**
 
@@ -141,10 +155,10 @@
 - call
   - call - звать; звонить.
   - call at\by\on - остановиться в месте.
-  - call somebody back - перезвонить кому-то.
   - call for - призывать.
   - call off - отменить.
   - call out - позвать\крикнуть\позвать на помощь.
+  - call somebody back - перезвонить кому-то.
 - calm (down) - успокоить.
 - care
   - care for something - заботиться о чём-то.
@@ -155,6 +169,7 @@
 
 - deal
   - deal with something - иметь дело с чем-то.
+- delay - отсрочить.
 
 **E:**
 
@@ -206,6 +221,7 @@
 
 **S:**
 
+- sail - отплыть.
 - say
   - say - сказать что-то околокороткое более менее дословно.
   - say to somebody.
@@ -225,8 +241,8 @@
 
 - talk
   - talk - поговорить на "ты"; иметь влияние; предавать огласке лишнее.
-  - talk to somebody.
   - talk something - обсуждать что-то.
+  - talk to somebody.
 - tell
   - tell somebody - пересказать, передать смысл чего-то длинного-объёмного кому-то.
   - tell something from something - отличить одно от другого.
@@ -249,6 +265,7 @@
 
 **F:**
 
+- fogbound - окутанный туманом.
 - former - первый из упомянутых.
 
 **G:**
@@ -265,8 +282,8 @@
 
 **O:**
 
-- obsessive - одержимый.
 - objective - объективный.
+- obsessive - одержимый.
 - open-minded - открытый к познанию.
 
 **P:**
@@ -278,6 +295,7 @@
 - reassuring - обнадёживающий.
 - rely
   - rely on something - полагаться на что-то.
+- rough - грубоватый(поверхность)\суровый.
 
 **S:**
 
@@ -289,6 +307,7 @@
 **T:**
 
 - tangible - реальный.
+- traffic - дорожный.
 
 ## Stable phrases
 
@@ -350,3 +369,8 @@
 - to make sacrifices - приносить жертвы.
 - to take care of something - заботиться о чём-то.
 - to familiarize yourself with something - познакомиться-узнать с чем-то.
+- a long tailback - длинная пробка.
+- congestion charge - плата за проезд по платной дороге.
+- speed camera - камера контроля скорости.
+- one-way street - улица с односторонним движением.
+- seat belt - ремень безопасности.
