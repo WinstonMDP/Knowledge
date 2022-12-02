@@ -315,90 +315,217 @@
 		\sum_{k = 0}^n C_n^k a^k b^{n - k}
 	\end{flalign*}
 
-	Многочлен
-	\begin{math}
-		Q(x)
-	\end{math}
-	является частным и многочлен
-	\begin{math}
-		R(x)
-	\end{math}
-	является остатком при делении многочлена
-	\begin{math}
-		P_n(x)
-	\end{math}
-	на
-	\begin{math}
-		S_m(x)
-	\end{math},
-	если
-	\begin{math}
-		P_n(x) = S_m(x)Q(x) + R(x)
-	\end{math}
-	и степень
-	\begin{math}
-		R(x)
-	\end{math}
-	меньше степени
-	\begin{math}
-		S_m(x)
-	\end{math}.
+	\begin{flalign*}
+		\forall A, \ B, \ Q, \ R \
+		\left(
+		\left\{
+		\begin{aligned}
+			&0 \leq deg \ R < deg \ Q \\
+			&A(x) = B(x)Q(x) + R(x)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&Q(x) - \text{частное при делении} \ A(x) \ \text{на} \ B(x). \\
+			&R(x) - \text{остаток при делении} \ A(x) \ \text{на} \ B(x).
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
 
-	Если
-	степень
-	\begin{math}
-		P_n(x)
-	\end{math}
-	больше степени
-	\begin{math}
-		S_m(x)
-	\end{math},
-	степень частного от деления
-	\begin{math}
-		P_n(x)
-	\end{math}
-	на
-	\begin{math}
-		S_m(x)
-	\end{math}
-	равна разности степеней
-	\begin{math}
-		P_n(x)
-	\end{math}
-	и
-	\begin{math}
-		S_m(x)
-	\end{math},
-	иначе частное равно нулю.
+	\begin{flalign*}
+		\forall A, \ B, \ Q, \ R \
+		\left(
+		\left\{
+		\begin{aligned}
+			&Q(x) - \text{частное при делении} \ A(x) \ \text{на} \ B(x). \\
+			&R(x) - \text{остаток при делении} \ A(x) \ \text{на} \ B(x). \\
+			&deg \ B < deg \ A
+		\end{aligned}
+		\right.
+		\longrightarrow
+		deg \ Q = deg \ A - deg \ B
+		\right)
+	\end{flalign*}
 
-	Остаток от деления многочлена
-	\begin{math}
-		P_n(x)
-	\end{math}
-	на двучлен вида
-	\begin{math}
-		x - \alpha
-	\end{math}
-	равен значению многочлена при
-	\begin{math}
-		x = \alpha
-	\end{math}.
+	\begin{flalign*}
+		\forall A, \ B, \ Q, \ R \
+		\left(
+		\left\{
+		\begin{aligned}
+			&Q(x) - \text{частное при делении} \ A(x) \ \text{на} \ B(x). \\
+			&R(x) - \text{остаток при делении} \ A(x) \ \text{на} \ B(x). \\
+			&deg \ A \leq deg \ B
+		\end{aligned}
+		\right.
+		\longrightarrow
+		deg \ Q = 0
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall R, \ A, \ \alpha \
+		\left(
+		R(x) - \text{остаток при делении} \ A(x) \ \text{на} \ (x - \alpha).
+		\longrightarrow
+		R(x) = A(\alpha)
+		\right)
+	\end{flalign*}
 
 	\textbf{Теорема Безу:}
-	\\
-	Многочлен
-	\begin{math}
-		P_n(x)
-	\end{math}
-	делится без остатка на двучлен
-	\begin{math}
-		x - \alpha
-	\end{math},
-	только если
-	\begin{math}
-		\alpha
-	\end{math}
-	- корень многочлена.
+	\begin{flalign*}
+		\forall R \
+		\left(
+		\exists A, \ x, \ \alpha \
+		\left\{
+		\begin{aligned}
+			&R(x) - \text{остаток при делении} \ A(x) \ \text{на} \ (x - \alpha). \\
+			&\alpha - \text{корень} \ A.
+		\end{aligned}
+		\right.
+		\longrightarrow
+		R(x) = 0
+		\right)
+	\end{flalign*}
+
+	\textbf{Основная теорема алгебры:}
+	\begin{flalign*}
+		\forall A \
+		\exists z \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A(x) - \text{многочлен}. \\
+			&z \in \mathbb{C}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		z - \text{корень} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\begin{aligned}
+		&\forall \sequence{a_n}, \ \sequence{x_n} \\
+		&\left(
+		\begin{aligned}
+			&\exists P \\
+			&\forall i
+		\end{aligned} \
+		\left\{
+		\begin{aligned}
+			&P(x) = a_n x^n + a_{n - 1} x^{n - 1} + \ldots + a_0 \\
+			&x_i - \text{корень} \ P(x).
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&x_1 + x_2 + \ldots + x_n = -\frac{a_{n - 1}}{a_n} \\
+			&x_1 x_2 + x_1 x_3 + \ldots + x_1 x_n + x_2 x_3 + \ldots + x_{n - 1} x_n = \frac{a_{n - 2}}{a_n} \\
+			&\vdots \\
+			&x_1 x_2 \ldots x_n = (-1)^n \frac{a_0}{a_n}
+		\end{aligned}
+		\right.
+		\right)
+		\end{aligned}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		0 < deg \ A
+		\Leftrightarrow
+		A - \text{нетривиальный}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\exists B, \ C \
+		\left\{
+		\begin{aligned}
+			&A(x) = B(x) C(x) \\
+			&B - \text{нетривиальный}. \\
+			&C - \text{нетривиальный}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A(x) - \text{приводимый}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		deg \ A = 1
+		\longrightarrow
+		A - \text{неприводимый над} \ \mathbb{C}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\left(
+		1 < deg \ A
+		\longrightarrow
+		A - \text{приводимый над} \ \mathbb{C}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\exists \sequence{z_n}, \ \sequence{\alpha_n}, \ a, \ k \
+		\left(
+		A(z) - \text{многочлен}.
+		\longrightarrow
+		\left\{
+		\begin{aligned}
+			&deg \ A = \alpha_1 + \alpha_2 + \ldots + \alpha_n \\
+			&a - \text{старший коэффициент} \ A. \\
+			&A(z) = a (z - z_1)^{\alpha_1} (z - z_{2})^{\alpha_2} \ldots (z - z_k)^{\alpha_k}
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A
+		\left(
+		deg \ A = 1
+		\longrightarrow
+		A - \text{неприводимый над} \ \mathbb{R}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A \
+		\left(
+		\left\{
+		\begin{aligned}
+			&deg \ A = 2 \\
+			&D(A) < 0
+		\end{aligned}
+		\right.
+		\longrightarrow
+		A - \text{неприводимый над} \ \mathbb{R}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A
+		\left(
+		\left[
+		\begin{aligned}
+			&2 < deg \ A \\
+			&D(A) < 0
+		\end{aligned}
+		\right.
+		\longrightarrow
+		A - \text{приводимый над} \ \mathbb{R}.
+		\right)
+	\end{flalign*}
 
 	\chapter{Измерения}
 	\textbf{Величина} - это
@@ -2144,31 +2271,6 @@
 	числами которого принадлежит ему тоже.
 
 	\section{Натуральные числа (N)}
-	\textbf{Целочисленная переменная} - это
-	величина, принимающая только
-	натуральные значения.
-
-	\textbf{Свойства сложения и умножения:}
-	\begin{enumerate}
-		\item Переместительное.
-		\begin{flalign*}
-			a + b = b + a
-		\end{flalign*}
-		\begin{flalign*}
-			ab = ba
-		\end{flalign*}
-
-		\item Сочетательное (ассоциативное).
-		\begin{flalign*}
-			(a + b) + c = a + (b + c)
-		\end{flalign*}
-		\begin{flalign*}
-			(ab)c = a(bc)
-		\end{flalign*}
-
-		\item Распределительнoe.
-	\end{enumerate}
-
 	\begin{flalign*}
 		+ - \text{операция на числах, обладающая коммутативным свойством.}
 	\end{flalign*}
@@ -3409,6 +3511,20 @@
 	\textbf{Формула Муавра:}
 	\begin{flalign*}
 		z^n = r^n(\cos n\phi + i\sin n\phi)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall z, \ r, \ n, \ \varphi \
+		\left(
+		z = r(\cos \varphi + i\sin \varphi)
+		\longrightarrow
+		\sqrt[n]{z} = \sqrt[n]{r}\left(\cos \frac{\varphi + 2\pi k}{n} + i\sin \frac{\varphi + 2\pi k}{n}\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \varphi \
+		\cos \varphi + i\sin \varphi = e^{i\varphi}
 	\end{flalign*}
 
 	\chapter{Матрицы}
@@ -4711,6 +4827,62 @@
 		\Leftrightarrow
 		\exists x \
 		Ax = b - \text{совместная}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ l, \ n \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A_l, A_{l + 1}, \ldots, A_{l + n - RgA - 1} - \text{л.н.з. столбцы}. \\
+			&A_l, A_{l + 1}, \ldots, A_{l + n - RgA - 1} - \text{решения} \ Ax = 0. \\
+			&n - \text{число неизвестных}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&A_l, A_{l + 1}, \ldots, A_{l + n - RgA - 1} - \\
+			&\text{фундаментальная система} \\
+			&\text{решений (ФСР)} \ Ax = 0.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ x \
+		\left(
+		Ax = 0
+		\longrightarrow
+		\exists C \
+		C - \text{ФСР} \ Ax = 0.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall C, \ x \
+		\exists n \
+		\left(
+		\exists m \
+		C_{m \times n} - \text{ФСР} \ Ax = 0.
+		\longrightarrow
+		x = \alpha_1 C_1 + \ldots + \alpha_n C_n.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall C, \ x \
+		\exists \sequence{\alpha_n}, \ n \
+		\left(
+		\exists m \
+		\left\{
+		\begin{aligned}
+			&C_{m \times n} - \text{ФСР} \ Ax = 0. \\
+			&Ax' = b
+		\end{aligned}
+		\right.
+		\longrightarrow
+		x' + \alpha_1 C_1 + \ldots + \alpha_n C_n - \text{все решения} \ Ax = b.
 		\right)
 	\end{flalign*}
 \end{document}
