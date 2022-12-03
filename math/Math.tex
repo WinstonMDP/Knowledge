@@ -2723,6 +2723,16 @@
 		\right)
 	\end{flalign*}
 
+	\begin{flalign*}
+		\forall x, \ y, \ m \
+		\left(
+		\exists a \
+		ax \equiv ay \ (mod \ am)
+		\Leftrightarrow
+		x \equiv y \ (mod \ m)
+		\right)
+	\end{flalign*}
+
 	\textbf{Тождество Безу:}
 	\begin{flalign*}
 		\forall a, \ b \
@@ -2752,8 +2762,8 @@
 	\begin{flalign*}
 		\forall a, \ m \
 		\left(
-		\forall \meta{x} \
-		ax \equiv 1 \ (mod \ m) - \text{имеет решение}.
+		\exists x \
+		ax \equiv 1 \ (mod \ m)
 		\Leftrightarrow
 		\text{НОД}(a, m) = 1
 		\right)
@@ -2859,6 +2869,203 @@
 		\right.
 		\longrightarrow
 		\text{НОК}(a, b) = p_1^{max(\alpha_1, \beta_1)} p_2^{max(\alpha_2, \beta_2)} \ldots
+		\right)
+	\end{flalign*}
+
+	\textbf{Алгоритм Евклида:}
+	\begin{flalign*}
+		\text{НОД}(a, b)
+		=
+		\text{НОД}(a \ \% \ b, b)
+		=
+		\text{НОД}(a \ \% \ b, b \ \% \ (a \ \% \ b))
+		=
+		\ldots
+		=
+		\text{НОД}(\ldots, 0)
+	\end{flalign*}
+
+	\textbf{Расширенный алгоритм Евклида:}
+	\begin{flalign*}
+		\left\{
+		\begin{aligned}
+			&r_t = au_t + bv_t \\
+			&r_t = r_{t - 2} - r_{t - 1}q_{t - 1} \\
+			&r_0 = a \\
+			&r_1 = b \\
+			&u_t = u_{t - 2} - u_{t - 1}q_{t - 1} \\
+			&u_0 = 1 \\
+			&u_1 = 0 \\
+			&v_t = v_{t - 2} - v_{t - 1}q_{t - 1} \\
+			&v_0 = 0 \\
+			&v_1 = 1
+		\end{aligned}
+		\right.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{x}, \ \meta{y}, \ b, \ c \
+		\left(
+		\exists a \
+		\left\{
+		\begin{aligned}
+			&ax + by = c \\
+			&a = 0 \\
+			&b \mid c
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\forall t \
+		\left\{
+		\begin{aligned}
+			&x = t \\
+			&y = \frac{c}{b}
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \meta{x}, \ \meta{y}, \ a, \ b, \ c \
+		\left(
+		\left\{
+		\begin{aligned}
+			&ax + by = c \\
+			&a \neq 0 \\
+			&b \neq 0 \\
+			&\text{НОД}(a, b) \mid c
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\exists a', \ b', \ c', \ u, \ v \
+		\forall t \
+		\left\{
+		\begin{aligned}
+			&a' = \frac{a}{\text{НОД}(a, b)} \\
+			&b' = \frac{b}{\text{НОД}(a, b)} \\
+			&c' = \frac{c}{\text{НОД}(a, b)} \\
+			&a'u + b'v = 1 \\
+			&x = u c' - b't \\
+			&y = v c' + a't \\
+			&t \in \mathbb{Z}
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c \
+		\left(
+		\exists \meta{x}, \ \meta{y} \
+		\left\{
+		\begin{aligned}
+			&ax + by = c \\
+			&\overline{\text{НОД}(a, b) \mid c}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\forall t, \ k \
+		\left(
+		\left\{
+		\begin{aligned}
+			&t \in \mathbb{Z} \\
+			&k \in \mathbb{Z}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\overline{at + bk = c}
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ m, \ x' \
+		\left(
+		\left\{
+		\begin{aligned}
+			&A(x) \equiv 0 \ (mod \ m) \\
+			&0 \leq x' < m
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		x' - \text{решение сравнения} \ A(x) \equiv 0 \ (mod \ m).
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ c, \ m \
+		\left(
+		\exists x' \
+		x' - \text{решение} \ ax \equiv c \ (mod \ m)
+		\Leftrightarrow
+		\text{НОД}(a, m) \mid C
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\begin{aligned}
+		\forall &\meta{x}, \\
+				&a, \ c, \ m
+		\end{aligned} \
+		\left(
+		\left\{
+		\begin{aligned}
+			&ax \equiv c \ (mod \ m) \\
+			&\text{НОД}(a, m) \mid c
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\exists a', \ c', \ m' \
+		\forall t \
+		\left(
+		\left\{
+		\begin{aligned}
+			&t \in \mathbb{Z} \\
+			&0 \leq t < \text{НОД}(a, m)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\left\{
+		\begin{aligned}
+			&a' = \frac{a}{\text{НОД}(a, m)} \\
+			&c' = \frac{c}{\text{НОД}(a, m)} \\
+			&m' = \frac{m}{\text{НОД}(a, m)} \\
+			&x = a^{-1} c' \ \% \ m' + m't \\
+		\end{aligned}
+		\right.
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\begin{aligned}
+		\forall &\meta{x}, \\
+		        &\sequence{c_n}, \\
+				&\sequence{m_n}
+		\end{aligned} \
+		\left(
+		\left\{
+		\begin{aligned}
+			&x \equiv c_1 \ (mod \ m_1) \\
+			&x \equiv c_2 \ (mod \ m_2) \\
+			&\vdots \\
+			&x \equiv c_n \ (mod \ m_n)
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\begin{aligned}
+		\exists &\sequence{M_n}, \\
+		        &\sequence{x_n}, \\
+				&\sequence{b_n} \\
+		\forall &i
+		\end{aligned} \
+		\left\{
+		\begin{aligned}
+			&M_i = m_1 m_2 \ldots m_{i - 1} m_{i + 1} \ldots m_n \\
+			&x_i - \text{решение} \ M_i b_i \equiv c_i \\
+			&x = \left(x_1 M_1 + x_2 M_2 + \ldots + x_n M_n\right) \ \% \ m_1 m_2 \ldots m_n
+		\end{aligned}
+		\right.
 		\right)
 	\end{flalign*}
 
