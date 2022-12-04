@@ -41,6 +41,7 @@
 
 **E:**
 
+- emission - выброс.
 - extremes - крайности.
 
 **F:**
@@ -85,6 +86,7 @@
 - physiotherapy - физиотерапия.
 - prompt - подсказка.
 - psychiatrist - психиатр.
+- puncture - прокол.
 
 **R:**
 
@@ -164,6 +166,7 @@
   - care for something - заботиться о чём-то.
 - complain
   - complain about something - жаловаться на что-то.
+- convince - убеждать.
 
 **D:**
 
@@ -259,6 +262,10 @@
 
 - authoritative - авторитетный.
 
+**C:**
+
+- conventional - традиционный.
+
 **E:**
 
 - efficient - эффективный.
@@ -288,6 +295,7 @@
 
 **P:**
 
+- preliminary - предварительный.
 - patient - терпеливый.
 
 **R:**
@@ -374,3 +382,5 @@
 - speed camera - камера контроля скорости.
 - one-way street - улица с односторонним движением.
 - seat belt - ремень безопасности.
+- traffic signal - светофор и прочее.
+- inflatable slide - что-то надувное, типо надувной горки.
