@@ -4101,8 +4101,8 @@
 	\end{flalign*}
 
 	\begin{flalign*}
-		&* - \text{операция на матрице и числе, обладающая дистрибутивным свойством} \\
-		&\text{(относительно матриц и относительно чисел) c +.}
+		&* - \text{операция на матрице и числе, обладающая дистрибутивным свойством c} \ + \\
+		&\text{относительно матриц и относительно чисел.}
 	\end{flalign*}
 
 	\begin{flalign*}
@@ -5091,5 +5091,352 @@
 		\longrightarrow
 		x' + \alpha_1 C_1 + \ldots + \alpha_n C_n - \text{все решения} \ Ax = b.
 		\right)
+	\end{flalign*}
+
+	\chapter{Векторы}
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \  \overrightarrow{b} \
+		\left(
+		\overrightarrow{a}, \overrightarrow{b} - \text{лежат на одной прямой или на параллельных}.
+		\Leftrightarrow
+		\overrightarrow{a}, \overrightarrow{b} - \text{коллинеарны}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \  \overrightarrow{b}, \ \overrightarrow{c} \
+		\left(
+		\begin{aligned}
+			&\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c} - \text{лежат на прямых,} \\
+			&\text{параллельных некоторой плоскости}.
+		\end{aligned}
+		\Leftrightarrow
+		\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c} - \text{компланарны}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \  \overrightarrow{b} \
+		\left(
+		\left\{
+		\begin{aligned}
+			&\overrightarrow{a} \upuparrows \overrightarrow{b} \\
+			&\left\lvert \overrightarrow{a} \right\rvert = \left\lvert \overrightarrow{b} \right\rvert
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\overrightarrow{a} = \overrightarrow{b}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \  \overrightarrow{b} \
+		\left(
+		\left\{
+		\begin{aligned}
+			&\overrightarrow{a} = \overrightarrow{b} \\
+			&\text{Начало} \ \overrightarrow{a}, \ \text{начало} \ \overrightarrow{b} \ \text{лежат на одной прямой}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\overrightarrow{a}, \overrightarrow{b} - \text{скользящие}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \  \overrightarrow{b} \
+		\left(
+		\left\{
+		\begin{aligned}
+			&\overrightarrow{a} = \overrightarrow{b} \\
+			&\text{Начало} \ \overrightarrow{a} = \text{начало} \ \overrightarrow{b}
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\overrightarrow{a}, \overrightarrow{b} - \text{связанные}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		+ - \text{операция на векторах, обладающая коммутативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		+ - \text{операция на векторах, обладающая ассоциативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		* - \text{операция на векторе и числе, обладающая коммутативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		* - \text{операция на векторе и числе, обладающая ассоциативным свойством.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		&* - \text{операция на векторе и числе, обладающая дистрибутивным свойством c} \ + \\
+		&\text{относительно векторов и относительно чисел.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{b} \
+		\left(
+		\overrightarrow{b} \neq 0
+		\Leftrightarrow
+		\exists \overrightarrow{a} \
+		\left\lvert a \right\rvert * \cos \angle \left(\overrightarrow{a}, \overrightarrow{b}\right) - \text{ортогональная проекция} \ \overrightarrow{a} \ \text{на направление} \ \overrightarrow{b}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\text{Ортогональная проекция уважает сложение векторов.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\text{Ортогональная проекция уважает умножение вектора на число.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b} \
+		\left(\overrightarrow{a}, \overrightarrow{b}\right)
+		=
+		\left\lvert \overrightarrow{a} \right\rvert \left\lvert \overrightarrow{b} \right\rvert \cos \varphi
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b} \
+		\left(\overrightarrow{a}, \overrightarrow{b}\right)
+		=
+		\left(\overrightarrow{b}, \overrightarrow{a}\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b} \
+		\left(\alpha \overrightarrow{a}, \overrightarrow{b}\right)
+		=
+		\alpha \left(\overrightarrow{a}, \overrightarrow{b}\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b} \
+		\left(\overrightarrow{a} + \overrightarrow{b}, \overrightarrow{c}\right)
+		=
+		\left(\overrightarrow{a}, \overrightarrow{c}\right) + \left(\overrightarrow{b}, \overrightarrow{c}\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}\
+		\left(
+		\overrightarrow{a} \neq 0
+		\Leftrightarrow
+		0 < \left(\overrightarrow{a}, \overrightarrow{a}\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}\
+		\left(
+		\overrightarrow{a} = 0
+		\Leftrightarrow
+		0 = \left(\overrightarrow{a}, \overrightarrow{a}\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a_1}, \ \overrightarrow{a_2}, \ \ldots, \ \overrightarrow{a_k} \
+		\left(
+		\forall \overrightarrow{b} \
+		\left\{
+		\begin{aligned}
+			&\overrightarrow{a_1}, \overrightarrow{a_2}, \ldots, \overrightarrow{a_k} - \text{л.н.з.} \\
+			&\overrightarrow{b} - \text{линейная комбинация} \ \overrightarrow{a_1}, \overrightarrow{a_2}, \ldots, \overrightarrow{a_k}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\overrightarrow{a_1}, \overrightarrow{a_2}, \ldots, \overrightarrow{a_k} - \text{базис}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a_1}, \ \overrightarrow{a_2}, \ \ldots, \ \overrightarrow{a_k} \
+		\left(
+		\forall \overrightarrow{b} \
+		\left\{
+		\begin{aligned}
+			&\overrightarrow{a_1}, \overrightarrow{a_2}, \ldots, \overrightarrow{a_k} - \text{базис} \\
+			&i = j \longrightarrow (a_i, a_j) = 1 \\
+			&i \neq j \longrightarrow (a_i, a_j) = 0
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\overrightarrow{a_1}, \overrightarrow{a_2}, \ldots, \overrightarrow{a_k} - \text{ортонормированный базис (ОНБ)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b} \
+		\left(\overrightarrow{a}, \overrightarrow{b}\right) = a_x b_x + a_y b_y + \ldots \ \text{в ОНБ}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\text{Г} - \text{матрица Грама}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{e_1}, \ \overrightarrow{e_2}, \ \overrightarrow{e_3} \
+		\left(
+		\overrightarrow{e_1}, \overrightarrow{e_2}, \overrightarrow{e_3} - \text{базис}.
+		\Leftrightarrow
+		\left(
+		\begin{array}{rrr}
+			\left(\overrightarrow{e_1}, \overrightarrow{e_1}\right) & \left(\overrightarrow{e_1}, \overrightarrow{e_2}\right) & \left(\overrightarrow{e_1}, \overrightarrow{e_3}\right) \\
+			\left(\overrightarrow{e_2}, \overrightarrow{e_2}\right) & \left(\overrightarrow{e_2}, \overrightarrow{e_2}\right) & \left(\overrightarrow{e_2}, \overrightarrow{e_3}\right) \\
+			\left(\overrightarrow{e_3}, \overrightarrow{e_1}\right) & \left(\overrightarrow{e_3}, \overrightarrow{e_2}\right) & \left(\overrightarrow{e_3}, \overrightarrow{e_3}\right)
+		\end{array}
+		\right)
+		=
+		\text{Г}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \ldots
+		\left(
+		\left\{
+		\begin{aligned}
+			&\overrightarrow{e_1}, \overrightarrow{e_2}, \overrightarrow{e_3} - \text{базис}. \\
+			&\overrightarrow{a} = a_1 \overrightarrow{e_1} + a_2 \overrightarrow{e_2} + a_3 \overrightarrow{e_3} \\
+			&\overrightarrow{b} = b_1 \overrightarrow{e_1} + b_2 \overrightarrow{e_2} + b_3 \overrightarrow{e_3}
+		\end{aligned}
+		\right.
+		\longrightarrow
+		\left(\overrightarrow{a}, \overrightarrow{b}\right)
+		=
+		\left(
+		\begin{array}{rrr}
+			a_1 & a_2 & a_3
+		\end{array}
+		\right)
+		\text{Г}
+		\left(
+		\begin{array}{r}
+			b_1 \\
+			b_2 \\
+			b_3
+		\end{array}
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{i}, \ \overrightarrow{j}, \ \overrightarrow{k} \
+		\left(
+		\overrightarrow{i}, \overrightarrow{j}, \overrightarrow{k} - \text{ортогональный базис}.
+		\Leftrightarrow
+		\forall \overrightarrow{a} \
+		\begin{aligned}
+			&cos \angle \left(\overrightarrow{a}, \overrightarrow{i}\right), cos \angle \left(\overrightarrow{a}, \overrightarrow{j}\right), cos \angle \left(\overrightarrow{a}, \overrightarrow{j}\right) - \\
+			&\text{направляющие косинусы} \ \overline{a}.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{i}, \ \overrightarrow{j}, \ \overrightarrow{k} \
+		\left(
+		\overrightarrow{i}, \overrightarrow{j}, \overrightarrow{k} - \text{ортогональный базис}.
+		\Leftrightarrow
+		\forall \overrightarrow{a} \
+		cos^2 \angle \left(\overrightarrow{a}, \overrightarrow{i}\right) + cos^2 \angle \left(\overrightarrow{a}, \overrightarrow{j}\right) + cos^2 \angle \left(\overrightarrow{a}, \overrightarrow{k}\right) = 1
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b}, \ \overrightarrow{c}
+		\left(
+		\text{Со стороны} \ \overrightarrow{c} \ \text{кратчайший поворот от} \ \overrightarrow{a} \ \text{к} \ \overrightarrow{b} \text{против часовой}.
+		\Leftrightarrow
+		\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c} - \text{правая}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\left\lvert \overrightarrow{a} \times \overrightarrow{b} \right\rvert = \left\lvert \overrightarrow{a} \right\rvert \left\lvert \overrightarrow{b} \right\rvert \sin \angle \left(\overrightarrow{a}, \overrightarrow{b}\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b}, \ \overrightarrow{c} \
+		\left(
+		\overrightarrow{c} = \overrightarrow{a} \times \overrightarrow{b}
+		\Leftrightarrow
+		\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c} - \text{правая}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b} \
+		\left(
+		\overrightarrow{a} \times \overrightarrow{b} = 0
+		\Leftrightarrow
+		\overrightarrow{a} \Vert \overrightarrow{b}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b} \
+		\overrightarrow{a} \times \overrightarrow{b} \bot \overrightarrow{a}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b} \
+		\overrightarrow{a} \times \overrightarrow{b} = -\overrightarrow{b} \times \overrightarrow{a}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\left(\alpha \overrightarrow{a}\right) \times \overrightarrow{b} = \alpha \left(\overrightarrow{a} \times \overleftrightarrow{b} \right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		&\times - \text{операция на векторах, обладающая дистрибутивным свойством c} \ + \\
+		&\text{относительно векторов.}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b}, \ \overrightarrow{c} \
+		\left(
+		0 < \left(\overrightarrow{a} \times \overrightarrow{b}, \overrightarrow{c}\right)
+		\longrightarrow
+		\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c} - \text{правая}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b}, \ \overrightarrow{c} \
+		\left(
+		\left(\overrightarrow{a} \times \overrightarrow{b}, \overrightarrow{c}\right) < 0
+		\longrightarrow
+		\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c} - \text{левая}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b}, \ \overrightarrow{c} \
+		\left(
+		\left(\overrightarrow{a} \times \overrightarrow{b}, \overrightarrow{c}\right) = 0
+		\Leftrightarrow
+		\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c} - \text{компланарны}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall \overrightarrow{a}, \ \overrightarrow{b}, \ \overrightarrow{c} \
+		\left(\overrightarrow{a} \times \overrightarrow{b}, \overrightarrow{c}\right)
+		=
+		\begin{array}{|rrr|}
+			a_x & a_y & a_z \\
+			b_x & b_y & b_z \\
+			c_x & c_y & c_z
+		\end{array} \
+		\text{в ОНБ}.
 	\end{flalign*}
 \end{document}
