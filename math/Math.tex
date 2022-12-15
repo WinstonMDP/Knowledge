@@ -17,6 +17,7 @@
 
 \newcommand{\meta}[1]{\text{<}#1\text{>}}
 \newcommand{\sequence}[1]{\left\{#1\right\}}
+\newcommand{\set}[1]{\left\{#1\right\}}
 
 \title{Математика}
 \date{\today}
@@ -179,6 +180,323 @@
 		\end{aligned}
 		\right.
 		\right)
+	\end{flalign*}
+
+	\chapter{Множества}
+	\section{Аксиомы множеств}
+	\begin{flalign*}
+		\forall a \
+		a - \text{множество}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left[
+		\begin{aligned}
+			&b \in a \\
+			&b \notin a
+		\end{aligned}
+		\right.
+	\end{flalign*}
+
+	\textbf{Аксиома основания:} \\
+	Не бывает бесконечных цепочек вида
+	\begin{math}
+		\left\{
+		\begin{aligned}
+			&x_1 \in x_2 \\
+			&x_2 \in x_3 \\
+			&\vdots
+		\end{aligned}
+		\right.
+	\end{math}
+
+	\textbf{Аксиома равенства:}
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		a = b
+		\Leftrightarrow
+		\forall c \
+		\left(
+		a \in c \Leftrightarrow b \in c
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a_1, \ a_2, \ \ldots, \ a_n \
+		\exists a \
+		a = \set{a_1, a_2, \ldots, a_n}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a_1, \ a_2, \ \ldots, \ a_n \ b \
+		\left(
+		b \in \set{a_1, a_2, \ldots, a_n}
+		\Leftrightarrow
+		\left[
+		\begin{aligned}
+			&b = a_1 \\
+			&b = a_2 \\
+			&\vdots \\
+			&b = a_n
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ c \
+		\left(
+		f: c \longrightarrow Bool
+		\Leftrightarrow
+		\exists b \
+		b = \set{a \in c \mid f(a)}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall f, \ b, \ c \
+		\left(
+		c \in \set{a \in b \mid f(a)}
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&c \in b \\
+			&f(c)
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\section{Другое}
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		a \subseteq b
+		\Leftrightarrow
+		\forall c \
+		\left(
+		c \in a \longrightarrow c \in b
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		a = b
+		\Leftrightarrow
+		\forall c \
+		\left(
+		c \in a \Leftrightarrow c \in b
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		a = b
+		\Leftrightarrow
+		\forall f \
+		\left(
+		\exists c \
+		f: c \longrightarrow Bool
+		\longrightarrow
+		\left(
+		f(a) \Leftrightarrow f(b)
+		\right)
+		\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		a = b
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&a \subseteq b \\
+			&b \subseteq a
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		a \subseteq a
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ c \
+		\left(
+		\exists b \
+		\left\{
+		\begin{aligned}
+			&a \subseteq b \\
+			&b \subseteq c
+		\end{aligned}
+		\right.
+		\longrightarrow
+		a \subseteq c
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a \
+		a \notin \varnothing
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a \
+		\varnothing \subseteq a
+	\end{flalign*}
+
+	\textbf{Парадокс Рассела:}
+	\begin{flalign*}
+		\overline{\exists a \ \forall b \ \left(b \in a \Leftrightarrow b \notin b\right)}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		a \in P(b)
+		\Leftrightarrow
+		a \subseteq b
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c \
+		\left(
+		c \in a \cup b
+		\Leftrightarrow
+		\left[
+		\begin{aligned}
+			&c \in a \\
+			&c \in b
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ c \
+		\left(
+		a \in \cup b
+		\Leftrightarrow
+		\exists c \
+		\left\{
+		\begin{aligned}
+			&a \in c \\
+			&c \in b
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		a \cap b = \set{c \in a \mid c \in b}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		a \diagdown b = \set{c \in a \mid c \notin b}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		a \subseteq b \Leftrightarrow a \cap b = a
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		a \subseteq b \Leftrightarrow a \cup b = b
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		\left(
+		b - \text{universum}.
+		\Leftrightarrow
+		\overline{a} = b \diagdown a
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\cup - \text{операция, обладающая коммутативным свойством}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\cup - \text{операция, обладающая ассоциативным свойством}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\cup - \text{операция, обладающая дистрибутивным свойством с} \ \cap.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\cap - \text{операция, обладающая коммутативным свойством}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\cap - \text{операция, обладающая ассоциативным свойством}.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\cap - \text{операция, обладающая дистрибутивным свойством с} \ \cup.
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b \
+		(a, b) = \set{\set{a}, \set{a, b}}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a, \ b, \ c \
+		\left(
+		\left\{
+		\begin{aligned}
+			&a \in c \\
+			&b \in c
+		\end{aligned}
+		\right.
+		\longrightarrow
+		(a, b) \in P\left(P\left(c\right)\right)
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		a \times b
+		=
+		\set
+		{
+			z \in P(P(a \cup b))
+			\mid
+			\exists x, \ y \
+			\left\{
+			\begin{aligned}
+				&x \in a \\
+				&y \in b \\
+				&z = (x, y)
+			\end{aligned}
+			\right.
+		}
+	\end{flalign*}
+
+	\begin{flalign*}
+		a^0 = \set{\varnothing}
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall a_1, \ a_2, \ \ldots, \ a_n \
+		\left(a_1, a_2, a_3, \ldots, a_n\right)
+		=
+		\left(\left(\left(a_1, a_2\right), a_3\right) \ldots a_n \right)
 	\end{flalign*}
 
 	\chapter{Алгебраические выражения}
