@@ -6,7 +6,9 @@
 
 - agility - ловкость.
 - airbag - подушка безопасности.
+- aircraft - воздушное судно.
 - alteration - изменение.
+- altitude - высота.
 - Alzheimer's - болезнь Альцгеймера.
 - anaesthetist - анестезиолог.
 - antibiotic - антибиотик.
@@ -16,20 +18,24 @@
 
 - belt - ремень.
 - brake - тормоз.
+- brass - латунь.
 - breast - молочная железа.
 
 **С:**
 
+- car - машина; вагон.
 - calm - спокойствие.
 - cancer - рак.
 - charge - плата.
-- closure - закрытие\замыкание.
+- closure - закрытие; замыкание.
 - complication - осложнение.
 - congestion - затор.
 - consistency - консистенция.
 - coordination - координация.
 - counterpart - аналог.
 - courtesy - вежливость.
+- crowd - толпа.
+- cuisine - кухня.
 
 **D:**
 
@@ -37,17 +43,28 @@
 - determination - целеустремлённость.
 - diabetes - диабет.
 - diagnosis - диагноз.
-- drug - лекарство\наркотик.
+- drug - лекарство; наркотик.
 
 **E:**
 
+- emergencies - чрезвычайные ситуации.
 - emission - выброс.
 - extremes - крайности.
 
 **F:**
 
-- flexibility - гибкость-подвижность.
+- felt - войлок.
 - fever - лихорадка.
+- flexibility - гибкость-подвижность.
+- fossil - ископаемое.
+
+**G:**
+
+- guide - руководство; направляющая.
+
+**H:**
+
+- heaven - рай.
 
 **I:**
 
@@ -70,27 +87,35 @@
 
 **N:**
 
+- nomad - кочевник.
 - nutrition - питание.
 
 **O:**
 
 - objective - цель.
+- opulence - богатство; роскошь.
 
 **P:**
 
+- pace - темп.
 - painkiller - обезболивающие.
 - parasite - паразит.
 - patient - пациент.
 - pharmacist - фармацевт.
 - physician - врач.
 - physiotherapy - физиотерапия.
+- pile-up - нагромождение.
+- plain - равнина.
 - prompt - подсказка.
+- prosperity - процветание.
 - psychiatrist - психиатр.
+- publisher - издатель.
 - puncture - прокол.
 
 **R:**
 
 - radiologist - радиолог.
+- romance - романтика.
 - rumour - слух.
 - runway - взлётная полоса.
 
@@ -102,12 +127,15 @@
 - self-development - саморазвитие.
 - self-discipline - самодисциплина.
 - self-respect - самоуважение.
+- shore - берег.
+- steppe - степь.
 - suggestion - предложение-совет.
 - surgeon - хирург.
 
 **T:**
 
 - tail - хвост.
+- tent - палатка.
 - tide - течение.
 - tip - совет.
 - tolerance - толерантность.
@@ -134,6 +162,7 @@
 - ask
   - ask - спросить.
   - ask somebody out - пригласить на свидание.
+- attract - привлекать.
 
 **B:**
 
@@ -143,6 +172,7 @@
   - be away - отсутствовать.
   - be on\of - быть включённым\выключенным.
 - blow - дуть.
+- board - подняться на борт.
 - break
   - break - сломать
   - break down - сломаться.
@@ -159,14 +189,19 @@
   - call at\by\on - остановиться в месте.
   - call for - призывать.
   - call off - отменить.
-  - call out - позвать\крикнуть\позвать на помощь.
+  - call out - позвать; крикнуть; позвать на помощь.
   - call somebody back - перезвонить кому-то.
 - calm (down) - успокоить.
 - care
   - care for something - заботиться о чём-то.
+- commute - переключать; добираться-ездить.
 - complain
   - complain about something - жаловаться на что-то.
+- conjure
+  - conjure - заклинать; вызывать.
+  - conjure up - вызвать в воображении.
 - convince - убеждать.
+- counter - противостоять.
 
 **D:**
 
@@ -176,7 +211,8 @@
 
 **E:**
 
-- embrace - обнять\принять что-то с энтузиазмом.
+- elevate - поднять.
+- embrace - обнять; принять что-то с энтузиазмом.
 - emerge - появиться.
 
 **F:**
@@ -191,22 +227,30 @@
   - go about - ходить-распространяться.
   - go about something - прогуливаться-рассматривать.
   - go about with somebody - иметь дело с кем-то.
-  - go after something - следовать за чем-то\пытаться достичь что-то.
+  - go after something - следовать за чем-то; пытаться достичь что-то.
   - go against - идти против.
   - go ahead - работать-делать.
-  - go along with something - сопровождаться с чем-то\соглашаться с чем-то.
-  - go away - уходить\исчезнуть.
-  - go back - вернуться\знать друг друга.
+  - go along with something - сопровождаться с чем-то; соглашаться с чем-то.
+  - go away - уходить; исчезнуть.
+  - go back - вернуться; знать друг друга.
   - go beyond - превзойти.
-  - go down - падать\садиться (солнце)\ломаться.
+  - go down - падать; садиться (солнце); ломаться.
   - go for - иметь значение\выбрать.
-  - go in - войти\быть понятным.
-  - go off - уходить\выйти из строя-испортиться.
-  - go on - продолжать\происходить\давай.
-  - go out - выйти\встречаться (отношения).
-  - go through - пройти через (испытания)\изучить.
-  - go with - подходить\сопровождать\быть в отношениях.
+  - go in - войти; быть понятным.
+  - go off - уходить; выйти из строя-испортиться.
+  - go on - продолжать; происходить; давай.
+  - go out - выйти; встречаться (отношения).
+  - go through - пройти через (испытания); изучить.
+  - go with - подходить; сопровождать; быть в отношениях.
 - guide - руководить.
+
+**H:**
+
+- heat - нагревать.
+
+**I:**
+
+- insulate - изолировать.
 
 **L:**
 
@@ -214,13 +258,16 @@
 
 **P:**
 
+- permit - разрешать.
 - protect
   - protect from something - защищаться от чего-то.
+- pump - выкачивать.
 
 **R:**
 
 - recover
   - recover from something - оправиться от чего-то.
+- respond - откликнуться.
 
 **S:**
 
@@ -230,6 +277,8 @@
   - say to somebody.
 - set
   - set apart - отделить.
+- skirt - обойти.
+- span - охватывать.
 - speak
   - speak - поговорить на "вы"; издавать звук; говорить на языке.
   - speak against\in favor of something.
@@ -239,6 +288,10 @@
   - specialise in something - специализироваться в чём-то.
 - succeed
   - succeed in something - преуспеть в чём-то.
+- step
+  - step - шагать.
+  - step up - подняться.
+  - step down - спуститься.
 
 **T:**
 
@@ -265,27 +318,39 @@
 **C:**
 
 - conventional - традиционный.
+- crowded - заполонённый.
 
 **E:**
 
 - efficient - эффективный.
+- elaborate - продуманный.
+- enormous - огромный.
 
 **F:**
 
 - fogbound - окутанный туманом.
 - former - первый из упомянутых.
+- freshwater - пресноводный.
 
 **G:**
 
+- giant - гигантский.
 - gradual - постепенный.
+- gruelling - изнурительный.
 
 **I:**
 
+- impeccable - безупречный.
 - innocent - невинный.
 
 **K:**
 
 - knowledgeable - знающий.
+
+**L:**
+
+- leisurely - неторопливый.
+- luxurious - роскошный.
 
 **O:**
 
@@ -301,12 +366,14 @@
 **R:**
 
 - reassuring - обнадёживающий.
+- reflect - отражать; размышлять.
 - rely
   - rely on something - полагаться на что-то.
-- rough - грубоватый(поверхность)\суровый.
+- rough - грубоватый (поверхность); суровый.
 
 **S:**
 
+- scenic - живописный.
 - sensitive - чувствительный.
 - sociable - социальный.
 - soothing - успокаивающий.
@@ -316,6 +383,22 @@
 
 - tangible - реальный.
 - traffic - дорожный.
+
+**W:**
+
+- wealth - богатый.
+
+## <a name = "Adverb">Adverb</a>
+
+**I:**
+
+- ironically - по иронии судьбы.
+
+## <a name = "Other">Other</a>
+
+**P:**
+
+- past - мимо.
 
 ## Stable phrases
 
@@ -384,3 +467,7 @@
 - seat belt - ремень безопасности.
 - traffic signal - светофор и прочее.
 - inflatable slide - что-то надувное, типо надувной горки.
+- Orient Express - Восточный экспресс.
+- household name - имя нарицательное.
+- drawing room - гостиная.
+- en-suite bathroom - ванная группа в комнате.
