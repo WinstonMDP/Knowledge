@@ -17,6 +17,7 @@
 **B:**
 
 - belt - ремень.
+- biopic - биографический фильм.
 - brake - тормоз.
 - brass - латунь.
 - breast - молочная железа.
@@ -55,6 +56,7 @@
 
 - felt - войлок.
 - fever - лихорадка.
+- fiction - фантазия.
 - flexibility - гибкость-подвижность.
 - fossil - ископаемое.
 
@@ -88,6 +90,9 @@
 **N:**
 
 - nomad - кочевник.
+- nostalgia - ностальгия.
+  - nostalgia for something - ностальгия по чему-то.
+- novel - роман.
 - nutrition - питание.
 
 **O:**
@@ -106,6 +111,8 @@
 - physiotherapy - физиотерапия.
 - pile-up - нагромождение.
 - plain - равнина.
+- play - спектакль.
+- poetry - поэзия.
 - prompt - подсказка.
 - prosperity - процветание.
 - psychiatrist - психиатр.
@@ -116,6 +123,7 @@
 
 - radiologist - радиолог.
 - romance - романтика.
+- romcom - романтическая комедия.
 - rumour - слух.
 - runway - взлётная полоса.
 
@@ -208,6 +216,7 @@
 - deal
   - deal with something - иметь дело с чем-то.
 - delay - отсрочить.
+- disappoint - разочаровать.
 
 **E:**
 
@@ -352,6 +361,11 @@
 - leisurely - неторопливый.
 - luxurious - роскошный.
 
+**N:**
+
+- nostalgic - ностальгический.
+  - nostalgic about something - ностальгический по чему-то.
+
 **O:**
 
 - objective - объективный.
@@ -390,9 +404,17 @@
 
 ## <a name = "Adverb">Adverb</a>
 
+**A:**
+
+- afterwards - впоследствии.
+
 **I:**
 
 - ironically - по иронии судьбы.
+
+**M:**
+
+- mostly - в основном.
 
 ## <a name = "Other">Other</a>
 
@@ -471,3 +493,6 @@
 - household name - имя нарицательное.
 - drawing room - гостиная.
 - en-suite bathroom - ванная группа в комнате.
+- science fiction (sci-fi) - научная фантастика.
+- short story - короткий рассказ.
+- travel writing - письмо о путешествии.
