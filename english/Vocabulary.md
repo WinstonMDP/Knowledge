@@ -27,6 +27,7 @@
 - calm - спокойствие.
 - cancer - рак.
 - car - машина; вагон.
+- cast - актёрский состав.
 - charge - плата.
 - closure - закрытие; замыкание.
 - complication - осложнение.
@@ -77,7 +78,12 @@
 - infection - инфекция.
 - infectivity - заразность.
 - injection - инъекция.
+- instance - экземпляр.
 - intensity - напряжённость.
+
+**J:**
+
+- jaw - челюсть.
 
 **L:**
 
@@ -89,6 +95,7 @@
 
 **M:**
 
+- majority - большая часть.
 - measure - степень.
 - midwife - акушерка.
 - mobility - мобильность.
@@ -115,12 +122,14 @@
 - parasite - паразит.
 - patient - пациент.
 - pedestrian - прохожий.
+- perception - ощущение.
 - pharmacist - фармацевт.
 - physician - врач.
 - physiotherapy - физиотерапия.
 - pile-up - нагромождение.
 - plain - равнина.
 - play - спектакль.
+- plot - сюжет.
 - poetry - поэзия.
 - prompt - подсказка.
 - prosperity - процветание.
@@ -149,6 +158,7 @@
 - shore - берег.
 - speeding - превышение скорости.
 - spot - пятно.
+- stage - этап; сцена.
 - steppe - степь.
 - suggestion - предложение-совет.
 - surgeon - хирург.
@@ -291,6 +301,9 @@
 
 - recover
   - recover from something - оправиться от чего-то.
+- reflect - отражать; размышлять.
+- rely
+  - rely on something - полагаться на что-то.
 - respond - откликнуться.
 
 **S:**
@@ -308,6 +321,7 @@
   - speak against\in favor of something.
   - speak of\about something.
   - speak to\with somebody.
+- spring - прыгать; возникнуть.
 - specialise
   - specialise in something - специализироваться в чём-то.
 - subside - спадать.
@@ -396,9 +410,7 @@
 **R:**
 
 - reassuring - обнадёживающий.
-- reflect - отражать; размышлять.
-- rely
-  - rely on something - полагаться на что-то.
+- reclusive - отшельнический.
 - rough - грубоватый (поверхность); суровый.
 
 **S:**
@@ -418,25 +430,34 @@
 
 - wealth - богатый.
 
-## <a name = "Adverb">Adverb</a>
+## <a name = "Other">Other</a>
 
 **A:**
 
 - afterwards - впоследствии.
 
+**D:**
+
+- despite - несмотря на.
+
 **I:**
 
+- indeed - действительно; даже.
 - ironically - по иронии судьбы.
 
 **M:**
 
 - mostly - в основном.
 
-## <a name = "Other">Other</a>
+**O:**
+
+- obviously - очевидно.
 
 **P:**
 
+- particularly - особенно; в частности.
 - past - мимо.
+- perhaps - возможно.
 
 ## Stable phrases
 
@@ -519,3 +540,7 @@
 - the Highway code - правила дорожного движения.
 - cycle lane - велосипедная дорога.
 - Park and Ride - перехватывающая дорога.
+- silver screen - киноэкран.
+- to spring to mind - появиться в уме.
+- screenwriter - сценарист.
+- to make sure - убедиться.
