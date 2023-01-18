@@ -24,15 +24,16 @@
 
 **С:**
 
-- car - машина; вагон.
 - calm - спокойствие.
 - cancer - рак.
+- car - машина; вагон.
 - charge - плата.
 - closure - закрытие; замыкание.
 - complication - осложнение.
 - congestion - затор.
 - consistency - консистенция.
 - coordination - координация.
+- council - совет.
 - counterpart - аналог.
 - courtesy - вежливость.
 - crowd - толпа.
@@ -41,10 +42,12 @@
 **D:**
 
 - deficiency - дефицит.
+- destination - место назначения.
 - determination - целеустремлённость.
 - diabetes - диабет.
 - diagnosis - диагноз.
 - drug - лекарство; наркотик.
+- regard - уважение.
 
 **E:**
 
@@ -66,6 +69,7 @@
 
 **H:**
 
+- fine - штраф.
 - heaven - рай.
 
 **I:**
@@ -81,10 +85,13 @@
 - leaflet - листовка.
 - limit - предел.
 - loan - кредит.
+- lorry - грузовик.
 
 **M:**
 
+- measure - степень.
 - midwife - акушерка.
+- mobility - мобильность.
 - morphine - морфин.
 
 **N:**
@@ -98,6 +105,7 @@
 **O:**
 
 - objective - цель.
+- offense - преступление.
 - opulence - богатство; роскошь.
 
 **P:**
@@ -106,6 +114,7 @@
 - painkiller - обезболивающие.
 - parasite - паразит.
 - patient - пациент.
+- pedestrian - прохожий.
 - pharmacist - фармацевт.
 - physician - врач.
 - physiotherapy - физиотерапия.
@@ -122,6 +131,8 @@
 **R:**
 
 - radiologist - радиолог.
+- regard - рассматривать.
+- resident - житель.
 - romance - романтика.
 - romcom - романтическая комедия.
 - rumour - слух.
@@ -136,6 +147,8 @@
 - self-discipline - самодисциплина.
 - self-respect - самоуважение.
 - shore - берег.
+- speeding - превышение скорости.
+- spot - пятно.
 - steppe - степь.
 - suggestion - предложение-совет.
 - surgeon - хирург.
@@ -144,6 +157,7 @@
 
 - tail - хвост.
 - tent - палатка.
+- thoroughfare - магистраль.
 - tide - течение.
 - tip - совет.
 - tolerance - толерантность.
@@ -154,6 +168,7 @@
 **V:**
 
 - vaccine - прививка.
+- victim - жертва.
 
 **W:**
 
@@ -295,6 +310,7 @@
   - speak to\with somebody.
 - specialise
   - specialise in something - специализироваться в чём-то.
+- subside - спадать.
 - succeed
   - succeed in something - преуспеть в чём-то.
 - step
@@ -496,3 +512,10 @@
 - science fiction (sci-fi) - научная фантастика.
 - short story - короткий рассказ.
 - travel writing - письмо о путешествии.
+- traffic-calming measures - меры по успокоению дорожного движения.
+- traffic-free zone - зона, свободная от дорожного движения.
+- drink-driving - вождение в нетрезвом виде.
+- pedestrian crossing - пешеходный переход.
+- the Highway code - правила дорожного движения.
+- cycle lane - велосипедная дорога.
+- Park and Ride - перехватывающая дорога.
