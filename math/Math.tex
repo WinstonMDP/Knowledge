@@ -507,6 +507,193 @@
 		=
 		\left(\left(\left(a_1, a_2\right), a_3\right) \ldots a_n \right)
 	\end{flalign*}
+	\chapter{Общая алгебра}
+	\begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\left\{
+		\begin{aligned}
+			&* - \text{операция}. \\
+			&*: A \times A \longrightarrow A
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		* - \text{бинарная операция на множестве} \ A.
+		\right)
+	\end{flalign*}
+	\begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\left(A, *\right)
+		\Leftrightarrow
+		* - \text{бинарная операция на множестве} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\left(A, *\right)
+		\Leftrightarrow
+		A - \text{группоид (магма)}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\forall a, \ b, \ c \
+		\left\{
+		\begin{aligned}
+			&(*, A) \\
+			&a, b \in A \longrightarrow a * b = b * a
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		* - \text{бинарная ассоциативная операция на множестве} \ A.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\forall a, \ b, \ c \
+		\left\{
+		\begin{aligned}
+			&(*, A) \\
+			&a, b, c \in A \longrightarrow (a * b) * c = a * (b * c)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&* - \text{бинарная коммутативная операция на} \\
+			&\text{множестве} \ A.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\begin{aligned}
+			&* - \text{бинарная ассоциативная операция} \\
+			&\text{на множестве} \ A.
+		\end{aligned}
+		\Leftrightarrow
+		A - \text{полугруппа относительно бинарной операции} \ *.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ *, \ e \
+		\left(
+		\forall a \
+		\left\{
+		\begin{aligned}
+			&(*, A) \\
+			&e \in A \\
+			&a \in A \longrightarrow e * a = a * e = a
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&e - \text{нейтральный элемент группоида} \ A \\
+			&\text{относительно бинарной операции} \ *.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\exists e \
+		\left\{
+		\begin{aligned}
+			&A - \text{полугруппа относительно бинарной операции} \ *. \\
+			&e - \text{нейтральный элемент группоида} \ A \\
+			&\text{относительно бинарной операции} \ *.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&A - \text{моноид относительно} \\
+			&\text{бинарной операции} \ *.
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ *, \ a, \ b, \ e \
+		\left(
+		\left\{
+		\begin{aligned}
+			&e - \text{нейтральный элемент группоида} \ A \\
+			&a, b \in A \longrightarrow a * b = b * a = e
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\left\{
+		\begin{aligned}
+			&a - \text{обратимый элемент группоида} \ A \\
+			&\text{относительно бинарной операции} \ *. \\
+			&b - \text{обратный элемент группоида} \ A \\
+			&\text{относительно бинарной операции} \ * \\
+			&\text{и элемента} \ a.
+		\end{aligned}
+		\right.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\forall a \
+		\left\{
+		\begin{aligned}
+			&A - \text{моноид}. \\
+			&a \in A \longrightarrow a - \text{обратимый элемент группоида} \ A \\
+			&\text{относительно бинарной операции} \ *.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		A - \text{группа}.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B, \ *, \ \circ, \ f \
+		\left(
+		\forall a, \ b \
+		\left\{
+		\begin{aligned}
+			&(A, *) \\
+			&(B, \circ) \\
+			&f: A \longrightarrow B \\
+			&f(a * b) = f(a) \circ f(b)
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		f - \text{гомоморфизм относительно операций} \ * \ \text{и} \ \circ.
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall *, \ \circ, \ f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{гомоморфизм относительно операций} \\
+			&* \ \text{и} \ \circ. \\
+			&f - \text{биекция}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&f - \text{изоморфизм относительно операций} \\
+			&* \ \text{и} \ \circ.
+		\end{aligned}
+		\right)
+	\end{flalign*}
 
 	\chapter{Алгебраические выражения}
 	\textbf{Алгебраическое выражение} - это
