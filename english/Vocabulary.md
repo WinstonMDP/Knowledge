@@ -4,6 +4,7 @@
 
 **A:**
 
+- acquaintance - знакомый.
 - agility - ловкость.
 - airbag - подушка безопасности.
 - aircraft - воздушное судно.
@@ -18,9 +19,11 @@
 
 - belt - ремень.
 - biopic - биографический фильм.
+- bow - поклон.
 - brake - тормоз.
 - brass - латунь.
 - breast - молочная железа.
+- butler - дворецкий.
 
 **С:**
 
@@ -29,6 +32,7 @@
 - car - машина; вагон.
 - cast - актёрский состав.
 - charge - плата.
+- chauffeur - шофёр.
 - closure - закрытие; замыкание.
 - complication - осложнение.
 - congestion - затор.
@@ -54,6 +58,7 @@
 
 - emergencies - чрезвычайные ситуации.
 - emission - выброс.
+- eternity - вечность.
 - extremes - крайности.
 
 **F:**
@@ -61,8 +66,10 @@
 - felt - войлок.
 - fever - лихорадка.
 - fiction - фантазия.
+- fine - штраф.
 - flexibility - гибкость-подвижность.
 - fossil - ископаемое.
+- favor - польза; благосклонность.
 
 **G:**
 
@@ -70,11 +77,13 @@
 
 **H:**
 
-- fine - штраф.
 - heaven - рай.
+- hedge - ограда.
+- host - хозяин.
 
 **I:**
 
+- impression - впечатление.
 - infection - инфекция.
 - infectivity - заразность.
 - injection - инъекция.
@@ -92,6 +101,7 @@
 - limit - предел.
 - loan - кредит.
 - lorry - грузовик.
+- lull - затишье.
 
 **M:**
 
@@ -131,6 +141,7 @@
 - play - спектакль.
 - plot - сюжет.
 - poetry - поэзия.
+- prejudice - предубеждение.
 - prompt - подсказка.
 - prosperity - процветание.
 - psychiatrist - психиатр.
@@ -142,6 +153,7 @@
 - radiologist - радиолог.
 - regard - рассматривать.
 - resident - житель.
+- rest - отдых.
 - romance - романтика.
 - romcom - романтическая комедия.
 - rumour - слух.
@@ -178,6 +190,7 @@
 **V:**
 
 - vaccine - прививка.
+- vicinity - окрестность.
 - victim - жертва.
 
 **W:**
@@ -188,13 +201,14 @@
 
 **A:**
 
-- apply
-  - apply for something - подать заявление на что-то.
 - agree
   - agree with something - согласиться с чем-то.
+- apply
+  - apply for something - подать заявление на что-то.
 - ask
   - ask - спросить.
   - ask somebody out - пригласить на свидание.
+- assure - уверять.
 - attract - привлекать.
 
 **B:**
@@ -234,6 +248,7 @@
   - conjure - заклинать; вызывать.
   - conjure up - вызвать в воображении.
 - convince - убеждать.
+- convey - передавать.
 - counter - противостоять.
 
 **D:**
@@ -245,9 +260,11 @@
 
 **E:**
 
+- elaborate - разрабатывать.
 - elevate - поднять.
 - embrace - обнять; принять что-то с энтузиазмом.
 - emerge - появиться.
+- exclaim - воскликнуть.
 
 **F:**
 
@@ -281,9 +298,12 @@
 **H:**
 
 - heat - нагревать.
+- hover - парить.
+- hurry - поспешить.
 
 **I:**
 
+- inquire - спрашивать.
 - insulate - изолировать.
 
 **L:**
@@ -293,6 +313,7 @@
 **P:**
 
 - permit - разрешать.
+- pick - выбирать.
 - protect
   - protect from something - защищаться от чего-то.
 - pump - выкачивать.
@@ -343,6 +364,10 @@
   - tell something from something - отличить одно от другого.
 - transplant - пересаживать.
 
+**V:**
+
+- vanish - пропадать.
+
 **W:**
 
 - worry
@@ -364,6 +389,7 @@
 - efficient - эффективный.
 - elaborate - продуманный.
 - enormous - огромный.
+- evident - очевидный.
 
 **F:**
 
@@ -404,19 +430,23 @@
 
 **P:**
 
-- preliminary - предварительный.
 - patient - терпеливый.
+- polite - вежливый.
+- preliminary - предварительный.
+- profound - глубокий-серьёзный.
 
 **R:**
 
 - reassuring - обнадёживающий.
 - reclusive - отшельнический.
 - rough - грубоватый (поверхность); суровый.
+- rowdy - буйный.
 
 **S:**
 
 - scenic - живописный.
 - sensitive - чувствительный.
+- slight - незначительный.
 - sociable - социальный.
 - soothing - успокаивающий.
 - sympathetic - сердобольный.
@@ -458,6 +488,10 @@
 - particularly - особенно; в частности.
 - past - мимо.
 - perhaps - возможно.
+
+**V:**
+
+- vicinity - поблизости.
 
 ## Stable phrases
 
@@ -544,3 +578,6 @@
 - to spring to mind - появиться в уме.
 - screenwriter - сценарист.
 - to make sure - убедиться.
+- old sport - старина.
+- to be on the tip of my tongue - вертеться на языке.
+- over there - вон там.
