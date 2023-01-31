@@ -108,6 +108,7 @@
 - majority - большая часть.
 - measure - степень.
 - midwife - акушерка.
+- mistery - тайна; загадка.
 - mobility - мобильность.
 - morphine - морфин.
 
@@ -152,8 +153,10 @@
 
 - radiologist - радиолог.
 - regard - рассматривать.
+- report - отчёт.
 - resident - житель.
 - rest - отдых.
+- riddle - загадка.
 - romance - романтика.
 - romcom - романтическая комедия.
 - rumour - слух.
@@ -186,6 +189,7 @@
 - traction - тяга.
 - tumor - опухоль.
 - turbulence - турбулентность.
+- twist - очередь-ход; поворот.
 
 **V:**
 
@@ -273,6 +277,10 @@
 
 **G:**
 
+- get
+  - get into something - вникнуть во что-то.
+- give
+  - give up - сдаться.
 - go
   - go - идти.
   - go about - ходить-распространяться.
@@ -317,6 +325,8 @@
 - protect
   - protect from something - защищаться от чего-то.
 - pump - выкачивать.
+- put
+  - put something down - оторваться от чего-то.
 
 **R:**
 
@@ -363,6 +373,8 @@
   - tell somebody - пересказать, передать смысл чего-то длинного-объёмного кому-то.
   - tell something from something - отличить одно от другого.
 - transplant - пересаживать.
+- turn - воернуть.
+- twist - крутить.
 
 **V:**
 
@@ -378,11 +390,19 @@
 **A:**
 
 - authoritative - авторитетный.
+- awful - ужасный.
 
 **C:**
 
+- charming - очаровательный.
 - conventional - традиционный.
 - crowded - заполонённый.
+
+**D:**
+
+- disturbing - беспокоящий.
+- dreadful - ужасный.
+- dull - скучный.
 
 **E:**
 
@@ -390,6 +410,7 @@
 - elaborate - продуманный.
 - enormous - огромный.
 - evident - очевидный.
+- evocative - вызывающий воспоминания.
 
 **F:**
 
@@ -401,6 +422,7 @@
 
 - giant - гигантский.
 - gradual - постепенный.
+- gripping - захватывающий.
 - gruelling - изнурительный.
 
 **I:**
@@ -414,11 +436,19 @@
 
 **L:**
 
+- lavish - щедрый.
 - leisurely - неторопливый.
+- lightweight - лёгкий.
 - luxurious - роскошный.
+
+**M:**
+
+- minority - заставляющий задуматься.
+- moving - волнующий.
 
 **N:**
 
+- narrow - узкий.
 - nostalgic - ностальгический.
   - nostalgic about something - ностальгический по чему-то.
 
@@ -427,6 +457,7 @@
 - objective - объективный.
 - obsessive - одержимый.
 - open-minded - открытый к познанию.
+- overrated - переоценённый.
 
 **P:**
 
@@ -439,6 +470,8 @@
 
 - reassuring - обнадёживающий.
 - reclusive - отшельнический.
+- ridiculous - нелепый.
+- riveting - захватывающий.
 - rough - грубоватый (поверхность); суровый.
 - rowdy - буйный.
 
@@ -454,6 +487,8 @@
 **T:**
 
 - tangible - реальный.
+- tedious - утомительный.
+- tense - напряжённый.
 - traffic - дорожный.
 
 **W:**
@@ -469,6 +504,10 @@
 **D:**
 
 - despite - несмотря на.
+
+**H:**
+
+- however - тем не менее.
 
 **I:**
 
@@ -492,6 +531,7 @@
 **V:**
 
 - vicinity - поблизости.
+- virtually - фактически.
 
 ## Stable phrases
 
@@ -581,3 +621,7 @@
 - old sport - старина.
 - to be on the tip of my tongue - вертеться на языке.
 - over there - вон там.
+- thought-provoking - заставляющий задуматься.
+- twice as - дважды.
+- upper-class - высший класс.
+- it is not my kind of thing - это не в моём вкусе.
