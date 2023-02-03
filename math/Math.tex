@@ -11,6 +11,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{bookmark}
 
 \setlength{\parskip}{0.03\textheight}
 
@@ -507,6 +508,177 @@
 		=
 		\left(\left(\left(a_1, a_2\right), a_3\right) \ldots a_n \right)
 	\end{flalign*}
+    
+    \chapter{Бинарные отношения}
+    \begin{flalign*}
+        \forall A, \ B, \ C \
+        \left(
+        C \subseteq A \times B
+        \Leftrightarrow
+        C - \text{множество бинарных отношений между множествами} \ A \ \text{и} \ B.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ C \
+        \left(
+        C \subseteq A \times B
+        \Leftrightarrow
+        dom \ C = \set{x \in A \mid \exists y \ (x, y) \in C}
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ C \
+        \left(
+        C \subseteq A \times B
+        \Leftrightarrow
+        rng \ C = \set{y \in B \mid \exists x \ (x, y) \in C}
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ C \
+        \left(
+        C \subseteq A \times B
+        \Leftrightarrow
+        C^{-1} = \set{(y, x) \in B \times A \mid (x, y) \in C}
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ C \
+        \left(
+        C \subseteq A \times B
+        \Leftrightarrow
+        \forall x, \ y \
+        \left(
+        x C y
+        \Leftrightarrow
+        (x, y) \in C
+        \right)
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ C, \ Q, \ Z \
+        \left(
+        \left\{
+        \begin{aligned}
+            &C \subseteq A \times Z \\
+            &Q \subseteq Z \times B
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        Q \circ C = \set
+        {
+        (x, y) \in dom \ C \times rng \ Q
+        \mid
+        \exists z \
+        \left\{
+        \begin{aligned}
+            &x C z \\
+            &z Q y
+        \end{aligned}
+        \right.
+        }
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ C, \ Q, \ Z \
+        \left(
+        \left\{
+        \begin{aligned}
+            &C \subseteq A \times Z \\
+            &Q \subseteq Z \times B
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \left( Q \circ C \right)^{-1} = C^{-1} \circ Q^{-1}
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        id_{A} = \set{z \in A \times A \mid \exists x \ z = (x, x)}
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ C \
+        \left(
+        C \subseteq A \times B
+        \longrightarrow
+        \left\{
+        \begin{aligned}
+            &id_{B} \circ C = C \\
+            &C \circ id_{A} = C
+        \end{aligned}
+        \right.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ C \
+        \left(
+        C \subseteq A \times B
+        \longrightarrow
+        \left\{
+        \begin{aligned}
+            &id_{B} \circ C = C \\
+            &C \circ id_{A} = C
+        \end{aligned}
+        \right.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C, \ X \
+        \left(
+        \exists A, \ B \
+        C \subseteq A \times B
+        \Leftrightarrow
+        C[X] - \text{образ множества $ X $ под действием отношения $ C $}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C, \ X \
+        C[X] = \set
+        {
+        b \in rng \ C
+        \mid
+        \exists a \
+        \left\{
+        \begin{aligned}
+            &a \in X \\
+            &a C b
+        \end{aligned}
+        \right.
+        }
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C \
+        C[dom \ C] = rng \ C
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C, \ X \
+        \left(
+        C[X] - \text{образ множества $ X $ под действием отношения $ C $}.
+        \Leftrightarrow
+        C^{-1}[X] - \text{пробраз множества $ X $ под действием отношения $ C $}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C \
+        C^{-1}[rng \ C] = dom \ C
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C \
+        C[\varnothing] = \varnothing
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C, \ X, \ Y \
+        C[X \cup Y] = C[X] \cup C[Y]
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C, \ X, \ Y \
+        C[X \cap Y] \subseteq C[X] \cap C[Y]
+	\end{flalign*}
+    \begin{flalign*}
+        \forall C, \ X, \ Y \
+        \left( Q \circ C \right)[X] = Q[C[X]]
+	\end{flalign*}
+    
 	\chapter{Общая алгебра}
 	\begin{flalign*}
 		\forall A, \ * \

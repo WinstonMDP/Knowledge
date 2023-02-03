@@ -625,3 +625,8 @@
 - twice as - дважды.
 - upper-class - высший класс.
 - it is not my kind of thing - это не в моём вкусе.
+- used to do something - делал что-то в прошлом не в привязанное время, но теперь не делаю.
+- would do something - делал именно какое-то действие в прошлом в привязанное время в прошлом,
+но теперь не делаю.
+- be used to doing/ something - привыкнуть делать что-то.
+- get used to doing/ something - привыкать делать что-то.
