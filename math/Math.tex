@@ -39,6 +39,10 @@
 	\tableofcontents
 
 	\chapter{Примечания}
+    В данном материале очень много опечаток.
+    А также данный материал неконсистентен -
+    он не стандартизирован.
+
 	Чтобы понять, что означают '<', '>',
 	попробуйте их убрать.
 
@@ -775,6 +779,19 @@
 		\right)
 	\end{flalign*}
 
+    \begin{flalign*}
+		\forall A, \ * \
+		\left(
+		\forall a \
+        (*, A)
+		\Leftrightarrow
+        \begin{aligned}
+            &e_{A} - \text{нейтральный элемент группоида} \ A \\
+			&\text{относительно бинарной операции} \ *.
+        \end{aligned}
+		\right)
+	\end{flalign*}
+
 	\begin{flalign*}
 		\forall A, \ * \
 		\left(
@@ -828,7 +845,42 @@
 		\end{aligned}
 		\right.
 		\Leftrightarrow
-		A - \text{группа}.
+        A - \text{группа}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ * \
+		\left(
+        \left\{
+        \begin{aligned}
+            &\left( A, * \right) - \text{группа}. \\
+            &* - \text{коммутативная операция}.
+        \end{aligned}
+        \right.
+		\Leftrightarrow
+        \left( A, * \right) - \text{абелева группа}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+        \forall *, \ n \
+        \left( S_n, * \right) - \text{симметрическая группа}.
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ * \
+		\left(
+        \forall a \
+        \exists b, \ n \
+        \left\{
+        \begin{aligned}
+            &\left( A, * \right) - \text{группа}. \\
+            &a \in A \wedge b \in A \wedge n \in \mathbb{N} \longrightarrow a = b^n
+        \end{aligned}
+        \right.
+		\Leftrightarrow
+        \left( A, * \right) - \text{циклическая группа}.
 		\right)
 	\end{flalign*}
 
@@ -845,25 +897,308 @@
 		\end{aligned}
 		\right.
 		\Leftrightarrow
-		f - \text{гомоморфизм относительно операций} \ * \ \text{и} \ \circ.
+        f - \text{гомоморфизм относительно} \
+        \left( A, * \right) \ \text{и} \ \left( B, \circ \right).
 		\right)
 	\end{flalign*}
 
-	\begin{flalign*}
-		\forall *, \ \circ, \ f \
+    \begin{flalign*}
+		\forall A, \ B, \ *, \ \circ, \ f \
+		\left(
+        \left\{
+        \begin{aligned}
+            &f - \text{гомоморфизм относительно} \
+            \left( A, * \right) \ \text{и} \ \left( B, \circ \right). \\
+            &\left( A, * \right) - \text{группа}. \\
+            &\left( B, \circ \right) - \text{группа}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \forall a \
+        \left\{
+        \begin{aligned}
+            &f(a^{-1}) = f(a)^{-1} \\
+            &f(e_{A}) = e_B
+        \end{aligned}
+        \right.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ *, \ \circ, \ f \
+		\left(
+        f - \text{гомоморфизм относительно} \
+        \left( A, * \right) \ \text{и} \ \left( B, \circ \right).
+        \Leftrightarrow
+        ker f = \set{x \in A \mid f(x) = e_{B}}
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ *, \ \circ, \ f \
+		\left(
+        f - \text{гомоморфизм относительно} \
+        \left( A, * \right) \ \text{и} \ \left( B, \circ \right).
+        \Leftrightarrow
+        ker f - \text{ядро гомоморфизма} \ f.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ *, \ \circ, \ f \
 		\left(
 		\left\{
 		\begin{aligned}
-			&f - \text{гомоморфизм относительно операций} \\
-			&* \ \text{и} \ \circ. \\
-			&f - \text{биекция}.
+			&f - \text{гомоморфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right). \\
+            &f - \text{инъекция}.
 		\end{aligned}
 		\right.
 		\Leftrightarrow
 		\begin{aligned}
-			&f - \text{изоморфизм относительно операций} \\
-			&* \ \text{и} \ \circ.
+			&f - \text{мономорфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right).
 		\end{aligned}
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall f \
+		\left(
+        \exists A \
+        ker f = \set{e_{A}}
+        \Leftrightarrow
+        f - \text{мономорфизм}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+        \forall A, \ B, \ *, \ \circ, \ f \
+		\left(
+		\left\{
+		\begin{aligned}
+			&f - \text{гомоморфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right). \\
+			&f - \text{сюрьекция}.
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&f - \text{эпиморфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right).
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+	\begin{flalign*}
+		\forall A, \ B, \ *, \ \circ, \ f \
+		\left(
+		\left\{
+		\begin{aligned}
+            &f - \text{мономорфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right). \\
+			&f - \text{эпиморфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right).
+		\end{aligned}
+		\right.
+		\Leftrightarrow
+		\begin{aligned}
+			&f - \text{изоморфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right).
+		\end{aligned}
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ *, \ \circ \
+		\left(
+		\begin{aligned}
+			&\exists f \ f - \text{изоморфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right).
+		\end{aligned}
+		\Leftrightarrow
+        \text{$ A $ и $ B $ изоморфны}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ *, \ \circ \
+		\left(
+		\begin{aligned}
+			&\exists f \ f - \text{изоморфизм относительно} \\
+            &\left( A, * \right) \ \text{и} \ \left( B, \circ \right).
+		\end{aligned}
+		\Leftrightarrow
+        A \simeq B
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+        \forall A \
+        \left(
+        A - \text{группа}.
+        \Leftrightarrow
+        ord \ A = \text{количество элементов} \ A.
+        \right)
+	\end{flalign*}
+
+    \begin{flalign*}
+        \forall A, \ a \
+        \left(
+        \left\{
+        \begin{aligned}
+            &a \in A \\
+            &a \neq e_A
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        ord \ a = min \set{n \in \mathbb{N} \mid a^n = e_A}
+        \right)
+	\end{flalign*}
+
+    \begin{flalign*}
+        \forall a \
+        ord \ a - \text{порядок} \ a.
+	\end{flalign*}
+
+    \begin{flalign*}
+        \forall A, \ a \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A - \text{группа}. \\
+            &a \in A
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        ord \ a \mid ord \ A
+        \right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ * \
+		\left(
+        \forall a, \ b \
+        \left\{
+        \begin{aligned}
+            &\left( A, * \right) - \text{группа}. \\
+            &B \subseteq A \\
+            &e_A \in B \\
+            &a \in B \wedge b \in B \longrightarrow a * b \in B \\
+            &a \in B \longrightarrow a^{-1} \in B
+        \end{aligned}
+        \right.
+		\Leftrightarrow
+        \left( B, * \right) - \text{подгруппа} \ A.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ * \
+		\left(
+        \left\{
+        \begin{aligned}
+            &\left( B, * \right) - \text{подгруппа} \ A. \\
+            &B \neq \set{e_A} \\
+            &B \neq A
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \left( B, * \right) - \text{собственная подгруппа}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ * \
+		\left(
+        \left\{
+        \begin{aligned}
+            &\left( B, * \right) - \text{подгруппа} \ A. \\
+            &B = \set{e_A} \\
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \left( B, * \right) - \text{тривиальная подгруппа}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ *, \ a \
+		\left(
+        \left\{
+        \begin{aligned}
+            &\left( B, * \right) - \text{подгруппа} \ A. \\
+            &a \in A \longrightarrow aB = \set{c \in B \mid c = a * b \wedge b \in B}
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        aB - \text{левый смежный класс}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ *, \ a \
+		\left(
+        \left\{
+        \begin{aligned}
+            &\left( B, * \right) - \text{подгруппа} \ A. \\
+            &a \in A \longrightarrow Ba = \set{c \in B \mid c = b * a \wedge b \in B}
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        Ba - \text{правый смежный класс}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ * \
+		\left(
+        \forall a \
+        \left\{
+        \begin{aligned}
+            &\left( B, * \right) - \text{подгруппа} \ A. \\
+            &aB = Ba
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        B - \text{нормальная подгруппа}.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B \
+		\left(
+        B - \text{нормальная подгруппа} \ A.
+        \Leftrightarrow
+        B \lhd A
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ * \
+        \left(
+        \left( B, * \right) - \text{подгруппа} \ A.
+        \Leftrightarrow
+        A : B = \text{количество множеств} \ \forall a \ aB.
+		\right)
+	\end{flalign*}
+
+    \begin{flalign*}
+		\forall A, \ B, \ * \
+        \left(
+        \left( B, * \right) - \text{подгруппа} \ A.
+        \Leftrightarrow
+        A : B - \text{индекс подгруппы $ B $ в $ A $}.
+		\right)
+	\end{flalign*}
+
+    \textbf{Теорема Лагранжа:}
+    \begin{flalign*}
+		\forall A, \ B, \ * \
+        \left(
+        \left( B, * \right) - \text{подгруппа} \ A.
+        \Leftrightarrow
+        |A| = |B| |A : B|
 		\right)
 	\end{flalign*}
 
