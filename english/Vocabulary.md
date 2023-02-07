@@ -25,15 +25,17 @@
 - breast - молочная железа.
 - butler - дворецкий.
 
-**С:**
+**C:**
 
 - calm - спокойствие.
 - cancer - рак.
 - car - машина; вагон.
+- carving - резьба.
 - cast - актёрский состав.
 - charge - плата.
 - chauffeur - шофёр.
 - closure - закрытие; замыкание.
+- commission - заказ.
 - complication - осложнение.
 - congestion - затор.
 - consistency - консистенция.
@@ -51,6 +53,7 @@
 - determination - целеустремлённость.
 - diabetes - диабет.
 - diagnosis - диагноз.
+- dome - купол.
 - drug - лекарство; наркотик.
 - regard - уважение.
 
@@ -59,7 +62,10 @@
 - emergencies - чрезвычайные ситуации.
 - emission - выброс.
 - eternity - вечность.
+- exhibition - выставка.
+- exterior - наружный вид.
 - extremes - крайности.
+- eysore - бельмо на глазу.
 
 **F:**
 
@@ -69,6 +75,7 @@
 - fine - штраф.
 - flexibility - гибкость-подвижность.
 - fossil - ископаемое.
+- foundation - фундамент.
 - favor - польза; благосклонность.
 
 **G:**
@@ -84,11 +91,13 @@
 **I:**
 
 - impression - впечатление.
+- incredibly - невероятно.
 - infection - инфекция.
 - infectivity - заразность.
 - injection - инъекция.
 - instance - экземпляр.
 - intensity - напряжённость.
+- interior - интерьер.
 
 **J:**
 
@@ -96,6 +105,7 @@
 
 **L:**
 
+- landmark - достопримечательность; ориентир.
 - lane - полоса движения.
 - leaflet - листовка.
 - limit - предел.
@@ -106,6 +116,7 @@
 **M:**
 
 - majority - большая часть.
+- marble - мрамор.
 - measure - степень.
 - midwife - акушерка.
 - mistery - тайна; загадка.
@@ -142,6 +153,7 @@
 - play - спектакль.
 - plot - сюжет.
 - poetry - поэзия.
+- porch - крыльцо.
 - prejudice - предубеждение.
 - prompt - подсказка.
 - prosperity - процветание.
@@ -171,10 +183,12 @@
 - self-discipline - самодисциплина.
 - self-respect - самоуважение.
 - shore - берег.
+- skyscraper - небоскрёб.
 - speeding - превышение скорости.
 - spot - пятно.
 - stage - этап; сцена.
 - steppe - степь.
+- stylish - стильный.
 - suggestion - предложение-совет.
 - surgeon - хирург.
 
@@ -184,8 +198,10 @@
 - tent - палатка.
 - thoroughfare - магистраль.
 - tide - течение.
+- timber - древесина.
 - tip - совет.
 - tolerance - толерантность.
+- tomb - мавзолей.
 - traction - тяга.
 - tumor - опухоль.
 - turbulence - турбулентность.
@@ -194,6 +210,7 @@
 **V:**
 
 - vaccine - прививка.
+- vast - обширный.
 - vicinity - окрестность.
 - victim - жертва.
 
@@ -212,6 +229,7 @@
 - ask
   - ask - спросить.
   - ask somebody out - пригласить на свидание.
+- arrange - организовать.
 - assure - уверять.
 - attract - привлекать.
 
@@ -233,7 +251,7 @@
   - break out - вырваться.
   - break up - расстаться.
 
-**С:**
+**C:**
 
 - call
   - call - звать; звонить.
@@ -243,6 +261,7 @@
   - call out - позвать; крикнуть; позвать на помощь.
   - call somebody back - перезвонить кому-то.
 - calm (down) - успокоить.
+- capture - захватывать.
 - care
   - care for something - заботиться о чём-то.
 - commute - переключать; добираться-ездить.
@@ -260,6 +279,7 @@
 - deal
   - deal with something - иметь дело с чем-то.
 - delay - отсрочить.
+- demolish - сносить.
 - disappoint - разочаровать.
 
 **E:**
@@ -268,6 +288,7 @@
 - elevate - поднять.
 - embrace - обнять; принять что-то с энтузиазмом.
 - emerge - появиться.
+- erect - возводить.
 - exclaim - воскликнуть.
 
 **F:**
@@ -395,11 +416,15 @@
 **C:**
 
 - charming - очаровательный.
+- contemporary - современный.
+- controversial - спорный.
 - conventional - традиционный.
 - crowded - заполонённый.
 
 **D:**
 
+- derelict - заброшенный.
+- dilapidated - полуразрушенный.
 - disturbing - беспокоящий.
 - dreadful - ужасный.
 - dull - скучный.
@@ -421,6 +446,7 @@
 **G:**
 
 - giant - гигантский.
+- graceful - изящный.
 - gradual - постепенный.
 - gripping - захватывающий.
 - gruelling - изнурительный.
@@ -429,6 +455,7 @@
 
 - impeccable - безупречный.
 - innocent - невинный.
+- innovative - иновационный.
 
 **K:**
 
@@ -511,16 +538,20 @@
 
 **I:**
 
+- imposing - внушительный.
+- impressive - впечатляющий.
 - indeed - действительно; даже.
 - ironically - по иронии судьбы.
 
 **M:**
 
+- magnificent - великолепный.
 - mostly - в основном.
 
 **O:**
 
 - obviously - очевидно.
+- ornate - витиеватый.
 
 **P:**
 
@@ -630,3 +661,4 @@
 но теперь не делаю.
 - be used to doing/ something - привыкнуть делать что-то.
 - get used to doing/ something - привыкать делать что-то.
+- run-down - разрушающееся.
