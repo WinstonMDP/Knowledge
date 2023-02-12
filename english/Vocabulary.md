@@ -1,9 +1,6 @@
 # Vocabulary
 
 ## <a name = "Noun">Noun</a>
-
-**A:**
-
 - acquaintance - знакомый.
 - agility - ловкость.
 - airbag - подушка безопасности.
@@ -14,27 +11,25 @@
 - anaesthetist - анестезиолог.
 - antibiotic - антибиотик.
 - arthritis - артрит.
-
-**B:**
-
+- bay - залив.
 - belt - ремень.
 - biopic - биографический фильм.
 - bow - поклон.
 - brake - тормоз.
 - brass - латунь.
 - breast - молочная железа.
+- burst - взрыв-вспышка-всплеск.
 - butler - дворецкий.
-
-**C:**
-
 - calm - спокойствие.
 - cancer - рак.
 - car - машина; вагон.
 - carving - резьба.
 - cast - актёрский состав.
 - charge - плата.
+- chariot - колесница.
 - chauffeur - шофёр.
 - closure - закрытие; замыкание.
+- collapse - коллапс.
 - commission - заказ.
 - complication - осложнение.
 - congestion - затор.
@@ -45,20 +40,17 @@
 - courtesy - вежливость.
 - crowd - толпа.
 - cuisine - кухня.
-
-**D:**
-
 - deficiency - дефицит.
 - destination - место назначения.
 - determination - целеустремлённость.
 - diabetes - диабет.
 - diagnosis - диагноз.
 - dome - купол.
+- dwelling - жилище.
+- dweller - обитатель.
 - drug - лекарство; наркотик.
 - regard - уважение.
-
-**E:**
-
+- earthquake - землетрясение.
 - emergencies - чрезвычайные ситуации.
 - emission - выброс.
 - eternity - вечность.
@@ -66,45 +58,32 @@
 - exterior - наружный вид.
 - extremes - крайности.
 - eysore - бельмо на глазу.
-
-**F:**
-
 - felt - войлок.
 - fever - лихорадка.
 - fiction - фантазия.
 - fine - штраф.
 - flexibility - гибкость-подвижность.
+- flood - наводнение.
 - fossil - ископаемое.
 - foundation - фундамент.
+- fountain - фонтан.
 - favor - польза; благосклонность.
-
-**G:**
-
 - guide - руководство; направляющая.
-
-**H:**
-
 - heaven - рай.
 - hedge - ограда.
 - host - хозяин.
-
-**I:**
-
+- hurricane - ураган.
+- ilumination - освещение.
 - impression - впечатление.
 - incredibly - невероятно.
 - infection - инфекция.
 - infectivity - заразность.
+- ingenious - изобретательный.
 - injection - инъекция.
 - instance - экземпляр.
 - intensity - напряжённость.
 - interior - интерьер.
-
-**J:**
-
 - jaw - челюсть.
-
-**L:**
-
 - landmark - достопримечательность; ориентир.
 - lane - полоса движения.
 - leaflet - листовка.
@@ -112,9 +91,6 @@
 - loan - кредит.
 - lorry - грузовик.
 - lull - затишье.
-
-**M:**
-
 - majority - большая часть.
 - marble - мрамор.
 - measure - степень.
@@ -122,23 +98,15 @@
 - mistery - тайна; загадка.
 - mobility - мобильность.
 - morphine - морфин.
-
-**N:**
-
 - nomad - кочевник.
 - nostalgia - ностальгия.
   - nostalgia for something - ностальгия по чему-то.
 - novel - роман.
 - nutrition - питание.
-
-**O:**
-
 - objective - цель.
+- obstacle - препятствие.
 - offense - преступление.
 - opulence - богатство; роскошь.
-
-**P:**
-
 - pace - темп.
 - painkiller - обезболивающие.
 - parasite - паразит.
@@ -156,13 +124,11 @@
 - porch - крыльцо.
 - prejudice - предубеждение.
 - prompt - подсказка.
+- property - собственность.
 - prosperity - процветание.
 - psychiatrist - психиатр.
 - publisher - издатель.
 - puncture - прокол.
-
-**R:**
-
 - radiologist - радиолог.
 - regard - рассматривать.
 - report - отчёт.
@@ -173,9 +139,6 @@
 - romcom - романтическая комедия.
 - rumour - слух.
 - runway - взлётная полоса.
-
-**S:**
-
 - self-confidence - самоуверенность.
 - self-control - самоконтроль.
 - self-defense - самозащита.
@@ -184,17 +147,17 @@
 - self-respect - самоуважение.
 - shore - берег.
 - skyscraper - небоскрёб.
+- span - промежуток.
 - speeding - превышение скорости.
 - spot - пятно.
 - stage - этап; сцена.
 - steppe - степь.
 - stylish - стильный.
 - suggestion - предложение-совет.
+- suspension - подвеска.
 - surgeon - хирург.
-
-**T:**
-
 - tail - хвост.
+- tenant - арендатор.
 - tent - палатка.
 - thoroughfare - магистраль.
 - tide - течение.
@@ -206,22 +169,14 @@
 - tumor - опухоль.
 - turbulence - турбулентность.
 - twist - очередь-ход; поворот.
-
-**V:**
-
 - vaccine - прививка.
 - vast - обширный.
+- vendor - продавец.
 - vicinity - окрестность.
 - victim - жертва.
-
-**W:**
-
 - willpower - сила воли.
 
 ## <a name = "Verb">Verb</a>
-
-**A:**
-
 - agree
   - agree with something - согласиться с чем-то.
 - apply
@@ -229,12 +184,10 @@
 - ask
   - ask - спросить.
   - ask somebody out - пригласить на свидание.
+- argue - спорить.
 - arrange - организовать.
 - assure - уверять.
 - attract - привлекать.
-
-**B:**
-
 - be
   - be - быть.
   - be after something - пытаться получить что-то.
@@ -250,9 +203,6 @@
   - break off - разорвать; расторгнуть.
   - break out - вырваться.
   - break up - расстаться.
-
-**C:**
-
 - call
   - call - звать; звонить.
   - call at\by\on - остановиться в месте.
@@ -270,34 +220,26 @@
 - conjure
   - conjure - заклинать; вызывать.
   - conjure up - вызвать в воображении.
+- contract - сокращать.
 - convince - убеждать.
 - convey - передавать.
 - counter - противостоять.
-
-**D:**
-
+- cramp - стеснить.
 - deal
   - deal with something - иметь дело с чем-то.
 - delay - отсрочить.
 - demolish - сносить.
 - disappoint - разочаровать.
-
-**E:**
-
 - elaborate - разрабатывать.
 - elevate - поднять.
 - embrace - обнять; принять что-то с энтузиазмом.
+- embody - воплощать.
 - emerge - появиться.
 - erect - возводить.
 - exclaim - воскликнуть.
-
-**F:**
-
+- expand - расширять.
 - focus
   - focus on something - сосредоточиться на чём-то.
-
-**G:**
-
 - get
   - get into something - вникнуть во что-то.
 - give
@@ -323,43 +265,33 @@
   - go through - пройти через (испытания); изучить.
   - go with - подходить; сопровождать; быть в отношениях.
 - guide - руководить.
-
-**H:**
-
+- harp - арфа.
 - heat - нагревать.
 - hover - парить.
 - hurry - поспешить.
-
-**I:**
-
 - inquire - спрашивать.
 - insulate - изолировать.
-
-**L:**
-
+- intrigued - заинтриговать.
+- leap - прыгать.
 - lessen - уменьшить.
-
-**P:**
-
 - permit - разрешать.
 - pick - выбирать.
+- prioritize - раставлять приоритеты.
+- promote - способствовать.
 - protect
   - protect from something - защищаться от чего-то.
 - pump - выкачивать.
 - put
   - put something down - оторваться от чего-то.
-
-**R:**
-
+  - put off something - откладывать что-то.
 - recover
   - recover from something - оправиться от чего-то.
 - reflect - отражать; размышлять.
 - rely
   - rely on something - полагаться на что-то.
+- resist - сопротивляться.
 - respond - откликнуться.
-
-**S:**
-
+- revitalise - восстанавливать-оживить.
 - sail - отплыть.
 - say
   - say - сказать что-то околокороткое более менее дословно.
@@ -383,9 +315,6 @@
   - step - шагать.
   - step up - подняться.
   - step down - спуститься.
-
-**T:**
-
 - talk
   - talk - поговорить на "ты"; иметь влияние; предавать огласке лишнее.
   - talk something - обсуждать что-то.
@@ -396,171 +325,104 @@
 - transplant - пересаживать.
 - turn - воернуть.
 - twist - крутить.
-
-**V:**
-
 - vanish - пропадать.
-
-**W:**
-
 - worry
   - worry about something - беспокоиться о чём-то.
 
 ## <a name = "Adjectives">Adjectives</a>
-
-**A:**
-
 - authoritative - авторитетный.
 - awful - ужасный.
-
-**C:**
-
 - charming - очаровательный.
+- chief - главная.
 - contemporary - современный.
 - controversial - спорный.
 - conventional - традиционный.
 - crowded - заполонённый.
-
-**D:**
-
+- daring - отважный.
 - derelict - заброшенный.
 - dilapidated - полуразрушенный.
 - disturbing - беспокоящий.
+- domestic - внутренний.
 - dreadful - ужасный.
 - dull - скучный.
-
-**E:**
-
 - efficient - эффективный.
 - elaborate - продуманный.
 - enormous - огромный.
+- essential - необходимый.
 - evident - очевидный.
 - evocative - вызывающий воспоминания.
-
-**F:**
-
+- fierce - свирепый.
 - fogbound - окутанный туманом.
 - former - первый из упомянутых.
 - freshwater - пресноводный.
-
-**G:**
-
 - giant - гигантский.
 - graceful - изящный.
 - gradual - постепенный.
 - gripping - захватывающий.
 - gruelling - изнурительный.
-
-**I:**
-
 - impeccable - безупречный.
 - innocent - невинный.
 - innovative - иновационный.
-
-**K:**
-
 - knowledgeable - знающий.
-
-**L:**
-
 - lavish - щедрый.
 - leisurely - неторопливый.
 - lightweight - лёгкий.
 - luxurious - роскошный.
-
-**M:**
-
+- miniscule - мизерный.
 - minority - заставляющий задуматься.
 - moving - волнующий.
-
-**N:**
-
 - narrow - узкий.
 - nostalgic - ностальгический.
   - nostalgic about something - ностальгический по чему-то.
-
-**O:**
-
 - objective - объективный.
 - obsessive - одержимый.
 - open-minded - открытый к познанию.
 - overrated - переоценённый.
-
-**P:**
-
 - patient - терпеливый.
 - polite - вежливый.
 - preliminary - предварительный.
 - profound - глубокий-серьёзный.
-
-**R:**
-
 - reassuring - обнадёживающий.
 - reclusive - отшельнический.
 - ridiculous - нелепый.
 - riveting - захватывающий.
 - rough - грубоватый (поверхность); суровый.
 - rowdy - буйный.
-
-**S:**
-
 - scenic - живописный.
 - sensitive - чувствительный.
+- shattered - разрушенный.
+- sliding - раздвижной.
 - slight - незначительный.
 - sociable - социальный.
 - soothing - успокаивающий.
 - sympathetic - сердобольный.
-
-**T:**
-
 - tangible - реальный.
 - tedious - утомительный.
 - tense - напряжённый.
+- thrilling - захватывающий.
+- tidal - приливной-периодический.
 - traffic - дорожный.
-
-**W:**
-
+- viable - жизнеспособный.
 - wealth - богатый.
+- windswept - обдуваемый.
 
 ## <a name = "Other">Other</a>
-
-**A:**
-
 - afterwards - впоследствии.
-
-**D:**
-
+- densely - плотно.
 - despite - несмотря на.
-
-**H:**
-
 - however - тем не менее.
-
-**I:**
-
 - imposing - внушительный.
 - impressive - впечатляющий.
 - indeed - действительно; даже.
+- indisputal - бесспорно.
 - ironically - по иронии судьбы.
-
-**M:**
-
 - magnificent - великолепный.
 - mostly - в основном.
-
-**O:**
-
 - obviously - очевидно.
 - ornate - витиеватый.
-
-**P:**
-
 - particularly - особенно; в частности.
 - past - мимо.
 - perhaps - возможно.
-
-**V:**
-
 - vicinity - поблизости.
 - virtually - фактически.
 
@@ -650,7 +512,7 @@
 - screenwriter - сценарист.
 - to make sure - убедиться.
 - old sport - старина.
-- to be on the tip of my tongue - вертеться на языке.
+- be on the tip of my tongue - вертеться на языке.
 - over there - вон там.
 - thought-provoking - заставляющий задуматься.
 - twice as - дважды.
@@ -662,3 +524,4 @@
 - be used to doing/ something - привыкнуть делать что-то.
 - get used to doing/ something - привыкать делать что-то.
 - run-down - разрушающееся.
+- World Heritage Site - объект всемирного наследия.

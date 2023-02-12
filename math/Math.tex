@@ -682,6 +682,189 @@
         \forall C, \ X, \ Y \
         \left( Q \circ C \right)[X] = Q[C[X]]
 	\end{flalign*}
+    \begin{flalign*}
+        \forall R \
+        \left(
+        \forall x, \ y, \ z \
+        \left(
+        \left\{
+        \begin{aligned}
+            &x R y \\
+            &x R z
+        \end{aligned}
+        \right.
+        \longrightarrow
+        y = z
+        \right)
+        \Leftrightarrow
+        R - \text{функционально}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R \
+        \left(
+        \forall x, \ y, \ z \
+        \left(
+        \left\{
+        \begin{aligned}
+            &y R x \\
+            &z R x
+        \end{aligned}
+        \right.
+        \longrightarrow
+        y = z
+        \right)
+        \Leftrightarrow
+        R - \text{инъективно}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R \
+        \left(
+        \forall x, \ y, \ z \
+        \left(
+        R - \text{функционально}.
+        \Leftrightarrow
+        R^{-1} - \text{инъективно}.
+        \right)
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ X \
+        \left(
+        X \subseteq dom \ R
+        \Leftrightarrow
+        R - \text{тотально для} \ X.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ Y \
+        \left(
+        Y \subseteq rng \ R
+        \Leftrightarrow
+        R - \text{сюрьективно для} \ Y.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ X \
+        \left(
+        R - \text{тотально для} \ X.
+        \Leftrightarrow
+        R^{-1} - \text{сюрьективно для} \ X.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ Q \
+        \left(
+        \left\{
+        \begin{aligned}
+            &R - \text{функционально}. \\
+            &Q - \text{функционально}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        R \circ Q - \text{функционально}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ Q \
+        \left(
+        \left\{
+        \begin{aligned}
+            &R - \text{инъективно}. \\
+            &Q - \text{инъективно}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        R \circ Q - \text{инъективно}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ Q, \ A \
+        \left(
+        \exists B \
+        \left\{
+        \begin{aligned}
+            &Q \subseteq A \times B \\
+            &R - \text{тотально для} \ rng \ Q. \\
+            &Q - \text{тотально для} \ A.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        R \circ Q - \text{тотально для} \ A.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ Q, \ C \
+        \left(
+        \exists B \
+        \left\{
+        \begin{aligned}
+            &R \subseteq B \times C \\
+            &Q - \text{сюрьективно для} \ dom \ R. \\
+            &R - \text{сюрьективно для} \ C.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        R \circ Q - \text{сюрьективно для} \ C.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ R \
+        \left(
+        \exists B
+        \left\{
+        \begin{aligned}
+            &R: A \longrightarrow B \\
+            &R - \text{инъекция}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        R^{-1} \circ R \subseteq id_A
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall B, \ R \
+        \left(
+        \exists A
+        \left\{
+        \begin{aligned}
+            &R: A \longrightarrow B \\
+            &R - \text{функционально}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        R \circ R^{-1} \subseteq id_B
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ R \
+        \left(
+        \exists B
+        \left\{
+        \begin{aligned}
+            &R: A \longrightarrow B \\
+            &R - \text{тотально для} \ A.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        id_A \subseteq R^{-1} \circ R
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall B, \ R \
+        \left(
+        \exists A
+        \left\{
+        \begin{aligned}
+            &R: A \longrightarrow B \\
+            &R - \text{сюрьективна для} \ B.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        id_B \subseteq R \circ R^{-1}
+        \right)
+	\end{flalign*}
     
 	\chapter{Общая алгебра}
 	\begin{flalign*}
@@ -2189,178 +2372,92 @@
 	\end{flalign*}
 
 	\chapter{Функции}
-	\begin{flalign*}
-		\forall X, \ Y \
-		X \times Y - \text{декартово произведение} \ X \ \text{и} \ Y.
+    \begin{flalign*}
+        \forall A, \ B, \ f \
+        \left(
+        \left\{
+        \begin{aligned}
+            &f \subseteq A \times B \\
+            &f - \text{функционально}. \\
+            &f - \text{тотально для} \ A.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        f: A \longrightarrow B
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall f \
+        \left(
+        \exists A, \ B \
+        f: A \longrightarrow B
+        \Leftrightarrow
+        f - \text{функция}.
+        \right)
 	\end{flalign*}
-
-	\begin{flalign*}
-		\forall X, \ Y \
+    \begin{flalign*}
+        \forall f, \ x, \ y \
+        \left(
+        \left\{
+        \begin{aligned}
+            &f: A \longrightarrow B \\
+            &x \in A \\
+            &x f y
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        y = f(x)
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall f, \ g \
+        \left(
+        \left\{
+        \begin{aligned}
+            &f - \text{функция}. \\
+            &g - \text{функция}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        \left(
+        \forall x \
+        \left\{
+        \begin{aligned}
+            &dom \ f = dom \ g \\
+            &f(x) = g(x)
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        f = g
+        \right)
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        B^A = \set{f \in P(A \times B) \mid f: A \longrightarrow B}
+	\end{flalign*}
+    \begin{flalign*}
+		\forall A, \ B, \ R \
 		\left(
-		X \times Y
+        \left\{
+        \begin{aligned}
+            &R: A \longrightarrow B \\
+            &R - \text{биекция}.
+        \end{aligned}
+        \right.
 		\Leftrightarrow
-		\forall \meta{x}, \ \meta{y} \
-		\left\{
-		\begin{aligned}
-			&x \in X \\
-			&y \in Y \\
-			&X \times Y = \sequence{(x, y)}
-		\end{aligned}
-		\right.
+        A \stackrel{R}{\thicksim} B
 		\right)
 	\end{flalign*}
-
-	\begin{flalign*}
-		\forall \meta{x}, \ \meta{y}, \ f, \ X, \ Y \
+    \begin{flalign*}
+		\forall A, \ B \
 		\left(
-		\forall z, \ w \
-		\left\{
-		\begin{aligned}
-			&X = \sequence{x} \\
-			&Y = \sequence{y} \\
-			&z \in X \\
-			&w \in Y \\
-			&x = z \longrightarrow y = w \\
-			&f = X \times Y
-		\end{aligned}
-		\right.
+        \exists R \
+        A \stackrel{R}{\thicksim} B
 		\Leftrightarrow
-		y = f(x)
+        A \thicksim B
 		\right)
 	\end{flalign*}
-
-	\begin{flalign*}
-		\forall f \
-		D(f) - \text{область определения} \ f.
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall f \
-		E(f) - \text{область значений} \ f.
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall \meta{x}, \ f, \ X \
-		\left(
-		f(x)
-		\Leftrightarrow
-		\left\{
-		\begin{aligned}
-			&\meta{x} - \text{аргумент (независимая переменная)} \ f. \\
-			&f - \text{функция от} \ \meta{x}.
-		\end{aligned}
-		\right.
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall \meta{x}, \ f, \ X \
-		\left(
-		f(x)
-		\Leftrightarrow
-		X = \sequence{x} \longrightarrow X = D(f)
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall \meta{y}, \ f, \ x \
-		\left(
-		y = f(x)
-		\Leftrightarrow
-		\meta{y} - \text{функция (зависимая переменная)} \ f.
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall \meta{y}, \ f, \ Y, \ x \
-		\left(
-		y = f(x)
-		\Leftrightarrow
-		Y = \sequence{y} \longrightarrow Y = E(f)
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall \meta{y}, \ \meta{x}, \ f \
-		\left(
-		y = f(x)
-		\Leftrightarrow
-		\left\{
-		\begin{aligned}
-			&y - \text{образ} \ x. \\
-			&x - \text{прообраз} \ y.
-		\end{aligned}
-		\right.
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall f, \ X, \ Y \
-		\left(
-		f: X \longrightarrow Y
-		\Leftrightarrow
-		\left\{
-		\begin{aligned}
-			&X = D(f) \\
-			&Y = E(f)
-		\end{aligned}
-		\right.
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall f, \ X, \ Y \
-		\left(
-		f: X \longrightarrow Y
-		\Leftrightarrow
-		\left\{
-		\begin{aligned}
-			&Y - \text{образ} \ X. \\
-			&X - \text{прообраз} \ Y.
-		\end{aligned}
-		\right.
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall f, \ A \
-		\left(
-		\forall y
-		\left\{
-		\begin{aligned}
-			&A = \sequence{y} \\
-			&y \in E(f)
-		\end{aligned}
-		\right.
-		\Leftrightarrow
-		f - \text{сюръекция (накрытие)}.
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall f \
-		\left(
-		\forall x, \ y \
-		(f(x) = f(y) \longrightarrow x = y)
-		\Leftrightarrow
-		f - \text{инъекция (вложение)}.
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall f \
-		\left(
-		\left\{
-		\begin{aligned}
-			&f - \text{сюръекция (накрытие)}. \\
-			&f - \text{инъекция (вложение)}.
-		\end{aligned}
-		\right.
-		\Leftrightarrow
-		f - \text{биекция (взаимно-однозначное соответствие)}.
-		\right)
-	\end{flalign*}
-
 	\begin{flalign*}
 		\forall A, \ B \
 		\left(
@@ -2369,18 +2466,105 @@
 		A \ \text{и} \ B - \text{равномощные}.
 		\right)
 	\end{flalign*}
-
 	\begin{flalign*}
-		\forall f, \ A, \ B \
+		\forall A, \ B, \ R \
+		\left(
+        \left\{
+        \begin{aligned}
+            &id_A \subseteq R^{-1} \circ R \\
+            &id_B \subseteq R \circ R^{-1} \\
+        \end{aligned}
+        \right.
+		\Leftrightarrow
+        A \stackrel{R}{\thicksim} B
+		\right)
+	\end{flalign*}
+    \begin{flalign*}
+		\forall A \
+        \overline{A \thicksim P(A)}
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ f \
+        \overline{
+        \left\{
+        \begin{aligned}
+            &f: A \longrightarrow P(A) \\
+            &f - \text{сюрьекция}.
+        \end{aligned}
+        \right.
+        }
+	\end{flalign*}
+    \begin{flalign*}
+        \underline{2} = \set{0, 1}
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        P(A) \thicksim \underline{2}
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ n \
+        \left(
+        n \in A
+        \longrightarrow
+        1_A(n) = 1
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ n \
+        \left(
+        n \notin A
+        \longrightarrow
+        1_A(n) = 0
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        1_A - \text{индикаторная функция}.
+	\end{flalign*}
+    \begin{flalign*}
+		\forall A \
+		A \thicksim A
+	\end{flalign*}
+    \begin{flalign*}
+		\forall A, \ B \
+        \left(
+        A \thicksim B
+        \longrightarrow
+        \forall C \
+        A \times C \thicksim B \times C
+        \right)
+	\end{flalign*}
+	\begin{flalign*}
+		\forall A, \ B, \ C \
+		\left(
+		A \thicksim B
+		\Leftrightarrow
+		B \thicksim A
+		\right)
+	\end{flalign*}
+    \begin{flalign*}
+		\forall A, \ B, \ C \
+        \left( A \times B \right) \times C \thicksim A \times \left( B \times C \right)
+	\end{flalign*}
+    \begin{flalign*}
+		\forall A, \ B, \ C \
+        \left( A \times B \right)^C \thicksim A^C \times B^C
+	\end{flalign*}
+    \begin{flalign*}
+		\forall A, \ B, \ C \
+        \left( C^B \right)^A \thicksim C^{B \times A}
+    \end{flalign*}
+	\begin{flalign*}
+		\forall A, \ B \
 		\left(
 		\left\{
 		\begin{aligned}
-			&f: A \longrightarrow B \\
-			&f - \text{биекция}.
+			&A \thicksim B \\
+			&B \thicksim C
 		\end{aligned}
 		\right.
-		\Leftrightarrow
-		A \thicksim B
+		\longrightarrow
+		A \thicksim C
 		\right)
 	\end{flalign*}
 
@@ -2423,34 +2607,7 @@
 		\right)
 	\end{flalign*}
 
-	\begin{flalign*}
-		\forall A \
-		A \thicksim A
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall A, \ B, \ C \
-		\left(
-		A \thicksim B
-		\Leftrightarrow
-		B \thicksim A
-		\right)
-	\end{flalign*}
-
-	\begin{flalign*}
-		\forall A, \ B \
-		\left(
-		\left\{
-		\begin{aligned}
-			&A \thicksim B \\
-			&B \thicksim C
-		\end{aligned}
-		\right.
-		\longrightarrow
-		A \thicksim C
-		\right)
-	\end{flalign*}
-
+	
 	\begin{flalign*}
 		\forall A \
 		\left(
