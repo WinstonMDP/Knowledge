@@ -2495,7 +2495,8 @@
         }
 	\end{flalign*}
     \begin{flalign*}
-        \underline{2} = \set{0, 1}
+        \forall n \
+        \underline{n} = \set{k \in \mathbb{N} \mid k < n}
 	\end{flalign*}
     \begin{flalign*}
         \forall A \
@@ -2567,6 +2568,201 @@
 		A \thicksim C
 		\right)
 	\end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ f \
+        \left(
+        \left\{
+        \begin{aligned}
+            &f: A \longrightarrow B \\
+            &f - \text{инъекция}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        A \stackrel{f}{\leq} B
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        \exists f \
+        A \stackrel{f}{\leq} B
+        \Leftrightarrow
+        A \leq B
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        A \leq B
+        \Leftrightarrow
+        A \ \text{вложено в} \ B.
+        \right)
+    \end{flalign*}
+    \textbf{Теорема Кантора-Бернштейна-Шрёдера:}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A \leq B \\
+            &B \leq A
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        A \thicksim B
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        A \leq A
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ C \
+        \left(
+        \exists B \
+        \left\{
+        \begin{aligned}
+            &A \leq B \\
+            &B \leq C
+        \end{aligned}
+        \right.
+        \longrightarrow
+        A \leq C
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        A \leq B
+        \Leftrightarrow
+        \exists C \
+        \left\{
+        \begin{aligned}
+            &C \subseteq B \\
+            &C \thicksim A
+        \end{aligned}
+        \right.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        A \subseteq B
+        \longrightarrow
+        A \leq B
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ n \
+        \left(
+        n \in \mathbb{N}
+        \longrightarrow
+        A^{\underline{n}} \thicksim A^n
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \mathbb{N}
+        \thicksim
+        \mathbb{Z}
+        \thicksim
+        \mathbb{Q}
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        A - \text{счётно}.
+        \Leftrightarrow
+        A \thicksim N
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall N \
+        \overline{P(\mathbb{N}) - \text{счётно}.}
+    \end{flalign*}
+    \begin{flalign*}
+        \underline{2}^{\mathbb{N}}
+        \thicksim
+        P(\mathbb{N})
+        \thicksim
+        \mathbb{N}^{\mathbb{N}}
+        \thicksim
+        \mathbb{Z}^{\mathbb{N}}
+        \thicksim
+        \mathbb{Q}^{\mathbb{N}}
+        \thicksim
+        \mathbb{R}
+        \thicksim
+        \mathbb{R} \times \mathbb{R}
+        \thicksim
+        \mathbb{R}^{\mathbb{N}}
+    \end{flalign*}
+    \textbf{Принцип Дрихле:}
+    \begin{flalign*}
+        \overline
+        {
+        \exists n \
+        \underline{n + 1} \leq \underline{n}
+        }
+    \end{flalign*}
+    \begin{flalign*}
+        \forall m, \ n \
+        \left(
+        m > n
+        \longrightarrow
+        \overline{\underline{m} \leq \underline{n}}
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall m, \ n \
+        \left(
+        m \neq n
+        \longrightarrow
+        \overline{\underline{m} \thicksim \underline{n}}
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \exists! n \
+        \left(
+        A \thicksim \underline{n}
+        \longrightarrow
+        A \thicksim \underline{n}
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        \exists n \
+        A \thicksim \underline{n}
+        \Leftrightarrow
+        A - \text{конечно}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        \overline{A - \text{конечно}.}
+        \Leftrightarrow
+        A - \text{бесконечно}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        \exists n \
+        A \thicksim \underline{n}
+        \Leftrightarrow
+        |A| = n
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        A - \text{счётно}.
+        \Leftrightarrow
+        |A| - \text{мощность множества}.
+        \right)
+    \end{flalign*}
 
 	\begin{flalign*}
 		\forall f \
