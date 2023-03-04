@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{bookmark}
+\usepackage{textcomp}
 
 \setlength{\parskip}{0.03\textheight}
 
@@ -28,6 +29,7 @@
 \newcommand{\meta}[1]{\text{<}#1\text{>}}
 \newcommand{\sequence}[1]{\left\{#1\right\}}
 \newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\simsub}{\stackrel{<}{\thicksim}}
 
 \title{Математика}
 \date{\today}
@@ -35,9 +37,7 @@
 
 \begin{document}
 	\maketitle
-
-	\tableofcontents
-
+    \tableofcontents
 	\chapter{Примечания}
     В данном материале очень много опечаток.
     А также данный материал неконсистентен -
@@ -2764,6 +2764,274 @@
         \Leftrightarrow
         |A| - \text{мощность множества}.
         \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall m, \ n \
+        \left(
+        m < n
+        \longrightarrow
+        \overline
+        {
+        \exists f \
+        \left\{
+        \begin{aligned}
+            &f: \underline{m} \longrightarrow \underline{n} \\
+            &f - \text{суръекция}.
+        \end{aligned}
+        \right.
+        }
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ f \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A \thicksim B \\
+            &f: A \longrightarrow B
+        \end{aligned}
+        \right.
+        \longrightarrow
+        \left(
+        f - \text{инъекция}.
+        \Leftrightarrow
+        f - \text{суръекция}.
+        \right)
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall m, \ n \
+        \underline{m} \thicksim \underline{n}
+        \longrightarrow
+        m = n
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        A \subseteq \mathbb{N}
+        \longrightarrow
+        \left[
+        \begin{aligned}
+            &A - \text{конечно}. \\
+            &A - \text{счётно}.
+        \end{aligned}
+        \right.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall B \
+        \left(
+        \exists A \
+        \left\{
+        \begin{aligned}
+            &A - \text{счётно}. \\
+            &A \simsub B
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        B - \text{бесконечно}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall B \
+        \left(
+        \exists A \
+        \left\{
+        \begin{aligned}
+            &A - \text{счётно}. \\
+            &B \simsub A
+        \end{aligned}
+        \right.
+        \longrightarrow
+        \left[
+        \begin{aligned}
+            &B - \text{конечно}. \\
+            &B - \text{счётно}.
+        \end{aligned}
+        \right.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall B \
+        \left(
+        \exists A \
+        \left\{
+        \begin{aligned}
+            &A - \text{конечно}. \\
+            &B \simsub A
+        \end{aligned}
+        \right.
+        \longrightarrow
+        B - \text{конечно}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A - \text{конечно}. \\
+            &B \simsub A
+        \end{aligned}
+        \right.
+        \longrightarrow
+        |B| \leq |A|
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        A - \text{конечно}.
+        \longrightarrow
+        \forall B \
+        A \cap B - \text{конечно}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        A - \text{конечно}.
+        \longrightarrow
+        \forall B \
+        A \backslash B - \text{конечно}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A - \text{конечно}. \\
+            &B - \text{конечно}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        |A \cup B| = |A| + |B| - |A \cap B|
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A - \text{конечно}. \\
+            &B - \text{конечно}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        max\left( |A|, |B| \right)
+        \leq
+        |A \cup B|
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A - \text{конечно}. \\
+            &B - \text{конечно}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        |A \times B| = |A| |B|
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A - \text{конечно}. \\
+            &B - \text{конечно}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        |B^A| = |B|^{|A|}
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        A - \text{конечно}.
+        \longrightarrow
+        |\mathcal{P}(A)| = 2^{|A|}
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A - \text{бесконечно}. \\
+            &B - \text{конечно}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        A \backslash B - \text{бесконечно}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        Inj \ (A, B)
+        =
+        \set{f: A \longrightarrow B \mid A \stackrel{f}{\simsub} B}
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ A', \ B' \
+        \left(
+        \left\{
+        \begin{aligned}
+            &A \thicksim A' \\
+            &B \thicksim B'
+        \end{aligned}
+        \right.
+        \longrightarrow
+        Inj \ (A, B) \thicksim Inj \ (A', B')
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall n, \ m \
+        n^{(m)} = \frac{n!}{(n - m)!}, m \leq n
+    \end{flalign*}
+    \begin{flalign*}
+        \forall n, \ m \
+        A_n^m - \text{количество размещений длины $ m \ n $ элементов}.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B, \ n, \ m \
+        |Inj \ (\underline{m}, \underline{n})|
+        =
+        \left\{
+        \begin{aligned}
+            &0, m > n \\
+            &n^{(m)}, m \leq n
+        \end{aligned}
+        \right.
+        =
+        A_n^m
+    \end{flalign*}
+    \begin{flalign*}
+        Bij(A, B)
+        =
+        \set{f: A \longrightarrow B \mid A \stackrel{f}{\thicksim} B}
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ B \
+        Bij \ (A, B)
+        \thicksim
+        Bij \ (A, A)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall n \
+        P_n - \text{количество перестановок из} \ n.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall n \
+        |Bij \ (\underline{n}, \underline{n})|
+        =
+        n!
+        =
+        P_n
     \end{flalign*}
 
 	\begin{flalign*}
