@@ -297,6 +297,15 @@
 		\right)
 	\end{flalign*}
 
+    \begin{flalign*}
+        \forall a, \ c \
+        \left(
+        a \subset c
+        \Leftrightarrow
+        c - \text{собственное подмножество} \ a.
+        \right)
+	\end{flalign*}
+
 	\begin{flalign*}
 		\forall a, \ b \
 		\left(
@@ -3146,6 +3155,71 @@
         n!
         =
         P_n
+    \end{flalign*}
+    \begin{flalign*}
+        \forall n, \ k \
+        C_n^k
+        =
+        \mathcal{P}_k(\underline{n})
+        =
+        \set{x \in \mathcal{P}(\underline{n}) \mid |x| = k}
+    \end{flalign*}
+    \begin{flalign*}
+        \forall n, \ k \
+        C_n^k - \text{количество сочетаний из $ n $ по $ k $}.
+    \end{flalign*}
+    \begin{flalign*}
+        C_{n + 1}^{k + 1} = C_n^{k + 1} + C_n^k
+    \end{flalign*}
+    \begin{flalign*}
+        \forall n, \ k \
+        \left(
+        k \leq n
+        \longrightarrow
+        C_n^k = C_n^{n - k}
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall \sequence{A_n} \
+        |A_1 \cup A_2 \cup \ldots \cup A_n|
+        =
+        \sum_{s = 1}^n (-1)^{s - 1}
+        \sum_{1 \leq i_1 < i_2 < \ldots < i_n \leq n} |A_1 \cap A_2 \cap \ldots \cap A_n|
+    \end{flalign*}
+    \begin{flalign*}
+        \forall m, \ n \
+        |Sur(\underline{m}, \underline{n})|
+        =
+        \sum_{s = 0}^n (-1)^s C_n^s (n - s)^m
+    \end{flalign*}
+    \begin{flalign*}
+        \forall A, \ f, \ n \
+        \left(
+        f - \text{беспорядок на} \ \underline{n}
+        \Leftrightarrow
+        \forall x \
+        \left\{
+        \begin{aligned}
+            &x \in A \longrightarrow f(x) \neq x \\
+            &f: A \longrightarrow A
+        \end{aligned}
+        \right.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        Der(\underline{n})
+        =
+        \set
+        {
+        f: \underline{n} \longrightarrow \underline{n}
+        \mid
+        f - \text{беспорядок на} \ \underline{n}
+        }
+    \end{flalign*}
+    \begin{flalign*}
+        |Der(\underline{n})|
+        =
+        n! \sum_{s = 0}^n \frac{(-1)^s}{s!}
     \end{flalign*}
 
 	\begin{flalign*}
