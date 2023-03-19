@@ -48,6 +48,7 @@
 - dome - купол.
 - dwelling - жилище.
 - dweller - обитатель.
+- drawback - недостаток.
 - drug - лекарство; наркотик.
 - regard - уважение.
 - earthquake - землетрясение.
@@ -68,6 +69,7 @@
 - foundation - фундамент.
 - fountain - фонтан.
 - favor - польза; благосклонность.
+- gain - выгода.
 - guide - руководство; направляющая.
 - heaven - рай.
 - hedge - ограда.
@@ -102,10 +104,12 @@
 - nostalgia - ностальгия.
   - nostalgia for something - ностальгия по чему-то.
 - novel - роман.
+- nuisance - неприятность.
 - nutrition - питание.
 - objective - цель.
 - obstacle - препятствие.
 - offense - преступление.
+- opportunity - возможность.
 - opulence - богатство; роскошь.
 - pace - темп.
 - painkiller - обезболивающие.
@@ -236,10 +240,12 @@
 - embody - воплощать.
 - emerge - появиться.
 - erect - возводить.
+- exceed - превышать.
 - exclaim - воскликнуть.
 - expand - расширять.
 - focus
   - focus on something - сосредоточиться на чём-то.
+- gain - получать.
 - get
   - get into something - вникнуть во что-то.
 - give
@@ -265,12 +271,14 @@
   - go through - пройти через (испытания); изучить.
   - go with - подходить; сопровождать; быть в отношениях.
 - guide - руководить.
+- handicap - препятствие.
 - harp - арфа.
 - heat - нагревать.
 - hover - парить.
 - hurry - поспешить.
 - inquire - спрашивать.
 - insulate - изолировать.
+- interfere - вмешиваться.
 - intrigued - заинтриговать.
 - leap - прыгать.
 - lessen - уменьшить.
@@ -331,7 +339,9 @@
 
 ## <a name = "Adjectives">Adjectives</a>
 - authoritative - авторитетный.
+- aware - сведущий.
 - awful - ужасный.
+- beneficial - выгодный.
 - charming - очаровательный.
 - chief - главная.
 - contemporary - современный.
@@ -361,6 +371,7 @@
 - gripping - захватывающий.
 - gruelling - изнурительный.
 - impeccable - безупречный.
+- inconvenient - неудобный.
 - innocent - невинный.
 - innovative - иновационный.
 - knowledgeable - знающий.
@@ -405,9 +416,12 @@
 - viable - жизнеспособный.
 - wealth - богатый.
 - windswept - обдуваемый.
+- worthy - достойный.
+- worthless - бесполезный.
 
 ## <a name = "Other">Other</a>
 - afterwards - впоследствии.
+- although - хотя.
 - densely - плотно.
 - despite - несмотря на.
 - however - тем не менее.
@@ -416,6 +430,7 @@
 - indeed - действительно; даже.
 - indisputal - бесспорно.
 - ironically - по иронии судьбы.
+- likewise - также.
 - magnificent - великолепный.
 - mostly - в основном.
 - obviously - очевидно.
@@ -423,6 +438,7 @@
 - particularly - особенно; в частности.
 - past - мимо.
 - perhaps - возможно.
+- though - хотя.
 - vicinity - поблизости.
 - virtually - фактически.
 
