@@ -1389,7 +1389,7 @@
         \left(
         \left( B, * \right) - \text{подгруппа} \ A.
         \Leftrightarrow
-        |A| = |B| |A : B|
+        |A| = |B| \left(A : B\right)
 		\right)
 	\end{flalign*}
     \begin{flalign*}
@@ -1401,18 +1401,10 @@
         \begin{aligned}
             &f: G \longrightarrow A \\
             &f - \text{гомоморфизм}. \\
-            &H = ker \ f
+            &H = Ker \ f
         \end{aligned}
         \right.
         \right)
-        \Leftrightarrow
-        H - \text{нормальная подгруппа} \ G.
-        \right)
-	\end{flalign*}
-    \begin{flalign*}
-        \forall G, \ H \
-        \left(
-        G / H
         \Leftrightarrow
         H - \text{нормальная подгруппа} \ G.
         \right)
@@ -1436,7 +1428,7 @@
         \end{aligned}
         \right.
         \longrightarrow
-        G / ker \ f \simeq Im \ f
+        G / Ker \ f \simeq Im \ f
         \right)
 	\end{flalign*}
     \begin{flalign*}
@@ -1477,7 +1469,7 @@
         \begin{aligned}
             &f - \text{автоморфизм}. \\
             &a \in dom \ f \\
-            &f(x) = axa^{-1}
+            &f(x) = a x a^{-1}
         \end{aligned}
         \right.
         f - \text{внутренний автоморфизм}.
@@ -1493,7 +1485,7 @@
         \left\{
         \begin{aligned}
             &a \in G \\
-            &b \in G \longrightarrow ab = ba
+            &b \in G \longrightarrow a b = b a
         \end{aligned}
         \right.
         \Leftrightarrow
@@ -1506,7 +1498,288 @@
     \begin{flalign*}
         \forall G \
         G / Z(G) \simeq Inn(G)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall G, \ H \
+        ord \ G \times H = ord \ G \ ord \ H
+    \end{flalign*}
+    \begin{flalign*}
+        \forall g, \ h \
+        ord \ (g, \ h) = \text{НОК}(ord \ g, \ ord \ h)
 	\end{flalign*}
+    \begin{flalign*}
+        \forall G, \ H \
+        \left(
+        \left\{
+        \begin{aligned}
+            &\text{НОД}\left(ord \ G, \ ord \ H\right) = 1 \\
+            &G - \text{циклическая}. \\
+            &H - \text{циклическая}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        G \times H - \text{циклическая}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall G, \ H, \ n, \ m \
+        \left(
+        \left\{
+        \begin{aligned}
+            &\text{НОД}\left(ord \ G, \ ord \ H\right) = 1 \\
+            &G - \text{циклическая}. \\
+            &H - \text{циклическая}. \\
+            &\text{НОД}(n, \ m) = 1
+        \end{aligned}
+        \right.
+        \longrightarrow
+        \left(\mathbb{Z}/n\mathbb{Z}\right)
+        \times
+        \left(\mathbb{Z}/m\mathbb{Z}\right)
+        \simeq
+        \left(\mathbb{Z}/nm\mathbb{Z}\right)
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall A \
+        \left(
+        ord \ A = \text{простое число}
+        \longrightarrow
+        A - \text{циклическая}
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        &\forall n \
+        GL_n(\mathbb{R}) \ \text{(общая линейная группа) - множества всех} \\
+        &\text{невырожденных матриц размера} \ n \
+        \text{с операцией матричного умножения}. \\
+	\end{flalign*}
+    \begin{flalign*}
+        \forall n \
+        SL_n(\mathbb{R}) \ \text{(специальная линейная группа)}
+        =
+        \set{A \in GL_n(\mathbb{R}) \mid det \ A = 1}
+	\end{flalign*}
+    \begin{flalign*}
+        \forall n \
+        D_n - \text{группа диэдра ($ R_i $ - поворот, $ l_j $ - осевая симметрия)}.
+    \end{flalign*}
+    \begin{flalign*}
+        V_4 = D_2
+	\end{flalign*}
+    \begin{flalign*}
+        \forall K \
+        \left(
+        \exists +, \ * \
+        \left\{
+        \begin{aligned}
+            &\left(K, \ +\right) - \text{абелева группа}. \\
+            &\left(K, \ *\right) - \text{полугруппа}. \\
+            &a, \ b, \ c \in K
+            \longrightarrow
+            \left\{
+            \begin{aligned}
+                &c(a + b) = c a + c b \\
+                &(a + b)c = ac + bc
+            \end{aligned}
+            \right.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        K - \text{кольцо}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall K \
+        \left(
+        \forall k \ 
+        \left\{
+        \begin{aligned}
+            &\text{Корректность} \ +. \\
+            &\text{Корректность} \ *. \\
+            &0 \in K \\
+            &k \in K \longrightarrow k - \text{обратимый}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        K - \text{кольцо}.
+        \right)
+	\end{flalign*}
+    Во всех кольцах, кроме кольца с одним элементом,
+    не существует обратного к нулю.
+    \begin{flalign*}
+        \forall a \
+        \left(
+        \exists n \
+        a^n = 0
+        \Leftrightarrow
+        a - \text{нильпотент}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall a \
+        \left(
+        \exists b \
+        \left\{
+        \begin{aligned}
+            &a \neq 0 \\
+            &b \neq 0 \\
+            &ab = 0
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        a - \text{делитель} \ 0.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall b \
+        \left(
+        \exists a \
+        \left\{
+        \begin{aligned}
+            &a \neq 0 \\
+            &b \neq 0 \\
+            &ab = 0
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        b - \text{делитель} \ 0.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ I \
+        \left(
+        \forall r, \ i \
+        \left\{
+        \begin{aligned}
+            &R - \text{кольцо}. \\
+            &I - \text{подгруппа} \ R. \\
+            &\left\{
+            \begin{aligned}
+                &i \in I \\
+                &r \in R
+            \end{aligned}
+            \right.
+            \longrightarrow
+            \left\{
+            \begin{aligned}
+                &i r \in I \\
+                &r i \in I
+            \end{aligned}
+            \right.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        I - \text{идеал} \ R.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall I, \ R \
+        \left(
+        I - \text{идеал} \ R.
+        \Leftrightarrow
+        I \lhd R
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall R, \ a \
+        \left(
+        \left\{
+        \begin{aligned}
+            &R - \text{коммутативное кольцо с единицей}. \\
+            &a \in R
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \meta{a} = a R - \text{главный идеал}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall I \
+        \left(
+        I \lhd \mathbb{Z}
+        \longrightarrow
+        I - \text{главный}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall K \
+        \left(
+        \forall a, \ b \
+        \left\{
+        \begin{aligned}
+            &K - \text{кольцо}. \\
+            &k \neq 0 \longrightarrow k - \text{обратимый}. \\
+            &a, \ b \in K \longrightarrow a b = b a
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        K - \text{поле}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall k \
+        \left(
+        \exists K \
+        \left\{
+        \begin{aligned}
+            &K - \text{поле}. \\
+            &k \in K
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        k - \text{скаляр}.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall K \
+        \left(
+        K - \text{поле}
+        \Leftrightarrow
+        char \ K = \text{количество 1, которые нужно сложить, чтобы получился} \ 0.
+        \right)
+	\end{flalign*}
+    \begin{flalign*}
+        \forall K \
+        \left[
+        \begin{aligned}
+            &char \ K - \text{простое}. \\
+            &char \ K = 0
+        \end{aligned}
+        \right.
+	\end{flalign*}
+    \begin{flalign*}
+        \forall k \
+        \left(
+        \exists K \
+        \left\{
+        \begin{aligned}
+            &K - \text{поле}. \\
+            &k \in K
+        \end{aligned}
+        \right.
+        \longrightarrow
+        \overline{k - \text{делитель} \ 0}.
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall K \
+        \left(
+        K - \text{конечное поле}.
+        \longrightarrow
+        \exists t \
+        |K| = \left(char \ K\right)^t
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \forall K \
+        \left(
+        K - \text{конечное поле}.
+        \longrightarrow
+        \exists t \
+        |K| = \left(char \ K\right)^t
+        \right)
+    \end{flalign*}
     
 	\chapter{Алгебраические выражения}
 	\textbf{Алгебраическое выражение} - это
