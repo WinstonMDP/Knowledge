@@ -7621,4 +7621,235 @@
 		\end{aligned}
 		\right)
 	\end{flalign*}
+
+    \chapter{Линейная алгебра}
+    \begin{flalign*}
+        \forall \lambda, \mu \in F \ x, y \in V \
+        \left\{
+        \begin{aligned}
+            &\left(V, +\right) - \text{абелева группа}. \\
+            &F - \text{поле}. \\
+            &*: V \times F \longrightarrow V \\
+            &1x = x \\
+            &(\lambda \mu) x = \lambda (\mu x) \\
+            &(\lambda + \mu) x = \lambda x + \mu x \\
+            &\lambda (x + y) = \lambda x + \lambda y
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \begin{aligned}
+            &V - \text{векторное пространство над} \\
+            &\text{полем} \ F.
+        \end{aligned}
+    \end{flalign*}
+    \begin{flalign*}
+        \exists F \ \forall \lambda \in F \ x, y \in U \
+        \left\{
+        \begin{aligned}
+            &x + y \in U \\
+            &\lambda x \in U
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        U \subseteq V \ (U \ \text{подпространство} \ V)
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &\lambda_1, \ldots, \lambda_k \in F \\
+            &v_1, \ldots, v_k \in V
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \begin{aligned}
+            &\lambda_1 v_1 + \ldots + \lambda_k v_k - \text{линейная комбинация} \\
+            &\text{векторов} \ v_1, \ldots, v_k \ \text{c коэффициентами} \ 
+            \lambda_1, \ldots, \lambda_k.
+        \end{aligned}
+    \end{flalign*}
+    \begin{flalign*}
+        \meta{
+        v_1, \ldots, v_k} = \set{\lambda_1 v_1 + \ldots + \lambda_k v_k
+        \mid
+        \forall i \ \lambda_i \in F
+        } - \text{линейная оболочка}.
+    \end{flalign*}
+    \begin{flalign*}
+        \exists \set{\lambda}, i \
+        \left\{
+        \begin{aligned}
+            &\lambda_1 v_1 + \ldots + \lambda_k v_k = 0 \\
+            &\lambda_i \neq 0
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        v_1, \ldots, v_k \ \text{линейно зависимы (л.з.)}.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x \ \exists \set{\alpha} \
+        x = \alpha_1 e_1 + \ldots \alpha_n e_n
+        \Leftrightarrow
+        e_1, \ldots, e_n - \text{полная система векторов}.
+    \end{flalign*}
+    Выяснить по набору векторов, являются ли они л.з. \\
+    Алгоритм:
+    \begin{enumerate}
+        \item Записать координаты данных векторов по столбцам в матрицу.
+        \item Найти ступенчатый вид.
+        \item Есть свободные переменные $ \Leftrightarrow $ л.з.
+    \end{enumerate}
+    $ e_1, \ldots, e_n \in V$: \\
+    $ e_1, \ldots, e_n $ - базис
+    $ \Leftrightarrow $
+    любые 2 из 3 достаточно в обратную сторону:
+    \begin{enumerate}
+        \item $ e_1, \ldots, e_n $ л.н.з.
+        \item $ e_1, \ldots, e_n $ - полная система векторов.
+        \item $ dim \ V = n $
+    \end{enumerate}
+    \begin{flalign*}
+        e_1, \ldots, e_n - \text{базис в} \ V.
+        \Leftrightarrow
+        dim \ V = n \ (n - \text{размерность} \ V )
+    \end{flalign*}
+    \begin{flalign*}
+        dim \ \mathbb{R}^n = n
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &e_1, \ldots, e_n - \text{базис в} \ V. \\
+            &x \in V
+        \end{aligned}
+        \right.
+        \longrightarrow
+        \exists! \set{\alpha} \ x = \alpha_1 e_1 + \ldots + \alpha_n e_n
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &e_1, \ldots, e_n - \text{базис в} \ V. \\
+            &x = \alpha_1 e_1 + \ldots + \alpha_n e_n
+        \end{aligned}
+        \right.
+        \longrightarrow
+        \forall i \ \alpha_i - \text{координата} \ x \ \text{относительно базиса} \
+        e_1, \ldots, e_n.
+    \end{flalign*}
+    \begin{flalign*}
+        \left(
+        \begin{array}{r}
+            1 \\
+            0 \\
+            \vdots \\
+            0
+        \end{array}
+        \right),
+        \left(
+        \begin{array}{r}
+            0 \\
+            1 \\
+            \vdots \\
+            0 
+        \end{array}
+        \right),
+        \ldots,
+        \left(
+        \begin{array}{r}
+            0 \\
+            0 \\
+            \vdots \\
+            1 
+        \end{array}
+        \right)
+        -
+        \text{стандартный базис}.
+    \end{flalign*}
+    \begin{flalign*}
+        C_{e \rightarrow e'} = \left(\left(e_1'\right)_e \ \ldots \ \left(e_n'\right)_e\right)
+    \end{flalign*}
+    \begin{flalign*}
+        x_e = C_{e \rightarrow e'} x_{e'}
+    \end{flalign*}
+    \begin{flalign*}
+        C_{e \rightarrow e'}^{-1} = C_{e' \rightarrow e}
+    \end{flalign*}
+    \textbf{Цепное правило:}
+    \begin{flalign*}
+        C_{e \rightarrow e'} = C_{e \rightarrow \text{ст.}} C_{\text{ст.} \rightarrow e'}
+    \end{flalign*}
+    \begin{flalign*}
+        L_1 + L_2
+        =
+        \set{
+        x_1 + x_2
+        \
+        \left|
+        \
+        \left\{
+        \begin{aligned}
+            &x_1 \in L_1 \\
+            &x_2 \in L_2
+        \end{aligned}
+        \right.
+        \right.
+        }
+    \end{flalign*}
+    \begin{flalign*}
+        dim \ L_1 \cap L_2 + dim \ L_1 + L_2 = dim \ L_1 + dim \ L_2
+    \end{flalign*}
+    Найти $ L_1 \cap L_2 $. \\
+    Алгоритм:
+    \begin{enumerate}
+        \item Задать через $ L_1 $ СЛАУ.
+        \item Задать через $ L_2 $ СЛАУ.
+        \item Склеить СЛАУ.
+        \item Решить полученную СЛАУ.
+    \end{enumerate}
+    \begin{flalign*}
+        U \oplus W = V
+        \Leftrightarrow
+        \left\{
+        \begin{aligned}
+            &U + W = V \\
+            &U \cap W = \set{0}
+        \end{aligned}
+        \right.
+    \end{flalign*}
+    \begin{flalign*}
+        U \oplus W = V
+        \Leftrightarrow
+        \left\{
+        \begin{aligned}
+            &\forall v \in V \ \exists! u \in U \ w \in W \ v = u + w \\
+            &u = proj_u v \\
+            &w = proj_w v
+        \end{aligned}
+        \right.
+    \end{flalign*}
+    \begin{flalign*}
+        Sym_n\left(\mathbb{R}\right)
+        =
+        \set{
+        A \in M_{n \times m}\left(\mathbb{R}\right) \
+        \left| \ A = A^T \right.
+        }
+    \end{flalign*}
+    \begin{flalign*}
+        Skew_n\left(\mathbb{R}\right)
+        =
+        \set{
+        A \in M_{n \times m}\left(\mathbb{R}\right) \
+        \left| \ A = -A^T \right.
+        }
+    \end{flalign*}
+    \begin{flalign*}
+        Sym_n\left(\mathbb{R}\right)
+        \oplus
+        Skew_n\left(\mathbb{R}\right)
+        =
+        M_{n \times m}\left(\mathbb{R}\right)
+        \ : \
+        \frac{C + C^T}{2} + \frac{C - C^T}{2} = C
+    \end{flalign*}
 \end{document}

@@ -40,7 +40,80 @@
 
     \tableofcontents
     
-    \chapter{}
+    \chapter{Аксиоматический метод}
+    Базовое понятие - это неопределяемое понятие.
+
+    \section{}
+    Зафиксировать базовые понятия.
+
+    \section{}
+    Зафиксировать аксиомы, связывающие понятия.
+
+    \section{}
+    Выводить следствия по правилам логики.
+
+    \chapter{Теория множеств}
+    \section{Базовые понятия}
+    Принадлежность ($ x \in y $).
+
+    \section{Аксиомы}
+    \subsection{Равенства}
+    \begin{flalign*}
+        x = y \longrightarrow \forall z \ \left(x \in z \longrightarrow y \in z\right)
+    \end{flalign*}
+
+    \subsection{Пары}
+    \begin{flalign*}
+        \exists z \ \forall u \
+        \left(
+        u \in z
+        \Leftrightarrow
+        \left[
+        \begin{aligned}
+            &u = x \\
+            &u = y
+        \end{aligned}
+        \right.
+        \right)
+    \end{flalign*}
+
+    \subsection{Объединения}
+    \begin{flalign*}
+        \exists y \ \forall u \
+        \left(
+        u \in y
+        \Leftrightarrow
+        \exists z \
+        \left\{
+        \begin{aligned}
+            &u \in z \\
+            &z \in x
+        \end{aligned}
+        \right.
+        \right)
+    \end{flalign*}
+
+    \subsection{Степени}
+    \begin{flalign*}
+        \exists y \ \forall u \ \left(u \in y \Leftrightarrow u \subseteq x\right)
+    \end{flalign*}
+
+    \subsection{Выделения}
+    \begin{flalign*}
+        \set{\left.x \in A \ \right| \ \varphi(x)}
+    \end{flalign*}
+
+    \section{Определения}
+    Класс $ = \set{x \ \left| \ \varphi(x)\right.} $.
+    Не все классы являются множествами. Все множества являются классами.
+    \begin{flalign*}
+        x = y \Leftrightarrow \left(z \in x \Leftrightarrow z \in y\right)
+    \end{flalign*}
+    \begin{flalign*}
+        x \subseteq y \Leftrightarrow \forall z \ \left(z \in x \longrightarrow z \in y\right)
+    \end{flalign*}
+
+    \chapter{Не обработанное}
     \textbf{Автонимный способ обозначения} - это
     способ обозначения,
     при котором формальные выражения обозначаются так же,
