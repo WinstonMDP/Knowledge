@@ -874,7 +874,395 @@
         id_B \subseteq R \circ R^{-1}
         \right)
 	\end{flalign*}
-    
+    \begin{flalign*}
+        \forall x \ x R x
+        \Leftrightarrow
+        R - \text{рефлексивное}.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x \ \overline{x R x}
+        \Leftrightarrow
+        R - \text{иррефлексивное}.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x, y \ \left(x R y \longrightarrow y R x\right)
+        \Leftrightarrow
+        R - \text{симметричное}.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x, y \
+        \left(
+        \left\{
+        \begin{aligned}
+            &x R y \\
+            &y R x
+        \end{aligned}
+        \right.
+        \longrightarrow
+        x = y
+        \right)
+        \Leftrightarrow
+        R - \text{антисимметричное}.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x, y, z \
+        \left(
+        \left\{
+        \begin{aligned}
+            &x R y \\
+            &y R z
+        \end{aligned}
+        \right.
+        \longrightarrow
+        x R z
+        \right)
+        \Leftrightarrow
+        R - \text{транзитивное}.
+    \end{flalign*}
+    \begin{flalign*}
+        id \subseteq R
+        \Leftrightarrow
+        R - \text{рефлексивное}.
+    \end{flalign*}
+    \begin{flalign*}
+        id \cap R = \varnothing
+        \Leftrightarrow
+        R - \text{иррефлексивное}.
+    \end{flalign*}
+    \begin{flalign*}
+        R = R^{-1}
+        \Leftrightarrow
+        R - \text{симметричность}.
+    \end{flalign*}
+    \begin{flalign*}
+        R \cap R^{-1} \subseteq id
+        \Leftrightarrow
+        R - \text{антисимметричное}.
+    \end{flalign*}
+    \begin{flalign*}
+        R \circ R \subseteq R
+        \Leftrightarrow
+        R - \text{транзитивное}.
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &P - \text{транзитивное}. \\
+            &Q - \text{транзитивное}.
+        \end{aligned}
+        \right.
+        \longrightarrow
+        P \cap Q - \text{транзитивное}.
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &P \subseteq A^2 \\
+            &P - \text{иррефлексивное}. \\
+            &P - \text{транзитивное}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        P - \text{строгий частичный порядок на} \ A.
+    \end{flalign*}
+    \begin{flalign*}
+        \exists A \ P - \text{строгий частичный порядок на} \ A.
+        \longrightarrow
+        P - \text{антисимметричное}.
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &P \subseteq A^2 \\
+            &P - \text{рефлексивное}. \\
+            &P - \text{транзитивное}. \\
+            &P - \text{антисимметричное}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        P - \text{нестрогий частичный порядок на} \ A.
+    \end{flalign*}
+    \begin{flalign*}
+        \varphi\left(P\right) = P \cup id
+    \end{flalign*}
+    \begin{flalign*}
+        \psi\left(P\right) = P \ \backslash \ id
+    \end{flalign*}
+    \begin{flalign*}
+        S\left(A\right) - \text{множество строгих частичных порядков на} \ A.
+    \end{flalign*}
+    \begin{flalign*}
+        N\left(A\right) - \text{множество нестрогих частичных порядков на} \ A.
+    \end{flalign*}
+    \begin{flalign*}
+        S\left(A\right) \stackrel{\varphi}{\sim} N\left(A\right)
+    \end{flalign*}
+    \begin{flalign*}
+        S\left(A\right) \stackrel{\psi}{\sim} N\left(A\right)
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &< - \text{строгий частичный порядок на} \ A. \\
+            &\leq - \text{нестрогий частичный порядок на} \ A. \\
+            &< = \psi(\leq)
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \left(A, <, \leq\right) - \text{частично упорядоченное множество}.
+    \end{flalign*}
+    \begin{flalign*}
+        \left(A, <, \leq\right) - \text{частично упорядоченное множество}.
+        \Leftrightarrow
+        A - \text{носитель порядка} \ \left(A, <, \leq\right).
+    \end{flalign*}
+    \begin{flalign*}
+        \forall y \in B \ \overline{y < x}
+        \Leftrightarrow
+        x - \text{минимальное в} \ B.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall y \in B \ \overline{x < y}
+        \Leftrightarrow
+        x - \text{максимальное в} \ B.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall y \in B \ x \leq y
+        \Leftrightarrow
+        x - \text{наименьший в} \ B.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall y \in B \ y \leq x
+        \Leftrightarrow
+        x - \text{наибольший в} \ B.
+    \end{flalign*}
+    \begin{flalign*}
+        x - \text{наименьший в} \ B.
+        \longrightarrow
+        min_< B = \set{x}
+    \end{flalign*}
+    \begin{flalign*}
+        x - \text{наибольший в} \ B.
+        \longrightarrow
+        max_< B = \set{x}
+    \end{flalign*}
+    \begin{flalign*}
+        \exists! x - \text{наименьший в} \ B.
+    \end{flalign*}
+    \begin{flalign*}
+        \exists! x - \text{наибольший в} \ B.
+    \end{flalign*}
+    \begin{flalign*}
+        B^{\triangle} (\text{множество верхних граней} \ B)
+        =
+        \set{x \in A \ \left| \ \forall y \in B \ y \leq x\right.}
+    \end{flalign*}
+    \begin{flalign*}
+        B^{\triangledown} (\text{множество нижних граней} \ B)
+        =
+        \set{x \in A \ \left| \ \forall y \in B \ x \leq y\right.}
+    \end{flalign*}
+    \begin{flalign*}
+        \left(B \cup C\right)^{\triangle} = B^{\triangle} \cap C^{\triangle}
+    \end{flalign*}
+    \begin{flalign*}
+        \left(B \cup C\right)^{\triangledown} = B^{\triangledown} \cap C^{\triangledown}
+    \end{flalign*}
+    \begin{flalign*}
+        B \subseteq C
+        \longrightarrow
+        B^{\triangle} \subseteq C^{\triangle}
+    \end{flalign*}
+    \begin{flalign*}
+        B \subseteq C
+        \longrightarrow 
+        C^{\triangledown} \subseteq B^{\triangledown}
+    \end{flalign*}
+    \begin{flalign*}
+        B \subseteq B^{\triangle \triangledown} \cap B^{\triangledown \triangle}
+    \end{flalign*}
+    \begin{flalign*}
+        B^{\triangledown} = B^{\triangledown \triangle \triangledown}
+    \end{flalign*}
+    \begin{flalign*}
+        B^{\triangle} = B^{\triangle \triangledown \triangle}
+    \end{flalign*}
+    \begin{flalign*}
+        sup_{<} B = \text{наименьший} \ B^{\triangle}
+    \end{flalign*}
+    \begin{flalign*}
+        inf_{<} B = \text{наибольший} \ B^{\triangledown}
+    \end{flalign*}
+    \begin{flalign*}
+        \left(A, <\right) - \text{решётка}.
+        \Leftrightarrow
+        \forall a, b \in A \ \exists
+        \left\{
+        \begin{aligned}
+            &\sup_{<}\set{a, b} \\
+            &\inf_{<}\set{a, b}
+        \end{aligned}
+        \right.
+    \end{flalign*}
+    \begin{flalign*}
+        \left(A, <\right) - \text{линейно упорядоченное множество}.
+        \Leftrightarrow
+        \forall x, y \in A \
+        \left[
+        \begin{aligned}
+            &x \leq y \\
+            &y \leq x
+        \end{aligned}
+        \right.
+    \end{flalign*}
+    \begin{flalign*}
+        \left(A, <\right) - \text{линейно упорядоченное множество}.
+        \longrightarrow
+        \forall x, y \in A \ \left(\overline{x < y} \Leftrightarrow y \leq x\right)
+    \end{flalign*}
+    \begin{flalign*}
+        \left(A, <\right) - \text{линейно упорядоченное множество}.
+        \longrightarrow
+        \left(
+        x - \text{наименьший в} \ B
+        \Leftrightarrow
+        x \in min_< B
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &\left(A, <\right) - \text{частично упорядоченное множество}. \\
+            &C \subseteq A \\
+            &\left(C, <\right) - \text{линейно упорядоченное множество}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        C - \text{цепь в} \ \left(A, <\right).
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x, y \in C \
+        \left\{
+        \begin{aligned}
+            &\left(A, <\right) - \text{частично упорядоченное множество}. \\
+            &C \subseteq A \\
+            &\overline{x < y} \\
+            &\overline{y < x}
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        C - \text{антицепь в} \ \left(A, <\right).
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x, y \in A \
+        \left\{
+        \begin{aligned}
+            &\alpha: A \longrightarrow B \\
+            &A \stackrel{\alpha}{\sim} B \\
+            &\left(x <_A y \Leftrightarrow \alpha(x) <_{\beta} \alpha(y)\right)
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \left(A, <_A\right)
+        \stackrel{\alpha}{\cong} (\text{изоморфно})
+        \left(B, <_B\right)
+    \end{flalign*}
+    \begin{flalign*}
+        A \cong A
+    \end{flalign*}
+    \begin{flalign*}
+        A \stackrel{\alpha}{\cong} B
+        \longrightarrow
+        B \stackrel{\alpha^{-1}}{\cong} A
+    \end{flalign*}
+    \begin{flalign*}
+        \forall B \
+        \left\{
+        \begin{aligned}
+            &A \stackrel{\alpha}{\cong} B \\
+            &B \stackrel{\beta}{\cong} C
+        \end{aligned}
+        \right.
+        \longrightarrow
+        A \stackrel{\alpha \circ \beta}{\cong} C
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &P \subseteq A^2 \\
+            &P - \text{рефлексивное}. \\
+            &P - \text{симметричное}. \\
+            &P - \text{транзитивное}.
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        P - \text{отношение эквивалентности на} \ A.
+    \end{flalign*}
+    \begin{flalign*}
+        Eq\left(A\right) - \text{множество отношений эквивалентности на} \ A.
+    \end{flalign*}
+    \begin{flalign*}
+        E \in Eq(A) \ id_A \subseteq E \subseteq A^2
+    \end{flalign*}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &E \in Eq\left(A\right) \\
+            &x \in A
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        [x]_E (\text{класс эквивалентности}) = \set{y \in A \ \left| \ x E y\right.}
+    \end{flalign*}
+    \begin{flalign*}
+        A/E (\text{фактор-множество мн-ва $ A $ по отн-нию экв-сти $ E $})
+        =
+        \set{\left.[x]_E \in P(A) \ \right| \ x \in E}
+    \end{flalign*}
+    \begin{flalign*}
+        \forall B \ f: A \longrightarrow B \
+        ker \ f = \set{\left.(x, y) \in A^2 \ \right| \ f(x) = f(y)}
+    \end{flalign*}
+    \begin{flalign*}
+        f: A \longrightarrow B \ ker \ f \in Eq\left(A\right)
+    \end{flalign*}
+    \begin{flalign*}
+        ker \ f = id
+        \Leftrightarrow
+        f - \text{инъекция}.
+    \end{flalign*}
+    \begin{flalign*}
+        E \in Eq(A) \ P_E: A \longrightarrow A/E \ P_E(x) = [x]_E
+    \end{flalign*}
+    \begin{flalign*}
+        x E y \Leftrightarrow [x]_E = [y]_E
+    \end{flalign*}
+    \begin{flalign*}
+        [x]_E = [y]_E \Leftrightarrow [x]_E \cap [y]_E = \varnothing
+    \end{flalign*}
+    \begin{flalign*}
+        x \in [x]_E
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x \in A \ \exists \sigma \in \Sigma \ 
+        \left\{
+        \begin{aligned}
+            &\Sigma \subseteq \mathcal{P}\left(A\right) \\
+            &x \in \sigma \\
+            &\sigma \cap \tau = \varnothing \Leftrightarrow \sigma \neq \tau \\
+            &\sigma \neq \varnothing
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \Sigma - \text{разбиение} \ A.
+    \end{flalign*}
+    \begin{flalign*}
+        \Pi\left(A\right) - \text{множество разбиений} \ A.
+    \end{flalign*}
+    \begin{flalign*}
+        Eq\left(A\right) \sim \Pi\left(A\right)
+    \end{flalign*}
+
 	\chapter{Общая алгебра}
 	\begin{flalign*}
 		\forall A, \ * \
@@ -4417,7 +4805,7 @@
 		\right)
 	\end{flalign*}
 
-	\chapter{Числа}
+    \chapter{Числа}
 	\textbf{Числовое кольцо} - это множество чисел,
 	результат суммы, разности, произведения любых чисел которого
 	принадлежит ему тоже.
@@ -7852,4 +8240,84 @@
         \ : \
         \frac{C + C^T}{2} + \frac{C - C^T}{2} = C
     \end{flalign*}
+    Дополнить набор векторов до базиса. \\
+    Алгоритм:
+    \begin{enumerate}
+        \item Записать по столбцам исходный набор векторов.
+        \item Приписать справа по столбцам стандартный базис.
+        \item Найти ступенчатый вид.
+    \end{enumerate}
+    \begin{flalign*}
+        \begin{aligned}
+            &\forall x, y, x_1, x_2, x_2, y_1, y_2 \in V \\
+            &\lambda, \mu \in \mathbb{R}
+        \end{aligned} \
+        \left\{
+        \begin{aligned}
+            &\beta: V \times V \longrightarrow \mathbb{R} \\
+            &\beta\left(\lambda x_1 + \mu x_2, y\right)
+            =
+            \lambda \beta\left(x_1, y\right) + \mu \beta\left(x_2, y\right) \\
+            &\beta\left(x, \lambda y_1 + \mu y_2\right)
+            =
+            \lambda \beta\left(x, y_1\right) + \mu \beta\left(x, y_2\right)
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \beta - \text{билинейная форма}.
+    \end{flalign*}
+    \begin{flalign*}
+        \sum_{i \ j} b_{i j} x_i y_j
+        =
+        \left(
+        \begin{array}{r r r r}
+            x_1 & x_2 & \ldots & x_n
+        \end{array}
+        \right)
+        \left(
+        \begin{array}{r r r r}
+            b_{1 1} & b_{1 2} & \ldots & b_{1 n} \\
+            b_{2 1} & b_{2 2} & \ldots & b_{2 n} \\
+            \vdots  & \vdots  & \ddots & \vdots    \\
+            b_{n 1} & b_{n 2} & \ldots & b_{n n}
+        \end{array}
+        \right)
+        \left(
+        \begin{array}{r}
+            y_1    \\
+            y_2    \\
+            \vdots \\
+            y_n
+        \end{array}
+        \right)
+        -
+        \text{билинейная форма}.
+    \end{flalign*}
+    \begin{flalign*}
+        f - \text{билинейная форма матрицы} \ A.
+        \longrightarrow
+        A' = C_{e \rightarrow e'}^T AC_{e \rightarrow e'}
+    \end{flalign*}
+    Если не знаешь, какой базис, можно брать стандартный базис
+    (\emph{правило с оговоркой}).
+    \begin{flalign*}
+        \exists f \
+        \left\{
+        \begin{aligned}
+            &f - \text{билинейная форма}. \\
+            &q(x) = f(x, x)
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        q - \text{квадратичная форма}.
+    \end{flalign*}
+    \textbf{Симметричная билинейная форма} - это билинейная форма из квадратичной,
+    в которой симметричная и которая позволяет сделать биекцию из квадратичной в
+    билинейную. \\
+    \textbf{Каноническая квадратичная форма} - это форма, в которой
+    только квадраты. \\
+    \textbf{Метод Лагранжа} \\
+    \textbf{Симметрический метод Гаусса} \\
+    Если нет квадратов, то матрица перехода равна $ E + E_{i j} + E_{j i} $
+    в зависимости от выбранного $ x_i x_j $ в квадратичной форме.
 \end{document}
