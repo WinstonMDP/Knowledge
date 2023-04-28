@@ -102,7 +102,7 @@
 - morphine - морфин.
 - nomad - кочевник.
 - nostalgia - ностальгия.
-  - nostalgia for something - ностальгия по чему-то.
+  - nostalgia for sm - ностальгия по чему-то.
 - novel - роман.
 - nuisance - неприятность.
 - nutrition - питание.
@@ -182,45 +182,45 @@
 
 ## <a name = "Verb">Verb</a>
 - agree
-  - agree with something - согласиться с чем-то.
+  - agree with sm - согласиться с чем-то.
 - apply
-  - apply for something - подать заявление на что-то.
+  - apply for sm - подать заявление на что-то.
 - ask
   - ask - спросить.
-  - ask somebody out - пригласить на свидание.
+  - ask sm out - пригласить на свидание.
 - argue - спорить.
 - arrange - организовать.
 - assure - уверять.
 - attract - привлекать.
 - be
   - be - быть.
-  - be after something - пытаться получить что-то.
+  - be after sm - пытаться получить что-то.
   - be away - отсутствовать.
-  - be on\of - быть включённым\выключенным.
+  - be on/of - быть включённым/выключенным.
 - blow - дуть.
 - board - подняться на борт.
 - break
   - break - сломать
   - break down - сломаться.
   - break in - вломиться; вмешаться в разговор.
-  - break into - вломиться.
   - break off - разорвать; расторгнуть.
   - break out - вырваться.
-  - break up - расстаться.
+  - break up - расстаться; разделиться.
 - call
   - call - звать; звонить.
-  - call at\by\on - остановиться в месте.
+  - call at/by/on - остановиться в месте.
   - call for - призывать.
   - call off - отменить.
   - call out - позвать; крикнуть; позвать на помощь.
-  - call somebody back - перезвонить кому-то.
+  - call sm back - перезвонить кому-то.
 - calm (down) - успокоить.
 - capture - захватывать.
 - care
-  - care for something - заботиться о чём-то.
+  - care for sm - заботиться о чём-то.
 - commute - переключать; добираться-ездить.
 - complain
-  - complain about something - жаловаться на что-то.
+  - complain about sm - жаловаться на что-то.
+- conform - соответствовать
 - conjure
   - conjure - заклинать; вызывать.
   - conjure up - вызвать в воображении.
@@ -230,7 +230,7 @@
 - counter - противостоять.
 - cramp - стеснить.
 - deal
-  - deal with something - иметь дело с чем-то.
+  - deal with sm - иметь дело с чем-то.
 - delay - отсрочить.
 - demolish - сносить.
 - disappoint - разочаровать.
@@ -243,27 +243,31 @@
 - exceed - превышать.
 - exclaim - воскликнуть.
 - expand - расширять.
+- fall
+  - fall out with sm - поссориться c кем-то; спорить с кем-то.
 - focus
-  - focus on something - сосредоточиться на чём-то.
+  - focus on sm - сосредоточиться на чём-то.
 - gain - получать.
 - get
-  - get into something - вникнуть во что-то.
+  - get down to sm - начать работать над чем-то.
+  - get into sm - вникнуть во что-то.
+  - get on with sm - ужиться c кем-то; иметь с кем-то приятные отношения.
 - give
   - give up - сдаться.
 - go
   - go - идти.
   - go about - ходить-распространяться.
-  - go about something - прогуливаться-рассматривать.
-  - go about with somebody - иметь дело с кем-то.
-  - go after something - следовать за чем-то; пытаться достичь что-то.
+  - go about sm - прогуливаться-рассматривать.
+  - go about with sm - иметь дело с кем-то.
+  - go after sm - следовать за чем-то; пытаться достичь что-то.
   - go against - идти против.
   - go ahead - работать-делать.
-  - go along with something - сопровождаться с чем-то; соглашаться с чем-то.
+  - go along with sm - сопровождаться с чем-то; соглашаться с чем-то.
   - go away - уходить; исчезнуть.
   - go back - вернуться; знать друг друга.
   - go beyond - превзойти.
   - go down - падать; садиться (солнце); ломаться.
-  - go for - иметь значение\выбрать.
+  - go for - иметь значение/выбрать.
   - go in - войти; быть понятным.
   - go off - уходить; выйти из строя-испортиться.
   - go on - продолжать; происходить; давай.
@@ -284,58 +288,59 @@
 - lessen - уменьшить.
 - permit - разрешать.
 - pick - выбирать.
-- prioritize - раставлять приоритеты.
+- prioritize - расставлять приоритеты.
 - promote - способствовать.
 - protect
-  - protect from something - защищаться от чего-то.
+  - protect from sm - защищаться от чего-то.
 - pump - выкачивать.
 - put
-  - put something down - оторваться от чего-то.
-  - put off something - откладывать что-то.
+  - put sm down - оторваться от чего-то.
+  - put off sm - откладывать что-то.
+  - put up with sm - смириться.
 - recover
-  - recover from something - оправиться от чего-то.
+  - recover from sm - оправиться от чего-то.
 - reflect - отражать; размышлять.
 - rely
-  - rely on something - полагаться на что-то.
+  - rely on sm - полагаться на что-то.
 - resist - сопротивляться.
 - respond - откликнуться.
 - revitalise - восстанавливать-оживить.
 - sail - отплыть.
 - say
   - say - сказать что-то околокороткое более менее дословно.
-  - say to somebody.
+  - say to sm.
 - set
   - set apart - отделить.
 - skirt - обойти.
 - span - охватывать.
 - speak
   - speak - поговорить на "вы"; издавать звук; говорить на языке.
-  - speak against\in favor of something.
-  - speak of\about something.
-  - speak to\with somebody.
+  - speak against/in favor of sm.
+  - speak of/about sm.
+  - speak to/with sm.
 - spring - прыгать; возникнуть.
 - specialise
-  - specialise in something - специализироваться в чём-то.
+  - specialise in sm - специализироваться в чём-то.
 - subside - спадать.
 - succeed
-  - succeed in something - преуспеть в чём-то.
+  - succeed in sm - преуспеть в чём-то.
 - step
   - step - шагать.
   - step up - подняться.
   - step down - спуститься.
 - talk
   - talk - поговорить на "ты"; иметь влияние; предавать огласке лишнее.
-  - talk something - обсуждать что-то.
-  - talk to somebody.
+  - talk sm - обсуждать что-то.
+  - talk to sm.
 - tell
-  - tell somebody - пересказать, передать смысл чего-то длинного-объёмного кому-то.
-  - tell something from something - отличить одно от другого.
+  - tell sm - пересказать, передать смысл чего-то длинного-объёмного кому-то.
+  - tell sm from sm - отличить одно от другого.
 - transplant - пересаживать.
 - turn - воернуть.
 - twist - крутить.
 - vanish - пропадать.
 - worry
-  - worry about something - беспокоиться о чём-то.
+  - worry about sm - беспокоиться о чём-то.
 
 ## <a name = "Adjectives">Adjectives</a>
 - authoritative - авторитетный.
@@ -384,7 +389,7 @@
 - moving - волнующий.
 - narrow - узкий.
 - nostalgic - ностальгический.
-  - nostalgic about something - ностальгический по чему-то.
+  - nostalgic about sm - ностальгический по чему-то.
 - objective - объективный.
 - obsessive - одержимый.
 - open-minded - открытый к познанию.
@@ -455,14 +460,14 @@
 - to speak up - говорить громко, отчётливо.
 - to speak too soon - поторопиться с выводами.
 - to be not on speaking terms - не общаться.
-- to speak highly of somebody - хорошо о ком-то отзываться.
-- to speak ill of somebody - плохо о ком-то отзываться.
+- to speak highly of sm - хорошо о ком-то отзываться.
+- to speak ill of sm - плохо о ком-то отзываться.
 - can't speak a word of Spanish - не могу ни слова сказать по-испански.
 - to talk behind one's back - говорить у кого-то за спиной.
 - to talk back - спорить, возражать.
 - to talk nonsense - нести чепуху.
-- to talk one out of something - отговорить кого-то от чего-то.
-- to talk one into something - уговорить кого-то на что-то.
+- to talk one out of sm - отговорить кого-то от чего-то.
+- to talk one into sm - уговорить кого-то на что-то.
 - to talk it over - обсудить.
 - to talk sense - дело говорить.
 - to tell a joke - рассказать шутку.
@@ -478,20 +483,20 @@
 - to display similarities - демонстрировать сходство.
 - to negotiate relationship - наладить отношения.
 - a outlining problem - определение проблемы.
-- get in touch with somebody - связаться с кем-то.
+- get in touch with sm - связаться с кем-то.
 - to track down - отслеживать.
 - to bump into - столкнуться.
-- to lose touch with somebody - потерять контакт с кем-то.
-- to stay in touch with somebody - поддерживать отношения с кем-то.
-- to keep track of something - отслеживать что-то.
-- catch up with somebody - догнать кого-то.
+- to lose touch with sm - потерять контакт с кем-то.
+- to stay in touch with sm - поддерживать отношения с кем-то.
+- to keep track of sm - отслеживать что-то.
+- catch up with sm - догнать кого-то.
 - actions speak louder than words - не по словам судят, да по делам.
 - think before you speak - слово не воробей - вылетит, не поймаешь.
 - to get a word in edgeways - вставить словечко.
 - to hear it on the grapevine - узнать слух из других уст.
 - to be on the same wavelength - быть на одной волне.
 - to get straight to the point - перейти сразу к делу.
-- to have a quick word with somebody - перекинуться с кем-то словами.
+- to have a quick word with sm - перекинуться с кем-то словами.
 - to be on the goal - быть на высоте.
 - to move the goalposts - менять правила.
 - to take your eyes off the ball - отвлечься.
@@ -500,8 +505,8 @@
 - to score an own goal - навредить себе же.
 - to start the ball rolling - начать что-то делать.
 - to make sacrifices - приносить жертвы.
-- to take care of something - заботиться о чём-то.
-- to familiarize yourself with something - познакомиться-узнать с чем-то.
+- to take care of sm - заботиться о чём-то.
+- to familiarize yourself with sm - познакомиться-узнать с чем-то.
 - a long tailback - длинная пробка.
 - congestion charge - плата за проезд по платной дороге.
 - speed camera - камера контроля скорости.
@@ -534,10 +539,15 @@
 - twice as - дважды.
 - upper-class - высший класс.
 - it is not my kind of thing - это не в моём вкусе.
-- used to do something - делал что-то в прошлом не в привязанное время, но теперь не делаю.
-- would do something - делал именно какое-то действие в прошлом в привязанное время в прошлом,
+- used to do sm - делал что-то в прошлом не в привязанное время, но теперь не делаю.
+- would do sm - делал именно какое-то действие в прошлом в привязанное время в прошлом,
 но теперь не делаю.
-- be used to doing/ something - привыкнуть делать что-то.
-- get used to doing/ something - привыкать делать что-то.
+- be used to doing/ sm - привыкнуть делать что-то.
+- get used to doing/ sm - привыкать делать что-то.
 - run-down - разрушающееся.
 - World Heritage Site - объект всемирного наследия.
+- peace of mind - душевное спокойствие.
+- keep an open mind - сохранять непредубеждённость.
+- make up your mind - прими решение.
+- out of mind - безумен.
+- in two minds - испытывать нерешительность/противоречивые эмоции.
