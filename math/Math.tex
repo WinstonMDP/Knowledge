@@ -8316,8 +8316,107 @@
     билинейную. \\
     \textbf{Каноническая квадратичная форма} - это форма, в которой
     только квадраты. \\
-    \textbf{Метод Лагранжа} \\
     \textbf{Симметрический метод Гаусса} \\
-    Если нет квадратов, то матрица перехода равна $ E + E_{i j} + E_{j i} $
-    в зависимости от выбранного $ x_i x_j $ в квадратичной форме.
+    Если нет квадратов, то нужно использовать матрицу перехода, равную
+    $ E - 2E_{j j} + E_{i j} + E_{j i} $
+    в зависимости от выбранного $ x_i x_j \ (i < j) $ в квадратичной форме. \\
+    \textbf{Нормальная квадратичная форма} - это каноническая форма,
+    в которой коэффициенты только 1, -1, 0. \\
+    \textbf{Положительный индекс инерции} ($ i_+(q) $) - это количество 1
+    в нормальной форме. \\
+    \textbf{Отрицательный индекс инерции} ($ i_-(q) $) - это количество -1
+    в нормальной форме.
+    \textbf{Правило Якоба и критерий Сильвестра:}
+    \begin{flalign*}
+        \left\{
+        \begin{aligned}
+            &\Delta_0 = 1 \\
+            &\Delta_1 = \left| a_{1 1} \right| \neq 0 \\
+            &\Delta_2
+            =
+            \begin{array}{| r r |}
+                a_{1 1} & a_{1 2} \\
+                a_{2 1} & a_{2 2}
+            \end{array}
+            \neq
+            0 \\
+            &\vdots \\
+            &\Delta_n = det \ A \neq 0
+        \end{aligned}
+        \right.
+        \Leftrightarrow
+        \frac{\Delta_1}{\Delta_0} x_1'^2
+        +
+        \frac{\Delta_2}{\Delta_1} x_2'^2
+        +
+        \ldots
+        +
+        \frac{\Delta_n}{\Delta_{n - 1}} x_n'^2
+        -
+        \text{каноническая форма}.
+    \end{flalign*}
+    \begin{flalign*}
+        \forall x \neq 0 \ q(x) > 0
+        \Leftrightarrow
+        q(x) - \text{положительно определённая квадратичная форма}
+    \end{flalign*}
+    \begin{flalign*}
+        q(x) - \text{положительно определённая квадратичная форма}
+        \Leftrightarrow
+        i_+ = n
+    \end{flalign*}
+    \begin{flalign*}
+        q(x) \geq 0
+        \Leftrightarrow
+        q(x) - \text{положительно полуопределённая квадратичная форма}
+    \end{flalign*}
+    \begin{flalign*}
+        q(x) - \text{положительно полуопределённая квадратичная форма}
+        \Leftrightarrow
+        i_- = 0
+    \end{flalign*}
+    \begin{flalign*}
+        \forall k \ \sequence{i_n} \ det A_{i_1, \ldots i_k}^{i_1, \ldots, i_k} \leq 0
+        \longrightarrow
+        q(x) - \text{положительно полуопределённая квадратичная форма}.
+    \end{flalign*}
+    \begin{flalign*}
+        \varphi: V \longrightarrow V
+        \Leftrightarrow
+        \varphi - \text{оператор}.
+    \end{flalign*}
+    \begin{flalign*}
+        \varphi(\alpha x + \beta y) = \alpha \varphi(x) + \beta \varphi(y)
+        \Leftrightarrow
+        \varphi - \text{линейный}.
+    \end{flalign*}
+    \begin{flalign*}
+        \varphi - \text{линейный}.
+        \Leftrightarrow
+        \varphi(x) = Ax
+    \end{flalign*}
+    \begin{flalign*}
+        A
+        =
+        \left(
+        \begin{array}{r r r r}
+            \left(\varphi(e_1)\right)_e
+            &
+            \left(\varphi(e_2)\right)_e
+            &
+            \ldots
+            &
+            \left(\varphi(e_n)\right)_e
+        \end{array}
+        \right)
+    \end{flalign*}
+    \begin{flalign*}
+        A' = C_{e \longrightarrow e'}^{-1} A C_{e \longrightarrow e'}
+    \end{flalign*}
+    \begin{flalign*}
+        Ker \ \varphi \subseteq V
+    \end{flalign*}
+    \begin{flalign*}
+        Im \ \varphi \subseteq V
+    \end{flalign*}
 \end{document}
