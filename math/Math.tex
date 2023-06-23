@@ -4805,6 +4805,272 @@
 		\right)
 	\end{flalign*}
 
+    \chapter{Графы}
+    \begin{flalign*}
+        &\left\{
+        \begin{aligned}
+            &V \neq \varnothing \\
+            &E \subseteq V^2 \\
+            &E - \text{иррефлексивное} \\
+            &E - \text{симметричное}
+        \end{aligned}
+        \right.
+        \iff
+        \left\{
+        \begin{aligned}
+            &(V, E) - \text{граф} \\
+            &V - \text{множество вершин} \\
+            &E - \text{отношение смежности}
+        \end{aligned}
+        \right. \\
+        &\set{x, y} \in \mathcal{P}_2(V) - \text{ребро графа} \iff x E y \\
+        &\mathcal{E} = \set{\set{x, y} \in \mathcal{P}_2(V) \mid x E y} \\
+        &|\mathcal{E}| = \frac{|E|}{2} - \text{размер графа} \\
+        &|V| - \text{порядок графа} \\
+        &(n, m) \ \text{граф}
+        \iff
+        \left\{
+        \begin{aligned}
+            &|V| = n \\
+            &|\mathcal{E}| = m
+        \end{aligned}
+        \right. \\
+        &\exists (n, m) \ \text{граф}
+        \iff
+        \left\{
+        \begin{aligned}
+            &0 \leq m \leq C_n^2 \\
+            &0 < n
+        \end{aligned}
+        \right. \\
+        &K_n = (\overline{n}, n^2 \backslash id) - \text{полный граф} \\
+        &N(x) = \set{y \in V \mid x E y} - \text{окрестность} \ x \\
+        &d(x) = |N(x)| - \text{степень} \ x \\
+        &|V| = n \implies d(x) \leq n - 1
+    \end{flalign*}
+    Полный граф - это $ (n, C_n^2) $ граф. \\
+    \textbf{Лемма о рукопожатиях:}
+    \begin{flalign*}
+        &\sum_{x \in V} d(x) = |E| \\
+        &d(v_i) \geq d(v_{i + 1}) \iff \set{v_j} - \text{степенная последовательность} \\
+        &\left\{
+        \begin{aligned}
+            &\varphi: V_G \rightarrow V_H \\
+            &V_G \sim V_H \\
+            &x E_G y \iff \varphi(x) E_H \varphi(y)
+        \end{aligned}
+        \right.
+        \iff
+        \varphi - \text{изоморфизм графов} \ G \ \text{и} \ H \\
+        &O_n = (\underline{n}, \varnothing) - \text{пустой граф} \\
+        &P_n
+        = \\
+        &(
+        \underline{n},
+        \set{(0, 1), (1, 0), (1, 2), (2, 1), \ldots, (n - 2, n - 1), (n - 1, n - 2)}
+        )
+        -
+        \text{граф-путь (цепь)} \\
+        &C_n
+        =
+        (
+        \underline{n},
+        \set{(0, 1), (1, 0), (1, 2), (2, 1), \ldots, (n - 2, n - 1), (n - 1, 0)}
+        )
+        -
+        \text{граф-цикл} \\
+        &\left\{
+        \begin{aligned}
+            &V' \subseteq V \\
+            &E' \subseteq E
+        \end{aligned}
+        \right.
+        \iff
+        (V', E') - \text{подграф} \ (V, E) \\
+        &\left\{
+        \begin{aligned}
+            &V' \subseteq V \\
+            &E' \subseteq E \cap V'^2
+        \end{aligned}
+        \right.
+        \iff
+        (V', E') - \text{индуцированный подграф} \ (V, E) \\
+        &\overline{G} = (V, (V^2 \ \backslash \ id_V) \ \backslash \ E)
+        -
+        \text{дополнение графа} \ G \\
+        &G = (n, m) \ \text{граф} \ \iff \overline{G} = (n, C_n^2 - m) \ \text{граф} \\
+        &V_1, \ldots, V_n - \text{путь} \iff \forall i \ V_i E V_{i + 1}
+    \end{flalign*}
+    Длина пути - это число рёбер. \\
+    Путь из $ x $ и $ y $. \\
+    $ x $ соединён с $ x $ путём длины 0.
+    \begin{flalign*}
+        &x \sim y \iff x, y \ \text{соединены} \\
+        &v_1, \ldots, v_n - \text{простой}
+        \iff
+        \forall i, j \ i \neq j \implies v_i \neq v_j \\
+        &x \sim y
+        \implies
+        \exists v_1, \ldots, v_n \ \text{простой путь между} \ x \ \text{и} \ y
+    \end{flalign*}
+    Простой путь - кратчайший путь.
+    \begin{flalign*}
+        &\sim \in Eq(V) \\
+        &[x]_{\sim} - \text{компонента связности} \\
+        &\left|G/\sim\right| = 1 \iff G \ \text{связен} \\
+        &\begin{cases}
+            v_1 = v_{n + 1} \\
+            i \neq j \implies \set{v_i, v_{i + 1}} \neq \set{v_j, v_{j + 1}}
+        \end{cases}
+        \iff
+        v_1, \ldots, v_n - \text{цикл}
+    \end{flalign*}
+    В простом цикле только первая и последняя вершины совпадают. \\
+    Удалить ребро цикла в связенном графе
+    $ \implies $
+    количество компонент связности останется тем же. \\
+    Удалить ребро цикла в связенном графе
+    $ \implies $
+    количество компонент связности равно $ 2 $.
+    \begin{flalign*}
+        (n, m) - \text{связный граф} \implies n - 1 \leq m
+    \end{flalign*}
+    Сумма степенной последовательности всегда чётная. \\
+    Граф минимально связен $ \iff $ граф связен и удаление любого ребра
+    даёт несвязный граф. \\
+    Удаление ребра в минимально связном графе даёт ровно два минимально
+    связных графа. \\
+    \begin{flalign*}
+        &(n, m) - \text{минимально связный граф}
+        \implies
+        m = n - 1 \\
+        &G - \text{дерево}
+        \iff
+        \begin{cases}
+            G \ \text{связен} \\
+            G \ \text{ацикличен}
+        \end{cases} \\
+        &G - \text{дерево} \\
+        &\iff \\
+        &G - \text{минимально связный граф} \\
+        &\iff \\
+        &\begin{cases}
+            G \ \text{связен} \\
+            m = n - 1
+        \end{cases} \\
+        &\iff \\
+        &\text{любые две вершины соединены ровно 1 простым путём} \\
+        &(V, E') - \text{остовное дерево графа} \ (V, E)
+        \iff
+        E' \subseteq E
+    \end{flalign*}
+    В любом связном графе имеется остовное дерево.
+    \begin{flalign*}
+        &(V, E) - \text{двудольный граф}
+        \iff
+        \exists V_1, V_2 \
+        \begin{cases}
+            V = V_1 \cup V_2 \\
+            V_1 \cap V_2 = \varnothing \\
+            V_1 \neq \varnothing \neq V_2 \\
+            \forall i \ x, y \in V_i \ \overline{x E y}
+        \end{cases} \\
+        &\begin{cases}
+            c: V \rightarrow \underline{k} \\
+            \forall x, y \ x E y \implies c(x) \neq c(y)
+        \end{cases}
+        \iff
+        c - \text{раскраска} \ (V, E) \ \text{в} \ k \ \text{цветов} \\
+        &G - k\text{-дольный граф}
+        \implies
+        \begin{cases}
+            \exists \text{раскраска} \ G \ \text{в} \ k \ \text{цветов} \\
+            \exists \text{раскраска} \ G \ \text{в} \ k + 1 \ \text{цвет} \\
+            \vdots \\
+        \end{cases} \\
+        &
+        \begin{cases}
+            G = (V, E) \\
+            |V| \geq 2
+        \end{cases}
+        \implies
+        \left(
+        \begin{aligned}
+            &G - \text{двудольный граф} \\
+            &\iff \\
+            &\text{в $ G $ нет цикла нечётной длины} \\
+            &\iff \\
+            &\text{в $ G $ нет простого цикла нечётной длины}
+        \end{aligned}
+        \right) \\
+        &(n, m) - \text{двудольный граф}
+        \implies
+        m = \sum_{x \in V_1} d(x) = \sum_{x \in V_2} d(x) \\
+        &A \subseteq V^2
+        \iff
+        (V, A) - \text{ориентированный граф} \\
+        &\begin{cases}
+            (V, A) - \text{ориентированный граф} \\
+            \overline{x A x} \\
+            \forall x, y \in V \
+            x \neq y \implies \left(x A y \iff \overline{y A x}\right)
+        \end{cases}
+        \iff
+        (V, A) - \text{турнир}
+    \end{flalign*}
+
+    \chapter{Беспредельный}
+    \begin{flalign*}
+        &Seq = \mathbb{R}^\mathbb{N} \\
+        &\Delta - \text{разностный оператор} \\
+        &\Delta: Seq \rightarrow Seq \\
+        &(\Delta a)_n = a_{n + 1} - a_n \\
+        &\Delta^0 a = a \\
+        &\Delta^{t + 1} a = \Delta(\Delta^t a) \\
+        &(\Delta^t a)_n = \sum_{k = 0}^t (-1)^k C_t^k a_{n + t - k}
+    \end{flalign*}
+    $ Seq $ образует векторное пространство над полем $ \mathbb{R} $
+    \begin{flalign*}
+        &(a + b)_n = a_n + b_n \\
+        &(\alpha a)_n = \alpha a_n \\
+        &\Delta - \text{линейный оператор} \\
+        &S - \text{оператор сдвига} \\
+        &(S a)_n = a_{n + 1} \\
+        &1 - \text{тождественный оператор} \\
+        &1 a = a \\
+        &0 - \text{константный оператор} \\
+        &0 a = 0 \\
+        &\sum - \text{оператор суммы} \\
+        &Lim - \text{множестве линейных операторов} \ Seq \rightarrow Seq \\
+        &\left(\sum a\right)_0 = 0 \\
+        &\left(\sum a\right)_{n + 1} = \left(\sum a\right)_n + a_n \\
+        &(P + Q)(a) = P a + Q a \\
+        &(\alpha P)(a) = \alpha (P a) \\
+        &P Q = P \circ Q \\
+        &(Lim, +, *) - \text{векторное пространство над полем} \ \mathbb{R} \\
+        &\Delta = S - 1 \\
+        &\Delta^t = \sum_{k = 0}^t C_t^k (-1)^k S^{t - k} \\
+        &a_{k + n} = \sum_{t = 0}^n \frac{(\Delta^t a)_k}{t!} n^{(t)} \\
+        &n^{(0)} = 1 \\
+        &a \ \text{удовлетворяет рекуррентному соотношению} \ \varphi \ \text{порядка} \
+        k \geq 1 \\
+        &\iff \\
+        &\begin{cases}
+            \varphi: \mathbb{R}^k \times \mathbb{N} \rightarrow \mathbb{R} \\
+            a_{n + k} = \varphi(a_{n + k - 1}, a_{n + k - 2}, \ldots, a_n, n)
+        \end{cases} \\
+        &\varphi - \text{стационарное} \iff \varphi \ \text{не зависит от} \ n
+    \end{flalign*}
+    Если есть рекуррентное соотношение и начальные условия, то последовательность
+    однозначно задана.
+    \begin{flalign*}
+        &a_n = p(n) - \text{многочлен степени} \ m > 0
+        \implies
+        a_{n + m + 1} = \sum_{k = 0}^m (-1)^k C_{n + 1}^{k + 1} a_{n + m - k} \\
+        &\Delta(a_n b_n) = a_n \Delta b_n + b_{n + 1} \Delta a_n \\
+        &\sum(a_n \Delta b_n) = (a_n b_n - a_0 b_0) - \sum(b_{n + 1} \Delta a_n)
+    \end{flalign*}
+
     \chapter{Числа}
 	\textbf{Числовое кольцо} - это множество чисел,
 	результат суммы, разности, произведения любых чисел которого
@@ -8419,4 +8685,49 @@
     \begin{flalign*}
         Im \ \varphi \subseteq V
     \end{flalign*}
-\end{document}
+    \begin{flalign*}
+        &A, C^{-1} A C - \text{подобные матрицы} \\
+        &\left\{
+        \begin{aligned}
+            &\varphi(f_i) = \lambda_i f_i \\
+            &f_i \neq 0
+        \end{aligned}
+        \right.
+        \iff
+        \left\{
+        \begin{aligned}
+            &f_i - \text{собственный вектор оператора} \\
+            &\lambda_i - \text{собственное число (значение) оператора}
+        \end{aligned}
+        \right. \\
+        &Spec \ \varphi = \set{\lambda_1, \ldots, \lambda_k}
+        -
+        \text{множество собственных чисел оператора} \\
+        &det \ (A - \lambda E) = 0 - \text{характеристическое уравнение} \\
+        &x_A(\lambda) = det \ (A - \lambda E) \\
+        &V_a(A) = \set{\overline{x} \mid A\overline{x} = 1 \overline{x}}
+        -
+        \text{собственное подпространство}
+        - \\
+        &\text{множество собственных векторов,} \
+        \text{отвечающих числу $a$ и ещё нулевой вектор} \\
+        &1 \leq g.m.(\lambda_i) \leq a.m.(\lambda_i) \\
+        &A^n = C D^n C^{-1} \\
+        &\left\{
+        \begin{aligned}
+            &i = j \implies (e_i, e_j) = 1 \\
+            &i \neq j \implies (e_i, e_j) = 0
+        \end{aligned}
+        \right.
+        \iff
+        e_1, \ldots, e_n - \text{ОНБ} \\
+        &A \ \text{диагонализуема} \iff \forall i \ a.m.(\lambda_i) = g.m.(\lambda_i) \\
+        &L^{\bot} = \set{y \mid \forall x \in L: (x, y) = 0} \\
+        &A^* = \text{Г}^{-1} A^T \text{Г} \\
+        &Ker \ A^* = (Im \ A)^{\bot} \\
+        &Im \ A^* = (Ker \ A)^{\bot} \\
+        &A = A^* \implies A = A^T \ \text{в ОНБ}
+    \end{flalign*}
+    У симметричной матрицы есть собственный ОНБ. \\
+    Собственные числа симметричной матрицы всегда вещественные.
+n + m - k\end{document}
