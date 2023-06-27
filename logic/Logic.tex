@@ -50,14 +50,14 @@
     \section{}
     Выводить следствия по правилам логики.
 
-    \chapter{Теория множеств}
+    \chapter{Теория множеств (ZFC)}
     \section{Базовые понятия}
     Принадлежность ($ x \in y $).
 
     \section{Аксиомы}
     \subsection{Равенства}
     \begin{flalign*}
-        x = y \longrightarrow \forall z \ \left(x \in z \longrightarrow y \in z\right)
+        x = y \implies \forall z \ \left(x \in z \implies y \in z\right)
     \end{flalign*}
 
     \subsection{Пары}
@@ -65,7 +65,7 @@
         \exists z \ \forall u \
         \left(
         u \in z
-        \Leftrightarrow
+        \iff
         \left[
         \begin{aligned}
             &u = x \\
@@ -80,7 +80,7 @@
         \exists y \ \forall u \
         \left(
         u \in y
-        \Leftrightarrow
+        \iff
         \exists z \
         \left\{
         \begin{aligned}
@@ -93,7 +93,7 @@
 
     \subsection{Степени}
     \begin{flalign*}
-        \exists y \ \forall u \ \left(u \in y \Leftrightarrow u \subseteq x\right)
+        \exists y \ \forall u \ \left(u \in y \iff u \subseteq x\right)
     \end{flalign*}
 
     \subsection{Выделения}
@@ -101,14 +101,50 @@
         \set{\left.x \in A \ \right| \ \varphi(x)}
     \end{flalign*}
 
+    \subsection{Бесконечности}
+    \begin{flalign*}
+        \exists S \ S - \text{индуктивное}
+    \end{flalign*}
+
+    \subsection{Выбора}
+    \begin{flalign*}
+        \varnothing \not\in S
+        \implies
+        \exists f \
+        \begin{cases}
+            f: S \rightarrow \cup S \\
+            \forall s \in S \ f(s) \in s
+        \end{cases}
+    \end{flalign*}
+
+    \subsection{Регулярности (фундированности)}
+    Необязательная аксиома.
+    \begin{flalign*}
+        \exists y \in x \ \forall z \in x \ z \not\in y
+    \end{flalign*}
+
+    \subsection{Подстановки}
+    Не знаю, что она означает. Необязательная аксиома.
+    Аксиома выделения - это часть данной аксиомы.
+    \begin{flalign*}
+        \forall x \ \exists! y \ \varphi(x, y)
+        \implies
+        \forall X \ \exists z \ \forall u \
+        \left(u \in z \iff \exists x \in X \ \varphi(x, u)\right)
+    \end{flalign*}
+
     \section{Определения}
     Класс $ = \set{x \ \left| \ \varphi(x)\right.} $.
     Не все классы являются множествами. Все множества являются классами.
     \begin{flalign*}
-        x = y \Leftrightarrow \left(z \in x \Leftrightarrow z \in y\right)
-    \end{flalign*}
-    \begin{flalign*}
-        x \subseteq y \Leftrightarrow \forall z \ \left(z \in x \longrightarrow z \in y\right)
+        &x = y \iff \left(z \in x \iff z \in y\right) \\
+        &x \subseteq y \iff \forall z \ \left(z \in x \implies z \in y\right) \\
+        &S - \text{индуктивное}
+        \iff
+        \begin{cases}
+            \varnothing \in S \\
+            \forall s \in S \ s \cup \set{s} \in S
+        \end{cases}
     \end{flalign*}
 
     \chapter{Программная инженерия}
@@ -265,5 +301,5 @@
     изучающий объекты математики,
     истинные свойства этих объектов,
     на основании которых можно вести рассуждения,
-    а также "сохраняющие истину" способы рассуждений.
+    а также "сохраняющие истину"{ }способы рассуждений.
 \end{document}
