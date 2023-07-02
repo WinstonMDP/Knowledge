@@ -57,43 +57,22 @@
     \section{Аксиомы}
     \subsection{Равенства}
     \begin{flalign*}
-        x = y \implies \forall z \ \left(x \in z \implies y \in z\right)
+        x = y \implies \forall z \ \left(x \in z \iff y \in z\right)
     \end{flalign*}
 
     \subsection{Пары}
     \begin{flalign*}
-        \exists z \ \forall u \
-        \left(
-        u \in z
-        \iff
-        \left[
-        \begin{aligned}
-            &u = x \\
-            &u = y
-        \end{aligned}
-        \right.
-        \right)
+        \exists \set{x, y}
     \end{flalign*}
 
     \subsection{Объединения}
     \begin{flalign*}
-        \exists y \ \forall u \
-        \left(
-        u \in y
-        \iff
-        \exists z \
-        \left\{
-        \begin{aligned}
-            &u \in z \\
-            &z \in x
-        \end{aligned}
-        \right.
-        \right)
+        \exists \cup x
     \end{flalign*}
 
     \subsection{Степени}
     \begin{flalign*}
-        \exists y \ \forall u \ \left(u \in y \iff u \subseteq x\right)
+        \exists \mathcal{P}(x)
     \end{flalign*}
 
     \subsection{Выделения}
@@ -103,7 +82,7 @@
 
     \subsection{Бесконечности}
     \begin{flalign*}
-        \exists S \ S - \text{индуктивное}
+        \exists S - \text{индуктивное}
     \end{flalign*}
 
     \subsection{Выбора}
@@ -138,13 +117,40 @@
     Не все классы являются множествами. Все множества являются классами.
     \begin{flalign*}
         &x = y \iff \left(z \in x \iff z \in y\right) \\
+        &x \in y \iff y = \set{\ldots, x, \ldots} \\
         &x \subseteq y \iff \forall z \ \left(z \in x \implies z \in y\right) \\
+        &x \subsetneq y
+        \iff
+        \begin{cases}
+            x \neq y \\
+            x \subseteq y
+        \end{cases} \\
+        &\varnothing - \text{пустое множество} \\
+        &a = \varnothing \iff \forall x \not\in a \\
+        &y \in \mathcal{P}(x) \iff y \subseteq x \\
+        &y \in \cup x
+        \iff
+        \exists z
+        \begin{cases}
+            z \in x \\
+            y \in z
+        \end{cases} \\
+        &a \cup b = \cup\set{a, b} \\
+        &a \cap b = \set{x \in a \mid x \in b} \\
+        &a \setminus b = \set{x \in a \mid x \not\in b} \\
+        &a \triangle b = (a \setminus b) \cup (b \setminus a) \\
         &S - \text{индуктивное}
         \iff
         \begin{cases}
             \varnothing \in S \\
             \forall s \in S \ s \cup \set{s} \in S
         \end{cases}
+    \end{flalign*}
+
+    \section{Теоремы}
+    \begin{flalign*}
+        &\exists y \not\in x \\
+        &x \not\in x
     \end{flalign*}
 
     \chapter{Формальные языки}
