@@ -57,7 +57,7 @@
     \section{Аксиомы}
     \subsection{Равенства}
     \begin{flalign*}
-        x = y \implies \forall z \ \left(x \in z \iff y \in z\right)
+        x = y \ \forall z \ \left(x \in z \iff y \in z\right)
     \end{flalign*}
 
     \subsection{Пары}
@@ -82,13 +82,12 @@
 
     \subsection{Бесконечности}
     \begin{flalign*}
-        \exists S - \text{индуктивное}
+        \exists S - \text{индуктивное множество}
     \end{flalign*}
 
     \subsection{Выбора}
     \begin{flalign*}
-        \varnothing \not\in S
-        \implies
+        \varnothing \not\in S \
         \exists f \
         \begin{cases}
             f: S \rightarrow \cup S \\
@@ -118,7 +117,7 @@
     \begin{flalign*}
         &x = y \iff \left(z \in x \iff z \in y\right) \\
         &x \in y \iff y = \set{\ldots, x, \ldots} \\
-        &x \subseteq y \iff \forall z \ \left(z \in x \implies z \in y\right) \\
+        &x \subseteq y \iff \forall z \in x \ z \in y \\
         &x \subsetneq y
         \iff
         \begin{cases}
@@ -126,7 +125,7 @@
             x \subseteq y
         \end{cases} \\
         &\varnothing - \text{пустое множество} \\
-        &a = \varnothing \iff \forall x \not\in a \\
+        &x \not\in \varnothing \\
         &y \in \mathcal{P}(x) \iff y \subseteq x \\
         &y \in \cup x
         \iff
@@ -135,11 +134,13 @@
             z \in x \\
             y \in z
         \end{cases} \\
+        &x - \text{транзитивное множество} \iff \cup x \subseteq x \\
+        &\cap x = \set{y \in \cup x \mid z \in x \ y \in z} \\
         &a \cup b = \cup\set{a, b} \\
         &a \cap b = \set{x \in a \mid x \in b} \\
         &a \setminus b = \set{x \in a \mid x \not\in b} \\
         &a \triangle b = (a \setminus b) \cup (b \setminus a) \\
-        &S - \text{индуктивное}
+        &S - \text{индуктивное множество}
         \iff
         \begin{cases}
             \varnothing \in S \\
