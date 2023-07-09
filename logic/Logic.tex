@@ -145,7 +145,16 @@
         \begin{cases}
             \varnothing \in S \\
             \forall s \in S \ s \cup \set{s} \in S
-        \end{cases}
+        \end{cases} \\
+        &(x, y) = \set{x, \set{x, y}} \\
+        &x \times y - \text{декартово (прямое) произведение множеств}\ x \ \text{и} \ y \\
+        &x \times y
+        =
+        \set {
+        z \in \mathcal{P}\left(\mathcal{P}\left(x \times y\right)\right)
+        \mid
+        \exists w \in x, i \in y \ z = (w, i)
+        }
     \end{flalign*}
 
     \section{Теоремы}
