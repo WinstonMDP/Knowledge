@@ -74,7 +74,15 @@
 
     \subsection{Выделения}
     \begin{flalign*}
-        \set{\left.x \in A \ \right| \ \varphi(x)}
+        \exists y \ \forall z \
+        \left(
+        z \in y
+        \iff
+        \begin{cases}
+            z \in x \\
+            \varphi(z)
+        \end{cases}
+        \right)
     \end{flalign*}
 
     \subsection{Бесконечности}
