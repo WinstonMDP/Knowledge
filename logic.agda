@@ -251,13 +251,30 @@ intersection-def x y z = ∃-application (subsets-ax x (λ z → z ∈ y)) z
 tuple : 𝕊 → 𝕊 → 𝕊
 tuple x y = pair (singleton x) (pair x y)   
 
-tuple-def : (x y z w : 𝕊) → tuple x y == tuple z w ≡ x == z and y == w
-tuple-def x y z w = ≡-def (and-def (λ { (==-def i) → and-def (lm-1 i) {!!} }) {!!})
-    where lm-1 : (i : (j : 𝕊) → j ∈ tuple x y ≡ j ∈ tuple z w) → x == z
-          lm-1 i = or-absorption (or-application (pair-∈ (to (i (singleton x)) pair-left-∈)) singleton-==-singleton singleton-==-pair)
+tuple-def : {x y z w : 𝕊} → tuple x y == tuple z w ≡ x == z and y == w
+tuple-def {x} {y} {z} {w} = ≡-def (and-def (λ i → lm-1 i) λ i → {!!})
+    where lm-1 : tuple x y == tuple z w → x == z and y == w
+          lm-1 i = or-absorption (or-application
+                                  ((to or-associativity) (or-application
+                                                          (pair-==-pair i)
+                                                          ((λ j → or-application
+                                                                  j
+                                                                  id
+                                                                  (back and-associativity)) ∘
+                                                           and-or-distributivity ∘
+                                                           (λ j → and-application j singleton-==-singleton pair-==-pair))
+                                                          ((back and-associativity) ∘
+                                                           λ j → and-application
+                                                                 j
+                                                                 singleton-==-pair
+                                                                 (and-commutativity ∘ (λ k → and-application k id ==-commutativity) ∘ singleton-==-pair ∘ ==-commutativity))))
+                                  ((λ j → and-application j (to and-idempotency) id) ∘ (back and-associativity))
+                                  ((λ j → and-application
+                                          j
+                                          (λ k → and-application k id (λ _ → ==-transitivity (==-transitivity (and-right j) ((==-commutativity ∘ and-left) k)) (and-right k)))
+                                          id) ∘
+                                   or-absorption))
 
--- and-def (lm-1 i) (or-application (pair-∈ (to (i (pair x y)) pair-right-∈)) (and-def (singleton-==-pair ∘ ==-commutativity) pair-==-pair))
-    
 th-1 : (x y : 𝕊) → x ⊆ y → (∪ x) ⊆ (∪ y)
 th-1 x y (⊆-def z) = ⊆-def λ w i → to (∪-def w y) (lm-1 w (back (∪-def w x) i))
     where lm-1 : (a : 𝕊) → ∃ (λ α → a ∈ α and α ∈ x) → ∃ λ α → a ∈ α and α ∈ y
