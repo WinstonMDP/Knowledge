@@ -1,7 +1,7 @@
 module logic where
 
 open Agda.Primitive using (Level)
-    
+
 id : {x : Level} → {y : Set x} → y → y
 id z = z
 
@@ -105,6 +105,9 @@ _∘_ w i = λ j → w (i j)
 infixl 50 _∘_
 
 postulate
+    excluded-middle-ax : (x : Set) → ¬ x or x
+
+postulate
     𝕊 : Set
     _∈_ : 𝕊 → 𝕊 → Set
 infix 50 _∈_
@@ -122,6 +125,9 @@ infixr 50 _==_
 ==-transitivity : {x y z : 𝕊} → x == y → y == z → x == z
 ==-transitivity (==-def w) (==-def i) = ==-def λ j → ≡-transitivity (w j) (i j)
 
+==-idempotency : (x : 𝕊) → x == x
+==-idempotency x = ==-def (λ _ → ≡-def (and-def id id))
+
 data _⊆_ : 𝕊 → 𝕊 → Set where
     ⊆-def : {x y : 𝕊} → ((z : 𝕊) → z ∈ x → z ∈ y) → x ⊆ y 
 infix 50 _⊆_
@@ -137,7 +143,6 @@ postulate
     𝓟 : 𝕊 → 𝕊 -- power axiom
     𝓟-def : (x y : 𝕊) → x ⊆ y ≡ x ∈ (𝓟 y)
     foundation-ax : (x : 𝕊) → ∃ (λ y → y ∈ x) → ∃ λ y → y ∈ x and ((z : 𝕊) → z ∈ x → ¬(z ∈ y))
-    subsets-ax : (x : 𝕊) → (y : 𝕊 → Set) → ∃ λ z → (w : 𝕊) →  w ∈ x and y w ≡ w ∈ z
 
 pair : 𝕊 → 𝕊 → 𝕊
 pair x y = ∃-element (pair-ax x y)
@@ -216,6 +221,15 @@ union-def x y z = ≡-def (and-def
 
 postulate
     infinity-ax : ∃ λ x → ((z : 𝕊) → ((w : 𝕊) → ¬(w ∈ z)) → z ∈ x) and ((y : 𝕊) → y ∈ x → (union y (singleton y)) ∈ x)
+    substitution-ax : (x : 𝕊 → 𝕊 → Set) → ((y : 𝕊) → 𝕊-∃! (λ z → x y z) or ((z : 𝕊) → ¬(x y z))) → (y : 𝕊) → ∃ λ z → (w : 𝕊) → ∃ (λ j → j ∈ y and x j w) ≡ w ∈ z
+
+subsets-ax : (x : 𝕊) → (y : 𝕊 → Set) → ∃ λ z → (w : 𝕊) → w ∈ x and y w ≡ w ∈ z
+subsets-ax x y = ∃-def (λ z → (w : 𝕊) → w ∈ x and y w ≡ w ∈ z) {!!} {!!}
+    where lm-1 = substitution-ax (λ i j → i == j and y i)
+          lm-2 : (i : 𝕊) → ¬(y i) or y i → 𝕊-∃! (λ j → i == j and y i) or ((z : 𝕊) → ¬(i == z and y i)) 
+          lm-2 i (or-def-left (¬-def k)) = or-def-right λ t → ¬-def λ {(and-def _ q) → k q}
+          lm-2 i (or-def-right k) = or-def-left (𝕊-∃!-def (λ j → i == j and y i) i (and-def (==-idempotency i) k) λ { z (and-def t _) → t })
+          lm-3 = lm-1 (λ i → lm-2 i (excluded-middle-ax (y i)))
 
 ∅ : 𝕊
 ∅ = ∃-element (subsets-ax (∃-element infinity-ax) λ _ → ⊥)
