@@ -136,7 +136,7 @@ infix 50 _⊆_
 ⊆-to (⊆-def z) = z
 
 postulate
-    eq-ax : (x y : 𝕊) → x == y → (z : 𝕊) → x ∈ z ≡ y ∈ z
+    eq-ax : {x y : 𝕊} → x == y → (z : 𝕊) → x ∈ z ≡ y ∈ z
     pair-ax : (x y : 𝕊) → ∃ λ z → x ∈ z and y ∈ z and ((w : 𝕊) → w ∈ z → w == x or w == y)
     ∪ : 𝕊 → 𝕊 -- union axiom
     ∪-def : (x y : 𝕊) → (∃ λ z → x ∈ z and z ∈ y) ≡ x ∈ ∪ y
@@ -223,13 +223,25 @@ postulate
     infinity-ax : ∃ λ x → ((z : 𝕊) → ((w : 𝕊) → ¬(w ∈ z)) → z ∈ x) and ((y : 𝕊) → y ∈ x → (union y (singleton y)) ∈ x)
     substitution-ax : (x : 𝕊 → 𝕊 → Set) → ((y : 𝕊) → 𝕊-∃! (λ z → x y z) or ((z : 𝕊) → ¬(x y z))) → (y : 𝕊) → ∃ λ z → (w : 𝕊) → ∃ (λ j → j ∈ y and x j w) ≡ w ∈ z
 
+==-congruence : {x y : 𝕊} → (z : 𝕊 → 𝕊) → x == y → z x == z y
+==-congruence {x} {y} z w = {!!}
+    where lm-1 = substitution-ax (λ i j → (z i) == (z j)) {!!} (singleton x)
+          lm-2 = (back ((∃-application lm-1) y)) ((to (eq-ax w (∃-element lm-1))) (to (∃-application lm-1 x) {!!}))
+    
 subsets-ax : (x : 𝕊) → (y : 𝕊 → Set) → ∃ λ z → (w : 𝕊) → w ∈ x and y w ≡ w ∈ z
 subsets-ax x y = ∃-def (λ z → (w : 𝕊) → w ∈ x and y w ≡ w ∈ z) {!!} {!!}
     where lm-1 = substitution-ax (λ i j → i == j and y i)
           lm-2 : (i : 𝕊) → ¬(y i) or y i → 𝕊-∃! (λ j → i == j and y i) or ((z : 𝕊) → ¬(i == z and y i)) 
           lm-2 i (or-def-left (¬-def k)) = or-def-right λ t → ¬-def λ {(and-def _ q) → k q}
-          lm-2 i (or-def-right k) = or-def-left (𝕊-∃!-def (λ j → i == j and y i) i (and-def (==-idempotency i) k) λ { z (and-def t _) → t })
-          lm-3 = lm-1 (λ i → lm-2 i (excluded-middle-ax (y i)))
+          lm-2 i (or-def-right k) = or-def-left (𝕊-∃!-def (λ j → i == j and y i) i (and-def (==-idempotency i) k) λ {z (and-def t _) → t})
+          lm-3 = ∃-application ((lm-1 (λ i → lm-2 i (excluded-middle-ax (y i)))) x)
+          lm-4 : ((w : 𝕊) → ∃ (λ j → j ∈ x and (j == w and y j)) ≡ w ∈ ∃-element (lm-1 (λ i → lm-2 i (excluded-middle-ax (y i))) x)) → ∃ λ z → (k : 𝕊) → k ∈ x and y k ≡ k ∈ z
+          lm-4 j = ∃-def
+                   (λ z → (k : 𝕊) → k ∈ x and y k ≡ k ∈ z)
+                   (∃-element (lm-1 (λ i → lm-2 i (excluded-middle-ax (y i))) x))
+                   λ t → ≡-def (and-def
+                                (λ {(and-def q r) → to (j t) (∃-def (λ j₁ → j₁ ∈ x and (j₁ == t and y j₁)) t (and-def q (and-def (==-idempotency t) r)))})
+                                λ q → and-def {!!} {!!})
 
 ∅ : 𝕊
 ∅ = ∃-element (subsets-ax (∃-element infinity-ax) λ _ → ⊥)
