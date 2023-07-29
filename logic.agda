@@ -226,8 +226,12 @@ singleton-==-singleton {x} = ≡-def (and-def
                                     (λ z → ==-congruence singleton z)
                                     λ {(==-def z) → (back singleton-∈) (to (z x) singleton-single-∈)})
 
-singleton-==-pair : {x y z : 𝕊} → singleton x == pair y z → x == y and x == z
-singleton-==-pair {_} {y} {z} (==-def w) = and-def (==-commutativity (back singleton-∈ (back (w y) pair-left-∈))) (==-commutativity (back singleton-∈ (back (w z) pair-right-∈)))
+singleton-==-pair : {x y z : 𝕊} → x == y and x == z ≡ singleton x == pair y z
+singleton-==-pair {_} {y} {z}  = ≡-def (and-def
+                                        (λ w → to pair-==-pair (or-def-left w))
+                                        λ {(==-def w) → and-def
+                                                        (==-commutativity (back singleton-∈ (back (w y) pair-left-∈)))
+                                                        (==-commutativity (back singleton-∈ (back (w z) pair-right-∈)))})
     
 data 𝕊-∃! : (𝕊 → Set) → Set where
     𝕊-∃!-def : (x : 𝕊 → Set) → (y : 𝕊) → x y → ((z : 𝕊) → x z → y == z) → 𝕊-∃! x
@@ -327,8 +331,8 @@ tuple-def {x} {y} {z} {w} = ≡-def (and-def (λ i → lm-1 i) λ i → to pair-
                                                           ((back and-associativity) ∘
                                                            λ j → and-application
                                                                  j
-                                                                 singleton-==-pair
-                                                                 (and-commutativity ∘ (λ k → and-application k id ==-commutativity) ∘ singleton-==-pair ∘ ==-commutativity))))
+                                                                 (back singleton-==-pair)
+                                                                 (and-commutativity ∘ (λ k → and-application k id ==-commutativity) ∘ (back singleton-==-pair) ∘ ==-commutativity))))
                                   ((λ j → and-application j (to and-idempotency) id) ∘ (back and-associativity))
                                   ((λ j → and-application
                                           j
