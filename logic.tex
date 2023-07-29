@@ -107,13 +107,20 @@
     \end{flalign*}
 
     \subsection{Подстановки}
-    Не знаю, что она означает. Необязательная аксиома.
+    Необязательная аксиома.
     Аксиома выделения - это часть данной аксиомы.
     \begin{flalign*}
-        \forall x \ \exists! y \ \varphi(x, y)
-        \implies
-        \forall X \ \exists z \ \forall u \
-        \left(u \in z \iff \exists x \in X \ \varphi(x, u)\right)
+        \left(
+        \forall x \
+        \left[
+        \begin{aligned}
+            &\exists! y \ \varphi(x, y) \\
+            &\overline{\exists y \ \varphi(x, y)}
+        \end{aligned}
+        \right.
+        \right)
+        \forall x \ \exists y \ \forall z \
+        \left(z \in y \iff \exists w \in x \ \varphi(w, z)\right)
     \end{flalign*}
 
     \section{Определения}
