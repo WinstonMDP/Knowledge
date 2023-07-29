@@ -141,7 +141,7 @@ infix 50 _⊆_
 
 postulate
     eq-ax : {x y : 𝕊} → x == y → (z : 𝕊) → x ∈ z ≡ y ∈ z
-    pair-ax : (x y : 𝕊) → ∃ λ z → x ∈ z and y ∈ z and ((w : 𝕊) → w ∈ z → w == x or w == y)
+    pair-ax : (x y : 𝕊) → ∃ λ z → x ∈ z and y ∈ z and ((w : 𝕊) → w ∈ z ≡ w == x or w == y)
     ∪ : 𝕊 → 𝕊 -- union axiom
     ∪-def : (x y : 𝕊) → (∃ λ z → x ∈ z and z ∈ y) ≡ x ∈ ∪ y
     𝓟 : 𝕊 → 𝕊 -- power axiom
@@ -151,8 +151,8 @@ postulate
 pair : 𝕊 → 𝕊 → 𝕊
 pair x y = ∃-element (pair-ax x y)
 
-pair-∈ : {x y z : 𝕊} → z ∈ pair x y → z == x or z == y
-pair-∈ {x} {y} {z} w = and-right (∃-application (pair-ax x y)) z w
+pair-∈ : {x y z : 𝕊} → z ∈ pair x y ≡ z == x or z == y
+pair-∈ {x} {y} {z} = and-right (∃-application (pair-ax x y)) z
 
 pair-left-∈ : {x y : 𝕊} → x ∈ pair x y
 pair-left-∈ {x} {y} = (and-left ∘ and-left) (∃-application (pair-ax x y))
@@ -160,19 +160,45 @@ pair-left-∈ {x} {y} = (and-left ∘ and-left) (∃-application (pair-ax x y))
 pair-right-∈ : {x y : 𝕊} → y ∈ pair x y
 pair-right-∈ {x} {y} = (and-right ∘ and-left) (∃-application (pair-ax x y))
 
-pair-==-pair : {x y z w : 𝕊} → pair x y == pair z w → x == z and y == w or x == w and y == z
-pair-==-pair {x} {y} {z} {w} (==-def i) = or-commutativity (or-application
-                                                            (or-application
-                                                             (and-or-distributivity (and-def (pair-∈ (to (i x) pair-left-∈)) (pair-∈ (to (i y) pair-right-∈))))
-                                                             (and-or-distributivity ∘ and-commutativity)
-                                                             (and-or-distributivity ∘ and-commutativity))
-                                                            (and-commutativity ∘
-                                                             or-absorption ∘
-                                                             or-commutativity ∘
-                                                             (λ j → or-application j (lm-1 ∘ and-def (pair-∈ (back (i w) pair-right-∈))) id))
-                                                            (and-commutativity ∘
-                                                             or-absorption ∘
-                                                             (λ j → or-application j id (lm-1 ∘ and-def (pair-∈ (back (i z) pair-left-∈))))))
+pair-==-pair : {x y z w : 𝕊} → pair x y == pair z w ≡ x == z and y == w or x == w and y == z
+pair-==-pair {x} {y} {z} {w} = ≡-def (and-def (λ {(==-def i) → or-commutativity (or-application
+                                                                                 (or-application
+                                                                                  (and-or-distributivity (and-def
+                                                                                                          ((to pair-∈) (to (i x) pair-left-∈))
+                                                                                                          ((to pair-∈) (to (i y) pair-right-∈))))
+                                                                                  (and-or-distributivity ∘ and-commutativity)
+                                                                                  (and-or-distributivity ∘ and-commutativity))
+                                                                                 (and-commutativity ∘
+                                                                                  or-absorption ∘
+                                                                                  or-commutativity ∘
+                                                                                  (λ j → or-application j (lm-1 ∘ and-def ((to pair-∈) (back (i w) pair-right-∈))) id))
+                                                                                 (and-commutativity ∘
+                                                                                  or-absorption ∘
+                                                                                  (λ j → or-application j id (lm-1 ∘ and-def ((to pair-∈) (back (i z) pair-left-∈))))))})
+                                       λ {(or-def-left i) → ==-def λ j → ≡-def (and-def
+                                                                                (λ k → back
+                                                                                       pair-∈
+                                                                                       (or-application
+                                                                                        (to pair-∈ k)
+                                                                                        (λ t → ==-transitivity t (and-left i))
+                                                                                         λ t → ==-transitivity t (and-right i)))
+                                                                                 λ k → back
+                                                                                       pair-∈
+                                                                                       (or-application
+                                                                                        (to pair-∈ k)
+                                                                                        (λ t → ==-transitivity t (==-commutativity (and-left i)))
+                                                                                        λ t → ==-transitivity t (==-commutativity (and-right i))));
+                                          (or-def-right i) → ==-def λ j → ≡-def (and-def
+                                                                                 (λ k → back
+                                                                                        pair-∈
+                                                                                        (or-commutativity (or-application
+                                                                                                           (to pair-∈ k)
+                                                                                                           (λ t → ==-transitivity t (and-left i))
+                                                                                                           λ t → ==-transitivity t (and-right i))))
+                                                                                  λ k → back pair-∈ (or-commutativity (or-application
+                                                                                                                       (to pair-∈ k)
+                                                                                                                       (λ t → ==-transitivity t (==-commutativity (and-right i)))
+                                                                                                                       λ t → ==-transitivity t (==-commutativity (and-left i)))))})
     where lm-1 : {l m n q : 𝕊} → (l == m or l == n) and (n == q and m == q) → n == q and m == l and l == q
           lm-1 = (λ t → and-def
                         (and-def ((and-left ∘ and-left) t) (==-transitivity ((and-right ∘ and-left) t) ((==-commutativity ∘ and-right) t)))
@@ -188,17 +214,21 @@ pair-==-pair {x} {y} {z} {w} (==-def i) = or-commutativity (or-application
 singleton : 𝕊 → 𝕊
 singleton x = pair x x
 
-singleton-∈ : {x y : 𝕊} → y ∈ singleton x → y == x
-singleton-∈ z = to or-idempotency (pair-∈ z)
+singleton-∈ : {x y : 𝕊} → y ∈ singleton x ≡ y == x
+singleton-∈ = ≡-def (and-def (λ z → to or-idempotency (to pair-∈ z)) λ z → back pair-∈ (or-def-left z))
 
 singleton-single-∈ : {x : 𝕊} → x ∈ singleton x
 singleton-single-∈ {x} = pair-left-∈
 
-singleton-==-singleton : {x y : 𝕊} → singleton x == singleton y → x == y
-singleton-==-singleton {x} (==-def z) = singleton-∈ (to (z x) singleton-single-∈)
+singleton-==-singleton : {x y : 𝕊} → singleton x == singleton y ≡ x == y
+singleton-==-singleton {x} = ≡-def (and-def
+                                    (λ {(==-def z) → (to singleton-∈) (to (z x) singleton-single-∈)})
+                                    λ z → ==-def λ i → ≡-def (and-def
+                                                              (λ j → back singleton-∈ (==-transitivity (to singleton-∈ j) z))
+                                                               λ j → back singleton-∈ (==-transitivity (to singleton-∈ j) (==-commutativity z))))
 
 singleton-==-pair : {x y z : 𝕊} → singleton x == pair y z → x == y and x == z
-singleton-==-pair {x} {y} {z} (==-def w) = and-def (==-commutativity (singleton-∈ (back (w y) pair-left-∈))) (==-commutativity (singleton-∈ (back (w z) pair-right-∈)))
+singleton-==-pair {x} {y} {z} (==-def w) = and-def (==-commutativity ((to singleton-∈) (back (w y) pair-left-∈))) (==-commutativity ((to singleton-∈) (back (w z) pair-right-∈)))
     
 data 𝕊-∃! : (𝕊 → Set) → Set where
     𝕊-∃!-def : (x : 𝕊 → Set) → (y : 𝕊) → x y → ((z : 𝕊) → x z → y == z) → 𝕊-∃! x
@@ -217,7 +247,7 @@ union-def x y z = ≡-def (and-def
                             (or-def-right w) → to
                                                (∪-def z (pair x y))
                                                (∃-def (λ i → z ∈ i and i ∈ pair x y) y (and-def w pair-right-∈))})
-                         λ w → lm-2 w (pair-∈ (and-right (lm-1 w))))
+                         λ w → lm-2 w (to pair-∈ (and-right (lm-1 w))))
     where lm-1 : (w : z ∈ union x y) → z ∈ ∃-element (back (∪-def z (pair x y)) w) and ∃-element (back (∪-def z (pair x y)) w) ∈ pair x y
           lm-1 w = ∃-application (back (∪-def z (pair x y)) w)
           lm-2 : (w : z ∈ union x y) → ∃-element (back (∪-def z (pair x y)) w) == x or ∃-element (back (∪-def z (pair x y)) w) == y → z ∈ x or z ∈ y
@@ -265,8 +295,8 @@ subsets-ax x y = lm-3 (∃-application ((lm-1 (λ i → lm-2 i (excluded-middle-
 x-∈-x-⊥ : (x : 𝕊) → ¬(x ∈ x)
 x-∈-x-⊥ x = ¬-def λ y → ¬-to-⊥ (and-right (∃-application (foundation-ax (singleton x) (∃-def (λ z → z ∈ singleton x) x singleton-single-∈))) x singleton-single-∈) (lm-2 y)
     where lm-1 : ∃-element (foundation-ax (singleton x) (∃-def (λ z → z ∈ singleton x) x singleton-single-∈)) == x
-          lm-1 = (to or-idempotency) ((and-right (∃-application (pair-ax x x)))
-                                      (∃-element (foundation-ax (singleton x) (∃-def (λ z → z ∈ singleton x) x singleton-single-∈)))
+          lm-1 = (to or-idempotency) (to
+                                      ((and-right (∃-application (pair-ax x x))) (∃-element (foundation-ax (singleton x) (∃-def (λ z → z ∈ singleton x) x singleton-single-∈))))
                                       (and-left (∃-application (foundation-ax (singleton x) (∃-def (λ z → z ∈ singleton x) x singleton-single-∈)))))
           lm-2 : (x ∈ x) → x ∈ ∃-element (foundation-ax (singleton x) (∃-def (λ z → z ∈ singleton x) x singleton-single-∈))
           lm-2 y = back (==-logic-eq lm-1 x) y
@@ -284,17 +314,17 @@ tuple : 𝕊 → 𝕊 → 𝕊
 tuple x y = pair (singleton x) (pair x y)   
 
 tuple-def : {x y z w : 𝕊} → tuple x y == tuple z w ≡ x == z and y == w
-tuple-def {x} {y} {z} {w} = ≡-def (and-def (λ i → lm-1 i) λ i → {!!})
+tuple-def {x} {y} {z} {w} = ≡-def (and-def (λ i → lm-1 i) λ i → back pair-==-pair (or-def-left (and-def (back singleton-==-singleton (and-left i)) (back pair-==-pair (or-def-left i)))))
     where lm-1 : tuple x y == tuple z w → x == z and y == w
           lm-1 i = or-absorption (or-application
                                   ((to or-associativity) (or-application
-                                                          (pair-==-pair i)
+                                                          (to pair-==-pair i)
                                                           ((λ j → or-application
                                                                   j
                                                                   id
                                                                   (back and-associativity)) ∘
                                                            and-or-distributivity ∘
-                                                           (λ j → and-application j singleton-==-singleton pair-==-pair))
+                                                           (λ j → and-application j (to singleton-==-singleton) (to pair-==-pair)))
                                                           ((back and-associativity) ∘
                                                            λ j → and-application
                                                                  j
