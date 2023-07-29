@@ -340,6 +340,9 @@ tuple-def {x} {y} {z} {w} = ≡-def (and-def (λ i → lm-1 i) λ i → to pair-
                                           id) ∘
                                    or-absorption))
 
+cartesian-product : 𝕊 → 𝕊 → 𝕊
+cartesian-product x y = ∃-element (subsets-ax (𝓟 (𝓟 (union x y))) λ z → ∃ λ w → w ∈ x and ∃ λ i → i ∈ y and z == tuple w i)
+    
 th-1 : (x y : 𝕊) → x ⊆ y → (∪ x) ⊆ (∪ y)
 th-1 x y (⊆-def z) = ⊆-def λ w i → to (∪-def w y) (lm-1 w (back (∪-def w x) i))
     where lm-1 : (a : 𝕊) → ∃ (λ α → a ∈ α and α ∈ x) → ∃ λ α → a ∈ α and α ∈ y
