@@ -116,6 +116,10 @@ data _==_ : 𝕊 → 𝕊 → Set where
     ==-def : {x y : 𝕊} → ((z : 𝕊) → z ∈ x ≡ z ∈ y) → x == y
 infixr 50 _==_
 
+postulate
+    𝕊-≡-congruence : {x y : 𝕊} → (z : 𝕊 → Set) → x == y → z x ≡ z y
+    ==-congruence : {x y : 𝕊} → (z : 𝕊 → 𝕊) → x == y → z x == z y
+
 ==-logic-eq : {x y : 𝕊} → x == y → (z : 𝕊) → z ∈ x ≡ z ∈ y
 ==-logic-eq (==-def x) = x
 
@@ -125,8 +129,8 @@ infixr 50 _==_
 ==-transitivity : {x y z : 𝕊} → x == y → y == z → x == z
 ==-transitivity (==-def w) (==-def i) = ==-def λ j → ≡-transitivity (w j) (i j)
 
-==-idempotency : (x : 𝕊) → x == x
-==-idempotency x = ==-def (λ _ → ≡-def (and-def id id))
+==-reflexivity : (x : 𝕊) → x == x
+==-reflexivity x = ==-def (λ _ → ≡-def (and-def id id))
 
 data _⊆_ : 𝕊 → 𝕊 → Set where
     ⊆-def : {x y : 𝕊} → ((z : 𝕊) → z ∈ x → z ∈ y) → x ⊆ y 
@@ -223,25 +227,27 @@ postulate
     infinity-ax : ∃ λ x → ((z : 𝕊) → ((w : 𝕊) → ¬(w ∈ z)) → z ∈ x) and ((y : 𝕊) → y ∈ x → (union y (singleton y)) ∈ x)
     substitution-ax : (x : 𝕊 → 𝕊 → Set) → ((y : 𝕊) → 𝕊-∃! (λ z → x y z) or ((z : 𝕊) → ¬(x y z))) → (y : 𝕊) → ∃ λ z → (w : 𝕊) → ∃ (λ j → j ∈ y and x j w) ≡ w ∈ z
 
-==-congruence : {x y : 𝕊} → (z : 𝕊 → 𝕊) → x == y → z x == z y
-==-congruence {x} {y} z w = {!!}
-    where lm-1 = substitution-ax (λ i j → (z i) == (z j)) {!!} (singleton x)
-          lm-2 = (back ((∃-application lm-1) y)) ((to (eq-ax w (∃-element lm-1))) (to (∃-application lm-1 x) {!!}))
-    
 subsets-ax : (x : 𝕊) → (y : 𝕊 → Set) → ∃ λ z → (w : 𝕊) → w ∈ x and y w ≡ w ∈ z
-subsets-ax x y = ∃-def (λ z → (w : 𝕊) → w ∈ x and y w ≡ w ∈ z) {!!} {!!}
+subsets-ax x y = lm-3 (∃-application ((lm-1 (λ i → lm-2 i (excluded-middle-ax (y i)))) x))
     where lm-1 = substitution-ax (λ i j → i == j and y i)
+
           lm-2 : (i : 𝕊) → ¬(y i) or y i → 𝕊-∃! (λ j → i == j and y i) or ((z : 𝕊) → ¬(i == z and y i)) 
           lm-2 i (or-def-left (¬-def k)) = or-def-right λ t → ¬-def λ {(and-def _ q) → k q}
-          lm-2 i (or-def-right k) = or-def-left (𝕊-∃!-def (λ j → i == j and y i) i (and-def (==-idempotency i) k) λ {z (and-def t _) → t})
-          lm-3 = ∃-application ((lm-1 (λ i → lm-2 i (excluded-middle-ax (y i)))) x)
-          lm-4 : ((w : 𝕊) → ∃ (λ j → j ∈ x and (j == w and y j)) ≡ w ∈ ∃-element (lm-1 (λ i → lm-2 i (excluded-middle-ax (y i))) x)) → ∃ λ z → (k : 𝕊) → k ∈ x and y k ≡ k ∈ z
-          lm-4 j = ∃-def
+          lm-2 i (or-def-right k) = or-def-left (𝕊-∃!-def (λ j → i == j and y i) i (and-def (==-reflexivity i) k) λ {z (and-def t _) → t})
+
+          lm-3 : ((w : 𝕊) → ∃ (λ j → j ∈ x and (j == w and y j)) ≡ w ∈ ∃-element (lm-1 (λ i → lm-2 i (excluded-middle-ax (y i))) x)) → ∃ λ z → (k : 𝕊) → k ∈ x and y k ≡ k ∈ z
+          lm-3 j = ∃-def
                    (λ z → (k : 𝕊) → k ∈ x and y k ≡ k ∈ z)
                    (∃-element (lm-1 (λ i → lm-2 i (excluded-middle-ax (y i))) x))
                    λ t → ≡-def (and-def
-                                (λ {(and-def q r) → to (j t) (∃-def (λ j₁ → j₁ ∈ x and (j₁ == t and y j₁)) t (and-def q (and-def (==-idempotency t) r)))})
-                                λ q → and-def {!!} {!!})
+                                (λ {(and-def q r) → to (j t) (∃-def (λ j₁ → j₁ ∈ x and (j₁ == t and y j₁)) t (and-def q (and-def (==-reflexivity t) r)))})
+                                λ q → and-def
+                                      (to (eq-ax ((and-right ∘ and-left) (lm-3-1 t q)) x) ((and-left ∘ and-left) (lm-3-1 t q)))
+                                      (to (𝕊-≡-congruence y ((and-right ∘ and-left) (lm-3-1 t q))) (and-right (lm-3-1 t q))))
+              where lm-3-1 : (t : 𝕊) →
+                             (q : t ∈ ∃-element (lm-1 (λ i → lm-2 i (excluded-middle-ax (y i))) x)) →
+                             ∃-element (back (j t) q) ∈ x and ∃-element (back (j t) q) == t and y (∃-element (back (j t) q))
+                    lm-3-1 t q = back and-associativity (∃-application (back (j t) q))
 
 ∅ : 𝕊
 ∅ = ∃-element (subsets-ax (∃-element infinity-ax) λ _ → ⊥)
