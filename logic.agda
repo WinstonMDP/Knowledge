@@ -242,8 +242,8 @@ data 𝕊-∃! : (𝕊 → Set) → Set where
 union : 𝕊 → 𝕊 → 𝕊
 union x y = ∪ (pair x y)
 
-union-def : (x y z : 𝕊) → z ∈ x or z ∈ y ≡ z ∈ union x y
-union-def x y z = ≡-def (and-def
+union-def : {x y z : 𝕊} → z ∈ x or z ∈ y ≡ z ∈ union x y
+union-def {x} {y} {z} = ≡-def (and-def
                          (λ {(or-def-left w) → to
                                                (∪-def z (pair x y))
                                                (∃-def (λ i → z ∈ i and i ∈ pair x y) x (and-def w pair-left-∈));
@@ -341,13 +341,16 @@ tuple-def {x} {y} {z} {w} = ≡-def (and-def (λ i → lm-1 i) λ i → to pair-
                                    or-absorption))
 
 _×_ : 𝕊 → 𝕊 → 𝕊
-x × y = ∃-element (subsets-ax (𝓟 (𝓟 (union x y))) λ z → ∃ λ w → w ∈ x and ∃ λ i → i ∈ y and z == tuple w i)
+x × y = ∃-element (subsets-ax (𝓟 (𝓟 (union x y))) λ z → ∃ λ w → ∃ λ i → w ∈ x and i ∈ y and z == tuple w i)
 infixl 60 _×_
 
+×-def : {x y z : 𝕊} → (∃ λ w → ∃ λ i → w ∈ y and i ∈ z and x == (tuple w i)) ≡ x ∈ y × z 
+×-def {x} {y} {z} = {!!}
+    
 th-1 : (x y : 𝕊) → x ⊆ y → (∪ x) ⊆ (∪ y)
 th-1 x y (⊆-def z) = ⊆-def λ w i → to (∪-def w y) (lm-1 w (back (∪-def w x) i))
     where lm-1 : (a : 𝕊) → ∃ (λ α → a ∈ α and α ∈ x) → ∃ λ α → a ∈ α and α ∈ y
-          lm-1 a (∃-def .(λ α → a ∈ α and α ∈ x) b (and-def c d)) = ∃-def (λ α → a ∈ α and α ∈ y) b (and-def c (z b d))
+          lm-1 a (∃-def _ b (and-def c d)) = ∃-def (λ α → a ∈ α and α ∈ y) b (and-def c (z b d))
 
 th-2 : (x : 𝕊) → x ⊆ 𝓟 (∪ x)
 th-2 x = ⊆-def λ y z → to (𝓟-def y (∪ x)) (⊆-def λ w i → to (∪-def w x) (∃-def (λ j → w ∈ j and j ∈ x) y (and-def i z)))
@@ -360,11 +363,12 @@ th-3 x (⊆-def y) = ⊆-def λ z w → to (𝓟-def z x) (⊆-def (λ i j → y
 th-4 : (x y : 𝕊) → x ⊆ y ≡ union x y == y
 th-4 x y = ≡-def (and-def
                   (λ {(⊆-def z) → ==-def λ w → ≡-def (and-def
-                                                      (λ i → to or-idempotency (or-application (back (union-def x y w) i) (z w) id))
-                                                      λ i → to (union-def x y w) (or-def-right i))})
-                  λ {(==-def j) → ⊆-def λ w i → to (j w) (to (union-def x y w) (or-def-left i))})
+                                                      (λ i → to or-idempotency (or-application (back (union-def {x} {y} {w}) i) (z w) id))
+                                                      λ i → to (union-def {x} {y} {w}) (or-def-right i))})
+                  λ {(==-def j) → ⊆-def λ w i → to (j w) (to (union-def {x} {y} {w}) (or-def-left i))})
 
 th-5 : (x y z w : 𝕊) → ¬(x == ∅) → ¬(y == ∅) → union (x × y) (y × x) == z × w → x == y and y == z and z == w
 th-5 x y z w i j (==-def k) = and-def (and-def {!!} {!!}) {!!}
-    where lm-1 : (k t l : 𝕊) → union k t == l
-          lm-1 k t l = ==-def (λ m → ≡-def (and-def (λ n → {!!}) {!!}))
+    where lm-1 : union x y == z
+          lm-1 = ==-def λ t → {!!}
+          lm-2 = (λ t → ≡-transitivity union-def (k t))
