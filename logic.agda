@@ -143,9 +143,9 @@ postulate
     eq-ax : {x y : 𝕊} → x == y → (z : 𝕊) → x ∈ z ≡ y ∈ z
     pair-ax : (x y : 𝕊) → ∃ λ z → x ∈ z and y ∈ z and ((w : 𝕊) → w ∈ z ≡ w == x or w == y)
     ∪ : 𝕊 → 𝕊 -- union axiom
-    ∪-def : (x y : 𝕊) → (∃ λ z → x ∈ z and z ∈ y) ≡ x ∈ ∪ y
+    ∪-def : {x y : 𝕊} → (∃ λ z → x ∈ z and z ∈ y) ≡ x ∈ ∪ y
     𝓟 : 𝕊 → 𝕊 -- power axiom
-    𝓟-def : (x y : 𝕊) → x ⊆ y ≡ x ∈ (𝓟 y)
+    𝓟-def : {x y : 𝕊} → x ⊆ y ≡ x ∈ (𝓟 y)
     foundation-ax : (x : 𝕊) → ∃ (λ y → y ∈ x) → ∃ λ y → y ∈ x and ((z : 𝕊) → z ∈ x → ¬(z ∈ y))
 
 pair : 𝕊 → 𝕊 → 𝕊
@@ -245,15 +245,15 @@ union x y = ∪ (pair x y)
 union-def : {x y z : 𝕊} → z ∈ x or z ∈ y ≡ z ∈ union x y
 union-def {x} {y} {z} = ≡-def (and-def
                          (λ {(or-def-left w) → to
-                                               (∪-def z (pair x y))
+                                               (∪-def {z} {pair x y})
                                                (∃-def (λ i → z ∈ i and i ∈ pair x y) x (and-def w pair-left-∈));
                             (or-def-right w) → to
-                                               (∪-def z (pair x y))
+                                               (∪-def {z} {pair x y})
                                                (∃-def (λ i → z ∈ i and i ∈ pair x y) y (and-def w pair-right-∈))})
                          λ w → lm-2 w (back pair-∈ (and-right (lm-1 w))))
-    where lm-1 : (w : z ∈ union x y) → z ∈ ∃-element (back (∪-def z (pair x y)) w) and ∃-element (back (∪-def z (pair x y)) w) ∈ pair x y
-          lm-1 w = ∃-application (back (∪-def z (pair x y)) w)
-          lm-2 : (w : z ∈ union x y) → ∃-element (back (∪-def z (pair x y)) w) == x or ∃-element (back (∪-def z (pair x y)) w) == y → z ∈ x or z ∈ y
+    where lm-1 : (w : z ∈ union x y) → z ∈ ∃-element (back (∪-def {z} {pair x y}) w) and ∃-element (back (∪-def {z} {pair x y}) w) ∈ pair x y
+          lm-1 w = ∃-application (back (∪-def {z} {pair x y}) w)
+          lm-2 : (w : z ∈ union x y) → ∃-element (back (∪-def {z} {pair x y}) w) == x or ∃-element (back (∪-def {z} {pair x y}) w) == y → z ∈ x or z ∈ y
           lm-2 w i = or-application i ((λ j → to (j z) (and-left (lm-1 w))) ∘ ==-logic-eq) ((λ j → to (j z) (and-left (lm-1 w))) ∘ ==-logic-eq)
 
 postulate
@@ -344,21 +344,24 @@ _×_ : 𝕊 → 𝕊 → 𝕊
 x × y = ∃-element (subsets-ax (𝓟 (𝓟 (union x y))) λ z → ∃ λ w → ∃ λ i → w ∈ x and i ∈ y and z == tuple w i)
 infixl 60 _×_
 
-×-def : {x y z : 𝕊} → (∃ λ w → ∃ λ i → w ∈ y and i ∈ z and x == (tuple w i)) ≡ x ∈ y × z 
-×-def {x} {y} {z} = {!!}
+×-def : {x y z : 𝕊} → (∃ λ w → ∃ λ i → w ∈ y and i ∈ z and x == tuple w i) ≡ x ∈ y × z 
+×-def {x} {y} {z} = ≡-def (and-def (λ w → to lm-1 (and-def (lm-2 w) w)) λ w → and-right (back lm-1 w))
+    where lm-1 = ∃-application (subsets-ax (𝓟 (𝓟 (union y z))) λ w → ∃ λ i → ∃ λ j → i ∈ y and j ∈ z and w == tuple i j) x
+          lm-2 : (∃ λ w → ∃ λ i → w ∈ y and i ∈ z and x == (tuple w i)) → x ∈ 𝓟 (𝓟 (union y z))
+          lm-2 (∃-def _ w (∃-def _ i j)) = to 𝓟-def {!!}
     
 th-1 : (x y : 𝕊) → x ⊆ y → (∪ x) ⊆ (∪ y)
-th-1 x y (⊆-def z) = ⊆-def λ w i → to (∪-def w y) (lm-1 w (back (∪-def w x) i))
+th-1 x y (⊆-def z) = ⊆-def λ w i → to (∪-def {w} {y}) (lm-1 w (back (∪-def {w} {x}) i))
     where lm-1 : (a : 𝕊) → ∃ (λ α → a ∈ α and α ∈ x) → ∃ λ α → a ∈ α and α ∈ y
           lm-1 a (∃-def _ b (and-def c d)) = ∃-def (λ α → a ∈ α and α ∈ y) b (and-def c (z b d))
 
 th-2 : (x : 𝕊) → x ⊆ 𝓟 (∪ x)
-th-2 x = ⊆-def λ y z → to (𝓟-def y (∪ x)) (⊆-def λ w i → to (∪-def w x) (∃-def (λ j → w ∈ j and j ∈ x) y (and-def i z)))
+th-2 x = ⊆-def λ y z → to (𝓟-def {y} {∪ x}) (⊆-def λ w i → to (∪-def {w} {x}) (∃-def (λ j → w ∈ j and j ∈ x) y (and-def i z)))
 
 th-3 : (x : 𝕊) → ∪ x ⊆ x → ∪ (𝓟 x) ⊆ 𝓟 x
-th-3 x (⊆-def y) = ⊆-def λ z w → to (𝓟-def z x) (⊆-def (λ i j → y i (to (∪-def i x) (∃-def (λ α → i ∈ α and α ∈ x) z (and-def j (lm-1 z (back (∪-def z (𝓟 x)) w)))))))
+th-3 x (⊆-def y) = ⊆-def λ z w → to (𝓟-def {z} {x}) (⊆-def (λ i j → y i (to (∪-def {i} {x}) (∃-def (λ α → i ∈ α and α ∈ x) z (and-def j (lm-1 z (back (∪-def {z} {𝓟 x}) w)))))))
     where lm-1 : (z : 𝕊) → ∃ (λ α → z ∈ α and α ∈ 𝓟 x) → z ∈ x 
-          lm-1 z (∃-def _ a (and-def b c)) = ⊆-to ((back (𝓟-def a x)) c) z b
+          lm-1 z (∃-def _ a (and-def b c)) = ⊆-to ((back (𝓟-def {a} {x})) c) z b
 
 th-4 : (x y : 𝕊) → x ⊆ y ≡ union x y == y
 th-4 x y = ≡-def (and-def
