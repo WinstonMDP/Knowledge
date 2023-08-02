@@ -348,7 +348,17 @@ infixl 60 _×_
 ×-def {x} {y} {z} = ≡-def (and-def (λ w → to lm-1 (and-def (lm-2 w) w)) λ w → and-right (back lm-1 w))
     where lm-1 = ∃-application (subsets-ax (𝓟 (𝓟 (union y z))) λ w → ∃ λ i → ∃ λ j → i ∈ y and j ∈ z and w == tuple i j) x
           lm-2 : (∃ λ w → ∃ λ i → w ∈ y and i ∈ z and x == (tuple w i)) → x ∈ 𝓟 (𝓟 (union y z))
-          lm-2 (∃-def _ w (∃-def _ i j)) = to 𝓟-def {!!}
+          lm-2 (∃-def _ w (∃-def _ i j)) = to 𝓟-def (⊆-def λ k t → to 𝓟-def (⊆-def (λ l m → to
+                                                                                            union-def
+                                                                                            (or-application
+                                                                                             (back
+                                                                                              or-associativity
+                                                                                              (or-application
+                                                                                               (back pair-∈ (to ((==-logic-eq ∘ and-right) j k) t))
+                                                                                               (λ n → back singleton-∈ (to (==-logic-eq n l) m))
+                                                                                               (λ n → back pair-∈ (to (==-logic-eq n l) m))))
+                                                                                             ((λ n → back (eq-ax n y) ((and-left ∘ and-left) j)) ∘ to or-idempotency)
+                                                                                             (λ n → back (eq-ax n z) ((and-right ∘ and-left) j))))))
     
 th-1 : (x y : 𝕊) → x ⊆ y → (∪ x) ⊆ (∪ y)
 th-1 x y (⊆-def z) = ⊆-def λ w i → to (∪-def {w} {y}) (lm-1 w (back (∪-def {w} {x}) i))
