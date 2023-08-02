@@ -25,6 +25,19 @@ data _≡_ : Set → Set → Set where
     ≡-def : {x y : Set} → (x → y) and (y → x) → x ≡ y
 infixr 30 _≡_
 
+to : {x y : Set} → x ≡ y → x → y
+to (≡-def (and-def z _)) = z
+
+back : {x y : Set} → x ≡ y → y → x
+back (≡-def (and-def _ z)) = z
+
+postulate
+    ≡-congruence : {x y : Set} → (z : Set → Set) → x ≡ y → z x ≡ z y
+
+≡-congruence-2 : (x y z w : Set) → (i : Set → Set → Set) → x ≡ z → y ≡ w → i x y ≡ i z w
+≡-congruence-2 x y z w i j k = {!!}
+-- ≡-congruence (λ t →	≡-congruence (i t) k) j
+
 ≡-commutativity : {x y : Set} → x ≡ y → y ≡ x
 ≡-commutativity (≡-def (and-def z w)) = ≡-def (and-def w z)
 
@@ -37,12 +50,6 @@ and-idempotency = ≡-def (and-def (λ {(and-def y _) → y}) λ y → and-def y
 and-associativity : {x y z : Set} → (x and y) and z ≡ x and (y and z)
 and-associativity = ≡-def (and-def (λ {(and-def (and-def w i) j) → and-def w (and-def i j)}) λ {(and-def w (and-def i j)) → and-def (and-def w i) j})
  
-to : {x y : Set} → x ≡ y → x → y
-to (≡-def (and-def z _)) = z
-
-back : {x y : Set} → x ≡ y → y → x
-back (≡-def (and-def _ z)) = z
-
 data ∃ : {x : Set} → (x → Set) → Set where
     ∃-def : {x : Set} → (y : x → Set) → (z : x) → y z → ∃ y
 
@@ -51,6 +58,9 @@ data ∃ : {x : Set} → (x → Set) → Set where
 
 ∃-application : {x : Set} → {y : x → Set} → (z : ∃ y) → y (∃-element z)
 ∃-application (∃-def _ _ w) = w
+
+-- ∃-replacement : {x : Set} → {y : x → Set} → (z : ∃ y) → (w : Set) → ∃-application z ≡ w → ∃
+-- ∃-replacement {x} {y} {z} = ≡-def (and-def (λ w → ∃-application w) λ w → ∃-def y (∃-element z) w)
 
 data ⊥ : Set where
 
@@ -68,10 +78,15 @@ data _or_ : Set → Set → Set where
     or-def-right : {x y : Set} → y → x or y
 infixl 35 _or_
 
-or-application : {x y z w : Set} → (x or y) → (x → z) → (y → w) → (z or w)
+or-application : {x y z w : Set} → x or y → (x → z) → (y → w) → z or w
 or-application {_} {_} {z} {w} (or-def-left i) j _ = or-def-left {z} {w} (j i)
 or-application {_} {_} {z} {w} (or-def-right i) _ j = or-def-right {z} {w} (j i)
 
+or-replacement : {x y z w : Set} → x ≡ z → y ≡ w → x or y ≡ z or w
+or-replacement {x} {y} {z} {w} i j = ≡-def (and-def
+                                            (λ {(or-def-left k) → or-def-left (to i k); (or-def-right k) → or-def-right (to j k)})
+                                            λ {(or-def-left k) → or-def-left (back i k); (or-def-right k) → or-def-right (back j k)})
+    
 or-commutativity : {x y : Set} → x or y → y or x
 or-commutativity (or-def-left z) = or-def-right z
 or-commutativity (or-def-right z) = or-def-left z
@@ -86,7 +101,7 @@ or-associativity = ≡-def (and-def
                              (or-def-right (or-def-right w)) → or-def-right w})
     
 or-idempotency : {x : Set} → x or x ≡ x
-or-idempotency {x} = ≡-def (and-def (λ { (or-def-left y) → y ; (or-def-right y) → y }) λ y → or-def-left y)
+or-idempotency {x} = ≡-def (and-def (λ {(or-def-left y) → y; (or-def-right y) → y}) λ y → or-def-left y)
 
 or-absorption : {x y : Set} → x or x and y → x
 or-absorption (or-def-left z) = z
@@ -305,7 +320,7 @@ x-∈-x-⊥ x = ¬-def λ y → ¬-to-⊥ (and-right (∃-application (foundatio
           lm-2 y = back (==-logic-eq lm-1 x) y
 
 set-of-all-sets-⊥ : ¬(∃ λ x → (y : 𝕊) → y ∈ x)
-set-of-all-sets-⊥ = ¬-def λ { (∃-def .(λ x → (y : 𝕊) → y ∈ x) z w) → ¬-to-⊥ (x-∈-x-⊥ z) (w z) }
+set-of-all-sets-⊥ = ¬-def λ {(∃-def _ z w) → ¬-to-⊥ (x-∈-x-⊥ z) (w z)}
 
 intersection : 𝕊 → 𝕊 → 𝕊
 intersection x y = ∃-element (subsets-ax x (λ z → z ∈ y))
@@ -384,4 +399,5 @@ th-5 : (x y z w : 𝕊) → ¬(x == ∅) → ¬(y == ∅) → union (x × y) (y 
 th-5 x y z w i j (==-def k) = and-def (and-def {!!} {!!}) {!!}
     where lm-1 : union x y == z
           lm-1 = ==-def λ t → {!!}
-          lm-2 = (λ t → ≡-transitivity union-def (k t))
+          lm-2 = (λ t → ≡-transitivity (or-replacement (×-def {t} {x} {y}) (×-def {t} {y} {x})) (≡-transitivity (≡-transitivity union-def (k t)) (≡-commutativity ×-def)))
+          -- lm-3 = (λ t → ≡-transitivity (lm-2 t) (≡-congruence (lm-2 t) ) ) 
