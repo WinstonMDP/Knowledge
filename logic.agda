@@ -31,18 +31,29 @@ to (≡-def (and-def z _)) = z
 back : {x y : Set} → x ≡ y → y → x
 back (≡-def (and-def _ z)) = z
 
-postulate
-    ≡-congruence : {x y : Set} → (z : Set → Set) → x ≡ y → z x ≡ z y
-
-≡-congruence-2 : (x y z w : Set) → (i : Set → Set → Set) → x ≡ z → y ≡ w → i x y ≡ i z w
-≡-congruence-2 x y z w i j k = {!!}
--- ≡-congruence (λ t →	≡-congruence (i t) k) j
-
+≡-reflexivity : (x : Set) → x ≡ x
+≡-reflexivity x = ≡-def (and-def id id)
+    
 ≡-commutativity : {x y : Set} → x ≡ y → y ≡ x
 ≡-commutativity (≡-def (and-def z w)) = ≡-def (and-def w z)
 
 ≡-transitivity : {x y z : Set} → x ≡ y → y ≡ z → x ≡ z
 ≡-transitivity (≡-def (and-def i j)) (≡-def (and-def k t)) = ≡-def (and-def (λ l → k (i l)) λ l → j (t l))
+
+postulate
+    ≡-congruence : {x y : Set} → (z : Set → Set) → x ≡ y → z x ≡ z y
+
+≡-congruence-2 : (x y z w : Set) → (i : Set → Set → Set) → x ≡ z → y ≡ w → i x y ≡ i z w
+≡-congruence-2 x y z w i j k = ≡-transitivity (lm-2 y) (lm-1 z)
+    where lm-1 = λ t → ≡-congruence (i t) k
+          lm-2 = λ t → ≡-congruence (λ l → (i l t)) j
+
+≡-transfer : {x y : Set} → x ≡ y → x and y ≡ y
+≡-transfer z = ≡-def (and-def (λ w → to z (and-left w)) (λ w → and-def (back z w) w))
+
+_≡[_]≡_ : (x : Set) → {y z : Set} → x ≡ y → y ≡ z → x ≡ z
+_≡[_]≡_ x w i = ≡-transitivity w i 
+infixr 10 _≡[_]≡_
 
 and-idempotency : {x : Set} → x and x ≡ x
 and-idempotency = ≡-def (and-def (λ {(and-def y _) → y}) λ y → and-def y y)
@@ -59,8 +70,13 @@ data ∃ : {x : Set} → (x → Set) → Set where
 ∃-application : {x : Set} → {y : x → Set} → (z : ∃ y) → y (∃-element z)
 ∃-application (∃-def _ _ w) = w
 
--- ∃-replacement : {x : Set} → {y : x → Set} → (z : ∃ y) → (w : Set) → ∃-application z ≡ w → ∃
--- ∃-replacement {x} {y} {z} = ≡-def (and-def (λ w → ∃-application w) λ w → ∃-def y (∃-element z) w)
+∃-replacement : {x : Set} → {y z : x → Set} → ((w : x) → y w ≡ z w) → ∃ y ≡ ∃ z
+∃-replacement {_} {y} {z} w = ≡-def (and-def (λ {(∃-def _ i j) → ∃-def z i (to (w i) j)}) λ {(∃-def _ i j) → ∃-def y i (back (w i) j)})
+
+∃-and-distributivity : {x : Set} → {y z : x → Set} → ∃ (λ i → ∃ λ j → y i and z j) ≡ ∃ y and ∃ z
+∃-and-distributivity {_} {y} {z} = ≡-def (and-def
+                                          (λ {(∃-def _ w (∃-def _ i j)) → and-def (∃-def y w (and-left j)) (∃-def z i (and-right j))})
+                                          λ {(and-def w i) → ∃-def _ (∃-element w) (∃-def _ (∃-element i) (and-def (∃-application w) (∃-application i)))})
 
 data ⊥ : Set where
 
@@ -107,13 +123,16 @@ or-absorption : {x y : Set} → x or x and y → x
 or-absorption (or-def-left z) = z
 or-absorption (or-def-right (and-def z _)) = z
 
-or-and-distributivity : {x y z : Set} → x or y and z → (x or y) and (x or z)
-or-and-distributivity (or-def-left w) = and-def (or-def-left w) (or-def-left w)
-or-and-distributivity (or-def-right (and-def w i)) = and-def (or-def-right w) (or-def-right i)
-
-and-or-distributivity : {x y z : Set} → x and (y or z) → x and y or x and z
-and-or-distributivity (and-def w (or-def-left i)) = or-def-left (and-def w i)
-and-or-distributivity (and-def w (or-def-right i)) = or-def-right (and-def w i)
+or-and-distributivity : {x y z : Set} → x or y and z ≡ (x or y) and (x or z)
+or-and-distributivity = ≡-def (and-def
+                               (λ {(or-def-left w) → and-def (or-def-left w) (or-def-left w); (or-def-right w) → and-def (or-def-right (and-left w)) (or-def-right (and-right w))})
+                               (λ {(and-def (or-def-left w) i) → or-def-left w;
+                                   (and-def (or-def-right w) (or-def-left i)) → or-def-left i;
+                                   (and-def (or-def-right w) (or-def-right i)) → or-def-right (and-def w i)}))
+    
+and-or-distributivity : {x y z : Set} → x and (y or z) ≡ x and y or x and z
+and-or-distributivity = ≡-def (and-def (λ {(and-def w (or-def-left i)) → or-def-left (and-def w i); (and-def w (or-def-right i)) → or-def-right (and-def w i)})
+                                       (λ {(or-def-left w) → and-def (and-left w) (or-def-left (and-right w)); (or-def-right w) → and-def (and-left w) (or-def-right (and-right w))}))
 
 _∘_ : {x y z : Set} → (y → z) → (x → y) → (x → z)
 _∘_ w i = λ j → w (i j)   
@@ -203,11 +222,11 @@ pair-==-pair {x} {y} {z} {w} = ≡-def (and-def
                                                                                                                      λ t → ==-transitivity t (==-commutativity (and-left i)))))})
                                       λ {(==-def i) → or-commutativity (or-application
                                                                         (or-application
-                                                                         (and-or-distributivity (and-def
-                                                                                                 ((back pair-∈) (to (i x) pair-left-∈))
-                                                                                                 ((back pair-∈) (to (i y) pair-right-∈))))
-                                                                         (and-or-distributivity ∘ and-commutativity)
-                                                                         (and-or-distributivity ∘ and-commutativity))
+                                                                         ((to and-or-distributivity) (and-def
+                                                                                                      ((back pair-∈) (to (i x) pair-left-∈))
+                                                                                                      ((back pair-∈) (to (i y) pair-right-∈))))
+                                                                         ((to and-or-distributivity) ∘ and-commutativity)
+                                                                         ((to and-or-distributivity) ∘ and-commutativity))
                                                                         (and-commutativity ∘
                                                                          or-absorption ∘
                                                                          or-commutativity ∘
@@ -224,7 +243,7 @@ pair-==-pair {x} {y} {z} {w} = ≡-def (and-def
                         k
                         (λ t → and-def (and-left t) (==-transitivity (and-right t) ((and-right ∘ and-left) t)))
                         λ t → and-def (and-left t) (==-transitivity (and-right t) ((and-left ∘ and-left) t))) ∘
-                 and-or-distributivity ∘
+                 (to and-or-distributivity) ∘
                  and-commutativity
 
 singleton : 𝕊 → 𝕊
@@ -341,7 +360,7 @@ tuple-def {x} {y} {z} {w} = ≡-def (and-def (λ i → lm-1 i) λ i → to pair-
                                                                   j
                                                                   id
                                                                   (back and-associativity)) ∘
-                                                           and-or-distributivity ∘
+                                                           (to and-or-distributivity) ∘
                                                            (λ j → and-application j (back singleton-==-singleton) (back pair-==-pair)))
                                                           ((back and-associativity) ∘
                                                            λ j → and-application
@@ -399,5 +418,33 @@ th-5 : (x y z w : 𝕊) → ¬(x == ∅) → ¬(y == ∅) → union (x × y) (y 
 th-5 x y z w i j (==-def k) = and-def (and-def {!!} {!!}) {!!}
     where lm-1 : union x y == z
           lm-1 = ==-def λ t → {!!}
-          lm-2 = (λ t → ≡-transitivity (or-replacement (×-def {t} {x} {y}) (×-def {t} {y} {x})) (≡-transitivity (≡-transitivity union-def (k t)) (≡-commutativity ×-def)))
-          -- lm-3 = (λ t → ≡-transitivity (lm-2 t) (≡-congruence (lm-2 t) ) ) 
+          lm-2 = λ t → ≡-transitivity (or-replacement (×-def {t} {x} {y}) (×-def {t} {y} {x})) (≡-transitivity (≡-transitivity union-def (k t)) (≡-commutativity ×-def))
+          lm-3 = λ t →
+                       ∃ (λ w' → ∃ λ w'' → ∃ λ i' → ∃ λ i'' → (w' ∈ z and i' ∈ w and t == tuple w' i') and (w' ∈ x and i' ∈ y and t == tuple w'' i''))
+                       or
+                       ∃ (λ w' → ∃ λ w'' → ∃ λ i' → ∃ λ i'' → (w' ∈ z and i' ∈ w and t == tuple w' i') and (w' ∈ y and i' ∈ x and t == tuple w'' i''))
+                       ≡[ or-replacement
+                          (∃-replacement λ _ → ∃-replacement λ _ → ∃-replacement λ _ → ∃-replacement λ _ → {!!} ≡[ {!!} ]≡ ≡-reflexivity _)
+                          (∃-replacement λ _ → ∃-replacement λ _ → ∃-replacement λ _ → ∃-replacement λ _ → {!!} ≡[ {!!} ]≡ ≡-reflexivity _)
+                       ]≡
+                       ∃ (λ w' → ∃ λ w'' → ∃ λ i' → ∃ λ i'' → (w' ∈ z and i' ∈ w and t == tuple w' i') and (w'' ∈ x and i'' ∈ y and t == tuple w'' i''))
+                       or
+                       ∃ (λ w' → ∃ λ w'' → ∃ λ i' → ∃ λ i'' → (w' ∈ z and i' ∈ w and t == tuple w' i') and (w'' ∈ y and i'' ∈ x and t == tuple w'' i''))
+                       ≡[ or-replacement (∃-replacement λ _ → ∃-replacement λ _ → ∃-and-distributivity) (∃-replacement λ _ → ∃-replacement λ _ → ∃-and-distributivity) ]≡
+                       ∃ (λ w' → ∃ λ w'' → ∃ (λ i' → w' ∈ z and i' ∈ w and t == tuple w' i') and ∃ (λ i'' → w'' ∈ x and i'' ∈ y and t == tuple w'' i''))
+                       or
+                       ∃ (λ w' → ∃ λ w'' → ∃ (λ i' → w' ∈ z and i' ∈ w and t == tuple w' i') and ∃ (λ i'' → w'' ∈ y and i'' ∈ x and t == tuple w'' i''))
+                       ≡[ or-replacement ∃-and-distributivity ∃-and-distributivity ]≡
+                       ∃ (λ w' → ∃ (λ i' → w' ∈ z and i' ∈ w and t == tuple w' i')) and ∃ (λ w' → ∃ (λ i' → w' ∈ x and i' ∈ y and t == tuple w' i'))
+                       or
+                       ∃ (λ w' → ∃ (λ i' → w' ∈ z and i' ∈ w and t == tuple w' i')) and ∃ (λ w' → ∃ (λ i' → w' ∈ y and i' ∈ x and t == tuple w' i'))
+                       ≡[ ≡-commutativity and-or-distributivity ]≡
+                       ∃ (λ w' → ∃ (λ i' → w' ∈ z and i' ∈ w and t == tuple w' i'))
+                       and
+                       (∃ (λ w' → ∃ (λ i' → w' ∈ x and i' ∈ y and t == tuple w' i')) or ∃ (λ w' → ∃ (λ i' → w' ∈ y and i' ∈ x and t == tuple w' i')))
+                       ≡[ ≡-def (and-def and-commutativity and-commutativity) ]≡
+                       (∃ (λ w' → ∃ (λ i' → w' ∈ x and i' ∈ y and t == tuple w' i')) or ∃ (λ w' → ∃ (λ i' → w' ∈ y and i' ∈ x and t == tuple w' i')))
+                       and
+                       ∃ (λ w' → ∃ (λ i' → w' ∈ z and i' ∈ w and t == tuple w' i'))
+                       ≡[ ≡-transfer (lm-2 t) ]≡
+                       ≡-reflexivity (∃ (λ w' → ∃ (λ i' → w' ∈ z and i' ∈ w and t == tuple w' i')))
