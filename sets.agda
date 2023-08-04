@@ -27,6 +27,12 @@ postulate
 ==-reflexivity : (x : 𝕊) → x == x
 ==-reflexivity x = ==-def (λ _ → ≡-def (and-def id id))
 
+data 𝕊-∃! : (𝕊 → Set) → Set where
+    𝕊-∃!-def : (x : 𝕊 → Set) → (y : 𝕊) → x y → ((z : 𝕊) → x z → y == z) → 𝕊-∃! x
+
+𝕊-∃!-∃ : {x : 𝕊 → Set} → 𝕊-∃! x → ∃ x
+𝕊-∃!-∃ (𝕊-∃!-def x y z _) = ∃-def x y z
+
 data _⊆_ : 𝕊 → 𝕊 → Set where
     ⊆-def : {x y : 𝕊} → ((z : 𝕊) → z ∈ x → z ∈ y) → x ⊆ y 
 infix 50 _⊆_
@@ -127,14 +133,6 @@ singleton-==-pair {_} {y} {z}  = ≡-def (and-def
                                         λ {(==-def w) → and-def
                                                         (==-commutativity (back singleton-∈ (back (w y) pair-left-∈)))
                                                         (==-commutativity (back singleton-∈ (back (w z) pair-right-∈)))})
-
-data 𝕊-∃! : (𝕊 → Set) → Set where
-    𝕊-∃!-def : (x : 𝕊 → Set) → (y : 𝕊) → x y → ((z : 𝕊) → x z → y == z) → 𝕊-∃! x
-
-𝕊-∃!-∃ : {x : 𝕊 → Set} → 𝕊-∃! x → ∃ x
-𝕊-∃!-∃ (𝕊-∃!-def x y z _) = ∃-def x y z
-
--- 𝕊-≡-∃-to-∀ : {x y : 𝕊 → Set} → ∃ x ≡ ∃ y → 
 
 union : 𝕊 → 𝕊 → 𝕊
 union x y = ∪ (pair x y)
