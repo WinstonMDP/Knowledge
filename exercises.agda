@@ -16,16 +16,30 @@ th-3 x (⊆-def y) = ⊆-def λ z w → to (𝓟-def {z} {x}) (⊆-def (λ i j �
     where lm-1 : (z : 𝕊) → ∃ (λ α → z ∈ α and α ∈ 𝓟 x) → z ∈ x 
           lm-1 z (∃-def _ a (and-def b c)) = ⊆-to ((back (𝓟-def {a} {x})) c) z b
 
-th-4 : (x y : 𝕊) → x ⊆ y ≡ union x y == y
-th-4 x y = ≡-def (and-def
-                  (λ {(⊆-def z) → ==-def λ w → ≡-def (and-def
-                                                      (λ i → to or-idempotency (or-application (back (union-def {x} {y} {w}) i) (z w) id))
-                                                      λ i → to (union-def {x} {y} {w}) (or-def-right i))})
-                  λ {(==-def j) → ⊆-def λ w i → to (j w) (to (union-def {x} {y} {w}) (or-def-left i))})
+union-⊆ : {x y : 𝕊} → x ⊆ y ≡ union x y == y
+union-⊆ {x} {y} = ≡-def (and-def
+                         (λ {(⊆-def z) → ==-def λ w → ≡-def (and-def
+                                                             (λ i → to or-idempotency (or-application (back (union-def {x} {y} {w}) i) (z w) id))
+                                                             λ i → to (union-def {x} {y} {w}) (or-def-right i))})
+                         λ {(==-def j) → ⊆-def λ w i → to (j w) (to (union-def {x} {y} {w}) (or-def-left i))})
 
+==-double-⊆ : {x y : 𝕊} → x ⊆ y and y ⊆ x ≡ x == y
+==-double-⊆ = ≡-def (and-def
+                     (λ z → ==-def (λ w → ≡-def (and-def (⊆-to (and-left z) w) (⊆-to (and-right z) w))))
+                     λ w → and-def (⊆-def (λ i → to (==-logic-eq w i))) (⊆-def (λ i → back (==-logic-eq w i))))
+
+×-== : {x y z w : 𝕊} → x == z and y == w ≡ x × y == z × w
+×-== = {!!}
+
+union-commutativity : {x y : 𝕊} → union x y == union y x
+union-commutativity = {!!}
+
+square : 𝕊 → 𝕊
+square x = x × x
+    
 th-5 : (x y z w : 𝕊) → ¬(x == ∅) → ¬(y == ∅) → union (x × y) (y × x) == z × w → x == y and y == z and z == w
-th-5 x y z w i j (==-def k) = and-def (and-def {!!} {!!}) {!!}
-    where lm-2 = λ t → ≡-transitivity (or-replacement (×-def {t} {x} {y}) (×-def {t} {y} {x})) (≡-transitivity (≡-transitivity union-def (k t)) (≡-commutativity ×-def))
+th-5 x y z w i j k = and-def (and-def {!!} {!!}) lm-11
+    where lm-2 = λ t → ≡-transitivity (or-replacement (×-def {t} {x} {y}) (×-def {t} {y} {x})) (≡-transitivity (≡-transitivity union-def (==-logic-eq k t)) (≡-commutativity ×-def))
           lm-3 = λ t →
                        ∃ (λ w' → ∃ λ w'' → ∃ λ i' → ∃ λ i'' → ∃ λ w''' → ∃ λ w'''' → ∃ λ i''' → ∃ λ i'''' → (w' ∈ z and i' ∈ w and t == tuple w' i')
                                                                                                             and
@@ -102,24 +116,30 @@ th-5 x y z w i j (==-def k) = and-def (and-def {!!} {!!}) {!!}
                                               (and-def (and-def l (∃-application (lm-8 (and-right lm-9)))) (==-reflexivity _)))
                                              (and-left ∘ and-left)
                                              (and-left ∘ and-left))))
-
           lm-10 : union y x == w
-          lm-10 = ==-def λ t → ≡-def (and-def
-                                      (λ l → to
-                                             or-idempotency
-                                             (or-application
-                                              (back union-def l)
-                                              (λ m → (and-right ∘ and-left) (to
-                                                                            (lm-5 (∃-element (lm-8 j)) t (tuple t (∃-element (lm-8 j))))
-                                                                            (or-def-left (and-def (and-def ? (∃-application (lm-8 j))) (==-reflexivity _)))))
-                                              (λ m → (and-right ∘ and-left) (to
-                                                                            (lm-5 t (∃-element (lm-8 i)) (tuple t (∃-element (lm-8 i))))
-                                                                            (or-def-right (and-def (and-def ? (∃-application (lm-8 i))) (==-reflexivity _)))))))
-                                      (λ l → to
-                                             union-def
-                                             (or-application
-                                              (back
-                                               (lm-5 t (∃-element (lm-8 (and-right lm-9))) (tuple t (∃-element (lm-8 (and-right lm-9)))))
-                                               (and-def (and-def l (∃-application (lm-8 (and-right lm-9)))) (==-reflexivity _)))
-                                              (and-right ∘ and-left)
-                                              (and-right ∘ and-left))))
+          lm-10 = ==-def λ t → ≡-def (and-def (λ l → to
+                                                     or-idempotency
+                                                     (or-application
+                                                      (back union-def l)
+                                                      (λ m → (and-right ∘ and-left) (to
+                                                                                     (lm-5 (∃-element (lm-8 i)) t (tuple (∃-element (lm-8 i)) t))
+                                                                                     (or-def-left (and-def (and-def (∃-application (lm-8 i)) m) (==-reflexivity _)))))
+                                                      λ m → (and-right ∘ and-left) (to
+                                                                                    (lm-5 (∃-element (lm-8 j)) t (tuple (∃-element (lm-8 j)) t))
+                                                                                    (or-def-right (and-def (and-def (∃-application (lm-8 j)) m) (==-reflexivity _))))))
+                                              (λ l → to
+                                                     union-def
+                                                     (or-application
+                                                      (back
+                                                       (lm-5 (∃-element (lm-8 (and-left lm-9))) t (tuple (∃-element (lm-8 (and-left lm-9))) t))
+                                                       (and-def (and-def (∃-application (lm-8 (and-left lm-9))) l) (==-reflexivity _)))
+                                                      (and-right ∘ and-left)
+                                                      (and-right ∘ and-left))))
+          lm-11 : z == w
+          lm-11 = ==-transitivity (==-commutativity lm-1) (==-transitivity union-commutativity lm-10)
+          lm-14 : square (union x y) == union (union (square x) (square y)) (union (x × y) (y × x))
+          lm-14 = {!!}
+          lm-13 : union (square x) (square y) ⊆ union (x × y) (y × x)
+          lm-13 = back union-⊆ (==-transitivity (==-commutativity lm-14) {!!})
+          lm-12 : x == y
+          lm-12 = to ==-double-⊆ (and-def {!!} {!!})
