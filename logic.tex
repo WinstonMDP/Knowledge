@@ -14,6 +14,8 @@
 \usepackage{bookmark}
 \usepackage{textcomp}
 
+\input{knowledge_preamble}
+
 \setlength{\parskip}{0.03\textheight}
 
 \graphicspath{{images/}}
@@ -26,9 +28,6 @@
     urlcolor=black
 }
 
-\newcommand{\meta}[1]{\text{<}#1\text{>}}
-\newcommand{\set}[1]{\left\{#1\right\}}
-
 \title{Логика}
 \date{\today}
 \author{WinstonMDP}
@@ -38,28 +37,45 @@
 
     \tableofcontents
 
-    \chapter{Аксиоматический метод}
-    Базовое понятие - это неопределяемое понятие.
-
-    \begin{enumerate}
-        \item Зафиксировать базовые понятия.
-        \item Зафиксировать аксиомы, связывающие понятия.
-        \item Выводить следствия по правилам логики.
-    \end{enumerate}
-
     \chapter{Теория множеств (ZFC)}
-    \section{Базовые понятия}
-    Принадлежность ($ x \in y $).
-
-    \section{Аксиомы}
-    \subsection{Равенства}
+    \section{Определения и аксиомы}
     \begin{flalign*}
-        x = y \ \forall z \ \left(x \in z \iff y \in z\right)
+        &\gr{r}{25}{\_ \ \_} \\
+        &\gr{n}{20}{\df{\_}{\_}} \\
+        &\gr{l}{50}{\_\gets\_} \\
+        &\ax{\type{\bb{S}}{\bb{T}}} \\
+        &\ax{\type{\_\in\_}{\bb{S} \ \bb{S} \ \bb{T}}} \\
+        &\gr{a}{40}{\_\in\_} \\
+        &\df {
+        \begin{cases}
+            x \ y \\
+            y \ x
+        \end{cases}
+        }
+        {x \iff y} \\
+        &\gr{r}{23}{\_\iff\_} \\
+        &\df{z \ \left(z \in x \iff z \in y\right)}{x == y}
     \end{flalign*}
-
-    \subsection{Пары}
+    \textbf{Аксиома равенства}
     \begin{flalign*}
-        \exists \set{x, y}
+        \ax{x == y \ z \left(x \in z \iff y \in z\right)}
+    \end{flalign*}
+    \begin{flalign*}
+        &\df {
+        \left[
+        \begin{aligned}
+            &x == y \\
+            &x == z \\
+            &\ldots
+        \end{aligned}
+        \right.
+        }
+        {x \in \set{y, z, \ldots}} \\
+        &\df{z \ z \in x \ z \in y}{x \subseteq y}
+    \end{flalign*}
+    \textbf{Аксиома пары}
+    \begin{flalign*}
+        \ax{\exists \lmbd{z}{z == \set{x, y}}}
     \end{flalign*}
 
     \subsection{Объединения}

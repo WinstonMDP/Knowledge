@@ -14,6 +14,8 @@
 \usepackage{bookmark}
 \usepackage{textcomp}
 
+\input{knowledge_preamble}
+
 \setlength{\parskip}{0.03\textheight}
 
 \graphicspath{{images/}}
@@ -25,9 +27,6 @@
     linkcolor=black,
     urlcolor=black
 }
-
-\newcommand{\meta}[1]{\text{<}#1\text{>}}
-\newcommand{\set}[1]{\left\{#1\right\}}
 
 \title{Теория множеств: \\ упражнения}
 \date{\today}
@@ -2287,4 +2286,136 @@
         A = B = C = D
         \right)
     \end{flalign*}
+    \section{Своё}
+    \subsection{Доказать}
+    \begin{flalign*}
+        \left(x \ y \ \exists\left(\lmbd{z}{z == \set{x, y}}\right)\right)
+        \iff
+        \left(x \ y \ \exists\lmbd{z} {
+        \begin{cases}
+            x \in z \\
+            y \in z \\
+            w \
+            w \in z \
+            \left[
+            \begin{aligned}
+                &w == x \\
+                &w == y
+            \end{aligned}
+            \right.
+         \end{cases}
+         }
+         \right)
+    \end{flalign*}
+
+    \subsection{Имеется}
+    \subsubsection{Локально}
+    \begin{flalign*}
+        &\left(x \ y \ \exists\left(\lmbd{z}{z == \set{x, y}}\right)\right) \
+        \left(x \ y \ \exists\lmbd{z} {
+        \begin{cases}
+           x \in z \\
+           y \in z \\
+           w \
+           w \in z \
+           \left[
+           \begin{aligned}
+               &w == x \\
+               &w == y
+           \end{aligned}
+           \right.
+        \end{cases}
+        }
+        \right) \\
+        &\left(x \ y \ \exists\lmbd{z} {
+        \begin{cases}
+            x \in z \\
+            y \in z \\
+            w \
+            w \in z \
+            \left[
+            \begin{aligned}
+                &w == x \\
+                &w == y
+            \end{aligned}
+            \right.
+         \end{cases}
+         }
+         \right) \
+         \left(x \ y \ \exists\left(\lmbd{z}{z == \set{x, y}}\right)\right)
+    \end{flalign*}
+
+    \subsection{Доказательство}
+    \begin{flalign*}
+        &\dfto
+        \gets
+        \fnd {
+        \df
+        {\begin{cases}
+            x \ y \\
+            y \ x
+        \end{cases}}
+        {x \iff y}
+        }
+        \gets \\
+        &\cstr\begin{cases}
+            &\fnd {
+            \left(x \ y \ \exists\left(\lmbd{z}{z == \set{x, y}}\right)\right) \
+            \left(x \ y \ \exists\lmbd{z} {
+            \begin{cases}
+               x \in z \\
+               y \in z \\
+               w \
+               w \in z \
+               \left[
+               \begin{aligned}
+                   &w == x \\
+                   &w == y
+               \end{aligned}
+               \right.
+            \end{cases}
+            }
+            \right)
+            } \\
+            &\fnd {
+            \left(x \ y \ \exists\lmbd{z} {
+            \begin{cases}
+                x \in z \\
+                y \in z \\
+                w \
+                w \in z \
+                \left[
+                \begin{aligned}
+                    &w == x \\
+                    &w == y
+                \end{aligned}
+                \right.
+             \end{cases}
+             }
+             \right) \
+             \left(x \ y \ \exists\left(\lmbd{z}{z == \set{x, y}}\right)\right)
+             }
+        \end{cases}
+        = \\
+        &\fnd {
+        \exists\left(\lmbd{z}{z == \set{x, y}}\right)
+        \iff
+        x \
+        y \
+        \exists\lmbd{z} {
+        \begin{cases}
+            x \in z \\
+            y \in z \\
+            w \
+            w \in z \
+            \left[
+            \begin{aligned}
+                &w == x \\
+                &w == y
+            \end{aligned}
+            \right.
+        \end{cases}
+        }
+        }
+   \end{flalign*}
 \end{document}
