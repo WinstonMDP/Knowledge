@@ -36,7 +36,10 @@ union-commutativity = {!!}
 
 square : 𝕊 → 𝕊
 square x = x × x
-    
+
+==-2-congruence : {x y z w : 𝕊} → (i : 𝕊 → 𝕊 → 𝕊) → x == z → y == w → i x y == i z w
+==-2-congruence = {!!}
+     
 th-5 : (x y z w : 𝕊) → ¬(x == ∅) → ¬(y == ∅) → union (x × y) (y × x) == z × w → x == y and y == z and z == w
 th-5 x y z w i j k = and-def (and-def {!!} {!!}) lm-11
     where lm-2 = λ t → ≡-transitivity (or-replacement (×-def {t} {x} {y}) (×-def {t} {y} {x})) (≡-transitivity (≡-transitivity union-def (==-logic-eq k t)) (≡-commutativity ×-def))
@@ -140,6 +143,8 @@ th-5 x y z w i j k = and-def (and-def {!!} {!!}) lm-11
           lm-14 : square (union x y) == union (union (square x) (square y)) (union (x × y) (y × x))
           lm-14 = {!!}
           lm-13 : union (square x) (square y) ⊆ union (x × y) (y × x)
-          lm-13 = back union-⊆ (==-transitivity (==-commutativity lm-14) {!!})
+          lm-13 = back
+                  union-⊆
+                  (==-transitivity (==-commutativity lm-14) (==-transitivity (==-2-congruence _×_ lm-1 lm-1) (==-transitivity (==-congruence (λ i → z × i) lm-11) (==-commutativity k))))
           lm-12 : x == y
           lm-12 = to ==-double-⊆ (and-def {!!} {!!})
