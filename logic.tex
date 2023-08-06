@@ -33,190 +33,223 @@
 \author{WinstonMDP}
 
 \begin{document}
-    \maketitle
+\maketitle
 
-    \tableofcontents
+\tableofcontents
 
-    \chapter{Теория множеств (ZFC)}
-    \section{Определения и аксиомы}
-    \begin{flalign*}
-        &\gr{r}{25}{\_ \ \_} \\
-        &\gr{n}{20}{\df{\_}{\_}} \\
-        &\gr{l}{50}{\_\gets\_} \\
-        &\ax{\type{\bb{S}}{\bb{T}}} \\
-        &\ax{\type{\_\in\_}{\bb{S} \ \bb{S} \ \bb{T}}} \\
-        &\gr{a}{40}{\_\in\_} \\
-        &\df {
-        \begin{cases}
-            x \ y \\
-            y \ x
-        \end{cases}
-        }
-        {x \iff y} \\
-        &\gr{r}{23}{\_\iff\_} \\
-        &\df{z \ \left(z \in x \iff z \in y\right)}{x == y}
-    \end{flalign*}
-    \textbf{Аксиома равенства}
-    \begin{flalign*}
-        \ax{x == y \ z \left(x \in z \iff y \in z\right)}
-    \end{flalign*}
-    \begin{flalign*}
-        &\df {
-        \left[
-        \begin{aligned}
-            &x == y \\
-            &x == z \\
-            &\ldots
-        \end{aligned}
-        \right.
-        }
-        {x \in \set{y, z, \ldots}} \\
-        &\df{z \ z \in x \ z \in y}{x \subseteq y}
-    \end{flalign*}
-    \textbf{Аксиома пары}
-    \begin{flalign*}
-        \ax{\exists \lmbd{z}{z == \set{x, y}}}
-    \end{flalign*}
+\chapter{Теория множеств (ZFC)}
+\section{Основание}
+Три возможные формы с кванторами
+\begin{flalign*}
+    &\forall (y \ x) \ (z \ x) \mid \text{в $ y \ x $ стоит первым символом} \\
+    &\exists x \\
+    &\exists x \ (y \ x) \\
+    &\exists (y \ x) \ (z \ x) \mid \text{в $ y \ x $ стоит первым символом}
+\end{flalign*}
+\begin{flalign*}
+    &\gr{r}{}{}{\_\to\_} \\
+    &\gr{n}{}{\_\to\_}{\df{\_}{\_}} \\
+    &\gr{n}{\df{\_}{\_}}{\_\iff\_}{\exists\_\_} \\
+    &\greq{n}{\exists\_\_}{\forall\_\_} \\
+    &\df{}{\bot} \\
+    &\argtype{y}{\bb{T}_x} \to \left(\df{y \to \bot}{\overline{y}}\right)
+\end{flalign*}
 
-    \subsection{Объединения}
-    \begin{flalign*}
-        \exists \cup x
-    \end{flalign*}
+\section{Аксиомы}
+\subsection{Равенства}
+\begin{flalign*}
+    \ax{x \equiv y \to \left(x \in z \iff y \in z\right)}
+\end{flalign*}
 
-    \subsection{Степени}
-    \begin{flalign*}
-        \exists \mathcal{P}(x)
-    \end{flalign*}
+\subsection{Пары}
+\begin{flalign*}
+    \ax{\exists \set{x, y}}
+\end{flalign*}
 
-    \subsection{Выделения}
-    \begin{flalign*}
-        \exists y \ \forall z \
-        \left(
+\subsection{Объединения}
+\begin{flalign*}
+    \ax{\exists \left(\cup x\right)}
+\end{flalign*}
+
+\subsection{Степени}
+\begin{flalign*}
+    \ax{\exists \left(\mathcal{P} \ x\right)}
+\end{flalign*}
+
+\subsection{Выделения}
+\begin{flalign*}
+    \exists \set{\alpha \in x \mid y \ \alpha}
+\end{flalign*}
+Выводится из аксиомы подстановки.
+
+\subsection{Бесконечности}
+\begin{flalign*}
+    \ax{\exists_{\bb{S}} \ x - \text{индуктивное}}
+\end{flalign*}
+
+\subsection{Выбора}
+?
+
+\subsection{Регулярности (фундированности)}
+\begin{flalign*}
+    \ax{\exists y \in x \ \forall z \in x \ z \not\in y}
+\end{flalign*}
+
+\subsection{Подстановки}
+\begin{flalign*}
+    \ax {
+    \argtype{y}{\bb{S}}
+    \to
+    \left(
+    z
+    \to
+    \left[
+    \begin{aligned}
+        &\exists! w \ (x \ z \ w) \\
+        &\nexists w \ (x \ z \ w)
+    \end{aligned}
+    \right.
+    \right)
+    \to
+    \exists z \ w
+    \to
+    \left(w \in z \iff \exists i \in y \ x \ i \ w\right)
+    }
+\end{flalign*}
+
+\section{Определения и обозначения}
+Класс - это $ \set{x \ \left| \ \varphi(x)\right.} $.
+Не все классы являются множествами. Все множества являются классами.
+\begin{flalign*}
+    &\ax{\type{\bb{S}}{\bb{T}}} \\
+    &\ax{\type{\_\in\_}{\bb{S} \ \bb{S} \ \bb{T}}} \\
+    &\gr{a}{}{}{\_\in\_} \\
+    &\df {
+    \begin{cases}
+        x \to y \\
+        y \to x
+    \end{cases}
+    }
+    {x \iff y} \\
+    &\gr{r}{}{\_\to\_}{\_\iff\_} \\
+    &\df{z \to \left(z \in x \iff z \in y\right)}{x \equiv y} \\
+    &\df {
+    \begin{cases}
+        \exists x \ y \ x \\
+        z \to y \ z \to z \equiv \exel\fnd{\exists x \ y \ x}
+    \end{cases}
+    }
+    {\exists! x \ y \ x} \\
+    &\df {
+    \left[
+    \begin{aligned}
+        &x \equiv y \\
+        &x \equiv z \\
+        &\ldots
+    \end{aligned}
+    \right.
+    }
+    {x \in \set{y, z, \ldots}} \\
+    &\df{\forall z \in x \ z \in y}{x \subseteq y} \\
+    &\df {
+    \exists z
+    \begin{cases}
+        x \in z \\
         z \in y
-        \iff
-        \begin{cases}
-            z \in x \\
-            \varphi(z)
-        \end{cases}
-        \right)
-    \end{flalign*}
+    \end{cases}
+    }
+    {x \in \cup \ y} \\
+    &\df{x \subseteq y}{x \in \mathcal{P} \ y} \\
+    &\df {
+    w
+    \to
+    \left(
+    w \in y
+    \iff
+    \begin{cases}
+        w \in x \\
+        z \ w
+    \end{cases}
+    \right)
+    }
+    {y \equiv \set{\alpha \in x \mid z \ \alpha}} \\
+    &\df{y \to y \not\in x}{x - \text{пустое}} \\
+    &\df {
+    \begin{cases}
+        \forall y - \text{пустое;} \ y \in x \\
+        \forall z \in x \ z \cup \set{z} \in x
+    \end{cases}
+    }
+    {x - \text{индуктивное}} \\
+    &\varnothing
+    =
+    \set{\alpha \in \exel\fnd{\exists_{\bb{S}} \ x - \text{индуктивное}} \mid \bot} \\
+    &\df{\cup x \subseteq x}{x - \text{транзитивное}} \\
+    &\cap x = \set{y \in \cup x \mid \forall z \in x \ y \in z} \\
+    &x \cup y = \cup\set{x, y} \\
+    &x \cap y = \cap\set{x, y} \\
+    &x \setminus y = \set{\alpha \in x \mid \alpha \not\in y} \\
+    &a \triangle b = (a \setminus b) \cup (b \setminus a) \\
+    &\df {
+    x \to y \to z \to w \to
+    \left(
+    \begin{cases}
+        x \equiv y \\
+        z \equiv w
+    \end{cases}
+    \iff
+    i \ x \ z \equiv i \ y \ w
+    \right)
+    }
+    {i - \text{упорядоченная пара}} \\
+    &(x, y) = \set{\set{x}, \set{x, y}} \\
+    &(\_, \_) - \text{упорядоченная пара} \\
+    &x \times y
+    =
+    \set {
+    \mathcal{P} \left(\mathcal{P} \left(x \cup y\right)\right) \
+    \left| \
+    \exists z, w, i
+    \begin{cases}
+        z \in x \\
+        i \in y \\
+        z \equiv (w, i)
+    \end{cases}
+    \right.
+    }
+\end{flalign*}
 
-    \subsection{Бесконечности}
-    \begin{flalign*}
-        \exists S - \text{индуктивное множество}
-    \end{flalign*}
+\section{Теоремы}
 
-    \subsection{Выбора}
-    \begin{flalign*}
-        \varnothing \not\in S \
-        \exists f \
-        \begin{cases}
-            f: S \rightarrow \cup S \\
-            \forall s \in S \ f(s) \in s
-        \end{cases}
-    \end{flalign*}
+\chapter{Формальные языки}
+\begin{flalign*}
+    &a \neq \varnothing \iff a - \text{алфавит} \\
+    &a \in A \iff a - \text{символ (буква)} \\
+    &f: \underline{n} \rightarrow A \iff f - \text{слово} \\
+    &\varepsilon - \text{пустое слово} \\
+    &\varepsilon = \varnothing
+\end{flalign*}
 
-    \subsection{Регулярности (фундированности)}
-    Необязательная аксиома.
-    \begin{flalign*}
-        \exists y \in x \ \forall z \in x \ z \not\in y
-    \end{flalign*}
+\chapter{Необработанное}
+\textbf{Автонимный способ обозначения} - это
+способ обозначения,
+при котором формальные выражения обозначаются так же,
+как и их значения.
 
-    \subsection{Подстановки}
-    Необязательная аксиома.
-    Аксиома выделения - это часть данной аксиомы.
-    \begin{flalign*}
-        \left(
-        \forall x \
-        \left[
-        \begin{aligned}
-            &\exists! y \ \varphi(x, y) \\
-            &\overline{\exists y \ \varphi(x, y)}
-        \end{aligned}
-        \right.
-        \right)
-        \forall x \ \exists y \ \forall z \
-        \left(z \in y \iff \exists w \in x \ \varphi(w, z)\right)
-    \end{flalign*}
+\textbf{Высказывательная форма}.
 
-    \section{Определения}
-    Класс - это $ \set{x \ \left| \ \varphi(x)\right.} $.
-    Не все классы являются множествами. Все множества являются классами.
-    \begin{flalign*}
-        &x = y \iff \left(z \in x \iff z \in y\right) \\
-        &y = \set{\ldots, x, \ldots} \iff x \in y \\
-        &x \subseteq y \iff \forall z \in x \ z \in y \\
-        &x \subsetneq y
-        \iff
-        \begin{cases}
-            x \neq y \\
-            x \subseteq y
-        \end{cases} \\
-        &\varnothing - \text{пустое множество} \\
-        &x \not\in \varnothing \\
-        &x \in \mathcal{P}(y) \iff x \subseteq y \\
-        &y \in \cup x
-        \iff
-        \exists z
-        \begin{cases}
-            z \in x \\
-            y \in z
-        \end{cases} \\
-        &x - \text{транзитивное множество} \iff \cup x \subseteq x \\
-        &\cap x = \set{y \in \cup x \mid z \in x \ y \in z} \\
-        &a \cup b = \cup\set{a, b} \\
-        &a \cap b = \set{x \in a \mid x \in b} \\
-        &a \setminus b = \set{x \in a \mid x \not\in b} \\
-        &a \triangle b = (a \setminus b) \cup (b \setminus a) \\
-        &S - \text{индуктивное множество}
-        \iff
-        \begin{cases}
-            \varnothing \in S \\
-            \forall s \in S \ s \cup \set{s} \in S
-        \end{cases} \\
-        &(x, y) = \set{x, \set{x, y}} \\
-        &x \times y - \text{декартово (прямое) произведение множеств}\ x \ \text{и} \ y \\
-        &z \in x \times y
-        \iff
-        \exists w, i
-        \begin{cases}
-            w \in x \\
-            i \in y \\
-            z = (w, i)
-        \end{cases}
-    \end{flalign*}
+\textbf{Именная форма} - это
+выражение с переменной.
 
-    \section{Теоремы}
+\textbf{Связанные переменные} - это
+переменные, вместо которых
+нельзя подставить значение.
 
-    \chapter{Формальные языки}
-    \begin{flalign*}
-        &a \neq \varnothing \iff a - \text{алфавит} \\
-        &a \in A \iff a - \text{символ (буква)} \\
-        &f: \underline{n} \rightarrow A \iff f - \text{слово} \\
-        &\varepsilon - \text{пустое слово} \\
-        &\varepsilon = \varnothing
-    \end{flalign*}
-
-    \chapter{Необработанное}
-    \textbf{Автонимный способ обозначения} - это
-    способ обозначения,
-    при котором формальные выражения обозначаются так же,
-    как и их значения.
-
-    \textbf{Высказывательная форма}.
-
-    \textbf{Именная форма} - это
-    выражение с переменной.
-
-    \textbf{Связанные переменные} - это
-    переменные, вместо которых
-    нельзя подставить значение.
-
-    \textbf{Основания математики} - это
-    раздел (в книге сказано "аспект")
-    математической логики,
-    изучающий объекты математики,
-    истинные свойства этих объектов,
-    на основании которых можно вести рассуждения,
-    а также "сохраняющие истину"{ }способы рассуждений.
+\textbf{Основания математики} - это
+раздел (в книге сказано "аспект")
+математической логики,
+изучающий объекты математики,
+истинные свойства этих объектов,
+на основании которых можно вести рассуждения,
+а также "сохраняющие истину"{ }способы рассуждений.
 \end{document}
