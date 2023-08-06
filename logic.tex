@@ -52,7 +52,8 @@
     &\gr{n}{\df{\_}{\_}}{\_\iff\_}{\exists\_\_} \\
     &\greq{n}{\exists\_\_}{\forall\_\_} \\
     &\df{}{\bot} \\
-    &\argtype{y}{\bb{T}_x} \to \left(\df{y \to \bot}{\overline{y}}\right)
+    &\argtype{y}{\bb{T}_x} \to \left(\df{y \to \bot}{\overline{y}}\right) \\
+    &\ax{\left(x \iff y\right) \to \left(z \ x \iff z \ y\right)}
 \end{flalign*}
 
 \section{Аксиомы}
@@ -117,13 +118,13 @@
     }
 \end{flalign*}
 
-\section{Определения и обозначения}
+\section{Определения и некоторое}
 Класс - это $ \set{x \ \left| \ \varphi(x)\right.} $.
 Не все классы являются множествами. Все множества являются классами.
 \begin{flalign*}
     &\ax{\type{\bb{S}}{\bb{T}}} \\
-    &\ax{\type{\_\in\_}{\bb{S} \ \bb{S} \ \bb{T}}} \\
-    &\gr{a}{}{}{\_\in\_} \\
+    &\ax{\type{\_\in\_}{\bb{S} \to \bb{S} \to \bb{T}}} \\
+    &\gr{t}{}{}{\_\in\_} \\
     &\df {
     \begin{cases}
         x \to y \\
@@ -131,8 +132,11 @@
     \end{cases}
     }
     {x \iff y} \\
-    &\gr{r}{}{\_\to\_}{\_\iff\_} \\
+    &\gr{r}{}{\_\to\_}{\_\iff\_}
+\end{flalign*}
+\begin{flalign*}
     &\df{z \to \left(z \in x \iff z \in y\right)}{x \equiv y} \\
+    &\gr{t}{}{}{\_\equiv\_} \\
     &\df {
     \begin{cases}
         \exists x \ y \ x \\
@@ -140,6 +144,7 @@
     \end{cases}
     }
     {\exists! x \ y \ x} \\
+    &\ax{x \equiv y \to z \ x \equiv z \ y} \\
     &\df {
     \left[
     \begin{aligned}
@@ -149,7 +154,9 @@
     \end{aligned}
     \right.
     }
-    {x \in \set{y, z, \ldots}} \\
+    {x \in \set{y, z, \ldots}}
+\end{flalign*}
+\begin{flalign*}
     &\df{\forall z \in x \ z \in y}{x \subseteq y} \\
     &\df {
     \exists z
@@ -184,12 +191,16 @@
     &\varnothing
     =
     \set{\alpha \in \exel\fnd{\exists_{\bb{S}} \ x - \text{индуктивное}} \mid \bot} \\
+\end{flalign*}
+\begin{flalign*}
     &\df{\cup x \subseteq x}{x - \text{транзитивное}} \\
     &\cap x = \set{y \in \cup x \mid \forall z \in x \ y \in z} \\
     &x \cup y = \cup\set{x, y} \\
     &x \cap y = \cap\set{x, y} \\
     &x \setminus y = \set{\alpha \in x \mid \alpha \not\in y} \\
-    &a \triangle b = (a \setminus b) \cup (b \setminus a) \\
+    &a \triangle b = (a \setminus b) \cup (b \setminus a)
+\end{flalign*}
+\begin{flalign*}
     &\df {
     x \to y \to z \to w \to
     \left(
@@ -203,7 +214,6 @@
     }
     {i - \text{упорядоченная пара}} \\
     &(x, y) = \set{\set{x}, \set{x, y}} \\
-    &(\_, \_) - \text{упорядоченная пара} \\
     &x \times y
     =
     \set {
@@ -216,10 +226,28 @@
         z \equiv (w, i)
     \end{cases}
     \right.
-    }
+    } \\
+    &\df{x \subseteq y \times z}{x - \text{бинарное отношение}}
 \end{flalign*}
 
 \section{Теоремы}
+\begin{flalign*}
+    &\exists! x \ x - \text{пустое} \\
+    &(\_, \_) - \text{упорядоченная пара} \\
+    &\begin{cases}
+        x \equiv y \\
+        z \equiv w
+    \end{cases}
+    \iff
+    x \times z \equiv y \times w \\
+    &x \not\equiv \varnothing
+    \to
+    y \not\equiv \varnothing
+    \to
+    \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
+    \to
+    x \equiv y \equiv z \equiv w
+\end{flalign*}
 
 \chapter{Формальные языки}
 \begin{flalign*}
