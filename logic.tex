@@ -13,25 +13,25 @@
 \section{Основание}
 Три возможные формы с кванторами
 \begin{flalign*}
-    &\forall (y \ x) \ (z \ x) \mid \text{в $ y \ x $ стоит первым символом} \\
+    &\forall (y \ x) \ (z \ x) \mid \tx{в $ y \ x $ стоит первым символом} \\
     &\exists x \\
     &\exists x \ (y \ x) \\
-    &\exists (y \ x) \ (z \ x) \mid \text{в $ y \ x $ стоит первым символом}
+    &\exists (y \ x) \ (z \ x) \mid \tx{в $ y \ x $ стоит первым символом}
 \end{flalign*}
 \begin{flalign*}
     &\gr{r}{}{}{\_\to\_} \\
-    &\gr{n}{}{\_\to\_}{\df{\_}{\_}} \\
-    &\gr{n}{\df{\_}{\_}}{\_\iff\_}{\exists\_\_} \\
+    &\gr{n}{}{\_\to\_}{\_=\_} \\
+    &\gr{n}{\_=\_}{\_\tot\_}{\exists\_\_} \\
     &\greq{n}{\exists\_\_}{\forall\_\_} \\
-    &\df{}{\bot} \\
-    &\argtype{y}{\bb{T}_x} \to \left(\df{y \to \bot}{\overline{y}}\right) \\
-    &\ax{\left(x \iff y\right) \to \left(z \ x \iff z \ y\right)}
+    &=\bot \\
+    &\argtype{y}{\bb{T}_x} \to \left(y \to \bot = \overline{y}\right) \\
+    &\ax{\left(x \tot y\right) \to \left(z \ x \leftrightarrow z \ y\right)}
 \end{flalign*}
 
 \section{Аксиомы}
 \subsection{Равенства}
 \begin{flalign*}
-    \ax{x \equiv y \to \left(x \in z \iff y \in z\right)}
+    \ax{x \equiv y \to \left(x \in z \tot y \in z\right)}
 \end{flalign*}
 
 \subsection{Пары}
@@ -57,7 +57,7 @@
 
 \subsection{Бесконечности}
 \begin{flalign*}
-    \ax{\exists_{\bb{S}} \ x - \text{индуктивное}}
+    \ax{\exists_{\bb{S}} \ x - \tx{индуктивное}}
 \end{flalign*}
 
 \subsection{Выбора}
@@ -86,108 +86,177 @@
     \to
     \exists z \ w
     \to
-    \left(w \in z \iff \exists i \in y \ x \ i \ w\right)
+    \left(w \in z \tot \exists i \in y \ x \ i \ w\right)
     }
 \end{flalign*}
 
-\section{Определения и некоторое}
+\section{Определения}
 Класс - это $ \set{x \ \left| \ \varphi(x)\right.} $.
 Не все классы являются множествами. Все множества являются классами.
 \begin{flalign*}
     &\ax{\type{\bb{S}}{\bb{T}}} \\
     &\ax{\type{\_\in\_}{\bb{S} \to \bb{S} \to \bb{T}}} \\
-    &\gr{t}{}{}{\_\in\_} \\
-    &\df {
+    &\gr{t}{}{}{\_\in\_}
+\end{flalign*}
+\begin{flalign*}
+    &x \tot y
+    =
     \begin{cases}
         x \to y \\
         y \to x
-    \end{cases}
-    }
-    {x \iff y} \\
-    &\gr{r}{}{\_\to\_}{\_\iff\_}
+    \end{cases} \\
+    &\gr{r}{}{\_\to\_}{\_\tot\_} \\
+    &\tx{$ x $ тогда и только тогда, когда $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &\df{z \to \left(z \in x \iff z \in y\right)}{x \equiv y} \\
-    &\gr{t}{}{}{\_\equiv\_} \\
-    &\df {
+    &x \equiv y = z \to \left(z \in x \tot z \in y\right) \\
+    &\gr{t}{}{}{\_\equiv\_}
+\end{flalign*}
+\begin{flalign*}
+    &\exists! x \ y \ x
+    =
     \begin{cases}
         \exists x \ y \ x \\
         z \to y \ z \to z \equiv \exel\fnd{\exists x \ y \ x}
-    \end{cases}
-    }
-    {\exists! x \ y \ x} \\
-    &\ax{x \equiv y \to z \ x \equiv z \ y} \\
-    &\df {
+    \end{cases} \\
+    &\tx{Существует единственный $ x $ удовлетворяющий $ y \ x $}
+\end{flalign*}
+\begin{flalign*}
+    \ax{x \equiv y \to z \ x \equiv z \ y}
+\end{flalign*}
+\begin{flalign*}
+    &x \in \set{y, z, \ldots}
+    =
     \left[
     \begin{aligned}
         &x \equiv y \\
         &x \equiv z \\
         &\ldots
     \end{aligned}
-    \right.
-    }
-    {x \in \set{y, z, \ldots}}
+    \right. \\
+    &\ntnt{\set{x, y, \ldots}}{\tx{множество из $ x, y, \ldots $}}
 \end{flalign*}
 \begin{flalign*}
-    &\df{\forall z \in x \ z \in y}{x \subseteq y} \\
-    &\df {
+    &x \subseteq y = \forall z \in x \ z \in y \\
+    &\tx{$ x $ вложено в $ y $; $ x $ - подмножество $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \in \cup \ y
+    =
     \exists z
     \begin{cases}
         x \in z \\
         z \in y
-    \end{cases}
-    }
-    {x \in \cup \ y} \\
-    &\df{x \subseteq y}{x \in \mathcal{P} \ y} \\
-    &\df {
+    \end{cases} \\
+    &\ntnt{\cup x}{\tx{объединение $ x $}} \\
+\end{flalign*}
+\begin{flalign*}
+    &x \in \mathcal{P} \ y = x \subseteq y \\
+    &\ntnt{\mathcal{P} \ x}{\tx{множество всех подмножеств $ x $}}
+\end{flalign*}
+\begin{flalign*}
+    &\set{\alpha \in x \mid z \ \alpha} \equiv y
+    =
     w
     \to
     \left(
     w \in y
-    \iff
+    \tot
     \begin{cases}
         w \in x \\
         z \ w
     \end{cases}
-    \right)
-    }
-    {y \equiv \set{\alpha \in x \mid z \ \alpha}} \\
-    &\df{y \to y \not\in x}{x - \text{пустое}} \\
-    &\df {
+    \right) \\
+    &x - \tx{пустое} = y \to y \not\in x\\
+    &x - \tx{индуктивное}
+    =
     \begin{cases}
-        \forall y - \text{пустое;} \ y \in x \\
+        \forall y - \tx{пустое} \ y \in x \\
         \forall z \in x \ z \cup \set{z} \in x
-    \end{cases}
-    }
-    {x - \text{индуктивное}} \\
+    \end{cases} \\
     &\varnothing
     =
-    \set{\alpha \in \exel\fnd{\exists_{\bb{S}} \ x - \text{индуктивное}} \mid \bot} \\
+    \set{\alpha \in \exel\fnd{\exists_{\bb{S}} \ x - \tx{индуктивное}} \mid \bot} \\
+    &x - \tx{транзитивное} = \cup x \subseteq x
 \end{flalign*}
 \begin{flalign*}
-    &\df{\cup x \subseteq x}{x - \text{транзитивное}} \\
     &\cap x = \set{y \in \cup x \mid \forall z \in x \ y \in z} \\
-    &x \cup y = \cup\set{x, y} \\
-    &x \cap y = \cap\set{x, y} \\
-    &x \setminus y = \set{\alpha \in x \mid \alpha \not\in y} \\
-    &a \triangle b = (a \setminus b) \cup (b \setminus a)
+    &\tx{Пересечение x}
 \end{flalign*}
 \begin{flalign*}
-    &\df {
-    x \to y \to z \to w \to
-    \left(
-    \begin{cases}
-        x \equiv y \\
-        z \equiv w
-    \end{cases}
-    \iff
-    i \ x \ z \equiv i \ y \ w
-    \right)
-    }
-    {i - \text{упорядоченная пара}} \\
-    &(x, y) = \set{\set{x}, \set{x, y}} \\
-    &x \times y
+    &x \cup y = \cup\set{x, y} \\
+    &\tx{Объединение $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \cap y = \cap\set{x, y} \\
+    &\tx{Пересечение $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \setminus y = \set{\alpha \in x \mid \alpha \not\in y} \\
+    &\tx{Разность $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \triangle y = (x \setminus y) \cup (y \setminus x) \\
+    &\tx{Симметрическая разность $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &(x, y)_z \equiv w
     =
+    \begin{cases}
+        i \to j \to k \to t \to
+        \left(
+        \begin{cases}
+            i \equiv k \\
+            j \equiv t
+        \end{cases}
+        \tot
+        z \ i \ j \equiv z \ k \ t
+        \right) \\
+        w \equiv z \ x \ y
+    \end{cases} \\
+    &\ntnt{(x, y)_z}{\tx{упорядоченная пара $ x $ и $ y $ с реализацией $ z $}}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{kur-tuple} = x, y \mapsto \set{\set{x}, \set{x, y}} \\
+    &\tx{Упорядоченная пара Куратовского}
+\end{flalign*}
+\begin{flalign*}
+    &x \times_y z \equiv w
+    =
+    i \to i \in w \to \exists j, k
+    \begin{cases}
+        j \in x \\
+        k \in z \\
+        i \equiv (j, k)_y
+    \end{cases} \\
+    &\ntnt{x \times_y z} {
+    \tx{прямое (декартово) произведение $ x $ и $ w $ с реализацией} \\
+    &\tx{упорядоченной пары $ y $}
+    } \\
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{бинарное отношение с реализацией упорядоченной пары $ y $}
+    = \\
+    &\exists z, w \ x \subseteq z \times_y w
+\end{flalign*}
+\begin{flalign*}
+    &\tx{dom} \ x \equiv y
+    =
+    z \to w \to (z, w) \in x \to z \in y \\
+    &\ntnt{\tx{dom} \ x}{\tx{область определения $ x $}}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{rng} \ x \equiv y = z \to w \to (z, w) \in x \to w \in y \\
+    &\ntnt{\tx{rng} \ x}{\tx{область значений $ x $}} \\
+    &\tx{dom} \ x = \set{\alpha \in \cup\cup x \mid \exists y \ (\alpha, y) \in x} \\
+    &\tx{rng} \ x = \set{\alpha \in \cup\cup x \mid \exists y \ (y, \alpha) \in x}
+\end{flalign*}
+
+\section{Теоремы}
+\begin{flalign*}
+    &\exists! x \ x - \tx{пустое} \\
+    &x \times_{\tx{kur}} y
+    \equiv
     \set {
     \mathcal{P} \left(\mathcal{P} \left(x \cup y\right)\right) \
     \left| \
@@ -195,22 +264,15 @@
     \begin{cases}
         z \in x \\
         i \in y \\
-        z \equiv (w, i)
+        z \equiv (w, i)_{kur}
     \end{cases}
     \right.
     } \\
-    &\df{x \subseteq y \times z}{x - \text{бинарное отношение}}
-\end{flalign*}
-
-\section{Теоремы}
-\begin{flalign*}
-    &\exists! x \ x - \text{пустое} \\
-    &(\_, \_) - \text{упорядоченная пара} \\
     &\begin{cases}
         x \equiv y \\
         z \equiv w
     \end{cases}
-    \iff
+    \tot
     x \times z \equiv y \times w \\
     &x \not\equiv \varnothing
     \to
@@ -218,15 +280,15 @@
     \to
     \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
     \to
-    x \equiv y \equiv z \equiv w
+    x \equiv y \equiv z \equiv w \\
 \end{flalign*}
 
 \chapter{Формальные языки}
 \begin{flalign*}
-    &a \neq \varnothing \iff a - \text{алфавит} \\
-    &a \in A \iff a - \text{символ (буква)} \\
-    &f: \underline{n} \rightarrow A \iff f - \text{слово} \\
-    &\varepsilon - \text{пустое слово} \\
+    &a \neq \varnothing \tot a - \tx{алфавит} \\
+    &a \in A \tot a - \tx{символ (буква)} \\
+    &f: \underline{n} \rightarrow A \tot f - \tx{слово} \\
+    &\varepsilon - \tx{пустое слово} \\
     &\varepsilon = \varnothing
 \end{flalign*}
 
