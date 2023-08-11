@@ -143,11 +143,7 @@
 \begin{flalign*}
     &x \in \cup \ y
     =
-    \exists z
-    \begin{cases}
-        x \in z \\
-        z \in y
-    \end{cases} \\
+    \exists z \in y \ x \in z \\
     &\ntnt{\cup x}{\tx{объединение $ x $}} \\
 \end{flalign*}
 \begin{flalign*}
@@ -203,7 +199,7 @@
     &(x, y)_z \equiv w
     =
     \begin{cases}
-        i \to j \to k \to t \to
+        i, j, k, t \to
         \left(
         \begin{cases}
             i \equiv k \\
@@ -223,12 +219,7 @@
 \begin{flalign*}
     &x \times_y z \equiv w
     =
-    \forall i \in w \ \exists j, k
-    \begin{cases}
-        j \in x \\
-        k \in z \\
-        i \equiv (j, k)_y
-    \end{cases} \\
+    \forall i \in w \ \exists j \in x, k \in z \ i \equiv (j, k)_y \\
     &\ntnt{x \times_y z} {
     \tx{прямое (декартово) произведение $ x $ и $ w $ с реализацией} \\
     &\tx{упорядоченной пары $ y $}
@@ -261,29 +252,27 @@
     &x \times_{\tx{kur}} y
     \equiv
     \set {
-    \mathcal{P} \left(\mathcal{P} \left(x \cup y\right)\right) \
-    \left| \
-    \exists z, w, i
-    \begin{cases}
-        z \in x \\
-        i \in y \\
-        z \equiv (w, i)_{kur}
-    \end{cases}
-    \right.
+    \alpha \in \mathcal{P} \left(\mathcal{P} \left(x \cup y\right)\right)
+    \mid
+    \exists z \in x, w \in y \ \alpha \equiv (z, w)_{\tx{kur}}
     } \\
-    &\begin{cases}
+    &\exists (x, z)_i
+    \to
+    \left(
+    \begin{cases}
         x \equiv y \\
         z \equiv w
     \end{cases}
     \tot
-    x \times z \equiv y \times w \\
+    x \times_i z \equiv y \times_i w
+    \right) \\
     &x \not\equiv \varnothing
     \to
     y \not\equiv \varnothing
     \to
-    \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
+    \left(x \times_z y\right) \cup \left(y \times_z x\right) \equiv w \times_z i
     \to
-    x \equiv y \equiv z \equiv w \\
+    x \equiv y \equiv w \equiv i \\
     &\tx{dom}_{\tx{kur}} \ x
     =
     \set{\alpha \in \cup\cup x \mid \exists y \ (\alpha, y) \in x} \\
