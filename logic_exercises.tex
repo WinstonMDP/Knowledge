@@ -2325,4 +2325,159 @@ $ A \cap C = \varnothing $.
     &\exists z \in x \ \exists y \in z \ w \in y \\
     &\exists z, i \ (z, i)_{\tx{kur}} \in x \ \exists y \in (z, i)_{\tx{kur}} \ w \in y \\
 \end{flalign*}
+
+\section{Дашков ЕВ | 1.3.5}
+Докажите, что $ \cup\cup x^{-1} \equiv \cup\cup x $,
+а затем $ \tx{dom} \ x^{-1} \equiv \tx{rng} x $ и
+$ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
+
+\subsection{}
+\begin{flalign*}
+    \cup\cup x^{-1} \equiv \cup\cup x
+\end{flalign*}
+
+\begin{flalign*}
+    &x^{-1} \equiv \set {
+    \alpha \in \tx{rng} \ x \times \tx{dom} \ x \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \alpha \equiv (y, z) \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    }
+    \equiv \\
+    &\set {
+    \alpha
+    \in
+    \mathcal{P}\left(\mathcal{P}\left(\tx{rng} \ x \cup \tx{dom} \ x\right)\right) \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \alpha \equiv (y, z) \\
+        (z, y) \in x \\
+        \exists w \in \tx{rng} \ x, i \in \tx{dom} \ x \ \alpha \equiv (w, i)
+    \end{cases}
+    \right.
+    }
+    \equiv \\
+    &\set {
+    \alpha
+    \in
+    \mathcal{P}\left(\mathcal{P}\left(\tx{rng} \ x \cup \tx{dom} \ x\right)\right) \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \alpha \equiv (y, z) \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    } \\
+    &\cup x^{-1}
+    \equiv
+    \set {
+    \alpha \in \mathcal{P}\left(\tx{rng} \ x \cup \tx{dom} \ x\right) \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \left[
+        \begin{aligned}
+            &\alpha \equiv \set{y} \\
+            &\alpha \equiv \set{y, z}
+        \end{aligned}
+        \right. \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    } \\
+    &\cup\cup x^{-1}
+    \equiv
+    \set {
+    \alpha \in \tx{rng} \ x \cup \tx{dom} \ x \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \left[
+        \begin{aligned}
+            &\alpha \equiv y \\
+            &\alpha \equiv z
+        \end{aligned}
+        \right. \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    }
+    \equiv
+    \set{\alpha \in \cup\cup x \ \left| \ \top \right.}
+    \equiv
+    \cup\cup x
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    \tx{dom} \ x^{-1} \to \tx{rng} \ x
+\end{flalign*}
+
+\begin{flalign*}
+    &y \in \tx{dom} \ x^{-1}
+    \implies
+    \begin{cases}
+        y \in \cup\cup x^{-1} \\
+        \exists z \ (y, z) \in x^{-1}
+    \end{cases}
+    \implies
+    \exists z, w, i
+    \begin{cases}
+        y \in \cup\cup x \\
+        (y, z) \in \tx{rng} \ x \times \tx{dom} \ x \\
+        (y, z) \equiv (w, i) \\
+        (i, w) \in x
+    \end{cases}
+    \implies \\
+    &\exists z
+    \begin{cases}
+        y \in \cup\cup x \\
+        (z, y) \in x
+    \end{cases}
+\end{flalign*}
+И т.д.
+
+\section{Дашков ЕВ | 1.3.32}
+Докажите, что $ \tx{imact} \ (x \circ y) \ z \equiv
+\tx{imact} \ x \ (\tx{imact} \ y \ z) $.
+
+\begin{flalign*}
+    &\tx{imact} \ x \ (\tx{imact} \ y \ z)
+    \equiv
+    \set {
+    \alpha \in \tx{rng} \ x \mid \exists w \in (\tx{imact} \ y \ z) \ (w, \alpha) \in x
+    }
+    \equiv \\
+    &\set {
+    \alpha \in \tx{rng} \ x
+    \mid
+    \exists w \in \set{\beta \in \tx{rng} \ y \mid \exists i \in z \ (i, \beta) \in y} \
+    (w, \alpha) \in x
+    } \\
+    &\tx{imact} \ (x \circ y) \ z
+    \equiv
+    \set {
+    \alpha \in \tx{rng} \ (x \circ y) \mid \exists w \in z \ (w, \alpha) \in (x \circ y)
+    }
+    \equiv \\
+    &\set {
+    \alpha \in \tx{rng} \ (x \circ y)
+    \mid
+    \exists w \in z \ (w, \alpha) \in \set {
+    \beta \in \tx{dom} \ y \times \tx{rng} \ x
+    \mid
+    \exists i \in \tx{rng} \ y
+    \begin{cases}
+        (w, i) \in y \\
+        (i, \alpha) \in x
+    \end{cases}
+    }
+    }
+\end{flalign*}
 \end{document}

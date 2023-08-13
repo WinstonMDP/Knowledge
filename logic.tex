@@ -144,23 +144,23 @@
     &x \in \cup \ y
     =
     \exists z \in y \ x \in z \\
-    &\ntnt{\cup x}{\tx{объединение $ x $}} \\
+    &\ntnt{\cup x}{\tx{объединение $ x $}}
 \end{flalign*}
 \begin{flalign*}
     &x \in \mathcal{P} \ y = x \subseteq y \\
     &\ntnt{\mathcal{P} \ x}{\tx{множество всех подмножеств $ x $}}
 \end{flalign*}
 \begin{flalign*}
-    &\set{\alpha \in x \mid z \ \alpha} \equiv y
+    &\set{\alpha \in x \mid y \ \alpha} \equiv z
     =
     w
     \to
     \left(
-    w \in y
+    w \in z
     \tot
     \begin{cases}
         w \in x \\
-        z \ w
+        y \ w
     \end{cases}
     \right) \\
     &x - \tx{пустое} = y \to y \not\in x\\
@@ -196,89 +196,99 @@
     &\tx{Симметрическая разность $ x $ и $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &(x, y)_z \equiv w
-    =
-    \begin{cases}
-        i, j, k, t \to
-        \left(
-        \begin{cases}
-            i \equiv k \\
-            j \equiv t
-        \end{cases}
-        \tot
-        z \ i \ j \equiv z \ k \ t
-        \right) \\
-        w \equiv z \ x \ y
-    \end{cases} \\
-    &\ntnt{(x, y)_z}{\tx{упорядоченная пара $ x $ и $ y $ с реализацией $ z $}}
+    &(x, y) = \set{\set{x}, \set{x, y}} \\
+    &\tx{Упорядоченная пара Куратовского $ x $ и $ y $} 
 \end{flalign*}
 \begin{flalign*}
-    &\tx{kur} \ x \ y = \set{\set{x}, \set{x, y}} \\
-    &\tx{Упорядоченная пара Куратовского}
-\end{flalign*}
-\begin{flalign*}
-    &x \times_y z \equiv w
+    &x \times y
     =
-    \forall i \in w \ \exists j \in x, k \in z \ i \equiv (j, k)_y \\
-    &\ntnt{x \times_y z} {
-    \tx{прямое (декартово) произведение $ x $ и $ w $ с реализацией} \\
-    &\tx{упорядоченной пары $ y $}
+    \set {
+    \alpha \in \mathcal{P}\left(\mathcal{P} \left(x \cup y\right)\right)
+    \mid
+    \exists z \in x, w \in y \ \alpha \equiv (z, w)
     } \\
+    &\tx{Прямое (декартово) произведение $ x $ и $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &x - \tx{бинарное отношение с реализацией упорядоченной пары $ y $}
-    = \\
-    &\exists z, w \ x \subseteq z \times_y w
+    &x - \tx{бинарное отношение} = \exists y, z \ x \subseteq y \times z
 \end{flalign*}
 \begin{flalign*}
-    &\tx{dom}_x \ y \equiv z
+    &\tx{dom} \ x
     =
-    w \to i \to (w, i)_x \in y \to w \in z \\
-    &\ntnt{\tx{dom}_x \ y} {
-    \tx{область определения $ y $ с реализацией упорядоченной пары $ x $}
-    }
+    \set{\alpha \in \cup\cup x \mid \exists y \ (\alpha, y) \in x} \\
+    &\tx{Область определения $ x $}
 \end{flalign*}
 \begin{flalign*}
-    &\tx{rng}_x \ y \equiv z = w \to i \to (w, i)_x \in y \to i \in z \\
-    &\ntnt{\tx{rng}_x \ y} {
-    \tx{область значений $ y $ с реализацией упорядоченной пары $ x $}
-    }
+    &\tx{rng} \ x = \set{\alpha \in \cup\cup x \mid \exists y \ (y, \alpha) \in x} \\
+    &\tx{Область значений $ x $}
 \end{flalign*}
-
+\begin{flalign*}
+    &x - \tx{поле $ y $} = x \equiv \cup\cup y
+\end{flalign*}
+\begin{flalign*}
+    &x^{-1} = \set {
+    \alpha \in \tx{rng} \ x \times \tx{dom} \ x \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \alpha \equiv (y, z) \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    } \\
+    &\tx{Обратное отношение к $ x $}
+\end{flalign*}
+\begin{flalign*}
+    &x \circ y = \set {
+    \alpha \in \tx{dom} \ y \times \tx{rng} \ x \
+    \left| \
+    \exists z, w, i
+    \begin{cases}
+        \alpha \equiv (z, w) \\
+        (z, i) \in x \\
+        (i, w) \in y
+    \end{cases}
+    \right.
+    } \\
+    &\tx{Композиция $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    \tx{id}_x = \set{\alpha \in x \times x \mid \exists y \ \alpha \equiv (y, y)}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{imact} \ x \ y
+    =
+   \set{\alpha \in \tx{rng} \ x \mid \exists z \in y \ (z, \alpha) \in x} \\
+    &\tx{Образ $ x $ под действием $ y $}
+\end{flalign*}
 
 \section{Теоремы}
 \begin{flalign*}
     &\exists! x \ x - \tx{пустое} \\
-    &x \times_{\tx{kur}} y
-    \equiv
-    \set {
-    \alpha \in \mathcal{P} \left(\mathcal{P} \left(x \cup y\right)\right)
-    \mid
-    \exists z \in x, w \in y \ \alpha \equiv (z, w)_{\tx{kur}}
-    } \\
-    &\exists (x, z)_i
-    \to
-    \left(
-    \begin{cases}
+    &\begin{cases}
+        x \equiv z \\
+        y \equiv w
+    \end{cases}
+    \tot
+    (x, y) \equiv (z, w) \\
+    &\forall z \in x \times y \ \exists w \in x, i \in y \ z \equiv (w, i) \\
+    &\begin{cases}
         x \equiv y \\
         z \equiv w
     \end{cases}
     \tot
-    x \times_i z \equiv y \times_i w
-    \right) \\
+    x \times z \equiv y \times w \\
     &x \not\equiv \varnothing
     \to
     y \not\equiv \varnothing
     \to
-    \left(x \times_z y\right) \cup \left(y \times_z x\right) \equiv w \times_z i
+    \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
     \to
-    x \equiv y \equiv w \equiv i \\
-    &\tx{dom}_{\tx{kur}} \ x
-    =
-    \set{\alpha \in \cup\cup x \mid \exists y \ (\alpha, y) \in x} \\
-    &\tx{rng}_{\tx{kur}} \ x
-    =
-    \set{\alpha \in \cup\cup x \mid \exists y \ (y, \alpha) \in x}
+    x \equiv y \equiv z \equiv w \\
+    &(y, z) \in x \to y \in \tx{dom} \ x \\
+    &(y, z) \in x \to z \in \tx{rng} \ x \\
+    &x - \tx{бинарное отношение} \to \cup\cup x \equiv \tx{dom} \ x \cup \tx{rng} \ x \\
+    &\left(x \circ y\right)^{-1} \equiv y^{-1} \circ x^{-1}
 \end{flalign*}
 
 \chapter{Формальные языки}
