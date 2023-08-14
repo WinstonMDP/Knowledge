@@ -2478,6 +2478,106 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
         (i, \alpha) \in x
     \end{cases}
     }
+    } \\
+    &\equiv
+    \set {
+    \alpha \in \tx{rng} \ x
+    \mid
+    \exists w \in z \ (w, \alpha) \in \set {
+    \beta \in \tx{dom} \ y \times \tx{rng} \ x
+    \mid
+    \exists i \in \tx{rng} \ y
+    \begin{cases}
+        (w, i) \in y \\
+        (i, \alpha) \in x
+    \end{cases}
     }
+    }
+\end{flalign*}
+
+
+\section{Дашков ЕВ | 1.4.5}
+Пусть отношение $ x \circ y $ инъективно, а $ x $ тотально для $ \tx{rng} \ y $.
+Докажите, что тогда инъективно $ y $, но не всегда инъективно $ x $.
+
+\subsection{}
+\begin{flalign*}
+    x \circ y - \tx{инъективное}
+    \to
+    x - \tx{тотальное на $ \tx{rng} \ y $}
+    \to
+    y - \tx{инъективное}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x \circ y - \tx{инъективное}, x - \tx{тотальное на $ \tx{rng} \ y $} \\
+    &(z, w) \in x \circ y \to (i, w) \in x \circ y \to z \equiv i \\
+    &\left(\exists j \ (z, j) \in y \ (j, w) \in x\right)
+    \to
+    \left(\exists j \ (i, j) \in y \ (j, w) \in x\right)
+    \to
+    z \equiv i \\
+    &\tx{rewrite} \
+    y - \tx{инъективно}
+    =
+    z, w, i \to (z, w) \in y \to (i, w) \in y \to z \equiv i \\
+    &\tx{intro} \ (z, w) \in y, (i, w) \in y \\
+    &\tx{intro} \ \exists j \ (w, j) \in x \\
+    &(z, j) \in x \circ y \\
+    &(i, j) \in x \circ y \\
+    &\top
+\end{flalign*}
+
+\subsection{}
+Не всегда инъективно $ x $.
+
+\begin{flalign*}
+    &(\varnothing, \set{\varnothing}) \in y \\
+    &(\varnothing, \set{\set{\varnothing}}) \in y \\
+    &(\set{\varnothing}, \set{\varnothing, \set{\varnothing}}) \in x \\
+    &(\set{\set{\varnothing}}, \set{\varnothing, \set{\varnothing}}) \in x
+\end{flalign*}
+
+\section{Лавров ИА, Максимова ЛЛ | по мотивам 2.11}
+\begin{flalign*}
+    x \subseteq y \times z \to w \circ x \equiv x \to w \upharpoonleft z \equiv \tx{id}_z
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x \subseteq y \times z, w \circ x \equiv x \\
+    &\tx{rewrite} \
+    x \subseteq y \times z \to w \circ x \equiv x \to w \upharpoonleft z \equiv \tx{id}_z
+    = \\
+    &x \subseteq y \times z
+    \to
+    w \circ x \equiv x
+    \to
+    \begin{cases}
+        \forall i \in w \upharpoonleft z \ i \in \tx{id}_z \\
+        \forall i \in \tx{id}_z \ i \in w \upharpoonleft z
+    \end{cases}
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    &\tx{rewrite} \
+    i \in \tx{id}_z
+    =
+    \begin{cases}
+        i \in z \times z \\
+        \exists j \ i \equiv (j, j)
+    \end{cases} \\
+    &\tx{intro} \ i \in w \upharpoonleft z \\
+    &i \in w \\
+    &\exists j \in z, k \ i \equiv (j, k) \\
+    &\left(
+    \exists t
+    \begin{cases}
+        (j, t) \in x \\
+        (t, k) \in w
+    \end{cases}
+    \right)
+    \to
+    (j, k) \in y \times z
 \end{flalign*}
 \end{document}

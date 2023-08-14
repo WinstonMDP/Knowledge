@@ -122,9 +122,6 @@
     &\tx{Существует единственный $ x $ удовлетворяющий $ y \ x $}
 \end{flalign*}
 \begin{flalign*}
-    \ax{x \equiv y \to z \ x \equiv z \ y}
-\end{flalign*}
-\begin{flalign*}
     &x \in \set{y, z, \ldots}
     =
     \left[
@@ -197,7 +194,7 @@
 \end{flalign*}
 \begin{flalign*}
     &(x, y) = \set{\set{x}, \set{x, y}} \\
-    &\tx{Упорядоченная пара Куратовского $ x $ и $ y $} 
+    &\tx{Упорядоченная пара Куратовского $ x $ и $ y $}
 \end{flalign*}
 \begin{flalign*}
     &x \times y
@@ -210,7 +207,7 @@
     &\tx{Прямое (декартово) произведение $ x $ и $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &x - \tx{бинарное отношение} = \exists y, z \ x \subseteq y \times z
+    x - \tx{бинарное отношение} = \exists y, z \ x \subseteq y \times z
 \end{flalign*}
 \begin{flalign*}
     &\tx{dom} \ x
@@ -223,7 +220,7 @@
     &\tx{Область значений $ x $}
 \end{flalign*}
 \begin{flalign*}
-    &x - \tx{поле $ y $} = x \equiv \cup\cup y
+    x - \tx{поле $ y $} = x \equiv \cup\cup y
 \end{flalign*}
 \begin{flalign*}
     &x^{-1} = \set {
@@ -245,8 +242,8 @@
     \exists z, w, i
     \begin{cases}
         \alpha \equiv (z, w) \\
-        (z, i) \in x \\
-        (i, w) \in y
+        (z, i) \in y \\
+        (i, w) \in x
     \end{cases}
     \right.
     } \\
@@ -256,22 +253,54 @@
     \tx{id}_x = \set{\alpha \in x \times x \mid \exists y \ \alpha \equiv (y, y)}
 \end{flalign*}
 \begin{flalign*}
-    &\tx{imact} \ x \ y
+    &x \upharpoonleft y
     =
-   \set{\alpha \in \tx{rng} \ x \mid \exists z \in y \ (z, \alpha) \in x} \\
-    &\tx{Образ $ x $ под действием $ y $}
+    \set{\alpha \in x \mid \exists z \in y, w \ \alpha \equiv (z, w)} \\
+    &\tx{Ограничение $ x $ на $ y $ слева}
+\end{flalign*}
+\begin{flalign*}
+    &x \upharpoonright y
+    =
+    \set{\alpha \in x \mid \exists z, w \in y \ \alpha \equiv (z, w)} \\
+    &\tx{Ограничение $ x $ на $ y $ справа}
+\end{flalign*}
+\begin{flalign*}
+    &x \uparrow y = x \upharpoonleft y \upharpoonright y \\
+    &\tx{Ограничение $ x $ на $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{тотальное на $ y $} = y \subseteq \tx{dom} \ x \\
+    &x - \tx{суръективное на $ y $} = y \subseteq \tx{rng} \ x \\
+    &x - \tx{функциональное}
+    =
+    y, z, w \to (y, z) \in x \to (y, w) \in x \to z \equiv w \\
+    &x - \tx{инъективное}
+    =
+    y, z, w \to (y, z) \in x \to (w, z) \in x \to y \equiv w
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{функция из $ y $}
+    =
+    \begin{cases}
+        x - \tx{тотальное на $ y $} \\
+        x - \tx{функциональное}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x^y
+    =
+    \set{\alpha \in \mathcal{P}\left(y \times x\right) \mid \alpha - \tx{функция из $ y $}}
 \end{flalign*}
 
 \section{Теоремы}
 \begin{flalign*}
     &\exists! x \ x - \tx{пустое} \\
     &\begin{cases}
-        x \equiv z \\
-        y \equiv w
+        x \equiv y \\
+        z \equiv w
     \end{cases}
     \tot
-    (x, y) \equiv (z, w) \\
-    &\forall z \in x \times y \ \exists w \in x, i \in y \ z \equiv (w, i) \\
+    (x, z) \equiv (y, w) \\
     &\begin{cases}
         x \equiv y \\
         z \equiv w
