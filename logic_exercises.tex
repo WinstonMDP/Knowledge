@@ -2524,8 +2524,7 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
     &\tx{intro} \ (z, w) \in y, (i, w) \in y \\
     &\tx{intro} \ \exists j \ (w, j) \in x \\
     &(z, j) \in x \circ y \\
-    &(i, j) \in x \circ y \\
-    &\top
+    &(i, j) \in x \circ y
 \end{flalign*}
 
 \subsection{}
@@ -2540,36 +2539,48 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
 
 \section{Лавров ИА, Максимова ЛЛ | по мотивам 2.11}
 \begin{flalign*}
-    x \subseteq y \times z \to w \circ x \equiv x \to w \upharpoonleft z \equiv \tx{id}_z
+    x - \tx{функциональное}
+    \to
+    x \subseteq y \times z
+    \to
+    w \circ x \equiv x
+    \to
+    w \upharpoonright \tx{rng} \ x \equiv \tx{id}_{\tx{rng} \ x}
 \end{flalign*}
 
 \begin{flalign*}
-    &\tx{intro} \ x \subseteq y \times z, w \circ x \equiv x \\
+    &\tx{intro} \ x - \tx{функциональное}, x \subseteq y \times z, w \circ x \equiv x \\
     &\tx{rewrite} \
-    x \subseteq y \times z \to w \circ x \equiv x \to w \upharpoonleft z \equiv \tx{id}_z
+    x \subseteq y \times z
+    \to
+    w \circ x \equiv x
+    \to
+    w \upharpoonright \tx{rng} \ x \equiv \tx{id}_z
     = \\
-    &x \subseteq y \times z
+    &x - \tx{функциональное}
+    \to
+    x \subseteq y \times z
     \to
     w \circ x \equiv x
     \to
     \begin{cases}
-        \forall i \in w \upharpoonleft z \ i \in \tx{id}_z \\
-        \forall i \in \tx{id}_z \ i \in w \upharpoonleft z
+        \forall i \in w \upharpoonright \tx{rng} \ x \ i \in \tx{id}_{\tx{rng} \ x} \\
+        \forall i \in \tx{id}_{\tx{rng} \ x} \ i \in w \upharpoonright \tx{rng} \ x
     \end{cases}
 \end{flalign*}
 
 \subsection{}
 \begin{flalign*}
     &\tx{rewrite} \
-    i \in \tx{id}_z
+    i \in \tx{id}_{\tx{rng} \ x}
     =
     \begin{cases}
         i \in z \times z \\
         \exists j \ i \equiv (j, j)
     \end{cases} \\
-    &\tx{intro} \ i \in w \upharpoonleft z \\
+    &\tx{intro} \ i \in w \upharpoonright \tx{rng} \ x \\
     &i \in w \\
-    &\exists j \in z, k \ i \equiv (j, k) \\
+    &\exists j \in \tx{rng} \ x, k \ i \equiv (j, k) \\
     &\left(
     \exists t
     \begin{cases}
@@ -2578,6 +2589,356 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
     \end{cases}
     \right)
     \to
-    (j, k) \in y \times z
+    (j, k) \in y \times z \\
+    &\tx{intro} \ j, k \ \exists j \in \tx{rng} \ x, k \ i \equiv (j, k) \\
+    &(j, k) \in \tx{rng} \ x \times z \\
+    &(j, k) \in z \times z \\
+    &(t, l) \in x \to (t, m) \in x \to l \equiv m \\
+    &k \in \tx{rng} \ x \\
+    &\tx{intro} \ \exists t \ (t, j) \in x \\
+    &(t, k) \in x \\
+    &j \equiv k
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    &\tx{rewrite} \
+    i \in w \upharpoonright \tx{rng} \ x
+    =
+    \begin{cases}
+        i \in w \\
+        \exists j \in \tx{rng} \ x, k \ i \equiv (j, k)
+    \end{cases} \\
+    &\tx{intro} \ i \in \tx{id}_{\tx{rng} \ x} \\
+    &i \in \tx{rng} \ x \times \tx{rng} \ x \\
+    &\exists j \ i \equiv (j, j) \\
+    &(j, k) \in x
+    \to
+    \exists t
+    \begin{cases}
+        (j, t) \in x \\
+        (t, k) \in w
+    \end{cases} \\
+    &\tx{intro} \ \exists j \ i \equiv (j, j) \\
+    &\exists k \ (k, j) \in x \\
+    &\exists k \ (k, j) \in w \\
+    &\tx{intro} \ \exists k \ (k, j) \in x \\
+    &\tx{intro} \ \exists t 
+    \begin{cases}
+        (k, t) \in x \\
+        (t, j) \in w
+    \end{cases} \\
+    &t \equiv j
+\end{flalign*}
+
+\section{Своё | 1}
+\begin{flalign*}
+    x \neq \varnothing \to \tx{rng} \ \left(x \times y\right) \equiv y
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    y \neq \varnothing \to x \in \tx{rng} \left(y \times z\right) \to x \in z
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ y \neq \varnothing, x \in \tx{rng} \left(y \times z\right) \\
+    &x \in \cup\cup \left(y \times z\right) \\
+    &\exists w \ (w, x) \in y \times z
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    y \neq \varnothing \to x \in z \to x \in \tx{rng} \left(y \times z\right)
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite} \
+    x \in \tx{rng} \left(y \times z\right)
+    =
+    \begin{cases}
+        x \in \cup\cup \left(y \times z\right) \\
+        \exists w \ (w, x) \in y \times z
+    \end{cases} \\
+    &\tx{intro} \ y \neq \varnothing, x \in z
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.6}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \tot
+    \begin{cases}
+        x \circ x^{-1} \equiv \tx{id}_z \\
+        x^{-1} \circ x \equiv \tx{id}_y
+    \end{cases}
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \to
+    \begin{cases}
+        x \circ x^{-1} \equiv \tx{id}_z \\
+        x^{-1} \circ x \equiv \tx{id}_y
+    \end{cases}
+\end{flalign*}
+
+\subsubsection{.}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \to
+    x \circ x^{-1} \equiv \tx{id}_z \\
+\end{flalign*}
+
+\paragraph{..}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \to
+    (w, i) \in x \circ x^{-1}
+    \to
+    (w, i) \in \tx{id}_z
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x - \tx{биекция из $ y $ в $ z $}, (w, i) \in x \circ x^{-1} \\
+    &\exists j
+    \begin{cases}
+        (w, j) \in x^{-1} \\
+        (j, i) \in x
+    \end{cases} \\
+    &\exists j
+    \begin{cases}
+        (j, w) \in x \\
+        (j, i) \in x
+    \end{cases} \\
+    &w \equiv i
+\end{flalign*}
+
+\paragraph{..}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \to
+    (w, w) \in \tx{id}_z
+    \to
+    (w, w) \in x \circ x^{-1}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x - \tx{биекция из $ y $ в $ z $}, (w, w) \in \tx{id}_z \\
+    &\tx{rewrite} \
+    (w, w) \in x \circ x^{-1}
+    =
+    \exists i
+    \begin{cases}
+        (w, i) \in x^{-1} \\
+        (i, w) \in x
+    \end{cases} \\
+    &\exists i \ (i, w) \in x
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    \begin{cases}
+        x \circ x^{-1} \equiv \tx{id}_z \\
+        x^{-1} \circ x \equiv \tx{id}_y
+    \end{cases}
+    \to
+    x - \tx{биекция из $ y $ в $ z $}
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    \begin{cases}
+        x \circ x^{-1} \equiv \tx{id}_z \\
+        x^{-1} \circ x \equiv \tx{id}_y
+    \end{cases}
+    \to
+    x - \tx{тотально на $ y $}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ y \subseteq \tx{dom} \ x \\
+    &w \in y \to \exists i \ (w, i) \in x
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.14}
+\begin{flalign*}
+    x \cap y \equiv \varnothing \to z^{x \cup y} \sim z^x \times z^y
+\end{flalign*}
+
+\begin{flalign*}
+    &w = \set {
+    \alpha \in z^{x \cup y} \times \left(z^x \times z^y\right)
+    \mid
+    \exists i \ \alpha \equiv (i, (i \upharpoonright x, i \upharpoonright y))
+    } \\
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w - \tx{тотальное на $ z^{x \cup y} $}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ z^{x \cup y} \subseteq \tx{dom} \ w \\
+    &\tx{rewrite-d} \
+    i \in z^{x \cup y}
+    \to
+    \begin{cases}
+        i \in \cup\cup w \\
+        \exists j \ (i, j) \in w
+    \end{cases} \\
+    &\tx{intro-d} \\
+    &\tx{rewrite} \
+    \exists j \ (i, j) \in w
+    =
+    \exists j, k \
+    \begin{cases}
+        i \in z^{x \cup y} \\
+        j \in z^x \times z^y \\
+        i \equiv k \\
+        j \equiv (k \upharpoonright x, k \upharpoonright y)
+    \end{cases}
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w - \tx{сюръективное на $ z^x \times z^y $}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ z^x \times z^y \subseteq \tx{rng} \ w \\
+    &\tx{rewrite-d} \
+    (i, j) \in z^x \times z^y
+    \to
+    \begin{cases}
+        (i, j) \in \cup\cup w \\
+        \exists k \ (k, (i, j)) \in w
+    \end{cases} \\
+    &\tx{rewrite} \
+    \exists k \ (k, (i, j)) \in w
+    =
+    \exists k, t
+    \begin{cases}
+        k \in z^{x \cup y} \\
+        i \in z^x \\
+        j \in z^y \\
+        k \equiv t \\
+        i \equiv t \upharpoonright x \\
+        j \equiv t \upharpoonright y
+    \end{cases}
+    =
+    \exists k
+    \begin{cases}
+        k \in z^{x \cup y} \\
+        i \in z^x \\
+        j \in z^y \\
+        i \equiv k \upharpoonright x \\
+        j \equiv k \upharpoonright y
+    \end{cases} \\
+    &\tx{intro-d} \\
+    &k = \left(i \cup j\right) \upharpoonright x \\
+    &k
+    \equiv
+    \set{\alpha \in i \cup j \mid \exists t \in x, l \ \alpha \equiv (t, l)}
+    \equiv
+    i \\
+    &i \cup j \in z^{x \cup y}
+\end{flalign*}
+
+\subsubsection{.}
+\begin{flalign*}
+    (t, l) \in k \to (t, l) \in i
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &(t, l) \in i \cup j \\
+    &t \in x \\
+    &t \not\in y
+\end{flalign*}
+
+\subsubsection{.}
+\begin{flalign*}
+    i \cup j - \tx{функциональное}
+\end{flalign*}
+
+\begin{flalign*}
+    \tx{rewrite-d} \ (t, l) \in i \cup j \to (t, m) \in i \cup j \to l \equiv m
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w - \tx{функциональное}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ (i, j) \in w \to (i, k) \in w \to j \equiv k \\
+    &\tx{intro-d} \\
+    &j \equiv (i \upharpoonright x, i \upharpoonright y) \\
+    &k \equiv (i \upharpoonright x, i \upharpoonright y)
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w - \tx{инъективное}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ (i, j) \in w \to (k, j) \in w \to i \equiv k \\
+    &\tx{intro-d} \\
+    &j \equiv (i \upharpoonright x, i \upharpoonright y) \\
+    &j \equiv (k \upharpoonright x, k \upharpoonright y) \\
+    &i \upharpoonright x
+    \equiv
+    \set{\alpha \in i \mid \exists t \in x, l \ \alpha \equiv (t, l)} \\
+    &i \in z^{x \cup y} \\
+    &k \in z^{x \cup y} \\
+    &t \in x
+    \to
+    l \in z
+    \to
+    \begin{cases}
+        (t, l) \in i \\
+        (t, l) \in k
+    \end{cases} \\
+    &t \in y
+    \to
+    l \in z
+    \to
+    \begin{cases}
+        (t, l) \in i \\
+        (t, l) \in k
+    \end{cases} \\
+    &\left[
+    \begin{aligned}
+        t \in x \\
+        t \in y
+    \end{aligned}
+    \right.
+    \to
+    l \in z
+    \to
+    \begin{cases}
+        (t, l) \in i \\
+        (t, l) \in k
+    \end{cases}
+\end{flalign*}
+
+\section{}
+\begin{flalign*}
+    \mathcal{P} \ x \not\lesssim x
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ \mathcal{P} \ x \lesssim x \to \bot \\
+    &\tx{intro-d} \\
+    &\exists y
+    \begin{cases}
+        y - \tx{инъекция из $ \mathcal{P} \ x $} \\
+        y \subseteq \left(\mathcal{P} \ x\right) \times x
+    \end{cases} \\
+    &
 \end{flalign*}
 \end{document}

@@ -14,7 +14,6 @@
 Три возможные формы с кванторами
 \begin{flalign*}
     &\forall (y \ x) \ (z \ x) \mid \tx{в $ y \ x $ стоит первым символом} \\
-    &\exists x \\
     &\exists x \ (y \ x) \\
     &\exists (y \ x) \ (z \ x) \mid \tx{в $ y \ x $ стоит первым символом}
 \end{flalign*}
@@ -36,22 +35,88 @@
 
 \subsection{Пары}
 \begin{flalign*}
-    \ax{\exists \set{x, y}}
+    &\ax {
+    x \in \set{y, z}
+    =
+    \left[
+    \begin{aligned}
+        &x \equiv y \\
+        &x \equiv z
+    \end{aligned}
+    \right.
+    } \\
+    &\ntnt{\set{x, y}}{\tx{множество из $ x, y $}}
 \end{flalign*}
 
 \subsection{Объединения}
 \begin{flalign*}
-    \ax{\exists \left(\cup x\right)}
+    &\ax {
+    x \in \cup \ y
+    =
+    \exists z \in y \ x \in z
+    } \\
+    &\ntnt{\cup x}{\tx{объединение $ x $}}
 \end{flalign*}
 
 \subsection{Степени}
 \begin{flalign*}
-    \ax{\exists \left(\mathcal{P} \ x\right)}
+    &\ax{x \in \mathcal{P} \ y = x \subseteq y} \\
+    &\ntnt{\mathcal{P} \ x}{\tx{множество всех подмножеств $ x $}}
 \end{flalign*}
 
 \subsection{Выделения}
 \begin{flalign*}
-    \exists \set{\alpha \in x \mid y \ \alpha}
+    &\set{\alpha \in x \mid y \ \alpha}
+    = \\
+    &\exel
+    \left(
+    \fnd {
+    \argtype{y}{\bb{S}}
+    \to
+    \left(
+    z
+    \to
+    \left[
+    \begin{aligned}
+        &\exists! w \ (x \ z \ w) \\
+        &\nexists w \ (x \ z \ w)
+    \end{aligned}
+    \right.
+    \right)
+    \to
+    \exists z \ w
+    \to
+    \left(w \in z \tot \exists i \in y \ x \ i \ w\right)
+    }
+    \right. \\
+    &\left.
+    \left(
+    z, w \mapsto
+    \begin{cases}
+        z \equiv w \\
+        y \ w
+    \end{cases}
+    \right) \
+    x \
+    \fnd {
+    z
+    \to
+    \left[
+    \begin{aligned}
+        &\exists! w
+        \begin{cases}
+            z \equiv w \\
+            y \ w
+        \end{cases} \\
+        &\nexists w
+        \begin{cases}
+            z \equiv w \\
+            y \ w
+        \end{cases}
+    \end{aligned}
+    \right.
+    }
+    \right)
 \end{flalign*}
 Выводится из аксиомы подстановки.
 
@@ -109,7 +174,7 @@
     &\tx{$ x $ тогда и только тогда, когда $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &x \equiv y = z \to \left(z \in x \tot z \in y\right) \\
+    &x \equiv y = z \in x \tot z \in y \\
     &\gr{t}{}{}{\_\equiv\_}
 \end{flalign*}
 \begin{flalign*}
@@ -117,55 +182,25 @@
     =
     \begin{cases}
         \exists x \ y \ x \\
-        z \to y \ z \to z \equiv \exel\fnd{\exists x \ y \ x}
+        y \ z \to z \equiv \exel\fnd{\exists x \ y \ x}
     \end{cases} \\
     &\tx{Существует единственный $ x $ удовлетворяющий $ y \ x $}
 \end{flalign*}
 \begin{flalign*}
-    &x \in \set{y, z, \ldots}
-    =
-    \left[
-    \begin{aligned}
-        &x \equiv y \\
-        &x \equiv z \\
-        &\ldots
-    \end{aligned}
-    \right. \\
-    &\ntnt{\set{x, y, \ldots}}{\tx{множество из $ x, y, \ldots $}}
-\end{flalign*}
-\begin{flalign*}
-    &x \subseteq y = \forall z \in x \ z \in y \\
+    &x \subseteq y = z \in x \to z \in y \\
     &\tx{$ x $ вложено в $ y $; $ x $ - подмножество $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &x \in \cup \ y
-    =
-    \exists z \in y \ x \in z \\
-    &\ntnt{\cup x}{\tx{объединение $ x $}}
+    &\set{y, z, \ldots} = \set{y, \cup\set{z, \cup\set{\ldots}}} \\
+    &\tx{Множество из $ y, z, \ldots $}
 \end{flalign*}
 \begin{flalign*}
-    &x \in \mathcal{P} \ y = x \subseteq y \\
-    &\ntnt{\mathcal{P} \ x}{\tx{множество всех подмножеств $ x $}}
-\end{flalign*}
-\begin{flalign*}
-    &\set{\alpha \in x \mid y \ \alpha} \equiv z
-    =
-    w
-    \to
-    \left(
-    w \in z
-    \tot
-    \begin{cases}
-        w \in x \\
-        y \ w
-    \end{cases}
-    \right) \\
-    &x - \tx{пустое} = y \to y \not\in x\\
+    &x - \tx{пустое} = y \to y \not\in x \\
     &x - \tx{индуктивное}
     =
     \begin{cases}
-        \forall y - \tx{пустое} \ y \in x \\
-        \forall z \in x \ z \cup \set{z} \in x
+        y - \tx{пустое} \to y \in x \\
+        z \in x \to z \cup \set{z} \in x
     \end{cases} \\
     &\varnothing
     =
@@ -210,20 +245,29 @@
     x - \tx{бинарное отношение} = \exists y, z \ x \subseteq y \times z
 \end{flalign*}
 \begin{flalign*}
-    &\tx{dom} \ x
+    &\tx{dom} \ x \ \fnd{x - \tx{бинарное отношение}}
     =
-    \set{\alpha \in \cup\cup x \mid \exists y \ (\alpha, y) \in x} \\
+     \set{\alpha \in \cup\cup x \mid \exists y \ (\alpha, y) \in x} \\
     &\tx{Область определения $ x $}
 \end{flalign*}
 \begin{flalign*}
-    &\tx{rng} \ x = \set{\alpha \in \cup\cup x \mid \exists y \ (y, \alpha) \in x} \\
+    &\tx{rng} \ x \ \fnd{x - \tx{бинарное отношение}}
+    =
+    \set{\alpha \in \cup\cup x \mid \exists y \ (y, \alpha) \in x} \\
     &\tx{Область значений $ x $}
 \end{flalign*}
 \begin{flalign*}
-    x - \tx{поле $ y $} = x \equiv \cup\cup y
+    x - \tx{поле $ y $}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        x \equiv \cup\cup y
+    \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    &x^{-1} = \set {
+    &x^{-1}
+    =
+    \set {
     \alpha \in \tx{rng} \ x \times \tx{dom} \ x \
     \left| \
     \exists y, z
@@ -236,7 +280,9 @@
     &\tx{Обратное отношение к $ x $}
 \end{flalign*}
 \begin{flalign*}
-    &x \circ y = \set {
+    &x \circ y
+    =
+    \set {
     \alpha \in \tx{dom} \ y \times \tx{rng} \ x \
     \left| \
     \exists z, w, i
@@ -253,13 +299,13 @@
     \tx{id}_x = \set{\alpha \in x \times x \mid \exists y \ \alpha \equiv (y, y)}
 \end{flalign*}
 \begin{flalign*}
-    &x \upharpoonleft y
+    &x \upharpoonright y \ \fnd{x - \tx{бинарное отношение}}
     =
     \set{\alpha \in x \mid \exists z \in y, w \ \alpha \equiv (z, w)} \\
     &\tx{Ограничение $ x $ на $ y $ слева}
 \end{flalign*}
 \begin{flalign*}
-    &x \upharpoonright y
+    &x \upharpoonleft y \ \fnd{x - \tx{бинарное отношение}}
     =
     \set{\alpha \in x \mid \exists z, w \in y \ \alpha \equiv (z, w)} \\
     &\tx{Ограничение $ x $ на $ y $ справа}
@@ -270,13 +316,19 @@
 \end{flalign*}
 \begin{flalign*}
     &x - \tx{тотальное на $ y $} = y \subseteq \tx{dom} \ x \\
-    &x - \tx{суръективное на $ y $} = y \subseteq \tx{rng} \ x \\
+    &x - \tx{сюръективное на $ y $} = y \subseteq \tx{rng} \ x \\
     &x - \tx{функциональное}
     =
-    y, z, w \to (y, z) \in x \to (y, w) \in x \to z \equiv w \\
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (y, w) \in x \to z \equiv w
+    \end{cases} \\
     &x - \tx{инъективное}
     =
-    y, z, w \to (y, z) \in x \to (w, z) \in x \to y \equiv w
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (w, z) \in x \to y \equiv w
+    \end{cases}
 \end{flalign*}
 \begin{flalign*}
     x - \tx{функция из $ y $}
@@ -290,6 +342,40 @@
     x^y
     =
     \set{\alpha \in \mathcal{P}\left(y \times x\right) \mid \alpha - \tx{функция из $ y $}}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{инъекция из $ y $}
+    =
+    \begin{cases}
+        x - \tx{функция из $ y $} \\
+        x - \tx{инъективное}
+    \end{cases} \\
+    &x - \tx{сюръекция из $ y $ в $ z $}
+    =
+    \begin{cases}
+        x - \tx{функция из $ y $} \\
+        x - \tx{суръективно на $ z $}
+    \end{cases} \\
+    &x - \tx{биекция из $ y $ в $ z $}
+    =
+    \begin{cases}
+        x - \tx{инъекция из $ y $} \\
+        x - \tx{сюръекция из $ y $ в $ z $}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &x \lesssim y
+    =
+    \exists z
+    \begin{cases}
+        z \subseteq x \times y \\
+        z - \tx{инъекция из $ x $}
+    \end{cases} \\
+    &\tx{$ x $ вложен в $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \sim y = \exists z \ z - \tx{биекция из $ x $ в $ y $} \\
+    &\tx{$ x $ равномощен $ y $}
 \end{flalign*}
 
 \section{Теоремы}
@@ -317,7 +403,14 @@
     &(y, z) \in x \to y \in \tx{dom} \ x \\
     &(y, z) \in x \to z \in \tx{rng} \ x \\
     &x - \tx{бинарное отношение} \to \cup\cup x \equiv \tx{dom} \ x \cup \tx{rng} \ x \\
-    &\left(x \circ y\right)^{-1} \equiv y^{-1} \circ x^{-1}
+    &\left(x \circ y\right)^{-1} \equiv y^{-1} \circ x^{-1} \\
+    &\begin{cases}
+        x^{-1} \circ x \equiv \tx{id}_y \\
+        x \circ x^{-1} \equiv \tx{id}_z
+    \end{cases}
+    \tot
+    x - \tx{биекция из $ y $ в $ z $} \\
+    &x \lesssim y \tot \exists z \subseteq y \ x \sim z
 \end{flalign*}
 
 \chapter{Формальные языки}
