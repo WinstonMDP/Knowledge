@@ -2926,19 +2926,134 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
     \end{cases}
 \end{flalign*}
 
-\section{}
+\section{Дашков ЕВ | 1.5.25}
 \begin{flalign*}
-    \mathcal{P} \ x \not\lesssim x
+    \set{0, 1}^{\bb{N}} \sim \set{0, 1, 2}^{\bb{N}}
 \end{flalign*}
 
 \begin{flalign*}
-    &\tx{rewrite-d} \ \mathcal{P} \ x \lesssim x \to \bot \\
+    &j
+    =
+    \set {
+    \alpha \in \set{0, 1, 2}^{\bb{N}} \times \set{0, 1}^{\bb{N}} \
+    \left| \
+    \exists x \
+    \alpha
+    \equiv
+    \left(
+    x,
+    i \ x
+    \right)
+    \right.
+    } \\
+    &i \ x
+    =
+    \set {
+    \beta \in \bb{N} \times \set{0, 1} \
+    \left| \
+    \exists y, z, w
+    \left[
+    \begin{aligned}
+        &\begin{cases}
+            \beta \equiv (2y, z) \\
+            (y, w) \in x \\
+            w \equiv 0 \to z \equiv 0 \\
+            w \equiv 1 \to z \equiv 0 \\
+            w \equiv 2 \to z \equiv 1
+        \end{cases} \\
+        &\begin{cases}
+            \beta \equiv (2y + 1, z) \\
+            (y, w) \in x \\
+            w \equiv 0 \to z \equiv 0 \\
+            w \equiv 1 \to z \equiv 1 \\
+            w \equiv 2 \to z \equiv 0
+        \end{cases}
+    \end{aligned}
+    \right.
+    \right.
+    }
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.28}
+\begin{flalign*}
+    x - \tx{сюръекция из $ y $ в $ z $}
+    \to
+    \exists w - \tx{функция из $ z $;} \ x \circ w \equiv \tx{id}_z
+\end{flalign*}
+
+\begin{flalign*}
     &\tx{intro-d} \\
-    &\exists y
+    &\set {
+    \alpha \in z \times y
+    \mid
+    \exists w \
+    \alpha
+    \equiv
+    \left(w, \tx{choose} \ \set{\beta \in y \mid (w, \beta) \in x^{-1}}\right)
+    }
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.31}
+\subsection{}
+\begin{flalign*}
+    &x - \tx{функция из $ y $}
+    \to
+    x \subseteq y \times z
+    \to
+    w - \tx{функция из $ z $}
+    \to
+    w \subseteq z \times y
+    \to \\
+    &w \circ x \equiv \tx{id}_y
+    \to
+    x - \tx{инъективное}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ (i, j) \in x \to (k, j) \in x \to i \equiv k \\
+    &\tx{intro-d} \\
+    &\begin{cases}
+        (t, l) \in x \\
+        (l, m) \in w
+    \end{cases}
+    \to
+    t \equiv m \\
+    &\tx{intro} \ \exists q \ (j, q) \in w \\
+    &i \equiv q \\
+    &k \equiv q
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    &x - \tx{функция из $ y $}
+    \to
+    x \subseteq y \times z
+    \to
+    w - \tx{функция из $ z $}
+    \to
+    w \subseteq z \times y
+    \to \\
+    &x - \tx{инъективное}
+    \to
+    w \circ x \equiv \tx{id}_y
+\end{flalign*}
+
+\begin{flalign*}
+    \tx{intro-d}
+\end{flalign*}
+
+\subsubsection{.}
+\begin{flalign*}
+    (i, j) \in w \circ x \to (i, j) \in \tx{id}_y
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &\exists k
     \begin{cases}
-        y - \tx{инъекция из $ \mathcal{P} \ x $} \\
-        y \subseteq \left(\mathcal{P} \ x\right) \times x
-    \end{cases} \\
-    &
+        (i, k) \in x \\
+        (k, j) \in w
+    \end{cases}
 \end{flalign*}
 \end{document}
