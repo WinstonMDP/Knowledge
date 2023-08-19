@@ -13,6 +13,7 @@ infixr 50 _==_
 
 postulate
     𝕊-≡-congruence : {x y : 𝕊} → (z : 𝕊 → Set) → x == y → z x ≡ z y
+    𝕊-≡-2-congruence : {x y : Set} → (z : Set → 𝕊) → x ≡ y → z x == z y
     ==-congruence : {x y : 𝕊} → (z : 𝕊 → 𝕊) → x == y → z x == z y
 
 ==-logic-eq : {x y : 𝕊} → x == y → (z : 𝕊) → z ∈ x ≡ z ∈ y
@@ -282,3 +283,60 @@ union-⊆ {x} {y} = ≡-def (and-def
 
 square : 𝕊 → 𝕊
 square x = x × x
+
+dom : (x : 𝕊) → 𝕊
+dom x = ∃-element (subsets-ax (∪ (∪ x)) λ y → ∃ λ z → tuple y z ∈ x)
+    
+data total : 𝕊 → 𝕊 → Set where
+    total-def : {x y : 𝕊} → y ⊆ dom x → total x y
+
+data func : 𝕊 → Set where
+    func-def : {x : 𝕊} → ((y z w : 𝕊) → tuple y z ∈ x → tuple y w ∈ x → z == w) → func x
+     
+data function : 𝕊 → 𝕊 → Set where
+    function-def : {x y : 𝕊} → total x y → func x → function x y
+
+Y : (x : 𝕊) → ((y : 𝕊) → y ∈ x → ∃ λ z → z ∈ y) → 𝕊
+Y x y = ∃-element (subsets-ax (x × ∪ x) λ z → ∃ λ w → ∃ λ i → z == tuple w (∃-element (y w i)))
+
+choice : (x : 𝕊) → ((y : 𝕊) → y ∈ x → ∃ λ z → z ∈ y) → ∃ λ z → function z x and z ⊆ x × ∪ x and ((j : 𝕊) → j ∈ x → ∃ λ k → tuple j k ∈ z and k ∈ j)
+choice x j = ∃-def
+             (λ z → function z x and z ⊆ x × ∪ x and ((j₁ : 𝕊) → j₁ ∈ x → ∃ (λ k → tuple j₁ k ∈ z and k ∈ j₁)))
+             (Y x j)
+             (and-def
+              (and-def
+               (function-def
+                (total-def
+                 (⊆-def (λ k t → to
+                                 (∃-application (subsets-ax (∪ (∪ (Y x j))) (λ y → ∃ λ z → tuple y z ∈ Y x j)) k)
+                                 (and-def
+                                  {!!}
+                                  (∃-def
+                                   (λ z → tuple k z ∈ Y x j)
+                                   (∃-element (j k t))
+                                   (to
+                                    (∃-application (subsets-ax (x × ∪ x) (λ z → ∃ λ w → ∃ λ i → z == tuple w (∃-element (j w i)))) (tuple k (∃-element (j k t))))
+                                    (and-def
+                                     {!!}
+                                     (∃-def
+                                      (λ w → ∃ λ i → tuple k (∃-element (j k t)) == tuple w (∃-element (j w i)))
+                                      k
+                                      (∃-def (λ l → tuple k (∃-element (j k t)) == tuple k (∃-element (j k l))) t (==-reflexivity (tuple k (∃-element (j k t)))))))))))))
+                (func-def (λ y z w i k → {!!})))
+               {!!})
+              λ i k → ∃-def
+                      (λ k₁ → tuple i k₁ ∈ Y x j and k₁ ∈ i)
+                      (∃-element (j i k))
+                      (and-def
+                       (to
+                        (∃-application (subsets-ax (x × ∪ x) (λ z → ∃ λ w → ∃ λ i → z == tuple w (∃-element (j w i)))) (tuple i (∃-element (j i k))))
+                        (and-def
+                         {!!}
+                         (∃-def
+                          (λ w → ∃ (λ i₁ → tuple i (∃-element (j i k)) == tuple w (∃-element (j w i₁))))
+                          i
+                          (∃-def (λ i₁ → tuple i (∃-element (j i k)) == tuple _ (∃-element (j _ i₁))) k (==-reflexivity _)))))
+                       (∃-application (j i k))))
+
+-- back (∃-application (subsets-ax (x × ∪ x) λ z → ∃ λ w → ∃ λ i → z == tuple w (∃-element (j w i))) (tuple y z)) i
+-- ∃-application (∃-application (and-right (back (∃-application (subsets-ax (x × ∪ x) λ z → ∃ λ w → ∃ λ i → z == tuple w (∃-element (j w i))) (tuple y z)) i)))

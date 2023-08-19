@@ -3026,34 +3026,144 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
 
 \subsection{}
 \begin{flalign*}
-    &x - \tx{функция из $ y $}
+    &\left[
+    \begin{aligned}
+        &y \not\equiv \varnothing \\
+        &z \equiv \varnothing
+    \end{aligned}
+    \right.
+    \to
+    x - \tx{инъекция из $ y $}
     \to
     x \subseteq y \times z
     \to
-    w - \tx{функция из $ z $}
-    \to
-    w \subseteq z \times y
-    \to \\
-    &x - \tx{инъективное}
-    \to
-    w \circ x \equiv \tx{id}_y
-\end{flalign*}
-
-\begin{flalign*}
-    \tx{intro-d}
+    \exists w
+    \begin{cases}
+        w - \tx{функция из $ z $} \\
+        w \subseteq z \times y \\
+        w \circ x \equiv \tx{id}_y
+    \end{cases}
 \end{flalign*}
 
 \subsubsection{.}
 \begin{flalign*}
-    (i, j) \in w \circ x \to (i, j) \in \tx{id}_y
+    &y \not\equiv \varnothing
+    \to
+    x - \tx{инъекция из $ y $}
+    \to
+    x \subseteq y \times z
+    \to
+    \exists w
+    \begin{cases}
+        w - \tx{функция из $ z $} \\
+        w \subseteq z \times y \\
+        w \circ x \equiv \tx{id}_y
+    \end{cases}
 \end{flalign*}
 
 \begin{flalign*}
     &\tx{intro-d} \\
+    &\tx{intro} \ \exists t \in y \\
+    &w
+    =
+    \set {
+    \alpha \in z \times y \
+    \left| \
+    \exists i, j
+    \begin{cases}
+        \alpha \equiv (i, j) \\
+        \exists k \ (i, k) \in x^{-1} \to j \equiv k \\
+        \overline{\exists k \ (i, k) \in x^{-1}} \to j \equiv t
+    \end{cases}
+    \right.
+    }
+\end{flalign*}
+
+\paragraph{..}
+\begin{flalign*}
+    w - \tx{тотальное на $ z $}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ i \in z
+    \to
+    \exists j
+    \begin{cases}
+        \exists k \ (i, k) \in x^{-1} \to j \equiv k \\
+        \overline{\exists k \ (i, k) \in x^{-1}} \to j \equiv t
+    \end{cases} \\
+    &\tx{intro-d} \\
+    &\left[
+    \begin{aligned}
+        &\exists j \ (i, j) \in x^{-1} \\
+        &\overline{\exists j \ (i, j) \in x^{-1}}
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &\exists j, k
+        \begin{cases}
+            (i, j) \in x^{-1} \\
+            k \equiv j
+        \end{cases} \\
+        &\exists k
+        \begin{cases}
+            \overline{\exists j \ (i, j) \in x^{-1}} \\
+            k \equiv t
+        \end{cases}
+    \end{aligned}
+    \right. \\
+    &\exists k
+    \left[
+    \begin{aligned}
+        &\begin{cases}
+            \exists j \ (i, j) \in x^{-1} \\
+            \exists j \ k \equiv j
+        \end{cases} \\
+        &\begin{cases}
+            \overline{\exists j \ (i, j) \in x^{-1}} \\
+            k \equiv t
+        \end{cases}
+    \end{aligned}
+    \right. \\
     &\exists k
     \begin{cases}
-        (i, k) \in x \\
-        (k, j) \in w
+        \exists j \ (i, j) \in x^{-1} \to k \equiv j \\
+        \overline{\exists j \ (i, j) \in x^{-1}} \to k \equiv t
     \end{cases}
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.38}
+Предположим, что для любых множеств $ x $ и $ y $ любая сюръекция из $ x $ в $ y $
+имеет правую обратную. Выведите отсюда аксиому выбора.
+(Иначе говоря, лемма равносильна аксиоме выбора.)
+
+\begin{flalign*}
+    &\tx{intro-n} \ \varnothing \not\in x \\
+    &y \ z \ \fnd{\varnothing \not\in z}
+    =
+    \set {
+    \alpha \in z \times \set{z} \
+    \left| \
+    \exists w, i
+    \begin{cases}
+        \alpha \equiv (w, i) \\
+        w \in i
+    \end{cases}
+    \right.
+    } \\
+    &y \ z - \tx{сюръекция из $ z $ в $ \set{z} $} \\
+    &i \ z = \exel\fnd {
+    \exists w
+    \begin{cases}
+        w - \tx{функция из $ \set{z} $} \\
+        w \circ y \ z \equiv \tx{id}_z
+    \end{cases}
+    } \\
+    &\set {
+    \alpha \in x \times \cup x
+    \mid
+    \exists w \ \alpha \equiv (w, \tx{apply} \ (i \ w) \ w)
+    }
 \end{flalign*}
 \end{document}
