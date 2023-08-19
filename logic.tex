@@ -126,17 +126,16 @@
 \end{flalign*}
 
 \subsection{Выбора}
+В этой системе, которая вроде является системой Мартина-Лёфа Пера, вроде доказуема.
 \begin{flalign*}
-    \ax {
     \varnothing \not\in x
     \to
     \exists y
     \begin{cases}
         y - \tx{функция из $ x $} \\
         y \subseteq x \times \cup x \\
-        \forall z \in x \ \tx{apply} \ y \ z \in z
+        \forall z \in x \ y_z \in z
     \end{cases}
-    }
 \end{flalign*}
 
 \subsection{Регулярности (фундированности)}
@@ -276,17 +275,6 @@
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    \tx{apply} \ x \ y \
-    \fnd {
-    \begin{cases}
-        x - \tx{бинарное отношение} \\
-        y \in \tx{dom} \ x
-    \end{cases}
-    }
-    =
-    \exel \fnd{\exists z \ (y, z) \in x}
-\end{flalign*}
-\begin{flalign*}
     &x^{-1}
     =
     \set {
@@ -318,7 +306,7 @@
     &\tx{Композиция $ x $ и $ y $}
 \end{flalign*}
 \begin{flalign*}
-    \tx{id}_x = \set{\alpha \in x \times x \mid \exists y \ \alpha \equiv (y, y)}
+    \tx{idr} \ x = \set{\alpha \in x \times x \mid \exists y \ \alpha \equiv (y, y)}
 \end{flalign*}
 \begin{flalign*}
     &x \upharpoonright y \ \fnd{x - \tx{бинарное отношение}}
@@ -353,30 +341,47 @@
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    &\tx{ch} \ x \ \fnd{\varnothing \not\in x}
-    =
-    \exel \fnd {
-    \exists y
-    \begin{cases}
-        y - \tx{функция из $ x $} \\
-        y \subseteq x \times \cup x \\
-        \forall z \in x \ \tx{apply} \ y \ z \in z
-    \end{cases}
-    } \\
-    &\tx{choose} \ x = \tx{apply} \left(\tx{ch} \ \set{x}\right) \ x
-\end{flalign*}
-\begin{flalign*}
-    x - \tx{функция из $ y $}
+    &x - \tx{функция из $ y $}
     =
     \begin{cases}
         x - \tx{тотальное на $ y $} \\
         x - \tx{функциональное}
+    \end{cases} \\
+    &x - \tx{индексированное семейство множеств с индексами из $ y $}
+\end{flalign*}
+\begin{flalign*}
+    x_y \
+    \fnd{
+    \begin{cases}
+        x - \tx{функция из $ z $} \\
+        y \in z
     \end{cases}
+    }
+    =
+    \exel\fnd{\exists w \ (y, w) \in x}
 \end{flalign*}
 \begin{flalign*}
     x^y
     =
     \set{\alpha \in \mathcal{P}\left(y \times x\right) \mid \alpha - \tx{функция из $ y $}}
+\end{flalign*}
+\begin{flalign*}
+    &\prod x
+    =
+    \set {
+    \alpha \in (\cup\tx{rng} \ x)^{\tx{dom} \ x}
+    \mid
+    \forall y \in \tx{dom} \ x \ \alpha_y \in x_y} \\
+    &\tx{Прямое (декартово) произведение $ x $}
+\end{flalign*}
+\begin{flalign*}
+    \bigsqcup x
+    =
+    \set {
+    \alpha \in \cup\tx{rng} \ x \times \tx{dom} \ x
+    \mid
+    \exists y, z \in x_y \ \alpha \equiv (z, y)
+    }
 \end{flalign*}
 \begin{flalign*}
     &x - \tx{инъекция из $ y $}
@@ -412,6 +417,76 @@
     &x \sim y = \exists z \ z - \tx{биекция из $ x $ в $ y $} \\
     &\tx{$ x $ равномощен $ y $}
 \end{flalign*}
+\begin{flalign*}
+    &x - \tx{рефлексивное} = \forall y \in \tx{dom} \ x \ (y, y) \in x \\
+    &x - \tx{иррефлексивное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        y \to (y, y) \not\in x
+    \end{cases} \\
+    &x - \tx{симметричное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (z, y) \in x
+    \end{cases} \\
+    &x - \tx{антисимметричное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (z, y) \in x \to y \equiv z
+    \end{cases} \\
+    &x - \tx{транзитивное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (z, w) \in x \to (y, w) \in x
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{строгий порядок}
+    =
+    \begin{cases}
+        x - \tx{иррефлексивное} \\
+        x - \tx{транзитивное}
+    \end{cases} \\
+    &x - \tx{нестрогий порядок}
+    =
+    \begin{cases}
+        x - \tx{рефлексивное} \\
+        x - \tx{антисимметричное} \\
+        x - \tx{транзитивное}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{$ y $-минимальный}
+    =
+    \begin{cases}
+        y - \tx{иррефлексивное} \\
+        \forall z \in \tx{dom} \ y \ (z, x) \not\in y
+    \end{cases} \\
+    &x - \tx{$ y $-максимальный}
+    =
+    \begin{cases}
+        y - \tx{иррефлексивное} \\
+        \forall z \in \tx{rng} \ y \ (x, z) \not\in y
+    \end{cases} \\
+    &\tx{min} \ x \ y \ \fnd{x - \tx{иррефлексивное}}
+    =
+    \set{\alpha \in y \mid \alpha - \tx{$ x $-минимальный}} \\
+    &\tx{max} \ x \ y \ \fnd{x - \tx{иррефлексивное}}
+    =
+    \set{\alpha \in y \mid \alpha - \tx{$ x $-максимальный}}
+\end{flalign*}
+\begin{flalign*}
+    (x, y) - \tx{частично упорядоченное множество}
+    =
+    \begin{cases}
+        y - \tx{строгий частичный порядок} \\
+        \tx{dom} \ y \subseteq x
+    \end{cases}
+\end{flalign*}
 
 \section{Теоремы}
 \begin{flalign*}
@@ -439,9 +514,10 @@
     &(y, z) \in x \to z \in \tx{rng} \ x \\
     &\cup\cup x \equiv \tx{dom} \ x \cup \tx{rng} \ x \\
     &\left(x \circ y\right)^{-1} \equiv y^{-1} \circ x^{-1} \\
+    &x^{-1} \subseteq x \tot x \equiv x^{-1} \\
     &\begin{cases}
-        x^{-1} \circ x \equiv \tx{id}_y \\
-        x \circ x^{-1} \equiv \tx{id}_z
+        x^{-1} \circ x \equiv \tx{idr} \ y \\
+        x \circ x^{-1} \equiv \tx{idr} \ z
     \end{cases}
     \tot
     x - \tx{биекция из $ y $ в $ z $} \\
@@ -450,6 +526,11 @@
 \subsection{Кантора-Шрёдера-Бернштейна}
 \begin{flalign*}
     x \lesssim y \to y \lesssim x \to x \sim y
+\end{flalign*}
+\begin{flalign*}
+    \set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{строгий порядок}}
+    \sim
+    \set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{нестрогий порядок}}
 \end{flalign*}
 
 \chapter{Формальные языки}

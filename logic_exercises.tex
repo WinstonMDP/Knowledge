@@ -1,5 +1,7 @@
 \input{knowledge_preamble}
 
+\setcounter{tocdepth}{1}
+
 \title{Теория множеств: \\ упражнения}
 \date{\today}
 \author{WinstonMDP}
@@ -7,6 +9,9 @@
 \begin{document}
 \maketitle
 
+\tableofcontents
+
+\chapter{Операции над множествами}
 \section{Дашков ЕВ | 1.2.12}
 Приведите к противоречию предположение о существовании множества всех множеств.
 
@@ -1706,6 +1711,7 @@ $ A \cap C = \varnothing $.
     \overline{B}C
 \end{flalign*}
 
+\chapter{Бинарные отношения}
 \section{Дашков ЕВ | 1.2.53}
 Установим, что для любых множеств $ A, B, C, D $ верно
 \begin{flalign*}
@@ -3163,7 +3169,26 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
     &\set {
     \alpha \in x \times \cup x
     \mid
-    \exists w \ \alpha \equiv (w, \tx{apply} \ (i \ w) \ w)
+    \exists w \ \alpha \equiv (w, \exel\fnd{\exists j \ (w, j) \in (i \ w)})
     }
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.6.19}
+\begin{flalign*}
+    (x, y) - \tx{частично упорядоченное множество}
+    \to
+    \begin{cases}
+        \tx{min} \ y \ x \equiv \tx{max} \ y^{-1} \ x \\
+        \tx{max} \ y \ x \equiv \tx{min} \ y^{-1} \ x
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    \tx{intro-d}
+\end{flalign*}
+\lend
+\begin{flalign*}
+    \tx{min} \ y \ x \equiv \tx{max} \ y^{-1} \ x \\
+\end{flalign*}
+\begin{flalign*}
 \end{flalign*}
 \end{document}
