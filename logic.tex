@@ -352,6 +352,7 @@
 \begin{flalign*}
     x_y \
     \fnd{
+    \exists z
     \begin{cases}
         x - \tx{функция из $ z $} \\
         y \in z
@@ -445,21 +446,6 @@
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    &x - \tx{строгий порядок}
-    =
-    \begin{cases}
-        x - \tx{иррефлексивное} \\
-        x - \tx{транзитивное}
-    \end{cases} \\
-    &x - \tx{нестрогий порядок}
-    =
-    \begin{cases}
-        x - \tx{рефлексивное} \\
-        x - \tx{антисимметричное} \\
-        x - \tx{транзитивное}
-    \end{cases}
-\end{flalign*}
-\begin{flalign*}
     &x - \tx{$ y $-минимальный}
     =
     \begin{cases}
@@ -480,11 +466,98 @@
     \set{\alpha \in y \mid \alpha - \tx{$ x $-максимальный}}
 \end{flalign*}
 \begin{flalign*}
+    &x - \tx{строгий порядок}
+    =
+    \begin{cases}
+        x - \tx{иррефлексивное} \\
+        x - \tx{транзитивное}
+    \end{cases} \\
+    &x - \tx{нестрогий порядок}
+    =
+    \begin{cases}
+        x - \tx{рефлексивное} \\
+        x - \tx{антисимметричное} \\
+        x - \tx{транзитивное}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{$ y $-нижняя грань $ z $}
+    =
+    \begin{cases}
+        y - \tx{нестрогий порядок} \\
+        \forall w \in z \ (x, w) \in y
+    \end{cases} \\
+    &x - \tx{$ y $-верхняя грань $ z $}
+    =
+    \begin{cases}
+        y - \tx{нестрогий порядок} \\
+        \forall w \in z \ (w, x) \in y
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{$ y $-наименьший}
+    =
+    x - \tx{$ y $-нижняя грань $ \tx{rng} \ y $} \\
+    &x - \tx{$ y $-наибольший}
+    =
+    x - \tx{$ y $-верхняя грань $ \tx{rng} \ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{$ y $-точная нижняя грань ($ y $-инфинум) $ z $}
+    = \\
+    &x
+    -
+    \tx {$
+    \left(y \uparrow \set{\alpha \in z \mid \alpha - \tx{нижняя грань $ z $}}\right)
+    $-наибольший
+    } \\
+    &x - \tx{$ y $-точная верхняя грань ($ y $-супремум) $ z $}
+    = \\
+    &x
+    -
+    \tx {$
+    \left(y \uparrow \set{\alpha \in z \mid \alpha - \tx{верхняя грань $ z $}}\right)
+    $-наименьший
+    } \\
+    &\tx{inf} \ x \ y \ \fnd{\exists z \ z - \tx{$ x $-точная нижняя грань $ y $}}
+    = \\
+    &\cup\set{\alpha \in y \mid \alpha - \tx{$ x $-точная нижняя грань $ y $}} \\
+    &\tx{sup} \ x \ y \ \fnd{\exists z \ z - \tx{$ x $-точная верхняя грань $ y $}}
+    = \\
+    &\cup\set{\alpha \in y \mid \alpha - \tx{$ x $-точная верхняя грань $ y $}}
+\end{flalign*}
+\begin{flalign*}
     (x, y) - \tx{частично упорядоченное множество}
     =
     \begin{cases}
         y - \tx{строгий частичный порядок} \\
         \tx{dom} \ y \subseteq x
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    (x, y) - \tx{решётка}
+    =
+    \begin{cases}
+        (x, y) - \tx{частично упорядоченное множество} \\
+        \forall z \in x, w \in x \
+        \exists i, j
+        \begin{cases}
+            i - \tx{$ y $-точная нижняя грань $ \set{z, w} $} \\
+            j - \tx{$ y $-точная верхняя грань $ \set{z, w} $} \\
+        \end{cases}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    (x, y) - \tx{полная решётка}
+    =
+    \begin{cases}
+        (x, y) - \tx{частично упорядоченное множество} \\
+        \forall z \subseteq x \
+        \exists w, i
+        \begin{cases}
+            w - \tx{$ y $-точная нижняя грань $ z $} \\
+            i - \tx{$ y $-точная верхняя грань $ z $}
+        \end{cases}
     \end{cases}
 \end{flalign*}
 
