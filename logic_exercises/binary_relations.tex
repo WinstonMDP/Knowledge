@@ -1,0 +1,1524 @@
+\input{../knowledge_preamble}
+
+\title{Теория множеств \\ упражнения \\ бинарные отношения}
+\date{\today}
+\author{WinstonMDP}
+
+\begin{document}
+\maketitle
+
+\section{Дашков ЕВ | 1.2.53}
+Установим, что для любых множеств $ A, B, C, D $ верно
+\begin{flalign*}
+    \left(A \times B\right) \cap \left(C \times D\right)
+    =
+    \left(A \cap C\right) \times \left(B \cap D\right)
+\end{flalign*}
+
+\begin{flalign*}
+    &\left(
+    \exists y, z
+    \begin{cases}
+        x = (y, z) \\
+        y \in A \cap C \\
+        z \in B \cap D \\
+    \end{cases}
+    \iff
+    \exists y, z
+        \begin{cases}
+            y \in A \cap C \\
+            z \in B \cap D \\
+            x = (y, z)
+        \end{cases}
+    \right)
+    \begin{gathered}
+        \iff \\
+        \exists y = x
+    \end{gathered} \\
+    &\left(
+    \exists y, z, w, i
+    \begin{cases}
+        x = (y, z) = (i, w) \\
+        y = i \\
+        z = w \\
+        y \in A \cap C \\
+        z \in B \cap D \\
+    \end{cases}
+    \iff
+    \exists y, z
+        \begin{cases}
+            y \in A \cap C \\
+            z \in B \cap D \\
+            x = (y, z)
+        \end{cases}
+    \right)
+    \begin{gathered}
+        \iff \\
+        def \ x \cap y
+    \end{gathered} \\
+    &\left(
+    \exists y, z, w, i
+    \begin{cases}
+        y \in A \\
+        z \in B \\
+        x = (y, z) = (i, w) \\
+        y = i \\
+        z = w \\
+        y \in C \\
+        z \in D
+    \end{cases}
+    \iff
+    \exists y, z
+        \begin{cases}
+            x
+            \in
+            y \in A \cap C \\
+            z \in B \cap D \\
+            x = (y, z)
+        \end{cases}
+    \right) \\
+    &\begin{gathered}
+        \iff \\
+        x = y \ \forall z \ x \in z \iff y \in z
+    \end{gathered} \\
+    &\left(
+    \exists y, z, w, i
+    \begin{cases}
+        y \in A \\
+        z \in B \\
+        x = (y, z) = (i, w) \\
+        w \in C \\
+        i \in D \\
+        y = i \\
+        z = w
+    \end{cases}
+    \iff
+    \exists y, z
+        \begin{cases}
+            x
+            \in
+            y \in A \cap C \\
+            z \in B \cap D \\
+            x = (y, z)
+        \end{cases}
+    \right) \\
+    &\begin{gathered}
+        \iff \\
+        (x, y) = (z, w)
+        \iff
+        \begin{cases}
+            x = z \\
+            y = w
+        \end{cases}
+    \end{gathered} \\
+    &\left(
+    \exists y, z, w, i
+    \begin{cases}
+        y \in A \\
+        z \in B \\
+        x = (y, z) = (i, w) \\
+        w \in C \\
+        i \in D
+    \end{cases}
+    \iff
+    \exists y, z
+        \begin{cases}
+            x
+            \in
+            y \in A \cap C \\
+            z \in B \cap D \\
+            x = (y, z)
+        \end{cases}
+    \right)
+    \iff \\
+    &\left(
+    \begin{cases}
+        \exists y, z
+        \begin{cases}
+            y \in A \\
+            z \in B \\
+            x = (y, z)
+        \end{cases} \\
+        \exists y, z
+        \begin{cases}
+            y \in C \\
+            z \in D \\
+            x = (y, z)
+        \end{cases}
+    \end{cases}
+    \iff
+    \exists y, z
+        \begin{cases}
+            x
+            \in
+            y \in A \cap C \\
+            z \in B \cap D \\
+            x = (y, z)
+        \end{cases}
+    \right) \\
+    &\begin{gathered}
+        \iff \\
+        def \ x \times y
+    \end{gathered}
+    \left(
+    \begin{cases}
+        x \in A \times B \\
+        x \in C \times D
+    \end{cases}
+    \iff
+    x \in \left(A \cap C\right) \times \left(B \cap D\right)
+    \right)
+    \begin{gathered}
+        \iff \\
+        def \ x = y \circ def \ x \cap y
+    \end{gathered} \\
+    &\left(A \times B\right) \cap \left(C \times D\right)
+    =
+    \left(A \cap C\right) \times \left(B \cap D\right)
+\end{flalign*}
+
+\section{Собственное}
+\begin{flalign*}
+    \ldots
+    \iff
+    \left(\exists w \in Y \ x \in X \ \exists y \in Y, (x, y)\right)
+    \begin{gathered}
+        \iff \\
+        def
+    \end{gathered}
+    \left(Y \neq \varnothing \ \forall x \in X \ \exists y \in Y, (x, y)\right)
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.2.55}
+Пусть множества $ A $ и $ B $ непусты. Тогда имеем
+\begin{flalign*}
+    \begin{cases}
+        A \subseteq C \\
+        B \subseteq D
+    \end{cases}
+    \iff
+    A \times B \subseteq C \times D
+\end{flalign*}
+
+\begin{flalign*}
+    &\top \ldots \\
+    &\begin{cases}
+        \forall a \ \exists b, (x, y), c, d
+        \begin{cases}
+            A \neq \varnothing \\
+            B \neq \varnothing \\
+            \left(
+            \forall x, y, z \ \exists w, i
+            \begin{cases}
+                y \in A \\
+                z \in B \\
+                x = (y, z)
+            \end{cases}
+            \begin{cases}
+                w \in C \\
+                i \in D \\
+                x = (w, i)
+            \end{cases}
+            \right) \\
+            a \in A \\
+            b \in B \\
+            c \in C \\
+            d \in D \\
+            (c, d) = (x, y)
+        \end{cases}
+        a \in C \\
+        \ldots
+    \end{cases} \\
+    &\iff \\
+    &\begin{cases}
+        \forall a \ \exists b, (x, y)
+        \begin{cases}
+            A \neq \varnothing \\
+            B \neq \varnothing \\
+            \left(
+            \forall x, y, z \ \exists w, i
+            \begin{cases}
+                y \in A \\
+                z \in B \\
+                x = (y, z)
+            \end{cases}
+            \begin{cases}
+                w \in C \\
+                i \in D \\
+                x = (w, i)
+            \end{cases}
+            \right) \\
+            a \in A \\
+            b \in B
+        \end{cases}
+        a \in C \\
+        \ldots
+    \end{cases} \\
+    &\begin{gathered}
+        \iff \\
+        x \in X \ Y \neq \varnothing \ \exists y \in Y, (x, y)
+    \end{gathered} \\
+    &\begin{cases}
+        \begin{cases}
+            A \neq \varnothing \\
+            B \neq \varnothing
+        \end{cases}
+        \left(
+        \forall x, y, z \ \exists w, i
+        \begin{cases}
+            y \in A \\
+            z \in B \\
+            x = (y, z)
+        \end{cases}
+        \begin{cases}
+            w \in C \\
+            i \in D \\
+            x = (w, i)
+        \end{cases}
+        \right)
+        \forall x \in A \ x \in C \\
+        \begin{cases}
+            A \neq \varnothing \\
+            B \neq \varnothing
+        \end{cases}
+        \left(
+        \forall x
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in A \\
+            z \in B \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in C \\
+            z \in D \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \right)
+        \forall x \in B \ x \in D
+    \end{cases} \\
+    &\begin{cases}
+        \begin{cases}
+            A \neq \varnothing \\
+            B \neq \varnothing
+        \end{cases}
+        \left(
+        \forall x
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in A \\
+            z \in B \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in C \\
+            z \in D \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \right)
+        \forall x \in A \ x \in C \\
+        \begin{cases}
+            A \neq \varnothing \\
+            B \neq \varnothing
+        \end{cases}
+        \left(
+        \forall x
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in A \\
+            z \in B \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in C \\
+            z \in D \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \right)
+        \forall x \in B \ x \in D
+    \end{cases} \\
+    &\iff
+\end{flalign*}
+\begin{flalign*}
+    &\left(
+    \begin{cases}
+        A \neq \varnothing \\
+        B \neq \varnothing
+    \end{cases}
+    \right. \\
+    &\left.
+    \begin{cases}
+        \begin{cases}
+            \forall x \in A \ x \in C \\
+            \forall x \in B \ x \in D \\
+        \end{cases}
+        \forall x
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in A \\
+            z \in B \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in C \\
+            z \in D \\
+            x = (y, z)
+        \end{cases}
+        \right) \\
+        \left(
+        \forall x
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in A \\
+            z \in B \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \left(
+        \exists y, z
+        \begin{cases}
+            y \in C \\
+            z \in D \\
+            x = (y, z)
+        \end{cases}
+        \right)
+        \right)
+        \begin{cases}
+            \forall x \in A \ x \in C \\
+            \forall x \in B \ x \in D \\
+        \end{cases}
+    \end{cases}
+    \right) \\
+    &\iff \\
+    &\ldots \\
+    &\begin{gathered}
+        \iff \\
+        def \ x \times y
+    \end{gathered}
+    \left(
+    \begin{cases}
+        A \neq \varnothing \\
+        B \neq \varnothing
+    \end{cases}
+    \left(
+    \begin{cases}
+        \forall x \in A \ x \in C \\
+        \forall x \in B \ x \in D \\
+    \end{cases}
+    \iff
+    \forall x \in A \times B \ x \in C \times D
+    \right)
+    \right) \\
+    &\begin{gathered}
+        \iff \\
+        def \ x \subseteq y
+    \end{gathered}
+    \left(
+    \begin{cases}
+        A \neq \varnothing \\
+        B \neq \varnothing
+    \end{cases}
+    \left(
+    \begin{cases}
+        A \subseteq C \\
+        B \subseteq D \\
+    \end{cases}
+    \iff
+    A \times B \subseteq C \times D
+    \right)
+    \right)
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.2.56}
+Пусть множества $ A $ и $ B $ непусты и $ \left(A \times B\right) \cup
+\left(B \times A\right) = C \times D $. Тогда $ A = B = C = D $.
+
+\begin{flalign*}
+    &\begin{cases}
+        \begin{cases}
+            A \neq \varnothing \\
+            B \neq \varnothing \\
+            \forall x \
+            \left(\exists y \in A, z \in B \ x = (y, z)\right) \
+            \exists y \in C, z \in D \ x = (y, z) \\
+            \forall x \
+            \left(\exists y \in B, z \in A \ x = (y, z)\right) \
+            \exists y \in C, z \in D \ x = (y, z) \\
+            w \in A
+        \end{cases}
+        w \in B \\
+        \begin{cases}
+            A \neq \varnothing \\
+            B \neq \varnothing \\
+            \forall x \
+            \left(\exists y \in A, z \in B \ x = (y, z)\right) \
+            \exists y \in C, z \in D \ x = (y, z) \\
+            \forall x \
+            \left(\exists y \in B, z \in A \ x = (y, z)\right) \
+            \exists y \in C, z \in D \ x = (y, z) \\
+            w \in B
+        \end{cases}
+        w \in A \\
+        \ldots
+    \end{cases} \\
+    &\left(
+    \begin{cases}
+        A \neq \varnothing \\
+        B \neq \varnothing \\
+        \forall x
+        \left[
+        \begin{aligned}
+            \exists y, z
+            \begin{cases}
+                y \in A \\
+                z \in B \\
+                x = (y, z)
+            \end{cases} \\
+            \exists y, z
+            \begin{cases}
+                y \in B \\
+                z \in A \\
+                x = (y, z)
+            \end{cases}
+        \end{aligned}
+        \right.
+        \iff
+        \exists y, z
+        \begin{cases}
+            y \in C \\
+            z \in D \\
+            x = (y, z)
+        \end{cases}
+    \end{cases}
+    A = B = C = D
+    \right) \\
+    &\begin{gathered}
+        \iff \\
+        def \ x \times y
+    \end{gathered}
+    \left(
+    \begin{cases}
+        A \neq \varnothing \\
+        B \neq \varnothing \\
+        \forall x
+        \left[
+        \begin{aligned}
+            x \in A \times B \\
+            x \in B \times A
+        \end{aligned}
+        \right.
+        \iff
+        x \in C \times D
+    \end{cases}
+    A = B = C = D
+    \right)
+    \begin{gathered}
+        \iff \\
+        def \ x \cup y
+    \end{gathered} \\
+    &\left(
+    \begin{cases}
+        A \neq \varnothing \\
+        B \neq \varnothing \\
+        \forall x \in \left(A \times B\right) \cup \left(B \times A\right)
+        \iff
+        x \in C \times D
+    \end{cases}
+    A = B = C = D
+    \right)
+    \begin{gathered}
+        \iff \\
+        def \ x = y
+    \end{gathered} \\
+    &\left(
+    \begin{cases}
+        A \neq \varnothing \\
+        B \neq \varnothing \\
+        \left(A \times B\right) \cup \left(B \times A\right) = C \times D
+    \end{cases}
+    A = B = C = D
+    \right)
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.3.1}
+Докажите, что $ \cup\cup x \equiv \tx{dom}_{\tx{kur}} \ x \cup \tx{rng}_{\tx{kur}} \ x $
+
+\begin{flalign*}
+    x - \tx{бинарное отношение с реализацией kur}
+    \to
+    \cup\cup x \equiv \tx{dom}_{\tx{kur}} \ x \cup \tx{rng}_{\tx{kur}} \ x
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x - \tx{бинарное отношение с реализацией упорядоченной пары kur} \\
+    &\exists y, z \ x \subseteq y \times_{\tx{kur}} z \\
+    &y = \exel\fnd{\exists y, z \ x \subseteq y \times_{\tx{kur}} z} \\
+    &z = \exel\fnd{\exists z \ x \subseteq y \times_{\tx{kur}} z} \\
+    &\tx{dom}_{\tx{kur}} \ x \cup \tx{rng}_{\tx{kur}} \ x
+    \equiv
+    \set {
+    \alpha \in \cup\cup x \
+    \left| \
+    \exists w
+    \left[
+    \begin{aligned}
+        (\alpha, w)_{\tx{kur}} \in x \\
+        (w, \alpha)_{\tx{kur}} \in x
+    \end{aligned}
+    \right.
+    \right.
+    } \\
+    &w \in \cup\cup x \to \exists i \left[
+    \begin{aligned}
+        (w, i)_{\tx{kur}} \in x \\
+        (i, w)_{\tx{kur}} \in x
+    \end{aligned}
+    \right. \\
+    &\cup\cup x
+    \equiv
+    \set {
+    \alpha \in \cup\cup x \
+    \left| \
+    \exists w
+    \left[
+    \begin{aligned}
+        (\alpha, w)_{\tx{kur}} \in x \\
+        (w, \alpha)_{\tx{kur}} \in x
+    \end{aligned}
+    \right.
+    \right.
+    }
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w \in \cup\cup x \to \exists i \left[
+    \begin{aligned}
+        (w, i)_{\tx{kur}} \in x \\
+        (i, w)_{\tx{kur}} \in x
+    \end{aligned}
+    \right.
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ w \in \cup\cup x \\
+    &\exists y \in \cup x \ w \in y \\
+    &\exists z \in x \ \exists y \in z \ w \in y \\
+    &\exists z, i \ (z, i)_{\tx{kur}} \in x \ \exists y \in (z, i)_{\tx{kur}} \ w \in y \\
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.3.5}
+Докажите, что $ \cup\cup x^{-1} \equiv \cup\cup x $,
+а затем $ \tx{dom} \ x^{-1} \equiv \tx{rng} x $ и
+$ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
+
+\subsection{}
+\begin{flalign*}
+    \cup\cup x^{-1} \equiv \cup\cup x
+\end{flalign*}
+
+\begin{flalign*}
+    &x^{-1} \equiv \set {
+    \alpha \in \tx{rng} \ x \times \tx{dom} \ x \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \alpha \equiv (y, z) \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    }
+    \equiv \\
+    &\set {
+    \alpha
+    \in
+    \mathcal{P}\left(\mathcal{P}\left(\tx{rng} \ x \cup \tx{dom} \ x\right)\right) \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \alpha \equiv (y, z) \\
+        (z, y) \in x \\
+        \exists w \in \tx{rng} \ x, i \in \tx{dom} \ x \ \alpha \equiv (w, i)
+    \end{cases}
+    \right.
+    }
+    \equiv \\
+    &\set {
+    \alpha
+    \in
+    \mathcal{P}\left(\mathcal{P}\left(\tx{rng} \ x \cup \tx{dom} \ x\right)\right) \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \alpha \equiv (y, z) \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    } \\
+    &\cup x^{-1}
+    \equiv
+    \set {
+    \alpha \in \mathcal{P}\left(\tx{rng} \ x \cup \tx{dom} \ x\right) \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \left[
+        \begin{aligned}
+            &\alpha \equiv \set{y} \\
+            &\alpha \equiv \set{y, z}
+        \end{aligned}
+        \right. \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    } \\
+    &\cup\cup x^{-1}
+    \equiv
+    \set {
+    \alpha \in \tx{rng} \ x \cup \tx{dom} \ x \
+    \left| \
+    \exists y, z
+    \begin{cases}
+        \left[
+        \begin{aligned}
+            &\alpha \equiv y \\
+            &\alpha \equiv z
+        \end{aligned}
+        \right. \\
+        (z, y) \in x
+    \end{cases}
+    \right.
+    }
+    \equiv
+    \set{\alpha \in \cup\cup x \ \left| \ \top \right.}
+    \equiv
+    \cup\cup x
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    \tx{dom} \ x^{-1} \to \tx{rng} \ x
+\end{flalign*}
+
+\begin{flalign*}
+    &y \in \tx{dom} \ x^{-1}
+    \implies
+    \begin{cases}
+        y \in \cup\cup x^{-1} \\
+        \exists z \ (y, z) \in x^{-1}
+    \end{cases}
+    \implies
+    \exists z, w, i
+    \begin{cases}
+        y \in \cup\cup x \\
+        (y, z) \in \tx{rng} \ x \times \tx{dom} \ x \\
+        (y, z) \equiv (w, i) \\
+        (i, w) \in x
+    \end{cases}
+    \implies \\
+    &\exists z
+    \begin{cases}
+        y \in \cup\cup x \\
+        (z, y) \in x
+    \end{cases}
+\end{flalign*}
+И т.д.
+
+\section{Дашков ЕВ | 1.3.32}
+Докажите, что $ \tx{imact} \ (x \circ y) \ z \equiv
+\tx{imact} \ x \ (\tx{imact} \ y \ z) $.
+
+\begin{flalign*}
+    &\tx{imact} \ x \ (\tx{imact} \ y \ z)
+    \equiv
+    \set {
+    \alpha \in \tx{rng} \ x \mid \exists w \in (\tx{imact} \ y \ z) \ (w, \alpha) \in x
+    }
+    \equiv \\
+    &\set {
+    \alpha \in \tx{rng} \ x
+    \mid
+    \exists w \in \set{\beta \in \tx{rng} \ y \mid \exists i \in z \ (i, \beta) \in y} \
+    (w, \alpha) \in x
+    } \\
+    &\tx{imact} \ (x \circ y) \ z
+    \equiv
+    \set {
+    \alpha \in \tx{rng} \ (x \circ y) \mid \exists w \in z \ (w, \alpha) \in (x \circ y)
+    }
+    \equiv \\
+    &\set {
+    \alpha \in \tx{rng} \ (x \circ y)
+    \mid
+    \exists w \in z \ (w, \alpha) \in \set {
+    \beta \in \tx{dom} \ y \times \tx{rng} \ x
+    \mid
+    \exists i \in \tx{rng} \ y
+    \begin{cases}
+        (w, i) \in y \\
+        (i, \alpha) \in x
+    \end{cases}
+    }
+    } \\
+    &\equiv
+    \set {
+    \alpha \in \tx{rng} \ x
+    \mid
+    \exists w \in z \ (w, \alpha) \in \set {
+    \beta \in \tx{dom} \ y \times \tx{rng} \ x
+    \mid
+    \exists i \in \tx{rng} \ y
+    \begin{cases}
+        (w, i) \in y \\
+        (i, \alpha) \in x
+    \end{cases}
+    }
+    }
+\end{flalign*}
+
+
+\section{Дашков ЕВ | 1.4.5}
+Пусть отношение $ x \circ y $ инъективно, а $ x $ тотально для $ \tx{rng} \ y $.
+Докажите, что тогда инъективно $ y $, но не всегда инъективно $ x $.
+
+\subsection{}
+\begin{flalign*}
+    x \circ y - \tx{инъективное}
+    \to
+    x - \tx{тотальное на $ \tx{rng} \ y $}
+    \to
+    y - \tx{инъективное}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x \circ y - \tx{инъективное}, x - \tx{тотальное на $ \tx{rng} \ y $} \\
+    &(z, w) \in x \circ y \to (i, w) \in x \circ y \to z \equiv i \\
+    &\left(\exists j \ (z, j) \in y \ (j, w) \in x\right)
+    \to
+    \left(\exists j \ (i, j) \in y \ (j, w) \in x\right)
+    \to
+    z \equiv i \\
+    &\tx{rewrite} \
+    y - \tx{инъективно}
+    =
+    z, w, i \to (z, w) \in y \to (i, w) \in y \to z \equiv i \\
+    &\tx{intro} \ (z, w) \in y, (i, w) \in y \\
+    &\tx{intro} \ \exists j \ (w, j) \in x \\
+    &(z, j) \in x \circ y \\
+    &(i, j) \in x \circ y
+\end{flalign*}
+
+\subsection{}
+Не всегда инъективно $ x $.
+
+\begin{flalign*}
+    &(\varnothing, \set{\varnothing}) \in y \\
+    &(\varnothing, \set{\set{\varnothing}}) \in y \\
+    &(\set{\varnothing}, \set{\varnothing, \set{\varnothing}}) \in x \\
+    &(\set{\set{\varnothing}}, \set{\varnothing, \set{\varnothing}}) \in x
+\end{flalign*}
+
+\section{Лавров ИА, Максимова ЛЛ | по мотивам 2.11}
+\begin{flalign*}
+    x - \tx{функциональное}
+    \to
+    x \subseteq y \times z
+    \to
+    w \circ x \equiv x
+    \to
+    w \upharpoonright \tx{rng} \ x \equiv \tx{id}_{\tx{rng} \ x}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x - \tx{функциональное}, x \subseteq y \times z, w \circ x \equiv x \\
+    &\tx{rewrite} \
+    x \subseteq y \times z
+    \to
+    w \circ x \equiv x
+    \to
+    w \upharpoonright \tx{rng} \ x \equiv \tx{id}_z
+    = \\
+    &x - \tx{функциональное}
+    \to
+    x \subseteq y \times z
+    \to
+    w \circ x \equiv x
+    \to
+    \begin{cases}
+        \forall i \in w \upharpoonright \tx{rng} \ x \ i \in \tx{id}_{\tx{rng} \ x} \\
+        \forall i \in \tx{id}_{\tx{rng} \ x} \ i \in w \upharpoonright \tx{rng} \ x
+    \end{cases}
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    &\tx{rewrite} \
+    i \in \tx{id}_{\tx{rng} \ x}
+    =
+    \begin{cases}
+        i \in z \times z \\
+        \exists j \ i \equiv (j, j)
+    \end{cases} \\
+    &\tx{intro} \ i \in w \upharpoonright \tx{rng} \ x \\
+    &i \in w \\
+    &\exists j \in \tx{rng} \ x, k \ i \equiv (j, k) \\
+    &\left(
+    \exists t
+    \begin{cases}
+        (j, t) \in x \\
+        (t, k) \in w
+    \end{cases}
+    \right)
+    \to
+    (j, k) \in y \times z \\
+    &\tx{intro} \ j, k \ \exists j \in \tx{rng} \ x, k \ i \equiv (j, k) \\
+    &(j, k) \in \tx{rng} \ x \times z \\
+    &(j, k) \in z \times z \\
+    &(t, l) \in x \to (t, m) \in x \to l \equiv m \\
+    &k \in \tx{rng} \ x \\
+    &\tx{intro} \ \exists t \ (t, j) \in x \\
+    &(t, k) \in x \\
+    &j \equiv k
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    &\tx{rewrite} \
+    i \in w \upharpoonright \tx{rng} \ x
+    =
+    \begin{cases}
+        i \in w \\
+        \exists j \in \tx{rng} \ x, k \ i \equiv (j, k)
+    \end{cases} \\
+    &\tx{intro} \ i \in \tx{id}_{\tx{rng} \ x} \\
+    &i \in \tx{rng} \ x \times \tx{rng} \ x \\
+    &\exists j \ i \equiv (j, j) \\
+    &(j, k) \in x
+    \to
+    \exists t
+    \begin{cases}
+        (j, t) \in x \\
+        (t, k) \in w
+    \end{cases} \\
+    &\tx{intro} \ \exists j \ i \equiv (j, j) \\
+    &\exists k \ (k, j) \in x \\
+    &\exists k \ (k, j) \in w \\
+    &\tx{intro} \ \exists k \ (k, j) \in x \\
+    &\tx{intro} \ \exists t 
+    \begin{cases}
+        (k, t) \in x \\
+        (t, j) \in w
+    \end{cases} \\
+    &t \equiv j
+\end{flalign*}
+
+\section{Своё | 1}
+\begin{flalign*}
+    x \neq \varnothing \to \tx{rng} \ \left(x \times y\right) \equiv y
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    y \neq \varnothing \to x \in \tx{rng} \left(y \times z\right) \to x \in z
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ y \neq \varnothing, x \in \tx{rng} \left(y \times z\right) \\
+    &x \in \cup\cup \left(y \times z\right) \\
+    &\exists w \ (w, x) \in y \times z
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    y \neq \varnothing \to x \in z \to x \in \tx{rng} \left(y \times z\right)
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite} \
+    x \in \tx{rng} \left(y \times z\right)
+    =
+    \begin{cases}
+        x \in \cup\cup \left(y \times z\right) \\
+        \exists w \ (w, x) \in y \times z
+    \end{cases} \\
+    &\tx{intro} \ y \neq \varnothing, x \in z
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.6}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \tot
+    \begin{cases}
+        x \circ x^{-1} \equiv \tx{id}_z \\
+        x^{-1} \circ x \equiv \tx{id}_y
+    \end{cases}
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \to
+    \begin{cases}
+        x \circ x^{-1} \equiv \tx{id}_z \\
+        x^{-1} \circ x \equiv \tx{id}_y
+    \end{cases}
+\end{flalign*}
+
+\subsubsection{.}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \to
+    x \circ x^{-1} \equiv \tx{id}_z \\
+\end{flalign*}
+
+\paragraph{..}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \to
+    (w, i) \in x \circ x^{-1}
+    \to
+    (w, i) \in \tx{id}_z
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x - \tx{биекция из $ y $ в $ z $}, (w, i) \in x \circ x^{-1} \\
+    &\exists j
+    \begin{cases}
+        (w, j) \in x^{-1} \\
+        (j, i) \in x
+    \end{cases} \\
+    &\exists j
+    \begin{cases}
+        (j, w) \in x \\
+        (j, i) \in x
+    \end{cases} \\
+    &w \equiv i
+\end{flalign*}
+
+\paragraph{..}
+\begin{flalign*}
+    x - \tx{биекция из $ y $ в $ z $}
+    \to
+    (w, w) \in \tx{id}_z
+    \to
+    (w, w) \in x \circ x^{-1}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro} \ x - \tx{биекция из $ y $ в $ z $}, (w, w) \in \tx{id}_z \\
+    &\tx{rewrite} \
+    (w, w) \in x \circ x^{-1}
+    =
+    \exists i
+    \begin{cases}
+        (w, i) \in x^{-1} \\
+        (i, w) \in x
+    \end{cases} \\
+    &\exists i \ (i, w) \in x
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    \begin{cases}
+        x \circ x^{-1} \equiv \tx{id}_z \\
+        x^{-1} \circ x \equiv \tx{id}_y
+    \end{cases}
+    \to
+    x - \tx{биекция из $ y $ в $ z $}
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    \begin{cases}
+        x \circ x^{-1} \equiv \tx{id}_z \\
+        x^{-1} \circ x \equiv \tx{id}_y
+    \end{cases}
+    \to
+    x - \tx{тотально на $ y $}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ y \subseteq \tx{dom} \ x \\
+    &w \in y \to \exists i \ (w, i) \in x
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.14}
+\begin{flalign*}
+    x \cap y \equiv \varnothing \to z^{x \cup y} \sim z^x \times z^y
+\end{flalign*}
+
+\begin{flalign*}
+    &w = \set {
+    \alpha \in z^{x \cup y} \times \left(z^x \times z^y\right)
+    \mid
+    \exists i \ \alpha \equiv (i, (i \upharpoonright x, i \upharpoonright y))
+    } \\
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w - \tx{тотальное на $ z^{x \cup y} $}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ z^{x \cup y} \subseteq \tx{dom} \ w \\
+    &\tx{rewrite-d} \
+    i \in z^{x \cup y}
+    \to
+    \begin{cases}
+        i \in \cup\cup w \\
+        \exists j \ (i, j) \in w
+    \end{cases} \\
+    &\tx{intro-d} \\
+    &\tx{rewrite} \
+    \exists j \ (i, j) \in w
+    =
+    \exists j, k \
+    \begin{cases}
+        i \in z^{x \cup y} \\
+        j \in z^x \times z^y \\
+        i \equiv k \\
+        j \equiv (k \upharpoonright x, k \upharpoonright y)
+    \end{cases}
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w - \tx{сюръективное на $ z^x \times z^y $}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ z^x \times z^y \subseteq \tx{rng} \ w \\
+    &\tx{rewrite-d} \
+    (i, j) \in z^x \times z^y
+    \to
+    \begin{cases}
+        (i, j) \in \cup\cup w \\
+        \exists k \ (k, (i, j)) \in w
+    \end{cases} \\
+    &\tx{rewrite} \
+    \exists k \ (k, (i, j)) \in w
+    =
+    \exists k, t
+    \begin{cases}
+        k \in z^{x \cup y} \\
+        i \in z^x \\
+        j \in z^y \\
+        k \equiv t \\
+        i \equiv t \upharpoonright x \\
+        j \equiv t \upharpoonright y
+    \end{cases}
+    =
+    \exists k
+    \begin{cases}
+        k \in z^{x \cup y} \\
+        i \in z^x \\
+        j \in z^y \\
+        i \equiv k \upharpoonright x \\
+        j \equiv k \upharpoonright y
+    \end{cases} \\
+    &\tx{intro-d} \\
+    &k = \left(i \cup j\right) \upharpoonright x \\
+    &k
+    \equiv
+    \set{\alpha \in i \cup j \mid \exists t \in x, l \ \alpha \equiv (t, l)}
+    \equiv
+    i \\
+    &i \cup j \in z^{x \cup y}
+\end{flalign*}
+
+\subsubsection{.}
+\begin{flalign*}
+    (t, l) \in k \to (t, l) \in i
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &(t, l) \in i \cup j \\
+    &t \in x \\
+    &t \not\in y
+\end{flalign*}
+
+\subsubsection{.}
+\begin{flalign*}
+    i \cup j - \tx{функциональное}
+\end{flalign*}
+
+\begin{flalign*}
+    \tx{rewrite-d} \ (t, l) \in i \cup j \to (t, m) \in i \cup j \to l \equiv m
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w - \tx{функциональное}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ (i, j) \in w \to (i, k) \in w \to j \equiv k \\
+    &\tx{intro-d} \\
+    &j \equiv (i \upharpoonright x, i \upharpoonright y) \\
+    &k \equiv (i \upharpoonright x, i \upharpoonright y)
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    w - \tx{инъективное}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ (i, j) \in w \to (k, j) \in w \to i \equiv k \\
+    &\tx{intro-d} \\
+    &j \equiv (i \upharpoonright x, i \upharpoonright y) \\
+    &j \equiv (k \upharpoonright x, k \upharpoonright y) \\
+    &i \upharpoonright x
+    \equiv
+    \set{\alpha \in i \mid \exists t \in x, l \ \alpha \equiv (t, l)} \\
+    &i \in z^{x \cup y} \\
+    &k \in z^{x \cup y} \\
+    &t \in x
+    \to
+    l \in z
+    \to
+    \begin{cases}
+        (t, l) \in i \\
+        (t, l) \in k
+    \end{cases} \\
+    &t \in y
+    \to
+    l \in z
+    \to
+    \begin{cases}
+        (t, l) \in i \\
+        (t, l) \in k
+    \end{cases} \\
+    &\left[
+    \begin{aligned}
+        t \in x \\
+        t \in y
+    \end{aligned}
+    \right.
+    \to
+    l \in z
+    \to
+    \begin{cases}
+        (t, l) \in i \\
+        (t, l) \in k
+    \end{cases}
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.25}
+\begin{flalign*}
+    \set{0, 1}^{\bb{N}} \sim \set{0, 1, 2}^{\bb{N}}
+\end{flalign*}
+
+\begin{flalign*}
+    &j
+    =
+    \set {
+    \alpha \in \set{0, 1, 2}^{\bb{N}} \times \set{0, 1}^{\bb{N}} \
+    \left| \
+    \exists x \
+    \alpha
+    \equiv
+    \left(
+    x,
+    i \ x
+    \right)
+    \right.
+    } \\
+    &i \ x
+    =
+    \set {
+    \beta \in \bb{N} \times \set{0, 1} \
+    \left| \
+    \exists y, z, w
+    \left[
+    \begin{aligned}
+        &\begin{cases}
+            \beta \equiv (2y, z) \\
+            (y, w) \in x \\
+            w \equiv 0 \to z \equiv 0 \\
+            w \equiv 1 \to z \equiv 0 \\
+            w \equiv 2 \to z \equiv 1
+        \end{cases} \\
+        &\begin{cases}
+            \beta \equiv (2y + 1, z) \\
+            (y, w) \in x \\
+            w \equiv 0 \to z \equiv 0 \\
+            w \equiv 1 \to z \equiv 1 \\
+            w \equiv 2 \to z \equiv 0
+        \end{cases}
+    \end{aligned}
+    \right.
+    \right.
+    }
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.28}
+\begin{flalign*}
+    x - \tx{сюръекция из $ y $ в $ z $}
+    \to
+    \exists w - \tx{функция из $ z $;} \ x \circ w \equiv \tx{id}_z
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &\set {
+    \alpha \in z \times y
+    \mid
+    \exists w \
+    \alpha
+    \equiv
+    \left(w, \tx{choose} \ \set{\beta \in y \mid (w, \beta) \in x^{-1}}\right)
+    }
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.31}
+\subsection{}
+\begin{flalign*}
+    &x - \tx{функция из $ y $}
+    \to
+    x \subseteq y \times z
+    \to
+    w - \tx{функция из $ z $}
+    \to
+    w \subseteq z \times y
+    \to \\
+    &w \circ x \equiv \tx{id}_y
+    \to
+    x - \tx{инъективное}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ (i, j) \in x \to (k, j) \in x \to i \equiv k \\
+    &\tx{intro-d} \\
+    &\begin{cases}
+        (t, l) \in x \\
+        (l, m) \in w
+    \end{cases}
+    \to
+    t \equiv m \\
+    &\tx{intro} \ \exists q \ (j, q) \in w \\
+    &i \equiv q \\
+    &k \equiv q
+\end{flalign*}
+
+\subsection{}
+\begin{flalign*}
+    &\left[
+    \begin{aligned}
+        &y \not\equiv \varnothing \\
+        &z \equiv \varnothing
+    \end{aligned}
+    \right.
+    \to
+    x - \tx{инъекция из $ y $}
+    \to
+    x \subseteq y \times z
+    \to
+    \exists w
+    \begin{cases}
+        w - \tx{функция из $ z $} \\
+        w \subseteq z \times y \\
+        w \circ x \equiv \tx{id}_y
+    \end{cases}
+\end{flalign*}
+
+\subsubsection{.}
+\begin{flalign*}
+    &y \not\equiv \varnothing
+    \to
+    x - \tx{инъекция из $ y $}
+    \to
+    x \subseteq y \times z
+    \to
+    \exists w
+    \begin{cases}
+        w - \tx{функция из $ z $} \\
+        w \subseteq z \times y \\
+        w \circ x \equiv \tx{id}_y
+    \end{cases}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{intro-d} \\
+    &\tx{intro} \ \exists t \in y \\
+    &w
+    =
+    \set {
+    \alpha \in z \times y \
+    \left| \
+    \exists i, j
+    \begin{cases}
+        \alpha \equiv (i, j) \\
+        \exists k \ (i, k) \in x^{-1} \to j \equiv k \\
+        \overline{\exists k \ (i, k) \in x^{-1}} \to j \equiv t
+    \end{cases}
+    \right.
+    }
+\end{flalign*}
+
+\paragraph{..}
+\begin{flalign*}
+    w - \tx{тотальное на $ z $}
+\end{flalign*}
+
+\begin{flalign*}
+    &\tx{rewrite-d} \ i \in z
+    \to
+    \exists j
+    \begin{cases}
+        \exists k \ (i, k) \in x^{-1} \to j \equiv k \\
+        \overline{\exists k \ (i, k) \in x^{-1}} \to j \equiv t
+    \end{cases} \\
+    &\tx{intro-d} \\
+    &\left[
+    \begin{aligned}
+        &\exists j \ (i, j) \in x^{-1} \\
+        &\overline{\exists j \ (i, j) \in x^{-1}}
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &\exists j, k
+        \begin{cases}
+            (i, j) \in x^{-1} \\
+            k \equiv j
+        \end{cases} \\
+        &\exists k
+        \begin{cases}
+            \overline{\exists j \ (i, j) \in x^{-1}} \\
+            k \equiv t
+        \end{cases}
+    \end{aligned}
+    \right. \\
+    &\exists k
+    \left[
+    \begin{aligned}
+        &\begin{cases}
+            \exists j \ (i, j) \in x^{-1} \\
+            \exists j \ k \equiv j
+        \end{cases} \\
+        &\begin{cases}
+            \overline{\exists j \ (i, j) \in x^{-1}} \\
+            k \equiv t
+        \end{cases}
+    \end{aligned}
+    \right. \\
+    &\exists k
+    \begin{cases}
+        \exists j \ (i, j) \in x^{-1} \to k \equiv j \\
+        \overline{\exists j \ (i, j) \in x^{-1}} \to k \equiv t
+    \end{cases}
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.5.38}
+Предположим, что для любых множеств $ x $ и $ y $ любая сюръекция из $ x $ в $ y $
+имеет правую обратную. Выведите отсюда аксиому выбора.
+(Иначе говоря, лемма равносильна аксиоме выбора.)
+
+\begin{flalign*}
+    &\tx{intro-n} \ \varnothing \not\in x \\
+    &y \ z \ \fnd{\varnothing \not\in z}
+    =
+    \set {
+    \alpha \in z \times \set{z} \
+    \left| \
+    \exists w, i
+    \begin{cases}
+        \alpha \equiv (w, i) \\
+        w \in i
+    \end{cases}
+    \right.
+    } \\
+    &y \ z - \tx{сюръекция из $ z $ в $ \set{z} $} \\
+    &i \ z = \exel\fnd {
+    \exists w
+    \begin{cases}
+        w - \tx{функция из $ \set{z} $} \\
+        w \circ y \ z \equiv \tx{id}_z
+    \end{cases}
+    } \\
+    &\set {
+    \alpha \in x \times \cup x
+    \mid
+    \exists w \ \alpha \equiv (w, \exel\fnd{\exists j \ (w, j) \in (i \ w)})
+    }
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.6.19}
+\begin{flalign*}
+    &(x, y) - \tx{частично упорядоченное множество}
+    \to
+    \begin{cases}
+        \tx{min} \ y \ x \equiv \tx{max} \ y^{-1} \ x \\
+        \tx{max} \ y \ x \equiv \tx{min} \ y^{-1} \ x
+    \end{cases} \\ \\
+    &\tx{intro-d}
+\end{flalign*}
+\lend
+\begin{flalign*}
+    \tx{min} \ y \ x \equiv \tx{max} \ y^{-1} \ x
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &z \in \tx{min} \ y \ x \to z \in \tx{max} \ y^{-1} \ x \\ \\
+    &\tx{intro-d} \\
+    &\forall w \in x \ (w, z) \not\in y \\
+    &\forall w \in x \ (z, w) \not\in y^{-1}
+\end{flalign*}
+\lend \\
+\lend
+
+\section{Дашков ЕВ | 1.6.24}
+\begin{flalign*}
+    &x - \tx{$ y $-наименьший}
+    \to
+    \tx{min} \ (y \setminus \tx{idr} \ \tx{dom} \ y) \ \tx{dom} \ y \equiv \set{x} \\ \\
+    &\tx{intro-d} \\
+    &\forall z \in \tx{rng} \ y \ (x, z) \in y
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &z \in \tx{min} \ (y \setminus \tx{idr} \ \tx{dom} \ y) \ \tx{dom} \ y
+    \to
+    z \equiv x \\ \\
+    &\tx{intro-d} \\
+    &\forall w \in \tx{dom} \ y \ (w, z) \not\in y \setminus \tx{idr} \ \tx{dom} \ y \\
+    &(x, z) \in y \\
+    &(x, z) \not\in y \setminus \tx{idr} \ \tx{dom} \ y \\
+    &(x, z) \in y \setminus (y \setminus \tx{idr} \ \tx{dom} \ y) \\
+    &(x, z) \in \tx{idr} \ \tx{dom} \ y
+\end{flalign*}
+\lend
+
+\section{Дашков ЕВ | 1.6.24}
+\begin{flalign*}
+    \begin{cases}
+        (\bb{N} \setminus \set{0}, \mid) - \tx{решётка} \\
+        (\bb{N} \setminus \set{0}, \mid) \notis \tx{решётка}
+    \end{cases}
+\end{flalign*}
+\end{document}
