@@ -1518,7 +1518,35 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
 \begin{flalign*}
     \begin{cases}
         (\bb{N} \setminus \set{0}, \mid) - \tx{решётка} \\
-        (\bb{N} \setminus \set{0}, \mid) \notis \tx{решётка}
+        (\bb{N} \setminus \set{0}, \mid) \notis \tx{полная решётка}
     \end{cases}
 \end{flalign*}
+\lend
+\begin{flalign*}
+    &\forall x \in \bb{N} \setminus \set{0}, y \in \bb{N} \setminus \set{0} \
+    \exists z, w
+    \begin{cases}
+         z - \tx{$ \mid $-точная нижняя грань $ \set{x, y} $} \\
+         w - \tx{$ \mid $-точная верхняя грань $ \set{x, y} $}
+    \end{cases} \\ \\
+    &\tx{intro-d} \\
+    &\tx{НОД} \ x \ y - \tx{$ \mid $-точная нижняя грань $ \set{x, y} $} \\
+    &\tx{НОК} \ x \ y - \tx{$ \mid $-точная верхняя грань $ \set{x, y} $}
+\end{flalign*}
+\lend \\
+\lend
+\begin{flalign*}
+    &\exists x \subseteq \bb{N} \setminus \set{0} \
+    y, z
+    \to
+    \left[
+    \begin{aligned}
+        &y \notis \tx{$ \mid $-точная нижняя грань $ x $} \\
+        &z \notis \tx{$ \mid $-точная верхняя грань $ x $}
+    \end{aligned}
+    \right. \\ \\
+    &\tx{intro-d} \\
+    &z \to z \notis \tx{$ \mid $-точная верхняя грань $ \bb{N} \setminus \set{0} $}
+\end{flalign*}
+\lend
 \end{document}
