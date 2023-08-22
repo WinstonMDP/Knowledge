@@ -1514,11 +1514,21 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
 \end{flalign*}
 \lend
 
-\section{Дашков ЕВ | 1.6.24}
+\section{Дашков ЕВ | 1.6.35}
 \begin{flalign*}
     \begin{cases}
-        (\bb{N} \setminus \set{0}, \mid) - \tx{решётка} \\
-        (\bb{N} \setminus \set{0}, \mid) \notis \tx{полная решётка}
+        \left(
+        \bb{N} \setminus \set{0},
+        \mid \setminus \ \tx{idr} \left(\bb{N} \setminus \set{0}\right)
+        \right)
+        -
+        \tx{решётка} \\
+        \left(
+        \bb{N} \setminus \set{0},
+        \mid \setminus \ \tx{idr} \left(\bb{N} \setminus \set{0}\right)
+        \right)
+        \notis
+        \tx{полная решётка}
     \end{cases}
 \end{flalign*}
 \lend
@@ -1546,7 +1556,98 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
     \end{aligned}
     \right. \\ \\
     &\tx{intro-d} \\
-    &z \to z \notis \tx{$ \mid $-точная верхняя грань $ \bb{N} \setminus \set{0} $}
+    &z \notis \tx{$ \mid $-точная верхняя грань $ \bb{N} \setminus \set{0} $}
 \end{flalign*}
 \lend
+
+\section{Дашков ЕВ | 1.6.36}
+\begin{flalign*}
+    &(x, y) - \tx{частично упорядоченное множество}
+    \to \\
+    &\left(
+    \left(
+    \forall z \subseteq x \
+    \exists w - \tx{$ y $-точная нижняя грань $ z $}
+    \right)
+    \right.
+    \tot \\
+    &\left.
+    \left(
+    \forall z \subseteq x \
+    \exists w - \tx{$ y $-точная верхняя грань $ z $}
+    \right)
+    \right) \\ \\
+    &\tx{intro-d}
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &\left(
+    \forall z \subseteq x \
+    \exists w - \tx{$ y $-точная нижняя грань $ z $}
+    \right)
+    \to \\
+    &\forall z \subseteq x \
+    \exists w - \tx{$ y $-точная верхняя грань $ z $} \\ \\
+    &\tx{intro-d} \\
+    &\tx{intro} \
+    \exists w - \tx{$ y $-точная нижняя грань $
+    \set{\alpha \in x \mid \alpha - \tx{$ y $-верхняя грань $ z $}}
+    $} \\
+    &i \in z
+    \to
+    i
+    -
+    \tx{$ y $-нижняя грань
+    $ \set{\alpha \in x \mid \alpha - \tx{$ y $-верхняя грань $ z $}}
+    $} \\
+    &i \in z \to (i, w) \in y \\
+    &w - \tx{$ y $-верхняя грань $ z $} \\
+    &w \in \set{\alpha \in x \mid \alpha - \tx{$ y $-верхняя грань $ z $}} \\
+    &w
+    -
+    \tx{$
+    \left(
+    y \uparrow \set{\alpha \in x \mid \alpha - \tx{$ y $-верхняя грань $ z $}}
+    \right)
+    $-наименьший}
+\end{flalign*}
+\lend
+
+\section{Дашков ЕВ | 1.6.43}
+Постройте в частично упорядоченном множестве $ \left(\mathcal{P}\left(\bb{N}\right),
+\subseteq\right) $ непустую цепь, не имеющую ни наибольшего, ни наименьшего элемента.
+\begin{flalign*}
+    \ldots
+    \subseteq
+    2\bb{N} \setminus \set{0}
+    \subseteq
+    2\bb{N}
+    \subseteq
+    2\bb{N} \cup \set{1}
+    \subseteq
+    \ldots
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.6.50}
+\begin{flalign*}
+    &(x, y) - \tx{частично упорядоченное множество}
+    \to \\
+    &\exists z \subseteq \mathcal{P}\ x \
+    (x, y)
+    \cong
+    \left(
+    z,
+    \set {
+    \alpha \in \mathcal{P} \ x \times \mathcal{P} \ x \
+    \left| \
+    \exists w, i
+    \begin{cases}
+        \alpha \equiv (w, i) \\
+        w \subseteq i
+    \end{cases}
+    \right.
+    }
+    \right) \\ \\
+    &\tx{intro-d}
+\end{flalign*}
 \end{document}

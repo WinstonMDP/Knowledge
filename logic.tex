@@ -11,10 +11,11 @@
 
 \chapter{Теория множеств (ZFC)}
 \section{Основание}
-Три возможные формы с кванторами
+Возможные формы с кванторами
 \begin{flalign*}
     &\forall (y \ x) \ (z \ x) \mid \tx{в $ y \ x $ стоит первым символом} \\
     &\exists x \ (y \ x) \\
+    &\exists (y \ x) \mid \tx{в $ y \ x $ стоит первым символом} \\
     &\exists (y \ x) \ (z \ x) \mid \tx{в $ y \ x $ стоит первым символом}
 \end{flalign*}
 \begin{flalign*}
@@ -78,13 +79,14 @@
     \to
     \left[
     \begin{aligned}
-        &\exists! w \ (x \ z \ w) \\
-        &\nexists w \ (x \ z \ w)
+        &\exists! (w \mapsto x \ z \ w) \\
+        &\nexists w \ x \ z \ w
     \end{aligned}
     \right.
     \right)
     \to
-    \exists z \ w
+    \exists z \
+    w
     \to
     \left(w \in z \tot \exists i \in y \ x \ i \ w\right)
     }
@@ -153,8 +155,8 @@
     \to
     \left[
     \begin{aligned}
-        &\exists! w \ (x \ z \ w) \\
-        &\nexists w \ (x \ z \ w)
+        &\exists! w \mapsto x \ z \ w \\
+        &\nexists w \ x \ z \ w
     \end{aligned}
     \right.
     \right)
@@ -188,21 +190,21 @@
     &\gr{t}{}{}{\_\equiv\_}
 \end{flalign*}
 \begin{flalign*}
-    &\exists! x \ y \ x
+    &\exists! x
     =
     \begin{cases}
-        \exists x \ y \ x \\
-        y \ z \to z \equiv \exel\fnd{\exists x \ y \ x}
+        \exists y \ x \ y \\
+        x \ z \to z \equiv \exel\fnd{\exists y \ x \ y}
     \end{cases} \\
-    &\tx{Существует единственный $ x $ удовлетворяющий $ y \ x $}
+    &\tx{Существует единственное, удовлетворяющее $ x $}
 \end{flalign*}
 \begin{flalign*}
     &x \subseteq y = z \in x \to z \in y \\
     &\tx{$ x $ вложено в $ y $; $ x $ - подмножество $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &\set{y, z, \ldots} = \set{y, \cup\set{z, \cup\set{\ldots}}} \\
-    &\tx{Множество из $ y, z, \ldots $}
+    &\set{x, y, \ldots} = \set{x, \cup\set{y, \cup\set{\ldots}}} \\
+    &\tx{Множество из $ x, y, \ldots $}
 \end{flalign*}
 \begin{flalign*}
     &x - \tx{пустое} = y \to y \not\in x \\
@@ -415,7 +417,7 @@
     &\tx{$ x $ вложен в $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &x \sim y = \exists z \ z - \tx{биекция из $ x $ в $ y $} \\
+    &x \sim y = \exists z - \tx{биекция из $ x $ в $ y $} \\
     &\tx{$ x $ равномощен $ y $}
 \end{flalign*}
 \begin{flalign*}
@@ -519,19 +521,42 @@
     \left(y \uparrow \set{\alpha \in z \mid \alpha - \tx{верхняя грань $ z $}}\right)
     $-наименьший
     } \\
-    &\tx{inf} \ x \ y \ \fnd{\exists z \ z - \tx{$ x $-точная нижняя грань $ y $}}
+    &\tx{inf} \ x \ y \ \fnd{\exists z - \tx{$ x $-точная нижняя грань $ y $}}
     = \\
     &\cup\set{\alpha \in y \mid \alpha - \tx{$ x $-точная нижняя грань $ y $}} \\
-    &\tx{sup} \ x \ y \ \fnd{\exists z \ z - \tx{$ x $-точная верхняя грань $ y $}}
+    &\tx{sup} \ x \ y \ \fnd{\exists z - \tx{$ x $-точная верхняя грань $ y $}}
     = \\
     &\cup\set{\alpha \in y \mid \alpha - \tx{$ x $-точная верхняя грань $ y $}}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{$ y $-цепь}
+    =
+    \begin{cases}
+        y - \tx{нестрогий порядок} \\
+        \forall z \in x, w \in x
+        \left[
+        \begin{aligned}
+            (z, w) \in y \\
+            (w, z) \in y
+        \end{aligned}
+        \right.
+    \end{cases} \\
+    &x - \tx{$ y $-антицепь}
+    =
+    \begin{cases}
+        y - \tx{нестрогий порядок} \\
+        \forall z \in x, w \in x \ (z, w) \in y \to z \equiv w
+    \end{cases}
 \end{flalign*}
 \begin{flalign*}
     (x, y) - \tx{частично упорядоченное множество}
     =
     \begin{cases}
-        y - \tx{строгий частичный порядок} \\
-        \tx{dom} \ y \subseteq x
+        \begin{aligned}
+            y - &\tx{нестрогий частичный} \\
+                &\tx{порядок}
+        \end{aligned} \\
+        \tx{dom} \ y \equiv x
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
@@ -539,11 +564,10 @@
     =
     \begin{cases}
         (x, y) - \tx{частично упорядоченное множество} \\
-        \forall z \in x, w \in x \
-        \exists i, j
+        \forall z \in x, w \in x
         \begin{cases}
-            i - \tx{$ y $-точная нижняя грань $ \set{z, w} $} \\
-            j - \tx{$ y $-точная верхняя грань $ \set{z, w} $} \\
+            \exists i - \tx{$ y $-точная нижняя грань $ \set{z, w} $} \\
+            \exists i - \tx{$ y $-точная верхняя грань $ \set{z, w} $}
         \end{cases}
     \end{cases}
 \end{flalign*}
@@ -552,18 +576,28 @@
     =
     \begin{cases}
         (x, y) - \tx{частично упорядоченное множество} \\
-        \forall z \subseteq x \
-        \exists w, i
+        \forall z \subseteq x
         \begin{cases}
-            w - \tx{$ y $-точная нижняя грань $ z $} \\
-            i - \tx{$ y $-точная верхняя грань $ z $}
+            \exists w - \tx{$ y $-точная нижняя грань $ z $} \\
+            \exists w - \tx{$ y $-точная верхняя грань $ z $}
         \end{cases}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    (x, y) - \tx{линейно упорядоченное множество}
+    =
+    \begin{cases}
+        \begin{aligned}
+            (x, y){ }-{ }&\tx{частично упорядоченное} \\
+            &\tx{множество}
+        \end{aligned} \\
+        x - \tx{$ y $-цепь}
     \end{cases}
 \end{flalign*}
 
 \section{Теоремы}
 \begin{flalign*}
-    &\exists! x \ x - \tx{пустое} \\
+    &\exists! (x \to x - \tx{пустое})) \\
     &\begin{cases}
         x \equiv y \\
         z \equiv w
@@ -601,18 +635,24 @@
     x \lesssim y \to y \lesssim x \to x \sim y
 \end{flalign*}
 \begin{flalign*}
-    \set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{строгий порядок}}
+    &\set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{строгий порядок}}
     \sim
-    \set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{нестрогий порядок}}
-\end{flalign*}
-
-\chapter{Формальные языки}
-\begin{flalign*}
-    &a \neq \varnothing \tot a - \tx{алфавит} \\
-    &a \in A \tot a - \tx{символ (буква)} \\
-    &f: \underline{n} \rightarrow A \tot f - \tx{слово} \\
-    &\varepsilon - \tx{пустое слово} \\
-    &\varepsilon = \varnothing
+    \set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{нестрогий порядок}} \\
+    &(x, y) - \tx{частично упорядоченное множество}
+    \to \\
+    &\left(
+    \left(
+    \forall z \subseteq x \
+    \exists w - \tx{$ y $-точная нижняя грань $ z $}
+    \right)
+    \right.
+    \tot \\
+    &\left.
+    \left(
+    \forall z \subseteq x \
+    \exists w - \tx{$ y $-точная верхняя грань $ z $}
+    \right)
+    \right)
 \end{flalign*}
 
 \chapter{Необработанное}
