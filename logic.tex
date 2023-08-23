@@ -9,8 +9,7 @@
 
 \tableofcontents
 
-\chapter{Теория множеств (ZFC)}
-\section{Основание}
+\chapter{Основание}
 Возможные формы с кванторами
 \begin{flalign*}
     &\forall (y \ x) \ (z \ x) \mid \tx{в $ y \ x $ стоит первым символом} \\
@@ -21,20 +20,21 @@
 \begin{flalign*}
     &\gr{r}{}{}{\_\to\_} \\
     &\gr{n}{}{\_\to\_}{\_=\_} \\
+    &\greq{n}{\_=\_}{\_\mapsto\_} \\
     &\gr{n}{\_=\_}{\_\tot\_}{\exists\_\_} \\
     &\greq{n}{\exists\_\_}{\forall\_\_} \\
     &=\bot \\
-    &\argtype{y}{\bb{T}_x} \to \left(y \to \bot = \overline{y}\right) \\
+    &\overline{y} = y \to \bot \\
     &\ax{\left(x \tot y\right) \to \left(z \ x \leftrightarrow z \ y\right)}
 \end{flalign*}
 
-\section{Аксиомы}
-\subsection{Равенства}
+\chapter{Аксиомы}
+\section{Равенства}
 \begin{flalign*}
     \ax{x \equiv y \to \left(x \in z \tot y \in z\right)}
 \end{flalign*}
 
-\subsection{Пары}
+\section{Пары}
 \begin{flalign*}
     &\ax {
     x \in \set{y, z}
@@ -49,7 +49,7 @@
     &\ntnt{\set{x, y}}{\tx{множество из $ x, y $}}
 \end{flalign*}
 
-\subsection{Объединения}
+\section{Объединения}
 \begin{flalign*}
     &\ax {
     x \in \cup \ y
@@ -59,13 +59,13 @@
     &\ntnt{\cup x}{\tx{объединение $ x $}}
 \end{flalign*}
 
-\subsection{Степени}
+\section{Степени}
 \begin{flalign*}
     &\ax{x \in \mathcal{P} \ y = x \subseteq y} \\
     &\ntnt{\mathcal{P} \ x}{\tx{множество всех подмножеств $ x $}}
 \end{flalign*}
 
-\subsection{Выделения}
+\section{Выделения}
 \begin{flalign*}
     &\set{\alpha \in x \mid y \ \alpha}
     = \\
@@ -122,12 +122,12 @@
 \end{flalign*}
 Выводится из аксиомы подстановки.
 
-\subsection{Бесконечности}
+\section{Бесконечности}
 \begin{flalign*}
     \ax{\exists_{\bb{S}} \ x - \tx{индуктивное}}
 \end{flalign*}
 
-\subsection{Выбора}
+\section{Выбора}
 В этой системе, которая вроде является системой Мартина-Лёфа Пера, вроде доказуема.
 \begin{flalign*}
     \varnothing \not\in x
@@ -140,12 +140,12 @@
     \end{cases}
 \end{flalign*}
 
-\subsection{Регулярности (фундированности)}
+\section{Регулярности (фундированности)}
 \begin{flalign*}
     \ax{\exists y \in x \ \forall z \in x \ z \not\in y}
 \end{flalign*}
 
-\subsection{Подстановки}
+\section{Подстановки}
 \begin{flalign*}
     \ax {
     \argtype{y}{\bb{S}}
@@ -167,6 +167,7 @@
     }
 \end{flalign*}
 
+\chapter{Операции над множествами}
 \section{Определения}
 Класс - это $ \set{x \ \left| \ \varphi(x)\right.} $.
 Не все классы являются множествами. Все множества являются классами.
@@ -200,7 +201,7 @@
 \end{flalign*}
 \begin{flalign*}
     &x \subseteq y = z \in x \to z \in y \\
-    &\tx{$ x $ вложено в $ y $; $ x $ - подмножество $ y $}
+    &\tx{$ x $ - подмножество $ y $}
 \end{flalign*}
 \begin{flalign*}
     &\set{x, y, \ldots} = \set{x, \cup\set{y, \cup\set{\ldots}}} \\
@@ -239,6 +240,14 @@
     &x \triangle y = (x \setminus y) \cup (y \setminus x) \\
     &\tx{Симметрическая разность $ x $ и $ y $}
 \end{flalign*}
+
+\section{Теоремы}
+\begin{flalign*}
+    \exists! (x \mapsto x - \tx{пустое})
+\end{flalign*}
+
+\chapter{Бинарные отношения}
+\section{Определения}
 \begin{flalign*}
     &(x, y) = \set{\set{x}, \set{x, y}} \\
     &\tx{Упорядоченная пара Куратовского $ x $ и $ y $}
@@ -247,9 +256,13 @@
     &x \times y
     =
     \set {
-    \alpha \in \mathcal{P}\left(\mathcal{P} \left(x \cup y\right)\right)
-    \mid
-    \exists z \in x, w \in y \ \alpha \equiv (z, w)
+    (\alpha, \beta) \in \mathcal{P}\left(\mathcal{P} \left(x \cup y\right)\right) \
+    \left| \
+    \begin{cases}
+        \alpha \in x \\
+        \beta \in y
+    \end{cases}
+    \right.
     } \\
     &\tx{Прямое (декартово) произведение $ x $ и $ y $}
 \end{flalign*}
@@ -277,17 +290,12 @@
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    &x^{-1}
+    &\tx{inv} \ x
     =
     \set {
-    \alpha \in \tx{rng} \ x \times \tx{dom} \ x \
-    \left| \
-    \exists y, z
-    \begin{cases}
-        \alpha \equiv (y, z) \\
-        (z, y) \in x
-    \end{cases}
-    \right.
+    (\alpha, \beta) \in \tx{rng} \ x \times \tx{dom} \ x
+    \mid
+    (\beta, \alpha) \in x
     } \\
     &\tx{Обратное к $ x $}
 \end{flalign*}
@@ -295,31 +303,32 @@
     &x \circ y
     =
     \set {
-    \alpha \in \tx{dom} \ y \times \tx{rng} \ x \
+    (\alpha, \beta) \in \tx{dom} \ y \times \tx{rng} \ x \
     \left| \
-    \exists z, w, i
+    \exists z
     \begin{cases}
-        \alpha \equiv (z, w) \\
-        (z, i) \in y \\
-        (i, w) \in x
+        (\alpha, z) \in y \\
+        (z, \beta) \in x
     \end{cases}
     \right.
     } \\
     &\tx{Композиция $ x $ и $ y $}
 \end{flalign*}
 \begin{flalign*}
-    \tx{idr} \ x = \set{\alpha \in x \times x \mid \exists y \ \alpha \equiv (y, y)}
+    \tx{idr} \ x
+    =
+    \set{(\alpha, \alpha) \in x \times x \mid \top}
 \end{flalign*}
 \begin{flalign*}
     &x \upharpoonright y \ \fnd{x - \tx{бинарное отношение}}
     =
-    \set{\alpha \in x \mid \exists z \in y, w \ \alpha \equiv (z, w)} \\
+    \set{(\alpha, \beta) \in x \mid \alpha \in y} \\
     &\tx{Ограничение $ x $ на $ y $ слева}
 \end{flalign*}
 \begin{flalign*}
     &x \upharpoonleft y \ \fnd{x - \tx{бинарное отношение}}
     =
-    \set{\alpha \in x \mid \exists z, w \in y \ \alpha \equiv (z, w)} \\
+    \set{(\alpha, \beta) \in x \mid \beta \in y} \\
     &\tx{Ограничение $ x $ на $ y $ справа}
 \end{flalign*}
 \begin{flalign*}
@@ -343,13 +352,15 @@
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    &x - \tx{функция из $ y $}
+    \begin{aligned}
+        x{ }-{ }&\tx{функция (индексированное семейство} \\
+                &\tx{множеств с индексами) из $ y $}
+    \end{aligned}
     =
     \begin{cases}
         x - \tx{тотальное на $ y $} \\
         x - \tx{функциональное}
-    \end{cases} \\
-    &x - \tx{индексированное семейство множеств с индексами из $ y $}
+    \end{cases}
 \end{flalign*}
 \begin{flalign*}
     x_y \
@@ -380,11 +391,7 @@
 \begin{flalign*}
     \bigsqcup x
     =
-    \set {
-    \alpha \in \cup\tx{rng} \ x \times \tx{dom} \ x
-    \mid
-    \exists y, z \in x_y \ \alpha \equiv (z, y)
-    }
+    \set{(\alpha, \beta) \in \cup\tx{rng} \ x \times \tx{dom} \ x \mid \alpha \in x_{\beta}}
 \end{flalign*}
 \begin{flalign*}
     &x - \tx{инъекция из $ y $}
@@ -467,6 +474,49 @@
     =
     \set{\alpha \in y \mid \alpha - \tx{$ x $-максимальный}}
 \end{flalign*}
+
+\section{Теоремы}
+\begin{flalign*}
+    &\begin{cases}
+        x \equiv y \\
+        z \equiv w
+    \end{cases}
+    \tot
+    (x, z) \equiv (y, w) \\
+    &\begin{cases}
+        x \equiv y \\
+        z \equiv w
+    \end{cases}
+    \tot
+    x \times z \equiv y \times w \\
+    &x \not\equiv \varnothing
+    \to
+    y \not\equiv \varnothing
+    \to
+    \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
+    \to
+    x \equiv y \equiv z \equiv w \\
+    &(y, z) \in x \to y \in \tx{dom} \ x \\
+    &(y, z) \in x \to z \in \tx{rng} \ x \\
+    &\cup\cup x \equiv \tx{dom} \ x \cup \tx{rng} \ x \\
+    &\tx{inv} \ \left(x \circ y\right) \equiv \tx{inv} \ y \circ \tx{inv} \ x \\
+    &\tx{inv} \ x \subseteq x \tot x \equiv \tx{inv} \ x \\
+    &\begin{cases}
+        \tx{inv} \ x \circ x \equiv \tx{idr} \ y \\
+        x \circ \tx{inv} \ x \equiv \tx{idr} \ z
+    \end{cases}
+    \tot
+    x - \tx{биекция из $ y $ в $ z $} \\
+    &x \lesssim y \tot \exists z \subseteq y \ x \sim z
+\end{flalign*}
+
+\subsection{Кантора-Шрёдера-Бернштейна}
+\begin{flalign*}
+    x \lesssim y \to y \lesssim x \to x \sim y
+\end{flalign*}
+
+\chapter{Порядки}
+\section{Определения}
 \begin{flalign*}
     &x - \tx{строгий порядок}
     =
@@ -505,7 +555,7 @@
     x - \tx{$ y $-верхняя грань $ \tx{rng} \ y $}
 \end{flalign*}
 \begin{flalign*}
-    &x - \tx{$ y $-точная нижняя грань ($ y $-инфинум) $ z $}
+    &x - \tx{$ y $-инфимум ($ y $-точная нижняя грань) $ z $}
     = \\
     &x
     -
@@ -513,7 +563,7 @@
     \left(y \uparrow \set{\alpha \in z \mid \alpha - \tx{нижняя грань $ z $}}\right)
     $-наибольший
     } \\
-    &x - \tx{$ y $-точная верхняя грань ($ y $-супремум) $ z $}
+    &x - \tx{$ y $-супремум ($ y $-точная верхняя грань) $ z $}
     = \\
     &x
     -
@@ -521,19 +571,19 @@
     \left(y \uparrow \set{\alpha \in z \mid \alpha - \tx{верхняя грань $ z $}}\right)
     $-наименьший
     } \\
-    &\tx{inf} \ x \ y \ \fnd{\exists z - \tx{$ x $-точная нижняя грань $ y $}}
-    = \\
-    &\cup\set{\alpha \in y \mid \alpha - \tx{$ x $-точная нижняя грань $ y $}} \\
-    &\tx{sup} \ x \ y \ \fnd{\exists z - \tx{$ x $-точная верхняя грань $ y $}}
-    = \\
-    &\cup\set{\alpha \in y \mid \alpha - \tx{$ x $-точная верхняя грань $ y $}}
+    &\tx{inf} \ x \ y \ \fnd{\exists z - \tx{$ x $-инфимум $ y $}}
+    =
+    \cup\set{\alpha \in y \mid \alpha - \tx{$ x $-инфимум $ y $}} \\
+    &\tx{sup} \ x \ y \ \fnd{\exists z - \tx{$ x $-супремум $ y $}}
+    =
+    \cup\set{\alpha \in y \mid \alpha - \tx{$ x $-супремум $ y $}}
 \end{flalign*}
 \begin{flalign*}
     &x - \tx{$ y $-цепь}
     =
     \begin{cases}
         y - \tx{нестрогий порядок} \\
-        \forall z \in x, w \in x
+        \forall z \andc w \in x
         \left[
         \begin{aligned}
             (z, w) \in y \\
@@ -545,17 +595,14 @@
     =
     \begin{cases}
         y - \tx{нестрогий порядок} \\
-        \forall z \in x, w \in x \ (z, w) \in y \to z \equiv w
+        \forall z \andc w \in x \ (z, w) \in y \to z \equiv w
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    (x, y) - \tx{частично упорядоченное множество}
+    (x, y) - \tx{частично упорядоченное множество (ч.у.м.)}
     =
     \begin{cases}
-        \begin{aligned}
-            y - &\tx{нестрогий частичный} \\
-                &\tx{порядок}
-        \end{aligned} \\
+        y - \tx{нестрогий порядок} \\
         \tx{dom} \ y \equiv x
     \end{cases}
 \end{flalign*}
@@ -563,11 +610,11 @@
     (x, y) - \tx{решётка}
     =
     \begin{cases}
-        (x, y) - \tx{частично упорядоченное множество} \\
+        (x, y) - \tx{ч.у.м.} \\
         \forall z \in x, w \in x
         \begin{cases}
-            \exists i - \tx{$ y $-точная нижняя грань $ \set{z, w} $} \\
-            \exists i - \tx{$ y $-точная верхняя грань $ \set{z, w} $}
+            \exists i - \tx{$ y $-инфимум $ \set{z, w} $} \\
+            \exists i - \tx{$ y $-супремум $ \set{z, w} $}
         \end{cases}
     \end{cases}
 \end{flalign*}
@@ -575,106 +622,66 @@
     (x, y) - \tx{полная решётка}
     =
     \begin{cases}
-        (x, y) - \tx{частично упорядоченное множество} \\
+        (x, y) - \tx{ч.у.м.} \\
         \forall z \subseteq x
         \begin{cases}
-            \exists w - \tx{$ y $-точная нижняя грань $ z $} \\
-            \exists w - \tx{$ y $-точная верхняя грань $ z $}
+            \exists w - \tx{$ y $-инфимум $ z $} \\
+            \exists w - \tx{$ y $-супремум $ z $}
         \end{cases}
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    (x, y) - \tx{линейно упорядоченное множество}
+    (x, y) - \tx{линейно упорядоченное множество (л.у.м.)}
     =
     \begin{cases}
-        \begin{aligned}
-            (x, y){ }-{ }&\tx{частично упорядоченное} \\
-            &\tx{множество}
-        \end{aligned} \\
+        (x, y) - \tx{ч.у.м.} \\
         x - \tx{$ y $-цепь}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &\begin{aligned}
+        (x, y){ }-{ }&\tx{соответствие Галуа между} \\
+                     &\tx{$ (z, w) $ и $ (i, j) $}
+    \end{aligned}
+    =
+    \begin{cases}
+        (z, w) \ \tx{и} \ (i, j) - \tx{ч.у.м} \\
+        x \subseteq z \times i \\
+        x - \tx{функция из $ z $} \\
+        y \subseteq i \times z \\
+        y - \tx{функция из $ i $} \\
+        \forall k \in z, t \in i \ (k, y_t) \in w \tot (x_k, t) \in j
     \end{cases}
 \end{flalign*}
 
 \section{Теоремы}
 \begin{flalign*}
-    &\exists! (x \to x - \tx{пустое})) \\
-    &\begin{cases}
-        x \equiv y \\
-        z \equiv w
-    \end{cases}
-    \tot
-    (x, z) \equiv (y, w) \\
-    &\begin{cases}
-        x \equiv y \\
-        z \equiv w
-    \end{cases}
-    \tot
-    x \times z \equiv y \times w \\
-    &x \not\equiv \varnothing
-    \to
-    y \not\equiv \varnothing
-    \to
-    \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
-    \to
-    x \equiv y \equiv z \equiv w \\
-    &(y, z) \in x \to y \in \tx{dom} \ x \\
-    &(y, z) \in x \to z \in \tx{rng} \ x \\
-    &\cup\cup x \equiv \tx{dom} \ x \cup \tx{rng} \ x \\
-    &\left(x \circ y\right)^{-1} \equiv y^{-1} \circ x^{-1} \\
-    &x^{-1} \subseteq x \tot x \equiv x^{-1} \\
-    &\begin{cases}
-        x^{-1} \circ x \equiv \tx{idr} \ y \\
-        x \circ x^{-1} \equiv \tx{idr} \ z
-    \end{cases}
-    \tot
-    x - \tx{биекция из $ y $ в $ z $} \\
-    &x \lesssim y \tot \exists z \subseteq y \ x \sim z
-\end{flalign*}
-\subsection{Кантора-Шрёдера-Бернштейна}
-\begin{flalign*}
-    x \lesssim y \to y \lesssim x \to x \sim y
-\end{flalign*}
-\begin{flalign*}
     &\set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{строгий порядок}}
     \sim
     \set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{нестрогий порядок}} \\
-    &(x, y) - \tx{частично упорядоченное множество}
-    \to \\
-    &\left(
+    &(x, y) - \tx{ч.у.м.}
+    \to
+    \left(
     \left(
     \forall z \subseteq x \
-    \exists w - \tx{$ y $-точная нижняя грань $ z $}
+    \exists w - \tx{$ y $-инфимум $ z $}
     \right)
-    \right.
-    \tot \\
-    &\left.
+    \tot
     \left(
     \forall z \subseteq x \
-    \exists w - \tx{$ y $-точная верхняя грань $ z $}
+    \exists w - \tx{$ y $-супремум $ z $}
     \right)
+    \right) \\
+    &(x, y) - \tx{ч.у.м.}
+    \to
+    \exists z \subseteq \mathcal{P}\ x \
+    (x, y)
+    \cong
+    \left(
+    z,
+    \set {
+    (\alpha, \beta) \in \mathcal{P} \ x \times \mathcal{P} \ x \mid \alpha \subseteq \beta
+    }
     \right)
 \end{flalign*}
-
-\chapter{Необработанное}
-\textbf{Автонимный способ обозначения} - это
-способ обозначения,
-при котором формальные выражения обозначаются так же,
-как и их значения.
-
-\textbf{Высказывательная форма}.
-
-\textbf{Именная форма} - это
-выражение с переменной.
-
-\textbf{Связанные переменные} - это
-переменные, вместо которых
-нельзя подставить значение.
-
-\textbf{Основания математики} - это
-раздел (в книге сказано "аспект")
-математической логики,
-изучающий объекты математики,
-истинные свойства этих объектов,
-на основании которых можно вести рассуждения,
-а также "сохраняющие истину"{ }способы рассуждений.
 \end{document}
