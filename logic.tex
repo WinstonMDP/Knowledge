@@ -358,6 +358,7 @@
     \end{aligned}
     =
     \begin{cases}
+        \exists z \ x \subseteq y \times z \\
         x - \tx{тотальное на $ y $} \\
         x - \tx{функциональное}
     \end{cases}
@@ -467,12 +468,12 @@
         y - \tx{иррефлексивное} \\
         \forall z \in \tx{rng} \ y \ (x, z) \not\in y
     \end{cases} \\
-    &\tx{min} \ x \ y \ \fnd{x - \tx{иррефлексивное}}
+    &\tx{min} \ x \ y \ \fnd{y - \tx{иррефлексивное}}
     =
-    \set{\alpha \in y \mid \alpha - \tx{$ x $-минимальный}} \\
-    &\tx{max} \ x \ y \ \fnd{x - \tx{иррефлексивное}}
+    \set{\alpha \in x \mid \alpha - \tx{$ y $-минимальный}} \\
+    &\tx{max} \ x \ y \ \fnd{y - \tx{иррефлексивное}}
     =
-    \set{\alpha \in y \mid \alpha - \tx{$ x $-максимальный}}
+    \set{\alpha \in x \mid \alpha - \tx{$ y $-максимальный}}
 \end{flalign*}
 
 \section{Теоремы}
@@ -499,7 +500,6 @@
     &(y, z) \in x \to y \in \tx{dom} \ x \\
     &(y, z) \in x \to z \in \tx{rng} \ x \\
     &\cup\cup x \equiv \tx{dom} \ x \cup \tx{rng} \ x \\
-    &\tx{inv} \ \left(x \circ y\right) \equiv \tx{inv} \ y \circ \tx{inv} \ x \\
     &\tx{inv} \ x \subseteq x \tot x \equiv \tx{inv} \ x \\
     &\begin{cases}
         \tx{inv} \ x \circ x \equiv \tx{idr} \ y \\
@@ -571,12 +571,12 @@
     \left(y \uparrow \set{\alpha \in z \mid \alpha - \tx{верхняя грань $ z $}}\right)
     $-наименьший
     } \\
-    &\tx{inf} \ x \ y \ \fnd{\exists z - \tx{$ x $-инфимум $ y $}}
+    &\tx{inf} \ x \ y \ \fnd{\exists z - \tx{$ y $-инфимум $ x $}}
     =
-    \cup\set{\alpha \in y \mid \alpha - \tx{$ x $-инфимум $ y $}} \\
-    &\tx{sup} \ x \ y \ \fnd{\exists z - \tx{$ x $-супремум $ y $}}
+    \cup\set{\alpha \in x \mid \alpha - \tx{$ y $-инфимум $ x $}} \\
+    &\tx{sup} \ x \ y \ \fnd{\exists z - \tx{$ y $-супремум $ x $}}
     =
-    \cup\set{\alpha \in y \mid \alpha - \tx{$ x $-супремум $ y $}}
+    \cup\set{\alpha \in x \mid \alpha - \tx{$ y $-супремум $ x $}}
 \end{flalign*}
 \begin{flalign*}
     &x - \tx{$ y $-цепь}
@@ -645,13 +645,39 @@
     \end{aligned}
     =
     \begin{cases}
-        (z, w) \ \tx{и} \ (i, j) - \tx{ч.у.м} \\
+        (z, w) \andc (i, j) - \tx{ч.у.м} \\
         x \subseteq z \times i \\
         x - \tx{функция из $ z $} \\
         y \subseteq i \times z \\
         y - \tx{функция из $ i $} \\
         \forall k \in z, t \in i \ (k, y_t) \in w \tot (x_k, t) \in j
     \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{отношение эквивалентности}
+    =
+    \begin{cases}
+        x - \tx{рефлексивное} \\
+        x - \tx{симметричное} \\
+        x - \tx{транзитивное}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{ker} \ x \ \fnd{\exists y \ x - \tx{функция из $ y $}}
+    =
+    \set {
+    (\alpha, \beta) \in \tx{dom} \ x \times \tx{dom} \ x \mid x_{\alpha} \equiv x_{\beta}
+    } \\
+    &\tx{Ядерная эквивалентность $ x $}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{class} \ x \ y \ \fnd{y - \tx{отношение эквивалентности}}
+    =
+    \set{\alpha \in \tx{dom} \ y \mid \exists z \ (x, z) \in y} \\
+    &\tx{Класс эквивалентности $ x $ по $ y $}
+\end{flalign*}
+\begin{flalign*}
+    x / y = \set{\tx{class} \ \alpha \ y \in \mathcal{P} \ x \mid \alpha \in x}
 \end{flalign*}
 
 \section{Теоремы}
@@ -682,6 +708,17 @@
     \set {
     (\alpha, \beta) \in \mathcal{P} \ x \times \mathcal{P} \ x \mid \alpha \subseteq \beta
     }
-    \right)
+    \right) \\
+    &\set {
+    \alpha \in x^z
+    \mid
+    \exists i \ (\alpha, i) - \tx{соответствие Галуа между $ (z, y) $ и $ (x, w) $}
+    }
+    \sim \\
+    &\set {
+    \alpha \in z^x
+    \mid
+    \exists i \ (i, \alpha) - \tx{соответствие Галуа между $ (z, y) $ и $ (x, w) $}
+    }
 \end{flalign*}
 \end{document}

@@ -197,6 +197,39 @@
     }
 \end{flalign*}
 
+\section{Дашков ЕВ | 1.6.53.1}
+\begin{flalign*}
+    &(x, y) - \tx{соответствие Галуа между $ (z, w) $ и $ (i, j) $}
+    \to
+    \forall k \in z \ (k, (y \circ x)_k) \in w \\ \\
+    &\tx{intro-d} \\
+    &(x_k, x_k) \in j \\
+    &(k, (y \circ x)_k) \in w
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.6.53.2}
+\begin{flalign*}
+    &(x, y) - \tx{соответствие Галуа между $ (z, w) $ и $ (i, j) $}
+    \to
+    \forall k \andc t \in z \ (k, t) \in w \to (x_k, x_t) \in j \\ \\
+    &\tx{intro-d} \\
+    &(t, (y \circ x)_t) \in w \\
+    &(k, (y \circ x)_t) \in w \\
+    &(x_k, x_t) \in j
+\end{flalign*}
+
+\section{Дашков ЕВ | 1.6.53.3}
+\begin{flalign*}
+    &(x, y) - \tx{соответствие Галуа между $ (z, w) $ и $ (i, j) $}
+    \to
+    x \equiv x \circ y \circ x \\ \\
+    &\tx{intro-d} \\
+    &\forall k \in z \ (k, (y \circ x)_k) \in w \\
+    &\forall k \in z \ (x_k, (x \circ y \circ x)_k) \in j \\
+    &\forall k \in z \ ((y \circ x)_k, (y \circ x)_k) \in w \\
+    &\forall k \in z \ ((x \circ y \circ x)_k, x_k) \in j
+\end{flalign*}
+
 \section{Дашков ЕВ | 1.6.54}
 \begin{flalign*}
     &(x, y) - \tx{соответствие Галуа между $ (z, w) $ и $ (i, j) $}
@@ -214,12 +247,95 @@
     &\tx{intro-d} \\
     &\forall k \andc t \in z \ (k, t) \in w \tot (x_k, x_t) \in j \\
     &\forall k \in z, t \in i \ (k, y_t) \in w \tot (x_k, t) \in j \\
-    &(x, \tx{inv} \ x) - \tx{соответствие Галуа между $ (z, w) $ и $ (i, j) $} \\
-    &\forall k \in z, t \in i \ (k, (\tx{inv} \ x)_t) \in w \tot (x_k, t) \in j \\
     &\forall k \in z, t \in i \ (k, y_t) \in w \tot (x_k, (x \circ y)_t) \in j \\
-    &\forall k \in z, t \in i \ (k, y_t) \in w \tot (k, (y \circ x \circ y)_t) \in w \\
-    &\forall k \in z, t \in i \ (x_k, t) \in j \to ((y \circ x)_k, y_t) \in w \\
-    &\forall k \in z, t \in i \ (y_t, y_t) \in w \tot ((x \circ y)_t, t) \in j
+    &\forall k \in i \ ((x \circ y)_k, k) \in j \\
+    &\forall k \in i \ (y_k, (\tx{inv} \ x)_k) \in w \\
+    &\forall k \in i \ ((x \circ \tx{inv} \ x)_k, k) \in j \\
+    &\forall k \in i \ ((\tx{inv} \ x)_k, y_k) \in w
+\end{flalign*}
+\lend
+
+\section{Дашков ЕВ | 1.6.55}
+\begin{flalign*}
+    &z \neq \varnothing
+    \to
+    i \neq \varnothing
+    \to
+    (x, y) - \tx{соответствие Галуа между $ (z, w) $ и $ (i, j) $}
+    \to \\
+    &(x - \tx{инъективное} \tot y - \tx{суръективное}) \\ \\
+    &\tx{intro-d}
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &x - \tx{инъективное} \to y - \tx{суръективное} \\ \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ \forall k \in z \ \exists t \ (t, k) \in y \\
+    &x \equiv x \circ y \circ x \\
+    &\tx{intro-d} \\
+    &\tx{intro} \ \exists t \ (k, t) \in x \\
+    &\exists l
+    \begin{cases}
+        (k, l) \in x \circ y \\
+        (l, t) \in x
+    \end{cases} \\
+    &\exists l, m
+    \begin{cases}
+        (k, l) \in x \\
+        (l, m) \in y \\
+        (m, t) \in x
+    \end{cases} \\
+    &\exists l
+    \begin{cases}
+        (k, l) \in x \\
+        (l, k) \in y \\
+        (k, t) \in x
+    \end{cases}
+\end{flalign*}
+\lend \\
+\lend
+\begin{flalign*}
+    &y - \tx{суръективное} \to x - \tx{инъективное} \\ \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ (k, t) \in x \to (l, t) \in x \to k \equiv l \\
+    &\tx{intro-d} \\
+    &y \equiv y \circ x \circ y \\
+    &\tx{intro} \ \exists m \ (m, k) \in y \\
+    &\exists n, q
+    \begin{cases}
+        (m, n) \in y \\
+        (n, q) \in x \\
+        (q, k) \in y
+    \end{cases} \\
+    &\exists n
+    \begin{cases}
+        (m, k) \in y \\
+        (k, n) \in x \\
+        (n, k) \in y
+    \end{cases} \\
+    &\begin{cases}
+        (m, k) \in y \\
+        (k, t) \in x \\
+        (t, k) \in y
+    \end{cases} \\
+    &\tx{intro} \ \exists n \ (n, l) \in y \\
+    &\exists q, r
+    \begin{cases}
+        (n, q) \in y \\
+        (q, r) \in x \\
+        (r, l) \in y
+    \end{cases} \\
+    &\exists q
+    \begin{cases}
+        (n, l) \in y \\
+        (l, q) \in x \\
+        (q, l) \in y
+    \end{cases} \\
+    &\begin{cases}
+        (n, l) \in y \\
+        (l, t) \in x \\
+        (t, l) \in y
+    \end{cases}
 \end{flalign*}
 \lend
 \end{document}
