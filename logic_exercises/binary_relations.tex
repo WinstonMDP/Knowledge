@@ -1467,4 +1467,175 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
     \exists w \ \alpha \equiv (w, \exel\fnd{\exists j \ (w, j) \in (i \ w)})
     }
 \end{flalign*}
+
+\section{Лавров ИА, Максимова ЛЛ | 1.2.25.г}
+\begin{flalign*}
+    &(x^y)^z \sim x^{y \times z} \\ \\
+    &y
+    =
+    \set {
+    \left.
+    \left(
+    \alpha,
+    \set {
+    \left.
+    \left(\beta, \gamma, \left(\alpha_{\beta}\right)_{\gamma}\right)
+    \in
+    z \times y \times x \
+    \right| \
+    \top
+    }
+    \right)
+    \in
+    (x^y)^z \times x^{y \times z} \
+    \right| \
+    \top
+    }
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &y - \tx{инъективное} \\ \\
+    &\tx{rewrite-d} \ y_z \equiv y_w \to z \equiv w \\
+    &\tx{intro-d} \\
+    &\forall i \in z, j \in y \ (y_z)_{(i, j)} \equiv (y_w)_{(i, j)} \\
+    &\forall i \in z, j \in y \ (z_j)_i \equiv (w_j)_i \\
+    &\forall i \in y \ z_i \equiv w_i
+\end{flalign*}
+\lend \\
+\lend
+\begin{flalign*}
+    &y - \tx{сюръективное} \\ \\
+    &\tx{rewrite-d} \ \forall w \in x^{y \times z} \ \exists i \ (i, w) \in y \\
+    &\tx{intro-d} \\
+    &i
+    =
+    \set {
+    \left.
+    \left(
+    \alpha,
+    \set{(\beta, w_{(\beta, \alpha)}) \in y \times x \mid \top}
+    \right)
+    \in
+    z \times x^y \
+    \right| \
+    \top
+    }
+\end{flalign*}
+\lend
+
+\section{Лавров ИА, Максимова ЛЛ | 1.2.33}
+\begin{flalign*}
+    &\left(\exists j \ x - \tx{функция из $ w $}\right)
+    \to \\
+    &\left(
+    x - \tx{инъективное}
+    \tot
+    y, z
+    \to
+    \tx{rng}(x \upharpoonright (y \cap z))
+    \equiv
+    \tx{rng}(x \upharpoonright y)
+    \cap
+    \tx{rng}(x \upharpoonright z)
+    \right) \\ \\
+    &\tx{intro-d}
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &x - \tx{инъективное}
+    \to
+    \tx{rng}(x \upharpoonright (y \cap z))
+    \equiv
+    \tx{rng}(x \upharpoonright y)
+    \cap
+    \tx{rng}(x \upharpoonright z) \\ \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \
+    w \in \tx{rng}(x \upharpoonright (y \cap z))
+    \tot
+    \begin{cases}
+        w \in \tx{rng}(x \upharpoonright y) \\
+        w \in \tx{rng}(x \upharpoonright z)
+    \end{cases} \\
+    &\tx{rewrite-d} \
+    \left(\exists i \in y \cap z \ (i, w) \in x\right)
+    \tot
+    \begin{cases}
+        \exists i \in y \ (i, w) \in x \\
+        \exists i \in z \ (i, w) \in x
+    \end{cases} \\
+    &w
+    \to
+    \left(
+    \begin{cases}
+        \exists i \in y \ (i, w) \in x \\
+        \exists i \in z \ (i, w) \in x
+    \end{cases}
+    \tot
+    \exists i
+    \begin{cases}
+        i \in y \ (i, w) \in x \\
+        i \in z \ (i, w) \in x
+    \end{cases}
+    \right)
+\end{flalign*}
+\lend \\
+\lend
+\begin{flalign*}
+    &\left(
+    y, z
+    \to
+    \tx{rng}(x \upharpoonright (y \cap z))
+    \equiv
+    \tx{rng}(x \upharpoonright y)
+    \cap
+    \tx{rng}(x \upharpoonright z)
+    \right)
+    \to
+    x - \tx{инъективное} \\ \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ x_k \equiv x_t \to k \equiv t \\
+    &\tx{intro-d} \\
+    &w
+    \to
+    \left(
+    \left(\exists i \in \set{k} \cap \set{t} \ (i, w) \in x\right)
+    \tot
+    \begin{cases}
+        \exists i \in \set{k} \ (i, w) \in x \\
+        \exists i \in \set{t} \ (i, w) \in x
+    \end{cases}
+    \right) \\
+    &w
+    \to
+    \begin{cases}
+        \exists i \in \set{k} \ (i, w) \in x \\
+        \exists i \in \set{t} \ (i, w) \in x
+    \end{cases}
+    \to
+    k \equiv t
+\end{flalign*}
+\lend
+
+\section{Лавров ИА, Максимова ЛЛ | 1.2.34}
+\begin{flalign*}
+    &\exists w \ x - \tx{функция из $ w $}
+    \to
+    \tx{rng}(x \upharpoonright y) \setminus \tx{rng}(x \upharpoonright z)
+    \subseteq
+    \tx{rng}(x \upharpoonright (y \setminus z)) \\ \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \
+    \begin{cases}
+        \exists j \in y \ (j, i) \in x \\
+        \forall j \in z \ (j, i) \not\in x
+    \end{cases}
+    \to
+    \exists j \
+    \begin{cases}
+        j \in y \\
+        j \not\in z \\
+        (j, i) \in x
+    \end{cases}
+\end{flalign*}
 \end{document}

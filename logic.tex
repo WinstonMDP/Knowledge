@@ -124,7 +124,7 @@
 
 \section{Бесконечности}
 \begin{flalign*}
-    \ax{\exists_{\bb{S}} \ x - \tx{индуктивное}}
+    \ax{\exists x - \tx{индуктивное}}
 \end{flalign*}
 
 \section{Выбора}
@@ -317,7 +317,7 @@
 \begin{flalign*}
     \tx{idr} \ x
     =
-    \set{(\alpha, \alpha) \in x \times x \mid \top}
+    \set{(\alpha, \alpha) \in \tx{zip} \ x^2 \mid \top}
 \end{flalign*}
 \begin{flalign*}
     &x \upharpoonright y \ \fnd{x - \tx{бинарное отношение}}
@@ -393,6 +393,9 @@
     \bigsqcup x
     =
     \set{(\alpha, \beta) \in \cup\tx{rng} \ x \times \tx{dom} \ x \mid \alpha \in x_{\beta}}
+\end{flalign*}
+\begin{flalign*}
+    \tx{zip} \ x^2 = x \times x
 \end{flalign*}
 \begin{flalign*}
     &x - \tx{инъекция из $ y $}
@@ -518,6 +521,12 @@
 \chapter{Порядки}
 \section{Определения}
 \begin{flalign*}
+    &x - \tx{предпорядок}
+    =
+    \begin{cases}
+        x - \tx{рефлексивное} \\
+        x - \tx{транзитивное}
+    \end{cases} \\
     &x - \tx{строгий порядок}
     =
     \begin{cases}
@@ -527,9 +536,8 @@
     &x - \tx{нестрогий порядок}
     =
     \begin{cases}
-        x - \tx{рефлексивное} \\
-        x - \tx{антисимметричное} \\
-        x - \tx{транзитивное}
+        x - \tx{предпорядок} \\
+        x - \tx{антисимметричное}
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
@@ -666,7 +674,9 @@
     &\tx{ker} \ x \ \fnd{\exists y \ x - \tx{функция из $ y $}}
     =
     \set {
-    (\alpha, \beta) \in \tx{dom} \ x \times \tx{dom} \ x \mid x_{\alpha} \equiv x_{\beta}
+    (\alpha, \beta) \in \tx{zip} \left(\tx{dom} \ x\right)^2
+    \mid
+    x_{\alpha} \equiv x_{\beta}
     } \\
     &\tx{Ядерная эквивалентность $ x $}
 \end{flalign*}
@@ -677,14 +687,30 @@
     &\tx{Класс эквивалентности $ x $ по $ y $}
 \end{flalign*}
 \begin{flalign*}
-    x / y = \set{\tx{class} \ \alpha \ y \in \mathcal{P} \ x \mid \alpha \in x}
+    &x / y = \set{\tx{class} \ \alpha \ y \in \mathcal{P} \ x \mid \alpha \in x} \\
+    &\tx{Фактор-множество $ x $ по $ y $}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{разбиение $ y $}
+    =
+    \begin{cases}
+        x \subseteq \mathcal{P} \ y \\
+        \varnothing \not\in x \\
+        \forall z \andc w \in x \ z \cap w \not\equiv \varnothing \to z \equiv w
+    \end{cases}
 \end{flalign*}
 
 \section{Теоремы}
 \begin{flalign*}
-    &\set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{строгий порядок}}
+    &\set {
+    \alpha \in \mathcal{P}\left(\tx{zip} \ x^2\right) \mid \alpha - \tx{строгий порядок}
+    }
     \sim
-    \set{\alpha \in \mathcal{P} (x \times x) \mid \alpha - \tx{нестрогий порядок}} \\
+    \set {
+    \alpha \in \mathcal{P}\left(\tx{zip} \ x^2\right)
+    \mid
+    \alpha - \tx{нестрогий порядок}
+    } \\
     &(x, y) - \tx{ч.у.м.}
     \to
     \left(
@@ -706,7 +732,7 @@
     \left(
     z,
     \set {
-    (\alpha, \beta) \in \mathcal{P} \ x \times \mathcal{P} \ x \mid \alpha \subseteq \beta
+    (\alpha, \beta) \in \tx{zip}\left(\mathcal{P} \ x\right)^2 \mid \alpha \subseteq \beta
     }
     \right) \\
     &\set {
@@ -719,6 +745,23 @@
     \alpha \in z^x
     \mid
     \exists i \ (i, \alpha) - \tx{соответствие Галуа между $ (z, y) $ и $ (x, w) $}
+    } \\
+    &\set {
+    \alpha \in \mathcal{P}\left(\tx{zip} \ x^2\right)
+    \mid
+    \alpha - \tx{отношение эквивалентности}
     }
+    \sim \\
+    &\set{\alpha \in \mathcal{P} \ \mathcal{P} \ x \mid \alpha - \tx{разбиение $ x $}} \\
+    &\left(
+    \set {
+    \alpha \in \mathcal{P}\left(\tx{zip} \ x^2\right)
+    \mid
+    \alpha - \tx{отношение эквивалентности}
+    },
+    \set{(\alpha, \beta) \in \tx{zip} \ x^2 \mid \alpha \subseteq \beta}
+    \right)
+    - \\
+    &\tx{полная решётка}
 \end{flalign*}
 \end{document}
