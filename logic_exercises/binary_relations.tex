@@ -1638,4 +1638,37 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
         (j, i) \in x
     \end{cases}
 \end{flalign*}
+
+\section{Лавров ИА, Максимова ЛЛ | 1.2.51}
+\begin{flalign*}
+    &\set{y, z} - \tx{разбиение $ x $}
+    \to
+    \prod x
+    \sim
+    \prod\left(x \upharpoonright y\right)
+    \times
+    \prod\left(x \upharpoonright z\right) \\ \\
+    &\tx{intro-d} \\
+    &\left\{
+    \left(
+    \alpha,
+    \left(
+    \set{(\beta, \alpha_{\beta}) \in y \times \cup x \mid \top},
+    \set{(\beta, \alpha_{\beta}) \in z \times \cup x \mid \top}
+    \right)
+    \right)
+    \in
+    \right. \\
+    &\left.
+    \prod x
+    \times
+    \left(
+    \prod\left(x \upharpoonright y\right)
+    \times
+    \prod\left(x \upharpoonright z\right)
+    \right)
+    \mid
+    \top
+    \right\}
+\end{flalign*}
 \end{document}

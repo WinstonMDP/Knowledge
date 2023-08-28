@@ -349,4 +349,28 @@
     &\tx{intro-d} \\
     &\set{(\alpha, \beta) \in z \times (z / x) \mid \beta \equiv \tx{class} \ \alpha \ x}
 \end{flalign*}
+
+\section{Лавров ИА, Максимова ЛЛ | по мотивам 1.3.16.1}
+\begin{flalign*}
+    &x \andc y - \tx{эквивалентность}
+    \to
+    \tx{dom} \ x \equiv \tx{dom} \ y \equiv z
+    \to
+    y \equiv \tx{zip} \ z^2
+    \to
+    \tx{zip} \ z^2 \subseteq x \circ y \\ \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ (w, i) \in \tx{zip} \ z^2 \to (w, i) \in x \circ y \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \
+    \exists j
+    \begin{cases}
+        (w, j) \in y \\
+        (j, i) \in x
+    \end{cases} \\
+    &\begin{cases}
+        (w, i) \in y \\
+        (i, i) \in x
+    \end{cases}
+\end{flalign*}
 \end{document}

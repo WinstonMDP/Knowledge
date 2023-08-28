@@ -662,7 +662,7 @@
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    x - \tx{отношение эквивалентности}
+    x - \tx{эквивалентность}
     =
     \begin{cases}
         x - \tx{рефлексивное} \\
@@ -681,7 +681,7 @@
     &\tx{Ядерная эквивалентность $ x $}
 \end{flalign*}
 \begin{flalign*}
-    &\tx{class} \ x \ y \ \fnd{y - \tx{отношение эквивалентности}}
+    &\tx{class} \ x \ y \ \fnd{y - \tx{эквивалентность}}
     =
     \set{\alpha \in \tx{dom} \ y \mid \exists z \ (x, z) \in y} \\
     &\tx{Класс эквивалентности $ x $ по $ y $}
@@ -695,6 +695,7 @@
     =
     \begin{cases}
         x \subseteq \mathcal{P} \ y \\
+        \cup x \equiv y \\
         \varnothing \not\in x \\
         \forall z \andc w \in x \ z \cap w \not\equiv \varnothing \to z \equiv w
     \end{cases}
@@ -749,15 +750,15 @@
     &\set {
     \alpha \in \mathcal{P}\left(\tx{zip} \ x^2\right)
     \mid
-    \alpha - \tx{отношение эквивалентности}
+    \alpha - \tx{эквивалентность}
     }
-    \sim \\
-    &\set{\alpha \in \mathcal{P} \ \mathcal{P} \ x \mid \alpha - \tx{разбиение $ x $}} \\
+    \sim
+    \set{\alpha \in \mathcal{P} \ \mathcal{P} \ x \mid \alpha - \tx{разбиение $ x $}} \\
     &\left(
     \set {
     \alpha \in \mathcal{P}\left(\tx{zip} \ x^2\right)
     \mid
-    \alpha - \tx{отношение эквивалентности}
+    \alpha - \tx{эквивалентность}
     },
     \set{(\alpha, \beta) \in \tx{zip} \ x^2 \mid \alpha \subseteq \beta}
     \right)
