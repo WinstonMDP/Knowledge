@@ -373,4 +373,296 @@
         (i, i) \in x
     \end{cases}
 \end{flalign*}
+
+\section{Лавров ИА, Максимова ЛЛ | по мотивам 1.3.16.2}
+\begin{flalign*}
+    &x \andc y - \tx{эквивалентность}
+    \to
+    \tx{dom} \ x \equiv \tx{dom} \ y \equiv z
+    \to
+    x \circ y \equiv \tx{zip} \ z^2
+    \to
+    \tx{zip} \ z^2 \subseteq y \circ x \\ \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \ (w, i) \in \tx{zip} \ z^2 \to (w, i) \in y \circ x \\
+    &\tx{intro-d} \\
+    &\tx{rewrite-d} \
+    \exists j
+    \begin{cases}
+        (w, j) \in x \\
+        (j, i) \in y
+    \end{cases} \\
+    &\exists j
+    \begin{cases}
+        (i, j) \in y \\
+        (j, w) \in x
+    \end{cases} \\
+    &\exists j
+    \begin{cases}
+        (w, j) \in x \\
+        (j, i) \in y
+    \end{cases}
+\end{flalign*}
+
+\section{Лавров ИА, Максимова ЛЛ | по мотивам 1.3.20}
+\begin{flalign*}
+    &x \andc y - \tx{эквивалентность}
+    \to
+    \tx{dom} \ x \equiv \tx{dom} \ y
+    \to
+    x \cap y - \tx{эквивалентность}
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &\forall z \in \tx{dom} \ x \ (z, z) \in x \cap y \\ \\
+    &(z, z) \in x \\
+    &(z, z) \in y
+\end{flalign*}
+\lend
+\begin{flalign*}
+    z, w \to (z, w) \in x \cap y \to (w, z) \in x \cap y
+\end{flalign*}
+
+\section{Лавров ИА, Максимова ЛЛ | 1.3.21}
+\begin{flalign*}
+    &x \andc y - \tx{эквивалентность}
+    \to
+    \tx{dom} \ x \equiv \tx{dom} \ y
+    \to \\
+    &\left(
+    x \cup y \equiv x \circ y
+    \tot
+    x \cup y - \tx{эквивалентность}
+    \right) \\ \\
+    &x \cup y \equiv x \circ y
+    \to
+    z, w, i
+    \to
+    (z, w) \in x \cup y
+    \to
+    (w, i) \in x \cup y
+    \to
+    (z, i) \in x \cup y
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &x \cup y - \tx{эквивалентность}
+    \to
+    x \cup y \equiv x \circ y
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &(z, w) \in x \cup y \to (z, w) \in x \circ y \\ \\
+    &\tx{rewrite-d} \
+    \exists i
+    \begin{cases}
+        (z, i) \in y \\
+        (i, w) \in x
+    \end{cases} \\
+    &\left[
+    \begin{aligned}
+        &(z, w) \in x \\
+        &(z, w) \in y
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &\begin{cases}
+            (z, z) \in y \\
+            (z, w) \in x
+        \end{cases} \\
+        &\begin{cases}
+            (z, w) \in y \\
+            (w, w) \in x
+        \end{cases}
+    \end{aligned}
+    \right.
+\end{flalign*}
+\lend \\
+\lend
+\begin{flalign*}
+    &(z, w) \in x \circ y \to (z, w) \in x \cup y \\ \\
+    &\exists i
+    \begin{cases}
+        (z, i) \in y \\
+        (i, w) \in x
+    \end{cases} \\
+    &\exists i
+    \begin{cases}
+        (z, i) \in x \cup y \\
+        (i, w) \in x \cup y
+    \end{cases}
+\end{flalign*}
+\lend \\
+\lend
+
+\section{Лавров ИА, Максимова ЛЛ | 1.3.22}
+\begin{flalign*}
+    &x \andc y - \tx{эквивалентность}
+    \to
+    \tx{dom} \ x \equiv \tx{dom} \ y
+    \to \\
+    &\left(
+    x \circ y \equiv y \circ x
+    \tot
+    x \circ y - \tx{эквивалентность}
+    \right)
+\end{flalign*}
+\lend
+\begin{flalign*}
+    x \circ y \equiv y \circ x \to x \circ y - \tx{эквивалентность}
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &(z, w) \in x \circ y \to (w, z) \in x \circ y \\ \\
+    &\exists i
+    \begin{cases}
+        (z, i) \in y \\
+        (i, w) \in x
+    \end{cases} \\
+    &\exists i
+    \begin{cases}
+        (w, i) \in x \\
+        (i, z) \in y
+    \end{cases} \\
+    &(w, z) \in y \circ x
+\end{flalign*}
+\lend \\
+\lend
+\begin{flalign*}
+    &(z, w) \in x \circ y \to (w, i) \in x \circ y \to (z, i) \in x \circ y \\ \\
+    &\tx{intro} \
+    \exists j
+    \begin{cases}
+        (z, j) \in y \\
+        (j, w) \in x
+    \end{cases} \\
+    &\tx{intro} \
+    \exists k
+    \begin{cases}
+        (w, k) \in x \\
+        (k, i) \in y
+    \end{cases} \\
+    &(j, k) \in x \\
+    &\exists t
+    \begin{cases}
+        (z, t) \in x \\
+        (t, k) \in y
+    \end{cases} \\
+    &\exists t
+    \begin{cases}
+        (z, t) \in x \\
+        (t, i) \in y
+    \end{cases}
+\end{flalign*}
+\lend \\
+\lend \\
+\lend
+\begin{flalign*}
+    &x \circ y - \tx{эквивалентность} \to x \circ y \subseteq y \circ x \\ \\
+    &\tx{rewrite-d} \ (z, w) \in x \circ y \to (z, w) \in y \circ x \\
+    &\exists i
+    \begin{cases}
+        (w, i) \in y \\
+        (i, z) \in x
+    \end{cases} \\
+    &\exists i
+    \begin{cases}
+        (z, i) \in x \\
+        (i, w) \in y
+    \end{cases}
+\end{flalign*}
+\lend
+
+\section{Лавров ИА, Максимова ЛЛ | 1.3.23}
+\begin{flalign*}
+    &x \andc y \andc (x \circ y) - \tx{эквивалентность}
+    \to \\
+    &x \circ y
+    -
+    \tx {$
+    \set{
+    (\alpha, \beta)
+    \in
+    \tx{zip}\left(\mathcal{P} \ \tx{zip} \left(\tx{dom} \ x\right)^2\right)^2 \
+    \left| \
+    \begin{cases}
+        \alpha \andc \beta - \tx{эквивалентность} \\
+        x \cup y \subseteq \alpha \andc \beta \\
+        \alpha \subseteq \beta
+    \end{cases}
+    \right.
+    }
+    $-наименьший} \\ \\
+    &\tx{rewrite-d} \
+    z - \tx{эквивалентность}
+    \to
+    \tx{dom} \ z \equiv \tx{dom} \ x
+    \to
+    x \cup y \subseteq z
+    \to
+    \begin{cases}
+        x \circ y \subseteq z \\
+        x \cup y \subseteq x \circ y
+    \end{cases} \\
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &(w, i) \in x \circ y \to (w, i) \in z \\
+    &\exists j
+    \begin{cases}
+        (w, j) \in y \\
+        (j, i) \in x
+    \end{cases} \\
+    &(w, i) \in z \circ z \\
+    &(w, i) \in z
+\end{flalign*}
+\lend
+
+\section{Лавров ИА, Максимова ЛЛ | 1.3.40}
+\begin{flalign*}
+    (x, y) \andc (x, z) - \tx{л.у.м.}
+    \to
+    \left(
+    (x, y \circ z) - \tx{л.у.м.}
+    \tot
+    y \equiv z
+    \right)
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &(x, y \circ z) - \tx{л.у.м.} \to y \subseteq z \\ \\
+    &\tx{rewrite-d} \ (w, i) \in y \to (w, i) \in z \\
+    &(w, i) \in y \circ z \\
+    &\left[
+    \begin{aligned}
+        &(w, i) \in z \\
+        &(i, w) \in z
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &(w, i) \in z \\
+        &(i, w) \in y \circ z
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &(w, i) \in z \\
+        &i \equiv w
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &(w, i) \in z \\
+        &(w, i) \in z
+    \end{aligned}
+    \right.
+\end{flalign*}
+\lend \\
+\lend
+\begin{flalign*}
+    y \equiv z \to (x, y \circ z) - \tx{л.у.м.}
+\end{flalign*}
+\lend
 \end{document}
