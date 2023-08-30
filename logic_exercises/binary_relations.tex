@@ -1671,4 +1671,58 @@ $ \tx{rng} \ x^{-1} \equiv \tx{dom} \ x $.
     \top
     \right\}
 \end{flalign*}
+
+\section{Дискретная математика контрольная работа | по мотивам 3.1}
+\begin{flalign*}
+    &x \neq \varnothing \to x \equiv x \times x \to \bot \\ \\
+    &\tx{intro} \ \exists y \in x \cup (\cup x) \
+    \forall z \in x \cup (\cup x) \ z \not\in y \\
+    &\left[
+    \begin{aligned}
+        &y \in x \\
+        &y \in \cup x
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &\begin{cases}
+            y \in x \\
+            \exists z \andc w \in x \ y \equiv (z, w)
+        \end{cases} \\
+        &\exists z \andc w \in x \ y \in (z, w)
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &\begin{cases}
+            y \in x \\
+            \exists z \in y
+        \end{cases} \\
+        &\exists z \in x \ y \equiv \set{z} \\
+        &\exists z \andc w \in x \ y \equiv \set{z, w}
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &\exists z \in y \ z \not\in y \\
+        &\exists z \not\in y \ z \in y \\
+        &\exists z \not\in y \ z \in y
+    \end{aligned}
+    \right.
+\end{flalign*}
+
+\section{!Дискретная математика контрольная работа | 3.4}
+\begin{flalign*}
+    \set {
+    \alpha \in \bb{N}^{\bb{N}} \
+    \left| \
+    \begin{cases}
+        \alpha - \tx{биекция из $ \bb{N} $ в $ \bb{N} $} \\
+        \forall x \in \bb{N} \ \alpha_x \not\equiv x
+    \end{cases}
+    \right.
+    }
+    \sim
+    \bb{R}
+\end{flalign*}
 \end{document}

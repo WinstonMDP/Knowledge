@@ -54,7 +54,7 @@
     &\ax {
     x \in \cup \ y
     =
-    \exists z \in y \ x \in z
+    \exists z \ x \in z \in y
     } \\
     &\ntnt{\cup x}{\tx{объединение $ x $}}
 \end{flalign*}
@@ -67,57 +67,18 @@
 
 \section{Выделения}
 \begin{flalign*}
-    &\set{\alpha \in x \mid y \ \alpha}
-    = \\
-    &\exel
-    \left(
-    \fnd {
-    \argtype{y}{\bb{S}}
-    \to
-    \left(
-    z
-    \to
-    \left[
-    \begin{aligned}
-        &\exists! (w \mapsto x \ z \ w) \\
-        &\nexists w \ x \ z \ w
-    \end{aligned}
-    \right.
-    \right)
-    \to
-    \exists z \
+    \set{\alpha \in x \mid y \ \alpha}
+    =
+    \exel z \
     w
     \to
-    \left(w \in z \tot \exists i \in y \ x \ i \ w\right)
-    }
-    \right. \\
-    &\left.
     \left(
-    z, w \mapsto
+    w \in z
+    \tot
     \begin{cases}
-        z \equiv w \\
+        w \in x \\
         y \ w
     \end{cases}
-    \right) \
-    x \
-    \fnd {
-    z
-    \to
-    \left[
-    \begin{aligned}
-        &\exists! w
-        \begin{cases}
-            z \equiv w \\
-            y \ w
-        \end{cases} \\
-        &\nexists w
-        \begin{cases}
-            z \equiv w \\
-            y \ w
-        \end{cases}
-    \end{aligned}
-    \right.
-    }
     \right)
 \end{flalign*}
 Выводится из аксиомы подстановки.
@@ -142,7 +103,7 @@
 
 \section{Регулярности (фундированности)}
 \begin{flalign*}
-    \ax{\exists y \in x \ \forall z \in x \ z \not\in y}
+    \ax{x \neq \varnothing \to \exists y \in x \ \forall z \in x \ z \not\in y}
 \end{flalign*}
 
 \section{Подстановки}
@@ -195,7 +156,7 @@
     =
     \begin{cases}
         \exists y \ x \ y \\
-        x \ z \to z \equiv \exel\fnd{\exists y \ x \ y}
+        x \ z \to z \equiv \exel y \ x \ y
     \end{cases} \\
     &\tx{Существует единственное, удовлетворяющее $ x $}
 \end{flalign*}
@@ -217,7 +178,7 @@
     \end{cases} \\
     &\varnothing
     =
-    \set{\alpha \in \exel\fnd{\exists_{\bb{S}} \ x - \tx{индуктивное}} \mid \bot} \\
+    \set{\alpha \in \exel x - \tx{индуктивное} \mid \bot} \\
     &x - \tx{транзитивное} = \cup x \subseteq x
 \end{flalign*}
 \begin{flalign*}
@@ -282,6 +243,15 @@
     &\tx{Область значений $ x $}
 \end{flalign*}
 \begin{flalign*}
+    x \abin y \abin z \abin \ldots \abind w
+    =
+    \begin{cases}
+        (x, y) \in w \\
+        (y, z) \in w \\
+        \ldots
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
     x - \tx{поле $ y $}
     =
     \begin{cases}
@@ -303,14 +273,9 @@
     &x \circ y
     =
     \set {
-    (\alpha, \beta) \in \tx{dom} \ y \times \tx{rng} \ x \
-    \left| \
-    \exists z
-    \begin{cases}
-        (\alpha, z) \in y \\
-        (z, \beta) \in x
-    \end{cases}
-    \right.
+    (\alpha, \beta) \in \tx{dom} \ y \times \tx{rng} \ x
+    \mid
+    \exists z \ \alpha \abin z \abin \beta \abind x
     } \\
     &\tx{Композиция $ x $ и $ y $}
 \end{flalign*}
@@ -373,7 +338,7 @@
     \end{cases}
     }
     =
-    \exel\fnd{\exists w \ (y, w) \in x}
+    \exel w \ (y, w) \in x
 \end{flalign*}
 \begin{flalign*}
     x^y
@@ -390,9 +355,12 @@
     &\tx{Прямое (декартово) произведение $ x $}
 \end{flalign*}
 \begin{flalign*}
-    \bigsqcup x
+    &\bigsqcup x
     =
-    \set{(\alpha, \beta) \in \cup\tx{rng} \ x \times \tx{dom} \ x \mid \alpha \in x_{\beta}}
+    \set {
+    (\alpha, \beta) \in \cup\tx{rng} \ x \times \tx{dom} \ x \mid \alpha \in x_{\beta}
+    } \\
+    &\tx{Дизъюнктное объединение $ x $}
 \end{flalign*}
 \begin{flalign*}
     \tx{zip} \ x^2 = x \times x
@@ -455,7 +423,7 @@
     =
     \begin{cases}
         x - \tx{бинарное отношение} \\
-        (y, z) \in x \to (z, w) \in x \to (y, w) \in x
+        y \abin z \abin w \abind x \to (y, w) \in x
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
@@ -481,18 +449,6 @@
 
 \section{Теоремы}
 \begin{flalign*}
-    &\begin{cases}
-        x \equiv y \\
-        z \equiv w
-    \end{cases}
-    \tot
-    (x, z) \equiv (y, w) \\
-    &\begin{cases}
-        x \equiv y \\
-        z \equiv w
-    \end{cases}
-    \tot
-    x \times z \equiv y \times w \\
     &x \not\equiv \varnothing
     \to
     y \not\equiv \varnothing
@@ -500,9 +456,6 @@
     \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
     \to
     x \equiv y \equiv z \equiv w \\
-    &(y, z) \in x \to y \in \tx{dom} \ x \\
-    &(y, z) \in x \to z \in \tx{rng} \ x \\
-    &\cup\cup x \equiv \tx{dom} \ x \cup \tx{rng} \ x \\
     &\tx{inv} \ x \subseteq x \tot x \equiv \tx{inv} \ x \\
     &\begin{cases}
         \tx{inv} \ x \circ x \equiv \tx{idr} \ y \\
@@ -764,4 +717,16 @@
     - \\
     &\tx{полная решётка}
 \end{flalign*}
+
+\chapter{Числа}
+\section{Определения}
+\begin{flalign*}
+    \bb{N}
+    =
+    \set {
+    \alpha \in \exel x - \tx{индуктивное} \mid \forall y - \tx{индуктивное} \ \alpha \in y
+    }
+\end{flalign*}
+
+\section{Теоремы}
 \end{document}

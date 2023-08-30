@@ -619,19 +619,13 @@
 \end{flalign*}
 \lend
 
-\section{Лавров ИА, Максимова ЛЛ | 1.3.40}
+\section{Лавров ИА, Максимова ЛЛ | по мотивам 1.3.40}
 \begin{flalign*}
-    (x, y) \andc (x, z) - \tx{л.у.м.}
+    &(x, y) \andc (x, z) - \tx{л.у.м.}
     \to
-    \left(
     (x, y \circ z) - \tx{л.у.м.}
-    \tot
-    y \equiv z
-    \right)
-\end{flalign*}
-\lend
-\begin{flalign*}
-    &(x, y \circ z) - \tx{л.у.м.} \to y \subseteq z \\ \\
+    \to
+    y \subseteq z \\ \\
     &\tx{rewrite-d} \ (w, i) \in y \to (w, i) \in z \\
     &(w, i) \in y \circ z \\
     &\left[
@@ -659,10 +653,50 @@
     \end{aligned}
     \right.
 \end{flalign*}
-\lend \\
-\lend
+
+\section{Лавров ИА, Максимова ЛЛ | по мотивам 1.3.47}
 \begin{flalign*}
-    y \equiv z \to (x, y \circ z) - \tx{л.у.м.}
+    &(x, y) - \tx{ч.у.м}
+    \to
+    z
+    \equiv
+    \set {
+    \alpha \in \mathcal{P} \ x \
+    \left| \
+    \exists z, w \
+    \alpha
+    \equiv
+    \set {
+    \beta \in x \
+    \left| \
+    z \abin \beta \abin w \abind y
+    \right.
+    }
+    \right.
+    }
+    \to \\
+    &\left(z, \set{(\alpha, \beta) \in \tx{zip} \ z^2 \mid \alpha \subseteq \beta}\right)
+    \cong \\
+    &\left(
+    \tx{zip} \ x^2,
+    \set {
+    ((\alpha, \beta), (\gamma, \delta)) \in \tx{zip}\left(\tx{zip} \ x^2 \right)^2 \
+    \left| \
+    \begin{cases}
+        (\alpha, \gamma) \in y \\
+        (\beta, \delta) \in \tx{inv} \ y
+    \end{cases}
+    \right.
+    }
+    \right) \\ \\
+    &\set {
+    (\alpha, (\beta, \gamma)) \in z \times \tx{zip} \ z^2 \
+    \left| \
+    \begin{cases}
+        \beta - \tx{$ y $-наибольший $ \alpha $} \\
+        \gamma - \tx{$ y $-наименьший $ \alpha $}
+    \end{cases}
+    \right.
+    }
 \end{flalign*}
-\lend
 \end{document}
