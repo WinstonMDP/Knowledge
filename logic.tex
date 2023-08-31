@@ -174,11 +174,9 @@
     =
     \begin{cases}
         y - \tx{пустое} \to y \in x \\
-        z \in x \to z \cup \set{z} \in x
+        z \in x \to \tx{suc} \ z \in x
     \end{cases} \\
-    &\varnothing
-    =
-    \set{\alpha \in \exel x - \tx{индуктивное} \mid \bot} \\
+    &\varnothing = \set{\alpha \in \exel x - \tx{индуктивное} \mid \bot} \\
     &x - \tx{транзитивное} = \cup x \subseteq x
 \end{flalign*}
 \begin{flalign*}
@@ -718,15 +716,75 @@
     &\tx{полная решётка}
 \end{flalign*}
 
-\chapter{Числа}
+\chapter{Натуральные числа}
 \section{Определения}
 \begin{flalign*}
-    \bb{N}
+    &\tx{suc} \ x = x \cup \set{x} \\
+    &\tx{Последователь $ x $}
+\end{flalign*}
+\begin{flalign*}
+    \begin{cases}
+        0 = \varnothing \\
+        1 = \tx{suc} \ 0 \\
+        2 = \tx{suc} \ 1 \\
+        \ldots
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &\bb{N}
     =
     \set {
     \alpha \in \exel x - \tx{индуктивное} \mid \forall y - \tx{индуктивное} \ \alpha \in y
-    }
+    } \\
+    &\tx{Множество натуральных чисел}
+\end{flalign*}
+\begin{flalign*}
+    &x < y
+    =
+    \begin{cases}
+        x \andc y \in \bb{N} \\
+        x \in y
+    \end{cases} \\
+    &\tx{$ x $ меньше $ y $}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{прогрессивное}
+    =
+    \forall y \in \bb{N} \ \left(\forall z < y \ x \ z\right) \to x \ y
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{конечное} = \exists y \in \bb{N} \ y \sim x \\
+    &\notis \tx{бесконечное}
 \end{flalign*}
 
 \section{Теоремы}
+\subsection{Принцип математической индукции}
+\begin{flalign*}
+    x \ 0
+    \to
+    \left(\forall y \in \bb{N} \ x \ y \to x \ \tx{suc} \ y\right)
+    \to
+    \forall y \in \bb{N} \ x \ y
+\end{flalign*}
+
+\subsection{Принцип порядковой (сильной) индукции}
+\begin{flalign*}
+    x - \tx{прогрессивное} \to \forall y \in \bb{N} \ x \ y
+\end{flalign*}
+
+\subsection{Принцип наименьшего числа}
+\begin{flalign*}
+    \left(\exists y \in \bb{N} \ x \ y\right)
+    \to
+    \exists y
+    \begin{cases}
+        x \ y \\
+        \forall z < y \ \overline{x \ z}
+    \end{cases}
+\end{flalign*}
+
+\subsection{Принцип Дирихле}
+\begin{flalign*}
+    x < y \to y \not\lesssim x
+\end{flalign*}
 \end{document}
