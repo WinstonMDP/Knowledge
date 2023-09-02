@@ -1,0 +1,194 @@
+\input{../knowledge_preamble}
+
+\title{Логика \\ упражнения \\ натуральные числа}
+\date{\today}
+\author{WinstonMDP}
+
+\begin{document}
+\maketitle
+
+\section{Дашков ЕВ | 2.1.24}
+\begin{flalign*}
+    &x < y \to z - \tx{функция из $ x $} \to z \notis \tx{сюръективное на $ y $} \\ \\
+    &\tx{stay-d} \\
+    &x \ y
+    =
+    z
+    \to
+    \forall w < y \ z - \tx{функция из $ w $} \to z \notis \tx{сюръективное на $ y $} \\
+    &x \ 0
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &\forall y \in \bb{N} \ x \ y \to x \ \tx{suc} \ y \\ \\
+    &\tx{rewrite-d} \
+    \forall w < \tx{suc} \ y \
+    z - \tx{функция из $ w $} \to z - \tx{сюръективное на $ \tx{suc} \ y $} \to \bot \\
+    &\left[
+    \begin{aligned}
+        &w < y \\
+        &w \equiv y
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &\begin{cases}
+            z \upharpoonleft y - \tx{сюръективное на $ y $} \\
+            z \upharpoonleft y \notis \tx{сюръективное на $ y $}
+        \end{cases} \\
+        &\exists i \ \tx{suc} \ i \equiv y \equiv w \\
+        &0 \equiv w
+    \end{aligned}
+    \right. \\
+    &\tx{intro} \ \exists i \ \tx{suc} \ i \equiv y \equiv w \\
+    &i < y \\
+    &j
+    =
+    \set {
+    (\alpha, \beta) \in \tx{suc} \ i \times \tx{suc} \ y \
+    \left| \
+    \begin{cases}
+        \alpha \equiv i \to \beta \equiv y \\
+        z_{\alpha} \equiv y \to \beta \equiv z_i \\
+        \alpha \not\equiv i \to z_{\alpha} \not\equiv y \to \beta \equiv z_{\alpha}
+    \end{cases}
+    \right.
+    } \\
+    &j - \tx{сюръекция из $ \tx{suc} \ i $ в $ \tx{suc} \ y $} \\
+    &j \setminus (i, y) - \tx{сюръекция из $ i $ в $ y $} \\
+    &j \setminus (i, y) \notis \tx{сюръективное на $ y $}
+\end{flalign*}
+\lend
+
+\section{Дашков ЕВ | 2.1.26}
+\begin{flalign*}
+    &x \in \bb{N} \to y - \tx{сюръекция из $ x $ в $ x $} \to y - \tx{инъективное} \\ \\
+    &\tx{stay-d} \\
+    &x \ y
+    =
+    y \in \bb{N} \to \forall z - \tx{сюръекция из $ y $ в $ y $} \ z - \tx{инъективное} \\
+    &x \ 0
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &\forall y \in \bb{N} \ x \ y \to x \ \tx{suc} \ y \\ \\
+    &w
+    =
+    \set {
+    (\alpha, \beta) \in \tx{zip} \ \left(\tx{suc} \ y\right)^2 \
+    \left| \
+    \begin{cases}
+        \alpha \equiv y \to \beta \equiv z_y \\
+        \alpha \equiv z_y \to \beta \equiv y \\
+        \alpha \not\equiv y \to \alpha \not\equiv z_y \to \alpha \equiv \beta
+    \end{cases}
+    \right.
+    } \\
+    &w - \tx{биекция из $ \tx{suc} \ y $ в $ \tx{suc} \ y $} \\
+    &w \circ z - \tx{сюръекция из $ \tx{suc} \ y $ в $ \tx{suc} \ y $} \\
+    &(w \circ z) \setminus (y, y) - \tx{сюръекция из $ y $ в $ y $} \\
+    &(w \circ z) \setminus (y, y) - \tx{биекция из $ y $ в $ y $} \\
+    &w \circ z - \tx{биекция из $ \tx{suc} \ y $ в $ \tx{suc} \ y $} \\
+    &\tx{inv} \ w \circ w \circ z  - \tx{биекция из $ \tx{suc} \ y $ в $ \tx{suc} \ y $} \\
+    &z - \tx{биекция из $ \tx{suc} \ y $ в $ \tx{suc} \ y $}
+\end{flalign*}
+\lend
+
+\section{Поле}
+\begin{flalign*}
+    &\tx{Спецификация:} \\
+    &\begin{cases}
+        0 + x \equiv x \\
+        x + 1 + y \equiv x + y + 1
+    \end{cases} \\
+    &\tx{Салама-диаграмма:} \\
+    &\begin{cases}
+        w_0 \equiv \tx{idr} \ \bb{N} \\
+        w_{\tx{suc} \ x} \equiv y \mapsto \tx{suc} \ (w_x)_y
+    \end{cases} \\
+    &\tx{Реализация:} \\
+    &\begin{cases}
+        w_0 \equiv \tx{idr} \ \bb{N} \\
+        w_{\tx{suc} \ x}
+        \equiv
+        \left(
+        \set {
+        \left(
+        \alpha, \set{(\beta, \tx{suc} \ \alpha_{\beta}) \in \tx{zip} \ \bb{N}^2 \mid \top}
+        \right)
+        \in
+        \tx{zip} \ \left(\bb{N}^{\bb{N}}\right)^2
+        \mid
+        \top
+        }
+        \circ
+        w
+        \right)_x
+    \end{cases} \\
+    &\begin{cases}
+        w_0 \equiv \tx{idr} \ \bb{N} \\
+        w_{\tx{suc} \ x}
+        \equiv
+        \left(
+        \left(
+        \exel i
+        \begin{cases}
+            i \in \left(\bb{N}^{\bb{N}}\right)^{\bb{N}^{\bb{N}}} \\
+            \forall j \in \bb{N}^{\bb{N}} \
+            i_j \equiv \exel k \ \forall t \in \bb{N} \ k_t \equiv \tx{suc} \ j_t
+        \end{cases}
+        \right)
+        \circ
+        w
+        \right)_x
+    \end{cases} \\
+    &\stackrel{\bb{Z}}{*} \\
+    &\set{1, 2} \\
+    &1 = \set{2} \\
+    &2 = \set{1} \\
+    &\set{\set{2}, 2}
+\end{flalign*}
+
+\section{Дашков ЕВ | 2.1.49}
+\begin{flalign*}
+    \exists x \not\equiv \varnothing \ \cup x \equiv x
+\end{flalign*}
+\lend
+\begin{flalign*}
+    &\forall x \in \bb{N} \ x \in \cup\bb{N}\\
+    &\tx{rewrite-d} \ \exists y \ x \in y \in \bb{N} \\
+    &x \in \tx{suc} \ x \in \bb{N}
+\end{flalign*}
+\lend
+
+\section{Дашков ЕВ | 2.1.50}
+\begin{flalign*}
+    &\exists x \not\equiv \varnothing \ \tx{zip} \ x^2 \subseteq x \\ \\
+    &x \ y \ z
+    =
+    \left[
+    \begin{aligned}
+        &\begin{cases}
+            y \equiv \varnothing \\
+            z \equiv \set{\varnothing}
+        \end{cases} \\
+        &\exists w \in \bb{N}
+        \begin{cases}
+            y - \tx{функция из $ \tx{suc} \ w $} \\
+            i, j \to \left(i \andc j \in \cup \tx{rng} \ y \tot (i, j) \in z\right)
+        \end{cases} \\
+        &\begin{cases}
+            \nexists w \in \bb{N} \ y - \tx{функция из $ w $} \\
+            y \equiv z
+        \end{cases}
+    \end{aligned}
+    \right. \\
+    &\tx{intro} \
+    \exists y
+    \begin{cases}
+        y - \tx{функция из $ \bb{N} $} \\
+        \forall z \in \bb{N} \ x \ \left(y \upharpoonright z\right) \ y_z
+    \end{cases} \\
+    &z = \cup\tx{rng} \ y
+\end{flalign*}
+\end{document}
