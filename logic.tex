@@ -20,7 +20,7 @@
 \begin{flalign*}
     &\gr{r}{}{}{\_\to\_} \\
     &\gr{n}{}{\_\to\_}{\_=\_} \\
-    &\greq{n}{\_=\_}{\_\mapsto\_} \\
+    &\greq{r}{\_\to\_}{\_\mapsto\_} \\
     &\gr{n}{\_=\_}{\_\tot\_}{\exists\_\_} \\
     &\greq{n}{\exists\_\_}{\forall\_\_} \\
     &=\bot \\
@@ -111,16 +111,7 @@
     \ax {
     \argtype{y}{\bb{S}}
     \to
-    \left(
-    z
-    \to
-    \left[
-    \begin{aligned}
-        &\exists! w \mapsto x \ z \ w \\
-        &\nexists w \ x \ z \ w
-    \end{aligned}
-    \right.
-    \right)
+    z - \tx{функциональное свойство}
     \to
     \exists z \ w
     \to
@@ -130,7 +121,7 @@
 
 \chapter{Операции над множествами}
 \section{Определения}
-Класс - это $ \set{x \ \left| \ \varphi(x)\right.} $.
+Класс - это $ \set{x  \middle| \ \varphi(x)} $.
 Не все классы являются множествами. Все множества являются классами.
 \begin{flalign*}
     &\ax{\type{\bb{S}}{\bb{T}}} \\
@@ -158,10 +149,11 @@
         \exists y \ x \ y \\
         x \ z \to z \equiv \exel y \ x \ y
     \end{cases} \\
-    &\tx{Существует единственное, удовлетворяющее $ x $}
+    &\tx{Существует единственное, удовлетворяющее $ x $} \\
+    &\greq{n}{\exists!\_}{\exists\_\_}
 \end{flalign*}
 \begin{flalign*}
-    &x \subseteq y = z \in x \to z \in y \\
+    &x \subseteq y = \forall z \in x \ z \in y \\
     &\tx{$ x $ - подмножество $ y $}
 \end{flalign*}
 \begin{flalign*}
@@ -202,11 +194,16 @@
 
 \section{Теоремы}
 \begin{flalign*}
-    \exists! (x \mapsto x - \tx{пустое})
+    \exists! x \mapsto x - \tx{пустое}
 \end{flalign*}
 
 \chapter{Бинарные отношения}
 \section{Определения}
+\begin{flalign*}
+    x - \tx{функциональное свойство}
+    =
+    \argtype{y}{\bb{S}} \to x \ y \ z \to x \ y \ w \to z \equiv w
+\end{flalign*}
 \begin{flalign*}
     &(x, y) = \set{\set{x}, \set{x, y}} \\
     &\tx{Упорядоченная пара Куратовского $ x $ и $ y $}
@@ -216,12 +213,11 @@
     =
     \set {
     (\alpha, \beta) \in \mathcal{P}\left(\mathcal{P} \left(x \cup y\right)\right) \
-    \left| \
+    \middle| \
     \begin{cases}
         \alpha \in x \\
         \beta \in y
     \end{cases}
-    \right.
     } \\
     &\tx{Прямое (декартово) произведение $ x $ и $ y $}
 \end{flalign*}
@@ -605,10 +601,8 @@
     =
     \begin{cases}
         (z, w) \andc (i, j) - \tx{ч.у.м} \\
-        x \subseteq z \times i \\
-        x - \tx{функция из $ z $} \\
-        y \subseteq i \times z \\
-        y - \tx{функция из $ i $} \\
+        x \in i^z \\
+        y \in z^i \\
         \forall k \in z, t \in i \ (k, y_t) \in w \tot (x_k, t) \in j
     \end{cases}
 \end{flalign*}
@@ -756,6 +750,36 @@
     &x - \tx{конечное} = \exists y \in \bb{N} \ y \sim x \\
     &\notis \tx{бесконечное}
 \end{flalign*}
+\begin{flalign*}
+    &x + y
+    =
+    \left(
+    \left(
+    \exel z
+    \begin{cases}
+        \forall w \in \bb{N} \ (z_0)_w \equiv w \\
+        \forall w \andc i \in \bb{N} \
+        \left(z_{\tx{suc} \ w}\right)_i \equiv \tx{suc}\left(z_w\right)_i
+    \end{cases}
+    \right)_x
+    \right)_y \\
+    &\tx{$ x $ плюс $ y $; сумма $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x * y
+    =
+    \left(
+    \left(
+    \exel z
+    \begin{cases}
+        \forall w \in \bb{N} \ (z_0)_w \equiv 0 \\
+        \forall w \andc i \in \bb{N} \
+        \left(z_{\tx{suc} \ w}\right)_i \equiv \left(z_w\right)_i + i
+    \end{cases}
+    \right)_x
+    \right)_y \\
+    &\tx{$ x $ умножить на $ y $; произведение $ x $ и $ y $}
+\end{flalign*}
 
 \section{Теоремы}
 \subsection{Принцип математической индукции}
@@ -787,4 +811,51 @@
 \begin{flalign*}
     x < y \to y \not\lesssim x
 \end{flalign*}
+
+\begin{flalign*}
+    x \in y
+    \to
+    z \in y^y
+    \to
+    \exists!
+    w
+    \mapsto
+    \begin{cases}
+        w \in y^{\bb{N}} \\
+        w_0 \equiv x \\
+        \forall i \in \bb{N} \ w_{\tx{suc} \ i} \equiv (z \circ w)_i
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{функциональное свойство}
+    \to
+    \left(\forall y \ \exists z \ x \ y \ z\right)
+    \to
+    \exists! y
+    \mapsto
+    \begin{cases}
+        y - \tx{функция из $ \bb{N} $} \\
+        \forall z \in \bb{N} \ x \ \left(y \upharpoonright z\right) \ y_z
+    \end{cases}
+\end{flalign*}
+
+\chapter{Другие числа}
+\section{Определения}
+\begin{flalign*}
+    &\bb{Z}
+    =
+    \left.
+    \tx{zip} \ \bb{N}^2 \
+    \middle/ \
+    \set {
+    \left(\left(\alpha, \beta\right), \left(\gamma, \delta\right)\right)
+    \in
+    \tx{zip}\left(\tx{zip} \ \bb{N}^2\right)^2 \
+    \middle| \
+    \alpha + \delta \equiv \beta + \gamma
+    }
+    \right.
+\end{flalign*}
+
+\section{Теоремы}
 \end{document}
