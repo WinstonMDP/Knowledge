@@ -751,6 +751,12 @@
     &\notis \tx{бесконечное}
 \end{flalign*}
 \begin{flalign*}
+    x - \tx{счётное} = x \sim \bb{N}
+\end{flalign*}
+\begin{flalign*}
+    |x| \ \fnd{x - \tx{конечное}} = \exel y \in \bb{N} \ y \sim x
+\end{flalign*}
+\begin{flalign*}
     &x + y
     =
     \left(
@@ -813,7 +819,7 @@
 \end{flalign*}
 
 \begin{flalign*}
-    x \in y
+    &x \in y
     \to
     z \in y^y
     \to
@@ -824,10 +830,8 @@
         w \in y^{\bb{N}} \\
         w_0 \equiv x \\
         \forall i \in \bb{N} \ w_{\tx{suc} \ i} \equiv (z \circ w)_i
-    \end{cases}
-\end{flalign*}
-\begin{flalign*}
-    x - \tx{функциональное свойство}
+    \end{cases} \\
+    &x - \tx{функциональное свойство}
     \to
     \left(\forall y \ \exists z \ x \ y \ z\right)
     \to
@@ -836,7 +840,13 @@
     \begin{cases}
         y - \tx{функция из $ \bb{N} $} \\
         \forall z \in \bb{N} \ x \ \left(y \upharpoonright z\right) \ y_z
-    \end{cases}
+    \end{cases} \\
+    &x \andc y - \tx{конечное}
+    \to
+    |x \cup y| \equiv |x| + |y| - |x \cap y| \\
+    &x \andc y - \tx{конечное}
+    \to
+    |x \times y| \equiv |x| * |y| \\
 \end{flalign*}
 
 \chapter{Другие числа}

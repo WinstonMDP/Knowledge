@@ -191,4 +191,64 @@
     \end{cases} \\
     &z = \cup\tx{rng} \ y
 \end{flalign*}
+
+\section{Дашков ЕВ | 2.1.51}
+\begin{flalign*}
+    &\exists x \not\equiv \varnothing \
+    \forall y \in x
+    \begin{cases}
+        \cup y \in x \\
+        \mathcal{P} \ y \in x
+    \end{cases} \\ \\
+    &x \ y \ z
+    =
+    \left[
+    \begin{aligned}
+        &\begin{cases}
+            y \equiv \varnothing \\
+            z \equiv \set{\varnothing, \set{\varnothing}}
+        \end{cases} \\
+        &\exists w \in \bb{N}
+        \begin{cases}
+            y - \tx{функция из $ \tx{suc} \ w $} \\
+            \forall i \in \cup\tx{rng} \ y \ \mathcal{P} \ i \in z \\
+            \forall i \in \cup\tx{rng} \ y \ \cup i \in z \\
+            \forall i \in z \
+            \exists j \in \cup\tx{rng} \ y
+            \left[
+            \begin{aligned}
+                &i \equiv \mathcal{P} \ j \\
+                &i \equiv \cup j
+            \end{aligned}
+            \right.
+        \end{cases} \\
+        &\begin{cases}
+            \nexists w \in \bb{N} \ y - \tx{функция из $ w $} \\
+            y \equiv z
+        \end{cases}
+    \end{aligned}
+    \right. \\
+    &\tx{intro} \
+    \exists y
+    \begin{cases}
+        y - \tx{функция из $ \bb{N} $} \\
+        \forall z \in \bb{N} \ x \ \left(y \upharpoonright z\right) \ y_z
+    \end{cases} \\
+    &z = \cup\tx{rng} \ y
+\end{flalign*}
+
+\section{Дашков ЕВ | 2.2.31}
+\begin{flalign*}
+    &x \setminus y - \tx{бесконечное}
+    \to
+    \left[
+    \begin{aligned}
+        &y - \tx{конечное} \\
+        &y - \tx{счётное}
+    \end{aligned}
+    \right.
+    \to
+    x \sim x \setminus y \\ \\
+    &x \equiv \left(x \setminus y\right) \cup y \sim x \setminus y
+\end{flalign*}
 \end{document}

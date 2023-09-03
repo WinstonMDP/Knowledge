@@ -699,4 +699,43 @@
     \right.
     }
 \end{flalign*}
+
+\section{Поле}
+\begin{flalign*}
+    &\left(
+    (x, y) - \tx{ч.у.м}
+    \to
+    \left(
+    \forall w \subseteq x \ \exists i \in w \
+    i - \tx{$ (y \upharpoonright w) $-максимальный}
+    \right)
+    \to
+    \right. \\
+    &\left.
+    \forall z \subseteq x \
+    \exists w \in z \ w - \tx{$ (y \upharpoonright z) $-минимальный}
+    \right)
+    \to
+    \bot
+\end{flalign*}
+
+\section{Своё}
+\begin{flalign*}
+    &y
+    \equiv
+    \set {
+    (\alpha, \beta) \in \tx{zip} \left(\mathcal{P} \ x\right)^2
+    \mid
+    \alpha \subseteq \beta
+    }
+    \to
+    \left(
+    \forall w \subseteq \mathcal{P} \ x \ \exists i \in w \
+    i - \tx{$ (y \upharpoonright w) $-максимальный}
+    \right)
+    \to \\
+    &\forall z \subseteq \mathcal{P} \ x \
+    \exists w \in z \ w - \tx{$ (y \upharpoonright z) $-минимальный} \\ \\
+    &\exists w \in z \ w - \tx{$ (y \upharpoonright z) $-максимальный}
+\end{flalign*}
 \end{document}
