@@ -251,4 +251,59 @@
     x \sim x \setminus y \\ \\
     &x \equiv \left(x \setminus y\right) \cup y \sim x \setminus y
 \end{flalign*}
+
+\section{+-| Дашков ЕВ | 2.2.43}
+\begin{flalign*}
+    &\left(
+    \forall y \subseteq \mathcal{P} \ x \
+    y \not\equiv \varnothing
+    \to
+    \right. \\
+    &\left.
+    \exists z \in y \
+    z - \tx{$
+    \left(
+    \set {
+    (\alpha, \beta) \in \tx{zip} \ \left(\mathcal{P} \ x\right)^2
+    \mid
+    \alpha \subsetneq \beta
+    }
+    \upharpoonright
+    y
+    \right)
+    $-минимальный элемент}
+    \right)
+    \to \\
+    &\forall y \subseteq \mathcal{P} \ \mathcal{P} \ x \
+    y \not\equiv \varnothing
+    \to \\
+    &\exists z \in y \
+    z - \tx{$
+    \left(
+    \set {
+    (\alpha, \beta) \in \tx{zip} \ \left(\mathcal{P} \ \mathcal{P} \ x\right)^2
+    \mid
+    \alpha \subsetneq \beta
+    }
+    \upharpoonright
+    y
+    \right)
+    $-минимальный элемент} \\ \\
+    &\tx{intro} \
+    \exists z
+    \begin{cases}
+        z \in \left(\mathcal{P} \ \mathcal{P} \ \mathcal{P} \ x\right)^{\bb{N}} \\
+        z_0 \equiv \set{\exel w \in y} \\
+        \forall w \in \bb{N} \
+        \begin{cases}
+            \left(\exists i \in y \ i \subsetneq \cup z_w\right)
+            \to
+            z_{\tx{suc} \ w} \equiv \set{\exel i \in y \ i \subsetneq \cup z_w} \\
+            \left(\nexists i \in y \ i \subsetneq \cup z_w\right)
+            \to
+            z_{\tx{suc} \ w} \equiv \varnothing
+        \end{cases}
+    \end{cases} \\
+    &\cup\tx{rng} \ z
+\end{flalign*}
 \end{document}

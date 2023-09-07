@@ -225,7 +225,7 @@
     x - \tx{бинарное отношение} = \exists y, z \ x \subseteq y \times z
 \end{flalign*}
 \begin{flalign*}
-    &\tx{dom} \ x \ \fnd{x - \tx{бинарное отношение}}
+    &\tx{dom} \ x \ \fnd{x - \tx{бинарное отношение}}pre
     =
      \set{\alpha \in \cup\cup x \mid \exists y \ (\alpha, y) \in x} \\
     &\tx{Область определения $ x $}
@@ -594,13 +594,40 @@
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
+    &(x, y) - \tx{фундированное}
+    = \\
+    &\begin{cases}
+        (x, y) - \tx{ч.у.м.} \\
+        \forall z \subseteq x \ z \not\equiv \varnothing
+        \to
+        \exists w \in z \
+        w - \tx{$ \left(y \upharpoonright z \setminus \tx{idr} \ z\right) $-минимальный}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    (x, y) - \tx{вполне упорядоченное множество (в.у.м.)}
+    =
+    \begin{cases}
+        (x, y) - \tx{л.у.м.} \\
+        (x, y) - \tx{фундированное}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{$ y $-прогрессивное}
+    =
+    \begin{cases}
+        y - \tx{строгий порядок} \\
+        \forall z \in \tx{dom} \ y \ \left(w \to (w, z) \in y \to x \ w\right) \to x \ z
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
     &\begin{aligned}
         (x, y){ }-{ }&\tx{соответствие Галуа между} \\
                      &\tx{$ (z, w) $ и $ (i, j) $}
     \end{aligned}
     =
     \begin{cases}
-        (z, w) \andc (i, j) - \tx{ч.у.м} \\
+        (z, w) \andc (i, j) - \tx{ч.у.м.} \\
         x \in i^z \\
         y \in z^i \\
         \forall k \in z, t \in i \ (k, y_t) \in w \tot (x_k, t) \in j
@@ -707,7 +734,36 @@
     \set{(\alpha, \beta) \in \tx{zip} \ x^2 \mid \alpha \subseteq \beta}
     \right)
     - \\
-    &\tx{полная решётка}
+    &\tx{полная решётка} \\
+    &(x, y) - \tx{фундированное}
+    \tot
+    \left(
+    \forall z - \tx{$ \left(y \setminus \tx{idr} \ x\right) $-прогрессивное}, w \in x \
+    z \ w
+    \right)
+\end{flalign*}
+
+\subsection{Цермело}
+\begin{flalign*}
+    \exists y \ (x, y) - \tx{в.у.м.}
+\end{flalign*}
+
+\subsection{Цорна}
+\begin{flalign*}
+    &(x, y) - \tx{ч.у.м.}
+    \to
+    \left(\forall z - \tx{$ y $-цепь} \ \exists\_ - \tx{$ y $-верхняя грань $ z $}\right)
+    \to \\
+    &\exists z \in x \ z - \tx{$ \left(y \setminus \tx{idr} \ x\right) $-максимальный}
+\end{flalign*}
+
+\begin{flalign*}
+    \left[
+    \begin{aligned}
+        &x \lesssim y \\
+        &y \lesssim x
+    \end{aligned}
+    \right.
 \end{flalign*}
 
 \chapter{Натуральные числа}
@@ -740,11 +796,6 @@
         x \in y
     \end{cases} \\
     &\tx{$ x $ меньше $ y $}
-\end{flalign*}
-\begin{flalign*}
-    x - \tx{прогрессивное}
-    =
-    \forall y \in \bb{N} \ \left(\forall z < y \ x \ z\right) \to x \ y
 \end{flalign*}
 \begin{flalign*}
     &x - \tx{конечное} = \exists y \in \bb{N} \ y \sim x \\
@@ -799,7 +850,13 @@
 
 \subsection{Принцип порядковой (сильной) индукции}
 \begin{flalign*}
-    x - \tx{прогрессивное} \to \forall y \in \bb{N} \ x \ y
+    x
+    -
+    \tx{$
+    \set{(\alpha, \beta) \in \tx{zip} \ \bb{N}^2 \ \middle| \ \alpha < \beta}
+    $-прогрессивное}
+    \to
+    \forall y \in \bb{N} \ x \ y
 \end{flalign*}
 
 \subsection{Принцип наименьшего числа}
