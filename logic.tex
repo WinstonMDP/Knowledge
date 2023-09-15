@@ -865,6 +865,10 @@
     &\tx{$ x $ умножить на $ y $; произведение $ x $ и $ y $}
 \end{flalign*}
 \begin{flalign*}
+    &x - y \ \fnd{y \leq x} = \exel z \ z + y \equiv x \\
+    &\tx{$ x $ минус $ y $; разность $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
     &\bb{Z}
     =
     \left.
@@ -924,5 +928,37 @@
     &x \andc y - \tx{конечное}
     \to
     |x \times y| \equiv |x| * |y| \\
+\end{flalign*}
+
+\chapter{Какие-то алфавиты}
+\section{Определения}
+\begin{flalign*}
+    x - \tx{слово над $ y $}
+    =
+    \exists z \in \bb{N} \ x \in y^z
+\end{flalign*}
+\begin{flalign*}
+    &x \concat y \
+    \fnd {
+    \begin{cases}
+        x - \tx{слово над $ z $} \\
+        y - \tx{слово над $ z $}
+    \end{cases}
+    }
+    = \\
+    &\set {
+    (\alpha, \beta) \in (|x| + |y|) \times z \
+    \middle| \
+    \begin{cases}
+        \alpha < |x| \to \beta \equiv x_z \\
+        |x| \leq \alpha \to \beta \equiv y_{\alpha - |x|}
+    \end{cases}
+    } \\
+    &\tx{Конкатенация $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{back} \ x \ \fnd{x - \tx{слово над $ y $}}
+    =
+    \exel z \in y^{|x|} \ \forall w \in |x| \ z_w \equiv x_{|x| - w - 1}
 \end{flalign*}
 \end{document}
