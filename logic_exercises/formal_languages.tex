@@ -1,0 +1,51 @@
+\input{../knowledge_preamble}
+
+\title{Логика \\ упражнения \\ формальные языки}
+\date{\today}
+\author{WinstonMDP}
+
+\begin{document}
+\maketitle
+
+\section{Дашков ЕВ | 2.3.12}
+\begin{flalign*}
+    &x \equiv \tx{inv} \ x
+    \to
+    \exists y
+    \left[
+    \begin{aligned}
+        &x \equiv y \concat \tx{inv} \ y \\
+        &\exists z \ x \equiv y \concat z \concat \tx{inv} \ y
+    \end{aligned}
+    \right. \\ \\
+    &\tx{intro} \ \exists y
+    \left[
+    \begin{aligned}
+        &|x| \equiv 2 * y \\
+        &|x| \equiv 2 * y + 1
+    \end{aligned}
+    \right. \\
+    &\left[
+    \begin{aligned}
+        &x \equiv (x \upharpoonright y) \concat \tx{inv} \ (x \upharpoonright y) \\
+        &x
+        \equiv
+        (x \upharpoonright y) \concat (y, x_y) \concat \tx{inv} \ (x \upharpoonright y)
+    \end{aligned}
+    \right.
+\end{flalign*}
+
+\section{Дашков ЕВ | 2.3.21}
+\begin{flalign*}
+    &x \concat y \equiv z \concat w
+    \to
+    |z| \leq |x|
+    \to
+    \exists i
+    \begin{cases}
+        x \equiv z \concat i \\
+        w \equiv i \concat y
+    \end{cases} \\ \\
+    &x \bcut |z|
+\end{flalign*}
+\end{document}

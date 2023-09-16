@@ -125,8 +125,7 @@
 Не все классы являются множествами. Все множества являются классами.
 \begin{flalign*}
     &\ax{\type{\bb{S}}{\bb{T}}} \\
-    &\ax{\type{\_\in\_}{\bb{S} \to \bb{S} \to \bb{T}}} \\
-    &\gr{t}{}{}{\_\in\_}
+    &\ax{\type{\_\in\_}{\bb{S} \to \bb{S} \to \bb{T}}}
 \end{flalign*}
 \begin{flalign*}
     &x \tot y
@@ -139,8 +138,7 @@
     &\tx{$ x $ тогда и только тогда, когда $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &x \equiv y = z \in x \tot z \in y \\
-    &\gr{t}{}{}{\_\equiv\_}
+    x \equiv y = z \in x \tot z \in y
 \end{flalign*}
 \begin{flalign*}
     &\exists! x
@@ -254,7 +252,7 @@
     \end{cases}
 \end{flalign*}
 \begin{flalign*}
-    &\tx{inv} \ x
+    &\tx{back} \ x
     =
     \set {
     (\alpha, \beta) \in \tx{rng} \ x \times \tx{dom} \ x
@@ -444,10 +442,10 @@
     \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
     \to
     x \equiv y \equiv z \equiv w \\
-    &\tx{inv} \ x \subseteq x \tot x \equiv \tx{inv} \ x \\
+    &\tx{back} \ x \subseteq x \tot x \equiv \tx{back} \ x \\
     &\begin{cases}
-        \tx{inv} \ x \circ x \equiv \tx{idr} \ y \\
-        x \circ \tx{inv} \ x \equiv \tx{idr} \ z
+        \tx{back} \ x \circ x \equiv \tx{idr} \ y \\
+        x \circ \tx{back} \ x \equiv \tx{idr} \ z
     \end{cases}
     \tot
     x - \tx{биекция из $ y $ в $ z $} \\
@@ -560,7 +558,7 @@
     =
     \begin{cases}
         x - \tx{нестрогий порядок} \\
-        \forall y \in \cup\cup x, z \in \cup\cup x
+        \forall y \andc z \in \cup\cup x
         \begin{cases}
             \exists w - \tx{$ x $-инфимум $ \set{y, z} $} \\
             \exists w - \tx{$ x $-супремум $ \set{y, z} $}
@@ -626,7 +624,9 @@
     &\exel z
     -
     \tx{$
-    \left(x \uparrow \set{\alpha \in \cup\cup x \mid (y, z) \in x} \setminus (y, y)\right)
+    \left(
+    x \uparrow \set{\alpha \in \cup\cup x \mid (y, \alpha) \in x} \setminus (y, y)
+    \right)
     $-наименьший} \\
     &\tx{Последователь $ y $ в $ x $}
 \end{flalign*}
@@ -720,15 +720,15 @@
     }
     \right) \\
     &\set {
-    \alpha \in x^z
+    \alpha \in \left(\cup\cup y\right)^{\cup\cup x}
     \mid
-    \exists i \ (\alpha, i) - \tx{соответствие Галуа между $ (z, y) $ и $ (x, w) $}
+    \exists z \ (\alpha, z) - \tx{соответствие Галуа между $ x $ и $ y $}
     }
     \sim \\
     &\set {
-    \alpha \in z^x
+    \alpha \in \left(\cup\cup x\right)^{\cup\cup y}
     \mid
-    \exists i \ (i, \alpha) - \tx{соответствие Галуа между $ (z, y) $ и $ (x, w) $}
+    \exists z \ (z, \alpha) - \tx{соответствие Галуа между $ x $ и $ y $}
     } \\
     &\set {
     \alpha \in \mathcal{P} \ \tx{zip} \ x^2
@@ -930,7 +930,7 @@
     |x \times y| \equiv |x| * |y| \\
 \end{flalign*}
 
-\chapter{Какие-то алфавиты}
+\chapter{Формальные языки}
 \section{Определения}
 \begin{flalign*}
     x - \tx{слово над $ y $}
@@ -957,8 +957,19 @@
     &\tx{Конкатенация $ x $ и $ y $}
 \end{flalign*}
 \begin{flalign*}
-    &\tx{back} \ x \ \fnd{x - \tx{слово над $ y $}}
+    &\tx{inv} \ x \ \fnd{x - \tx{слово над $ y $}}
     =
     \exel z \in y^{|x|} \ \forall w \in |x| \ z_w \equiv x_{|x| - w - 1}
+\end{flalign*}
+\begin{flalign*}
+    x \bcut y \
+    \fnd {
+    \begin{cases}
+        x - \tx{слово над $ z $} \\
+        y \leq |x|
+    \end{cases}
+    }
+    =
+    \exel z \in z^{|x| - y} \ \forall w \in |x| - y \ z_w \equiv x_{w + y}
 \end{flalign*}
 \end{document}
