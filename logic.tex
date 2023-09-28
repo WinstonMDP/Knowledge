@@ -265,9 +265,13 @@
     &x \circ y
     =
     \set {
-    (\alpha, \beta) \in \tx{dom} \ y \times \tx{rng} \ x
-    \mid
-    \exists z \ \alpha \abin z \abin \beta \abind x
+    (\alpha, \beta) \in \tx{dom} \ y \times \tx{rng} \ x \
+    \middle| \
+    \exists z
+    \begin{cases}
+        (\alpha, z) \in y \\
+        (z, \beta) \in x
+    \end{cases}
     } \\
     &\tx{Композиция $ x $ и $ y $}
 \end{flalign*}
@@ -971,5 +975,25 @@
     }
     =
     \exel z \in z^{|x| - y} \ \forall w \in |x| - y \ z_w \equiv x_{w + y}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{индуктивное определение над $ y $}
+    =
+    \forall z \in x \ \exists w \in \bb{N} \ z \in y^{y^w}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{замкнутое относительно $ y $}
+    =
+    \exists z
+    \begin{cases}
+        y - \tx{индуктивное определение над $ z $} \\
+        x \subseteq z \\
+        \exists w \ \forall i \in y, j \in x^w \ i_j \in x
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{ind} \ x \ \fnd{x - \tx{индуктивное определение над $ y $}}
+    = \\
+    &\cap\set {\alpha \in \mathcal{P} \ y \mid \alpha - \tx{замкнутое относительно $ x $}}
 \end{flalign*}
 \end{document}
