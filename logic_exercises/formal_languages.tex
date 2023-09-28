@@ -48,4 +48,38 @@
     \end{cases} \\ \\
     &x \bcut |z|
 \end{flalign*}
+
+\section{Дашков ЕВ | 2.4.39}
+\begin{flalign*}
+    &x - \tx{оператор замыкания над $ y $}
+    \to \\
+    &\set {
+    (\alpha, \beta)
+    \in
+    \tx{zip}
+    \set {
+    \gamma \in \mathcal{P} \ y \
+    \middle|
+    \ \gamma - \tx{замкнутое относительно $ x $}
+    }^2 \
+    \middle| \
+    \alpha \subseteq \beta
+    } - \\
+    &\tx{полная решётка} \\ \\
+    &\forall z \andc w
+    \in
+    \set {
+    \gamma \in \mathcal{P} \ y \
+    \middle|
+    \ \gamma - \tx{замкнутое относительно $ x $}
+    } \
+    \begin{cases}
+        x_z \equiv z \\
+        x_w \equiv w \\
+        z \cap w \subseteq x_{z \cap w} \subseteq z \andc w \\
+        x_{z \cap w} \subseteq z \cap w \\
+        z \cap w \equiv x_{z \cap w} \\
+        x_{z \cup w} \equiv (x \circ x)_{z \cup w}
+    \end{cases}
+\end{flalign*}
 \end{document}

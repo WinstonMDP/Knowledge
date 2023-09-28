@@ -718,7 +718,7 @@
     \left(
     y,
     \set {
-    (\alpha, \beta) \in \tx{zip}\left(\mathcal{P}\cup\cup x\right)^2 \
+    (\alpha, \beta) \in \tx{zip} \ y^2 \
     \middle| \
     \alpha \subseteq \beta
     }
@@ -982,9 +982,9 @@
     \forall z \in x \ \exists w \in \bb{N} \ z \in y^{y^w}
 \end{flalign*}
 \begin{flalign*}
-    x - \tx{замкнутое относительно $ y $}
-    =
-    \exists z
+    &x - \tx{индуктивно-замкнутое относительно $ y $}
+    = \\
+    &\exists z
     \begin{cases}
         y - \tx{индуктивное определение над $ z $} \\
         x \subseteq z \\
@@ -994,6 +994,30 @@
 \begin{flalign*}
     &\tx{ind} \ x \ \fnd{x - \tx{индуктивное определение над $ y $}}
     = \\
-    &\cap\set {\alpha \in \mathcal{P} \ y \mid \alpha - \tx{замкнутое относительно $ x $}}
+    &\cap\set {\alpha \in \mathcal{P} \ y \mid \alpha
+    -
+    \tx{индуктивно-замкнутое относительно $ x $}}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{оператор замыкания над $ y $}
+    =
+    \forall z \andc w \subseteq y
+    \begin{cases}
+        y \not\equiv \varnothing \\
+        x \in \left(\mathcal{P} \ y\right)^{\mathcal{P} \ y} \\
+        z \subseteq x_z \\
+        z \subseteq w \to x_z \subseteq x_w \\
+        x_z \equiv (x \circ x)_z
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{замкнутое относительно $ y $}
+    =
+    \exists z
+    \begin{cases}
+        y - \tx{оператор замыкания над $ z $} \\
+        x \subseteq z \\
+        y_x \equiv x
+    \end{cases}
 \end{flalign*}
 \end{document}
