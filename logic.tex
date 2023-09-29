@@ -982,21 +982,31 @@
     \forall z \in x \ \exists w \in \bb{N} \ z \in y^{y^w}
 \end{flalign*}
 \begin{flalign*}
-    &x - \tx{индуктивно-замкнутое относительно $ y $}
-    = \\
-    &\exists z
-    \begin{cases}
-        y - \tx{индуктивное определение над $ z $} \\
-        x \subseteq z \\
-        \exists w \ \forall i \in y, j \in x^w \ i_j \in x
-    \end{cases}
+    \tx{ind} \ x \ \fnd{x - \tx{индуктивное определение над $ y $}}
+    =
+    \cap
+    \set {
+    \alpha \in \mathcal{P} \ y
+    \mid
+    \exists z \ \forall w \in x, i \in \alpha^z \ w_i \in \alpha
+    }
 \end{flalign*}
 \begin{flalign*}
-    &\tx{ind} \ x \ \fnd{x - \tx{индуктивное определение над $ y $}}
+    &x - \tx{однозначное для разбора}
     = \\
-    &\cap\set {\alpha \in \mathcal{P} \ y \mid \alpha
-    -
-    \tx{индуктивно-замкнутое относительно $ x $}}
+    &\exists y
+    \begin{cases}
+        x - \tx{индуктивное определение над $ y $} \\
+        \forall z \andc w \in x \
+        \exists i, j \
+        \forall k \in \left(\tx{ind} \ x\right)^i, t \in \left(\tx{ind} \ x\right)^j \
+        z_k \equiv w_t
+        \to
+        \begin{cases}
+            z \equiv w \\
+            k \equiv t
+        \end{cases}
+    \end{cases}
 \end{flalign*}
 \begin{flalign*}
     x - \tx{оператор замыкания над $ y $}
@@ -1019,5 +1029,47 @@
         x \subseteq z \\
         y_x \equiv x
     \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{финитарное}
+    =
+    \exists y
+    \begin{cases}
+        x - \tx{оператор замыкания над $ y $} \\
+        \forall z \subseteq y \ x_z
+        \equiv
+        \cup
+        \set {
+        x_{\alpha} \in \mathcal{P} \ y \
+        \middle| \
+        \begin{cases}
+            \alpha \subseteq z \\
+            \alpha - \tx{конечное}
+        \end{cases}
+        }
+    \end{cases}
+\end{flalign*}
+
+\section{Теоремы}
+\subsection{Биркгофа-Фринка}
+\begin{flalign*}
+    &x - \tx{оператор замыкания над $ y $}
+    \to
+    x - \tx{финитарное}
+    \to \\
+    &\exists z - \tx{индуктивное определение над $ y $} \
+    \forall w \subseteq y \
+    x_w
+    \equiv \\
+    &\tx{ind}
+    \left(
+    z
+    \cup
+    \set {
+    (\varnothing, \alpha) \in \set{\varnothing} \times \mathcal{P} \ y \
+    \middle| \
+    \alpha \in w
+    }
+    \right)
 \end{flalign*}
 \end{document}
