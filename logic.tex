@@ -1048,21 +1048,6 @@
         }
     \end{cases}
 \end{flalign*}
-\begin{flalign*}
-    &\tx{map} \ x \ y \
-    \fnd {
-    \begin{cases}
-        x - \tx{слово над $ z $} \\
-        y \in w^{z^{|x|}}
-    \end{cases}
-    }
-    = \\
-    &\set {
-    (\alpha, \beta) \in z^{|x|} \times w^{|x|} \
-    \middle| \
-    i, j \to (i, j) \in \alpha \to (i, y_j) \in \beta
-    }
-\end{flalign*}
 
 \section{Теоремы}
 \subsection{Биркгофа-Фринка}
@@ -1102,7 +1087,8 @@
     \begin{cases}
         i \in w^{\tx{ind} \ x} \\
         \forall j \in x, k \
-        \forall t \in y^k \ (i \circ j)_t \equiv (z_j)_{\tx{map} \ t \ i}
+        \forall t \in \left(\tx{ind} \ x\right)^k \
+        (i \circ j)_t \equiv (z_j)_{i \circ t}
     \end{cases}
 \end{flalign*}
 \end{document}
