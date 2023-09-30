@@ -997,8 +997,7 @@
     &\exists y
     \begin{cases}
         x - \tx{индуктивное определение над $ y $} \\
-        \forall z \andc w \in x \
-        \exists i, j \
+        \forall z \andc w \in x, i, j \
         \forall k \in \left(\tx{ind} \ x\right)^i, t \in \left(\tx{ind} \ x\right)^j \
         z_k \equiv w_t
         \to
@@ -1049,6 +1048,21 @@
         }
     \end{cases}
 \end{flalign*}
+\begin{flalign*}
+    &\tx{map} \ x \ y \
+    \fnd {
+    \begin{cases}
+        x - \tx{слово над $ z $} \\
+        y \in w^{z^{|x|}}
+    \end{cases}
+    }
+    = \\
+    &\set {
+    (\alpha, \beta) \in z^{|x|} \times w^{|x|} \
+    \middle| \
+    i, j \to (i, j) \in \alpha \to (i, y_j) \in \beta
+    }
+\end{flalign*}
 
 \section{Теоремы}
 \subsection{Биркгофа-Фринка}
@@ -1071,5 +1085,24 @@
     \alpha \in w
     }
     \right)
+\end{flalign*}
+
+\subsection{Рекурсия по построению}
+\begin{flalign*}
+    &x - \tx{индуктивное определение над $ y $}
+    \to
+    x - \tx{однозначное для разбора}
+    \to \\
+    &z - \tx{функция из $ x $}
+    \to
+    \left(\forall i \in x, j \ i \in y^{y^j} \to z_i \in w^{w^j}\right)
+    \to \\
+    &\exists! i
+    \mapsto
+    \begin{cases}
+        i \in w^{\tx{ind} \ x} \\
+        \forall j \in x, k \
+        \forall t \in y^k \ (i \circ j)_t \equiv (z_j)_{\tx{map} \ t \ i}
+    \end{cases}
 \end{flalign*}
 \end{document}
