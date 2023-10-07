@@ -1,0 +1,275 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\chapter{Бинарные отношения}
+\section{Определения}
+\begin{flalign*}
+    x - \tx{функциональное свойство}
+    =
+    \argtype{y}{\bb{S}} \to x \ y \ z \to x \ y \ w \to z \equiv w
+\end{flalign*}
+\begin{flalign*}
+    &(x, y) = \set{\set{x}, \set{x, y}} \\
+    &\tx{Упорядоченная пара Куратовского $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \times y
+    =
+    \set {
+    (\alpha, \beta) \in \mathcal{P} \ \mathcal{P} \left(x \cup y\right) \
+    \middle| \
+    \begin{cases}
+        \alpha \in x \\
+        \beta \in y
+    \end{cases}
+    } \\
+    &\tx{Прямое (декартово) произведение $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{бинарное отношение} = \exists y, z \ x \subseteq y \times z
+\end{flalign*}
+\begin{flalign*}
+    &\tx{dom} \ x \ \fnd{x - \tx{бинарное отношение}}pre
+    =
+     \set{\alpha \in \cup\cup x \mid \exists y \ (\alpha, y) \in x} \\
+    &\tx{Область определения $ x $}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{rng} \ x \ \fnd{x - \tx{бинарное отношение}}
+    =
+    \set{\alpha \in \cup\cup x \mid \exists y \ (y, \alpha) \in x} \\
+    &\tx{Область значений $ x $}
+\end{flalign*}
+\begin{flalign*}
+    x \abin y \abin z \abin \ldots \abind w
+    =
+    \begin{cases}
+        (x, y) \in w \\
+        (y, z) \in w \\
+        \ldots
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{поле $ y $}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        x \equiv \cup\cup y
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{back} \ x
+    =
+    \set {
+    (\alpha, \beta) \in \tx{rng} \ x \times \tx{dom} \ x
+    \mid
+    (\beta, \alpha) \in x
+    } \\
+    &\tx{Обратное к $ x $}
+\end{flalign*}
+\begin{flalign*}
+    &x \circ y
+    =
+    \set {
+    (\alpha, \beta) \in \tx{dom} \ y \times \tx{rng} \ x \
+    \middle| \
+    \exists z
+    \begin{cases}
+        (\alpha, z) \in y \\
+        (z, \beta) \in x
+    \end{cases}
+    } \\
+    &\tx{Композиция $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    \tx{idr} \ x
+    =
+    \set{(\alpha, \alpha) \in \tx{zip} \ x^2 \mid \top}
+\end{flalign*}
+\begin{flalign*}
+    &x \upharpoonright y \ \fnd{x - \tx{бинарное отношение}}
+    =
+    \set{(\alpha, \beta) \in x \mid \alpha \in y} \\
+    &\tx{Ограничение $ x $ на $ y $ слева}
+\end{flalign*}
+\begin{flalign*}
+    &x \upharpoonleft y \ \fnd{x - \tx{бинарное отношение}}
+    =
+    \set{(\alpha, \beta) \in x \mid \beta \in y} \\
+    &\tx{Ограничение $ x $ на $ y $ справа}
+\end{flalign*}
+\begin{flalign*}
+    &x \uparrow y = x \upharpoonleft y \upharpoonright y \\
+    &\tx{Ограничение $ x $ на $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{тотальное на $ y $} = y \subseteq \tx{dom} \ x \\
+    &x - \tx{сюръективное на $ y $} = y \subseteq \tx{rng} \ x \\
+    &x - \tx{функциональное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (y, w) \in x \to z \equiv w
+    \end{cases} \\
+    &x - \tx{инъективное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (w, z) \in x \to y \equiv w
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    \begin{aligned}
+        x{ }-{ }&\tx{функция (индексированное семейство} \\
+                &\tx{множеств с индексами) из $ y $}
+    \end{aligned}
+    =
+    \begin{cases}
+        \exists z \ x \subseteq y \times z \\
+        x - \tx{тотальное на $ y $} \\
+        x - \tx{функциональное}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x_y \
+    \fnd{
+    \exists z
+    \begin{cases}
+        x - \tx{функция из $ z $} \\
+        y \in z
+    \end{cases}
+    }
+    =
+    \exel w \ (y, w) \in x
+\end{flalign*}
+\begin{flalign*}
+    x^y
+    =
+    \set{\alpha \in \mathcal{P}\left(y \times x\right) \mid \alpha - \tx{функция из $ y $}}
+\end{flalign*}
+\begin{flalign*}
+    &\prod x
+    =
+    \set {
+    \alpha \in (\cup\tx{rng} \ x)^{\tx{dom} \ x}
+    \mid
+    \forall y \in \tx{dom} \ x \ \alpha_y \in x_y} \\
+    &\tx{Прямое (декартово) произведение $ x $}
+\end{flalign*}
+\begin{flalign*}
+    &\bigsqcup x
+    =
+    \set {
+    (\alpha, \beta) \in \cup\tx{rng} \ x \times \tx{dom} \ x \mid \alpha \in x_{\beta}
+    } \\
+    &\tx{Дизъюнктное объединение $ x $}
+\end{flalign*}
+\begin{flalign*}
+    \tx{zip} \ x^2 = x \times x
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{инъекция из $ y $}
+    =
+    \begin{cases}
+        x - \tx{функция из $ y $} \\
+        x - \tx{инъективное}
+    \end{cases} \\
+    &x - \tx{сюръекция из $ y $ в $ z $}
+    =
+    \begin{cases}
+        x - \tx{функция из $ y $} \\
+        x - \tx{суръективно на $ z $}
+    \end{cases} \\
+    &x - \tx{биекция из $ y $ в $ z $}
+    =
+    \begin{cases}
+        x - \tx{инъекция из $ y $} \\
+        x - \tx{сюръекция из $ y $ в $ z $}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &x \lesssim y
+    =
+    \exists z
+    \begin{cases}
+        z \subseteq x \times y \\
+        z - \tx{инъекция из $ x $}
+    \end{cases} \\
+    &\tx{$ x $ вложен в $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \sim y = \exists z - \tx{биекция из $ x $ в $ y $} \\
+    &\tx{$ x $ равномощен $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{рефлексивное} = \forall y \in \tx{dom} \ x \ (y, y) \in x \\
+    &x - \tx{иррефлексивное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        y \to (y, y) \not\in x
+    \end{cases} \\
+    &x - \tx{симметричное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (z, y) \in x
+    \end{cases} \\
+    &x - \tx{антисимметричное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        (y, z) \in x \to (z, y) \in x \to y \equiv z
+    \end{cases} \\
+    &x - \tx{транзитивное}
+    =
+    \begin{cases}
+        x - \tx{бинарное отношение} \\
+        y \abin z \abin w \abind x \to (y, w) \in x
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{$ y $-минимальный}
+    =
+    \begin{cases}
+        y - \tx{иррефлексивное} \\
+        \forall z \in \tx{dom} \ y \ (z, x) \not\in y
+    \end{cases} \\
+    &x - \tx{$ y $-максимальный}
+    =
+    \begin{cases}
+        y - \tx{иррефлексивное} \\
+        \forall z \in \tx{rng} \ y \ (x, z) \not\in y
+    \end{cases}
+\end{flalign*}
+
+\section{Теоремы}
+\begin{flalign*}
+    &x \not\equiv \varnothing
+    \to
+    y \not\equiv \varnothing
+    \to
+    \left(x \times y\right) \cup \left(y \times x\right) \equiv z \times w
+    \to
+    x \equiv y \equiv z \equiv w \\
+    &\tx{back} \ x \subseteq x \tot x \equiv \tx{back} \ x \\
+    &\begin{cases}
+        \tx{back} \ x \circ x \equiv \tx{idr} \ y \\
+        x \circ \tx{back} \ x \equiv \tx{idr} \ z
+    \end{cases}
+    \tot
+    x - \tx{биекция из $ y $ в $ z $} \\
+    &x \lesssim y \tot \exists z \subseteq y \ x \sim z \\
+    &\left[
+    \begin{aligned}
+        &x \lesssim y \\
+        &y \lesssim x
+    \end{aligned}
+    \right.
+\end{flalign*}
+
+\subsection{Кантора-Шрёдера-Бернштейна}
+\begin{flalign*}
+    x \lesssim y \to y \lesssim x \to x \sim y
+\end{flalign*}
+\end{document}

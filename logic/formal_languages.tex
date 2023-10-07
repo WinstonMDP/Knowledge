@@ -1,0 +1,161 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\chapter{Формальные языки}
+\section{Определения}
+\begin{flalign*}
+    x - \tx{слово над $ y $}
+    =
+    \exists z \in \bb{N} \ x \in y^z
+\end{flalign*}
+\begin{flalign*}
+    &x \concat y \
+    \fnd {
+    \begin{cases}
+        x - \tx{слово над $ z $} \\
+        y - \tx{слово над $ z $}
+    \end{cases}
+    }
+    = \\
+    &\set {
+    (\alpha, \beta) \in (|x| + |y|) \times z \
+    \middle| \
+    \begin{cases}
+        \alpha < |x| \to \beta \equiv x_z \\
+        |x| \leq \alpha \to \beta \equiv y_{\alpha - |x|}
+    \end{cases}
+    } \\
+    &\tx{Конкатенация $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &\tx{inv} \ x \ \fnd{x - \tx{слово над $ y $}}
+    =
+    \exel z \in y^{|x|} \ \forall w \in |x| \ z_w \equiv x_{|x| - w - 1}
+\end{flalign*}
+\begin{flalign*}
+    x \bcut y \
+    \fnd {
+    \begin{cases}
+        x - \tx{слово над $ z $} \\
+        y \leq |x|
+    \end{cases}
+    }
+    =
+    \exel z \in z^{|x| - y} \ \forall w \in |x| - y \ z_w \equiv x_{w + y}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{индуктивное определение над $ y $}
+    =
+    \forall z \in x \ \exists w \in \bb{N} \ z \in y^{y^w}
+\end{flalign*}
+\begin{flalign*}
+    \tx{ind} \ x \ \fnd{x - \tx{индуктивное определение над $ y $}}
+    =
+    \cap
+    \set {
+    \alpha \in \mathcal{P} \ y
+    \mid
+    \exists z \ \forall w \in x, i \in \alpha^z \ w_i \in \alpha
+    }
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{однозначное для разбора}
+    = \\
+    &\exists y
+    \begin{cases}
+        x - \tx{индуктивное определение над $ y $} \\
+        \forall z \andc w \in x, i, j \
+        \forall k \in \left(\tx{ind} \ x\right)^i, t \in \left(\tx{ind} \ x\right)^j \
+        z_k \equiv w_t
+        \to
+        \begin{cases}
+            z \equiv w \\
+            k \equiv t
+        \end{cases}
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{оператор замыкания над $ y $}
+    =
+    \forall z \andc w \subseteq y
+    \begin{cases}
+        y \not\equiv \varnothing \\
+        x \in \left(\mathcal{P} \ y\right)^{\mathcal{P} \ y} \\
+        z \subseteq x_z \\
+        z \subseteq w \to x_z \subseteq x_w \\
+        x_z \equiv (x \circ x)_z
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{замкнутое относительно $ y $}
+    =
+    \exists z
+    \begin{cases}
+        y - \tx{оператор замыкания над $ z $} \\
+        x \subseteq z \\
+        y_x \equiv x
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{финитарное}
+    =
+    \exists y
+    \begin{cases}
+        x - \tx{оператор замыкания над $ y $} \\
+        \forall z \subseteq y \ x_z
+        \equiv
+        \cup
+        \set {
+        x_{\alpha} \in \mathcal{P} \ y \
+        \middle| \
+        \begin{cases}
+            \alpha \subseteq z \\
+            \alpha - \tx{конечное}
+        \end{cases}
+        }
+    \end{cases}
+\end{flalign*}
+
+\section{Теоремы}
+\subsection{Биркгофа-Фринка}
+\begin{flalign*}
+    &x - \tx{оператор замыкания над $ y $}
+    \to
+    x - \tx{финитарное}
+    \to \\
+    &\exists z - \tx{индуктивное определение над $ y $} \
+    \forall w \subseteq y \
+    x_w
+    \equiv \\
+    &\tx{ind}
+    \left(
+    z
+    \cup
+    \set {
+    (\varnothing, \alpha) \in \set{\varnothing} \times \mathcal{P} \ y \
+    \middle| \
+    \alpha \in w
+    }
+    \right)
+\end{flalign*}
+
+\subsection{Рекурсия по построению}
+\begin{flalign*}
+    &x - \tx{индуктивное определение над $ y $}
+    \to
+    x - \tx{однозначное для разбора}
+    \to \\
+    &z - \tx{функция из $ x $}
+    \to
+    \left(\forall i \in x, j \ i \in y^{y^j} \to z_i \in w^{w^j}\right)
+    \to \\
+    &\exists! i
+    \mapsto
+    \begin{cases}
+        i \in w^{\tx{ind} \ x} \\
+        \forall j \in x, k \
+        \forall t \in \left(\tx{ind} \ x\right)^k \
+        (i \circ j)_t \equiv (z_j)_{i \circ t}
+    \end{cases}
+\end{flalign*}
+\end{document}

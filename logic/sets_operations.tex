@@ -1,0 +1,79 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\chapter{Операции над множествами}
+\section{Определения}
+Класс - это $ \set{x  \middle| \ \varphi(x)} $.
+Не все классы являются множествами. Все множества являются классами.
+\begin{flalign*}
+    &\ax{\type{\bb{S}}{\bb{T}}} \\
+    &\ax{\type{\_\in\_}{\bb{S} \to \bb{S} \to \bb{T}}}
+\end{flalign*}
+\begin{flalign*}
+    &x \tot y
+    =
+    \begin{cases}
+        x \to y \\
+        y \to x
+    \end{cases} \\
+    &\gr{r}{}{\_\to\_}{\_\tot\_} \\
+    &\tx{$ x $ тогда и только тогда, когда $ y $}
+\end{flalign*}
+\begin{flalign*}
+    x \equiv y = z \in x \tot z \in y
+\end{flalign*}
+\begin{flalign*}
+    &\exists! x
+    =
+    \begin{cases}
+        \exists y \ x \ y \\
+        x \ z \to z \equiv \exel y \ x \ y
+    \end{cases} \\
+    &\tx{Существует единственное, удовлетворяющее $ x $} \\
+    &\greq{n}{\exists!\_}{\exists\_\_}
+\end{flalign*}
+\begin{flalign*}
+    &x \subseteq y = \forall z \in x \ z \in y \\
+    &\tx{$ x $ - подмножество $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &\set{x, y, \ldots} = \set{x, \cup\set{y, \cup\set{\ldots}}} \\
+    &\tx{Множество из $ x, y, \ldots $}
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{пустое} = y \to y \not\in x \\
+    &x - \tx{индуктивное}
+    =
+    \begin{cases}
+        y - \tx{пустое} \to y \in x \\
+        z \in x \to \tx{suc} \ z \in x
+    \end{cases} \\
+    &\varnothing = \set{\alpha \in \exel x - \tx{индуктивное} \mid \bot} \\
+    &x - \tx{транзитивное} = \cup x \subseteq x
+\end{flalign*}
+\begin{flalign*}
+    &\cap x = \set{y \in \cup x \mid \forall z \in x \ y \in z} \\
+    &\tx{Пересечение x}
+\end{flalign*}
+\begin{flalign*}
+    &x \cup y = \cup\set{x, y} \\
+    &\tx{Объединение $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \cap y = \cap\set{x, y} \\
+    &\tx{Пересечение $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \setminus y = \set{\alpha \in x \mid \alpha \not\in y} \\
+    &\tx{Разность $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \triangle y = (x \setminus y) \cup (y \setminus x) \\
+    &\tx{Симметрическая разность $ x $ и $ y $}
+\end{flalign*}
+
+\section{Теоремы}
+\begin{flalign*}
+    \exists! x \mapsto x - \tx{пустое}
+\end{flalign*}
+\end{document}

@@ -1,0 +1,152 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\chapter{Числа}
+\section{Определения}
+\begin{flalign*}
+    \begin{cases}
+        0 = \varnothing \\
+        1 = \set{0} \\
+        2 = \set{0, 1} \\
+        \ldots
+    \end{cases}
+\end{flalign*}
+\begin{flalign*}
+    &\bb{N}
+    =
+    \set {
+    \alpha \in \exel x - \tx{индуктивное} \mid \forall y - \tx{индуктивное} \ \alpha \in y
+    } \\
+    &\tx{Множество натуральных чисел}
+\end{flalign*}
+\begin{flalign*}
+    &x < y
+    =
+    \begin{cases}
+        x \andc y \in \bb{N} \\
+        x \in y
+    \end{cases} \\
+    &\tx{$ x $ меньше $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x \leq y
+    =
+    \left[
+    \begin{aligned}
+        x < y \\
+        x \equiv y
+    \end{aligned}
+    \right.
+\end{flalign*}
+\begin{flalign*}
+    &x - \tx{конечное} = \exists y \in \bb{N} \ y \sim x \\
+    &\notis \tx{бесконечное}
+\end{flalign*}
+\begin{flalign*}
+    x - \tx{счётное} = x \sim \bb{N}
+\end{flalign*}
+\begin{flalign*}
+    |x| \ \fnd{x - \tx{конечное}} = \exel y \in \bb{N} \ y \sim x
+\end{flalign*}
+\begin{flalign*}
+    &x + y \
+    \fnd{z \equiv \set{(\alpha, \beta) \in \tx{zip} \ \bb{N}^2 \mid \alpha \leq \beta}}
+    = \\
+    &\left(
+    \left(
+    \exel w
+    \begin{cases}
+        \forall i \in \bb{N} \ (z_0)_i \equiv i \\
+        \forall i \andc j \in \bb{N} \
+        \left(
+        w_{\tx{suc} \ z \ i}
+        \right)_i
+        \equiv
+        \tx{suc} \ z \ \left(w_i\right)_j
+    \end{cases}
+    \right)_x
+    \right)_y \\
+    &\tx{$ x $ плюс $ y $; сумма $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x * y \
+    \fnd{z \equiv \set{(\alpha, \beta) \in \tx{zip} \ \bb{N}^2 \mid \alpha \leq \beta}}
+    = \\
+    &\left(
+    \left(
+    \exel w
+    \begin{cases}
+        \forall i \in \bb{N} \ (z_0)_i \equiv 0 \\
+        \forall i \andc j \in \bb{N} \
+        \left(w_{\tx{suc} \ z \ w}\right)_j \equiv \left(w_i\right)_j + j
+    \end{cases}
+    \right)_x
+    \right)_y \\
+    &\tx{$ x $ умножить на $ y $; произведение $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &x - y \ \fnd{y \leq x} = \exel z \ z + y \equiv x \\
+    &\tx{$ x $ минус $ y $; разность $ x $ и $ y $}
+\end{flalign*}
+\begin{flalign*}
+    &\bb{Z}
+    =
+    \left.
+    \tx{zip} \ \bb{N}^2 \
+    \middle/ \
+    \set {
+    \left(\left(\alpha, \beta\right), \left(\gamma, \delta\right)\right)
+    \in
+    \tx{zip}\left(\tx{zip} \ \bb{N}^2\right)^2 \
+    \middle| \
+    \alpha + \delta \equiv \beta + \gamma
+    }
+    \right.
+\end{flalign*}
+
+\section{Теоремы}
+\subsection{Принцип математической индукции}
+\begin{flalign*}
+    x \ 0
+    \to
+    \left(\forall y \in \bb{N} \ x \ y \to x \ \tx{suc} \ y\right)
+    \to
+    \forall y \in \bb{N} \ x \ y
+\end{flalign*}
+
+\subsection{Принцип Дирихле}
+\begin{flalign*}
+    x < y \to y \not\lesssim x
+\end{flalign*}
+
+\begin{flalign*}
+    &x \in y
+    \to
+    z \in y^y
+    \to
+    \exists!
+    w
+    \mapsto
+    \begin{cases}
+        w \in y^{\bb{N}} \\
+        w_0 \equiv x \\
+        \forall i \in \bb{N} \ w_{\tx{suc} \ i} \equiv (z \circ w)_i
+    \end{cases} \\
+    &x - \tx{функциональное свойство}
+    \to
+    \left(\forall y \ \exists z \ x \ y \ z\right)
+    \to
+    \exists! y
+    \mapsto
+    \begin{cases}
+        y - \tx{функция из $ \bb{N} $} \\
+        \forall z \in \bb{N} \ x \ \left(y \upharpoonright z\right) \ y_z
+    \end{cases} \\
+    &x \andc y - \tx{конечное}
+    \to
+    |x \cup y| \equiv |x| + |y| - |x \cap y| \\
+    &x \andc y - \tx{конечное}
+    \to
+    |x \times y| \equiv |x| * |y| \\
+\end{flalign*}
+\end{document}
