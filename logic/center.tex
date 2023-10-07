@@ -102,4 +102,57 @@ $ \tx{Fm} $ - это множество всех формул.
 Кванторы: $ \forall, \exists $.
 
 Вспомогательные символы: $ ( \ ) \ , $.
+
+Термы ($ \tx{Tm} \ \Sigma $):
+\begin{enumerate}
+    \item Свободные переменные.
+    \item Константы.
+    \item $ f \in \tx{Func} \ \Sigma  \to f(t_1, \ldots, t_n) $
+        (это текст, а не действительное применение функции).
+    \item Только эти 3 правила.
+\end{enumerate}
+
+Формулы ($ \tx{Fm} \ \Sigma $):
+\begin{enumerate}
+    \item $ t_1, \ldots, t_n \in \tx{Tm} \ \Sigma \to P \in \tx{Pred} \ \Sigma \to
+        P(t_0, \ldots, t_n) $. Такие формулы называются атомарными.
+    \item $ A \andc B \in \tx{Fm} \ \Sigma \to (A \wedge B), (A \vee B), (\neg A) $.
+    \item $ \top, \bot $. Тоже являются атомарными.
+    \item Связанная переменная $ x $ не входит в формулу $ A \to A[a/x] $,
+        где $ a \in \tx{FrVar} $.
+\end{enumerate}
+
+Замкнутая формула (предложение) - формула без свободных переменных.
+
+Значение терма вычисляется рекурсией по построению. Обозначается $ x_y $ (((.
+
+\begin{flalign*}
+    &M \models P(t_1, \ldots, t_n) \tot P_M ((t_1)_M, \ldots, (t_n)_M) \equiv 1,
+    \tx{где $ P(t_1, \ldots, t_n) $ - атомарная} \\
+    &\tx{$ P(t_1, \ldots, t_n) $ истинно в модели $ M $} \\
+    &M \models B \wedge C
+    \tot
+    \begin{cases}
+        M \models B \\
+        M \models C
+    \end{cases} \\
+    &M \models \neg B \tot M \not\models B \\
+    &M \models B \vee C
+    \tot
+    \left[
+    \begin{aligned}
+        &M \models B \\
+        &M \models C
+    \end{aligned}
+    \right. \\
+    &M \models \left(\forall x \ B[a/x]\right)
+    \tot
+    \tx{для любого $ c \in M \ M \models B[a/\underline{c}] $} \\
+    &M \models \left(\exists x \ B[a/x]\right)
+    \tot
+    \tx{существует $ c \in M \ M \models B[a/\underline{c}] $}
+\end{flalign*}
+
+Выразимость (определимость). Определение не записываю, так как оно опять прямое,
+но в то же время сомневаюсь, как его более-менее формально записать.
 \end{document}
