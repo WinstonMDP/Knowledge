@@ -15,82 +15,30 @@ Definition or {x : Type} (y z : formula x) := neg (and (neg y) (neg z)).
 
 Definition estimation (x : Type) := x -> bool.
 
-Fixpoint interpretation {x : Type} (y : estimation x) (z : formula x) : bool :=
+Fixpoint interpretation {x : Type} (z : formula x) (y : estimation x) : bool :=
   match z with
   | bot => false
   | top => true
   | var w => y w
-  | neg w => negb (interpretation y w)
-  | and w i => andb (interpretation y w) (interpretation y i)
+  | neg w => negb (interpretation w y)
+  | and w i => andb (interpretation w y) (interpretation i y)
   end.
 
-Require List.
+Require Import List.
+Import List.ListNotations.
 
-Fixpoint nth {x : Type} (v : Vector.t x size) (index : nat) (H : index < size) : x.
-Proof.
-  destruct v as [| vh size' vt] eqn:E.
-  - exfalso. apply (PeanoNat.Nat.nlt_0_r index). apply H.
-  - unfold lt in H.
-    destruct index as [| index'].
-    + apply vh.
-    + apply nth with size' index'.
-      * apply vt.
-      * unfold lt. apply le_S_n. apply H.
-Defined.
-
-Fixpoint suitable_formula {n : nat} (l : List.list bool) (acc : nat) : formula nat :=
-  match l with
-  | [] => top
-  | x :: y => and (suitable_formula y (S acc)) (if x then var acc else neg (var acc))
-  end.
-
-Theorem suitable_formula_true :
-  forall n (v : Vector.t bool n) f,
-  f v = true ->
-  interpretation
-  (fun i => List.nth i (Vector.to_list v) false)
-  (suitable_formula v) =
-  true.
-Proof.
-  intros n v f H.
-  induction v as [| vh n' vt IH].
-  - reflexivity.
-  - unfold suitable_formula.
-    fold (suitable_formula vt).
-    specialize (IH (fun _ => true)).
-    simpl in IH.
-    specialize (IH (eq_refl true)).
-    assert (H' :
-      forall (x y : formula nat) e,
-        interpretation e (and x y) = andb (interpretation e x) (interpretation e y)
-    ).
-    { reflexivity. }
-    rewrite H'.
-Admitted.
-
-Fixpoint bool_force (n : nat) : list (Vector.t bool n) :=
-  match n with
-  | O => List.cons Vector.nil List.nil
-  | S n' =>
-      List.map (Vector.cons false n') (bool_force n') ++
-      List.map (Vector.cons true n') (bool_force n')
-  end.
-
-Theorem all_in_force : forall {n : nat} (v : Vector.t bool n), List.In v (bool_force n).
-Proof.
-Admitted.
-
-Definition suitable_formulas_formula {n : nat} (f : Vector.t bool n -> bool) : formula nat :=
-  List.fold_right or bot (List.map suitable_formula (List.filter f (bool_force n))).
+Theorem or_bot : forall (T : Type) (f : formula T) e,
+  interpretation (or bot f) e = interpretation f e.
+Proof. intros. simpl. rewrite Bool.negb_involutive. reflexivity. Qed.
 
 Theorem or_introduce_left :
   forall (t : Type) (x : formula t) y e,
-    interpretation e x = true -> interpretation e (or x y) = true.
+  interpretation x e = true -> interpretation (or x y) e = true.
 Proof. intros t x y e H. unfold or. simpl. rewrite H. reflexivity. Qed.
 
 Theorem or_introduce_right :
   forall (t : Type) (x : formula t) y e,
-    interpretation e y = true -> interpretation e (or x y) = true.
+  interpretation y e = true -> interpretation (or x y) e = true.
 Proof.
   intros t x y e H.
   unfold or.
@@ -103,8 +51,8 @@ Qed.
 
 Theorem or_fold_in :
   forall (x : Type) (f : formula x) fs e,
-    List.In f fs -> interpretation e f = true ->
-      interpretation e (List.fold_right or bot fs) = true.
+  In f fs -> interpretation f e = true ->
+  interpretation (fold_right or bot fs) e = true.
 Proof.
   intros x f.
   induction fs as [| fsh fst IH].
@@ -120,36 +68,87 @@ Proof.
       reflexivity.
 Qed.
 
+Fixpoint suitable_formula' (l : list bool) (acc : nat) : formula nat :=
+  match l with
+  | [] => top
+  | x :: y => and (if x then var acc else neg (var acc)) (suitable_formula' y (S acc))
+  end.
+
+Theorem suitable_formula_next :
+  forall (l : list bool) b,
+  interpretation (suitable_formula' l 0) (fun i => nth i l false) =
+  interpretation (suitable_formula' l 1) (fun i => match i with
+                                                   | 0 => b
+                                                   | S i => nth i l false
+                                                   end).
+Proof.
+  induction l as [| lh lt IH].
+  - reflexivity.
+  - simpl in *.
+    intros.
+    destruct lh eqn:E.
+    + simpl in *.
+      rewrite <- IH.
+Admitted.
+
+Definition suitable_formula (l : list bool) : formula nat := suitable_formula' l 0.
+
+Theorem suitable_formula_true :
+  forall (l : list bool),
+  interpretation (suitable_formula l) (fun i => nth i l false) = true.
+Proof.
+  induction l as [| lh lt IH].
+  - reflexivity.
+  - simpl.
+    rewrite Bool.andb_true_iff.
+    split.
+    + destruct lh.
+      * reflexivity.
+      * reflexivity.
+    + rewrite <- suitable_formula_next.
+      apply IH.
+Qed.
+
+Fixpoint bool_force (n : nat) : list (list bool) :=
+  match n with
+  | O => [[]]
+  | S n' => map (cons false) (bool_force n') ++ map (cons true) (bool_force n')
+  end.
+
+Theorem all_in_force : forall (l : list bool), In l (bool_force (length l)).
+Proof.
+  intros.
+  induction l as [| lh lt IH].
+  - simpl. left. reflexivity.
+  - simpl.
+    apply in_or_app.
+    destruct lh.
+    + right. apply in_map. apply IH.
+    + left. apply in_map. apply IH.
+Qed.
+
+Definition suitable_formulas_formula (n : nat) (f : list bool -> bool) : formula nat :=
+  fold_right or bot (map suitable_formula (filter f (bool_force n))).
+
+
 Theorem functional_completeness :
-  forall (n : nat) (function : (forall l : list bool) -> (length l = n) -> bool),
+  forall (n : nat) (fn : list bool -> bool),
   exists (form : formula nat),
   forall (l : list bool),
-  (length l = n) -> interpretation (fun i => List.nth i l false) form = function v.
+  length l = n -> interpretation form (fun i => nth i l false) = fn l.
 Proof.
-  intros n function.
-  exists (suitable_formulas_formula function).
-  intros v.
-  destruct (function v) eqn:E.
+  intros n fn.
+  exists (suitable_formulas_formula n fn).
+  intros l H1.
+  unfold suitable_formulas_formula.
+  destruct (fn l) eqn:E.
+  - set (conj (all_in_force l) E) as H2.
+    rewrite <- filter_In in H2.
+    apply (in_map suitable_formula) in H2.
+    apply or_fold_in with (suitable_formula l).
+    + rewrite <- H1. apply H2.
+    + apply suitable_formula_true.
   - unfold suitable_formulas_formula.
-    set (conj (all_in_force v) E) as H.
-    rewrite <- List.filter_In in H.
-    apply (List.in_map suitable_formula) in H.
-    apply or_fold_in with (suitable_formula v).
-    + apply H.
-    + apply suitable_formula_true with function. apply E.
-  - unfold suitable_formulas_formula.
-    set (conj (all_in_force v) E) as H.
+    set (conj (all_in_force l) E) as H.
     apply proj1 in H.
-    "list"
-    rewrite <- List.filter_In in H.
-    apply (List.in_map suitable_formula) in H.
-    apply or_fold_in with (suitable_formula v).
-
-  induction v as [| vh n' vt IH].
-  - cbn.
-    destruct (function Vector.nil) eqn:E.
-    + reflexivity.
-    + reflexivity.
-  - simpl.
-    destruct (Vector.cons vh n' vt) .
-Qed.
+Admitted.
