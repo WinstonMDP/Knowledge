@@ -23,16 +23,19 @@
 
 *Соглашение:* префиксное связывает сильнее инфиксного.
 
-*Соглашение:* предикаты действуют до самого конца, пока не встретят скобку..
+*Соглашение:* предикаты действуют до самого конца, пока не встретят скобку.
 
 $ x : "class" $
 $
-[y \/ x]mono(A) <-> forall z = y, x = z space mono(A) | "d:" {x, z}, {y, z}, {z, mono(A)}
+  [y \/ x]mono(A)
+  <->
+  forall z = y, x = z space mono(A) | "d:" {x, z}, {y, z}, {z, mono(A)}
 $
 $ x in {y | mono(A)} <-> [x \/ y] mono(A) $
 $ alpha = beta <-> (forall x in alpha <-> x in beta) $
 $ alpha in beta <-> (exists x = alpha space x in beta) $
 $ {x in alpha | mono(A)} <-> {x mid(|) cases(x in alpha, mono(A))} $
+$ (exists x in alpha) -> @alpha in alpha $
 
 *Аксиома выделения*
 $ exists x = {y in z mid(|) mono(A)} $
@@ -45,8 +48,12 @@ $ alpha L : "at_least_one" | L : "list" $
 $ , S : "list" | S : "at_least_one" $
 $ {S} : "class" | S : "at_least_one" $
 $ alpha in {beta} <-> alpha = beta $
-$ alpha in {beta, S} <-> cases(delim: "[", alpha = beta, alpha in {S}) |
-S : "at_least_one" $
+$
+  lr(
+    alpha in {beta, S} <-> cases(delim: "[", alpha = beta, alpha in {S}) space|
+  ) space
+  S : "at_least_one"
+$
 
 *Аксиома пары*
 $ exists x = {y, z} $
@@ -91,60 +98,62 @@ $ alpha harpoon.tl beta = {(x, y) in alpha | y in beta} $
 $ alpha arrow.t beta = (alpha harpoon.tl beta) harpoon.tr beta $
 $ (alpha, beta) in gamma <-> alpha gamma beta $
 $
-alpha - "функциональное"
-<->
-cases(
-	alpha - "бинарное отношение",
-	forall x\, y\, z space x alpha y -> x alpha z -> y = z
-)
+  alpha - "функциональное"
+  <->
+  cases(
+    alpha - "бинарное отношение",
+    forall x\, y\, z space x alpha y -> x alpha z -> y = z,
+
+  )
 $
 $
-alpha - "инъективное"
-<->
-cases(
-	alpha - "бинарное отношение",
-	forall x\, y\, z space x alpha y -> z alpha y -> x = z
-)
+  alpha - "инъективное"
+  <->
+  cases(
+    alpha - "бинарное отношение",
+    forall x\, y\, z space x alpha y -> z alpha y -> x = z,
+
+  )
 $
 $
-alpha - "функция из" beta
-<->
-cases(
-	exists y space alpha subset.eq beta times y,
-	beta subset.eq "dom" alpha,
-	alpha - "функциональное"
-)
+  alpha - "функция из" beta
+  <->
+  cases(
+    exists y space alpha subset.eq beta times y,
+    beta subset.eq "dom" alpha,
+    alpha - "функциональное",
+
+  )
 $
 $ alpha_beta = union {y | beta alpha y} $
 $ alpha^beta = {x in cal(P)(beta times alpha) | x - "функция из" beta} $
+$
+  product alpha
+  =
+  {x in (union "rng" alpha)^("dom" alpha) | forall y in "dom" alpha space x_y in alpha_y}
+$
+$ product.co alpha = {(x, y) | y in alpha_x} $
+$
+  alpha - "инъекция из" beta <-> cases(alpha - "функция из" beta, alpha - "инъективное")
+$
+$
+  alpha - "сюръекция из" beta space "в" space gamma
+  <->
+  cases(alpha - "функция из" beta, gamma subset.eq "rng" alpha)
+$
+$
+  alpha - "биекция из" beta space "в" space gamma
+  <->
+  cases(
+    alpha - "инъекция из" beta,
+    alpha - "сюръекция из" beta space "в" space gamma,
 
-Общий случай декартового произвдения
-$
-product alpha
-=
-{x in (union "rng" alpha)^("dom" alpha) | forall y in "dom" alpha space x_y in alpha_y}
-$
-
-Дизъюнктное объединение
-$ product.co alpha = {(x, y) in "dom" alpha times union "rng" alpha | y in alpha_x} $
-
-$
-alpha - "инъекция из" beta <-> cases(alpha - "функция из" beta, alpha - "инъективное")
+  )
 $
 $
-alpha - "сюръекция из" beta space "в" space gamma
-<->
-cases(alpha - "функция из" beta, gamma subset.eq "rng" alpha)
-$
-$
-alpha - "биекция из" beta space "в" space gamma
-<->
-cases(alpha - "инъекция из" beta, alpha - "сюръекция из" beta space "в" space gamma)
-$
-$
-alpha lt.tilde beta
-<->
-exists x cases(x subset.eq alpha times beta, x - "инъекция из" alpha)
+  alpha lt.tilde beta
+  <->
+  exists x cases(x subset.eq alpha times beta, x - "инъекция из" alpha)
 $
 $ alpha tilde beta <-> exists x - "биекция из" alpha space "в" space beta $
 
@@ -155,114 +164,126 @@ $ x lt.tilde y -> y lt.tilde x -> x tilde y $
 $ x lt.tilde y <-> exists z subset.eq y space x tilde z $
 
 $
-alpha - "рефлексивное"
-<->
-cases(alpha - "бинарное отношение", forall x in "dom" alpha space x alpha x)
+  alpha - "рефлексивное"
+  <->
+  cases(alpha - "бинарное отношение", forall x in "dom" alpha space x alpha x)
 $
 $
-alpha - "иррефлексивное"
-<->
-cases(alpha - "бинарное отношение", forall x cancel(alpha) x)
+  alpha - "иррефлексивное"
+  <->
+  cases(alpha - "бинарное отношение", forall x cancel(alpha) x)
 $
 $
-alpha - "симметричное"
-<->
-cases(
-	alpha - "бинарное отношение",
-	forall x\, y space x alpha y -> y alpha x
-)
+  alpha - "симметричное"
+  <->
+  cases(
+    alpha - "бинарное отношение",
+    forall x\, y space x alpha y -> y alpha x,
+
+  )
 $
 $
-alpha - "антисимметричное"
-<->
-cases(
-	alpha - "бинарное отношение",
-	forall x\, y space x alpha y -> y alpha x -> x = y
-)
+  alpha - "антисимметричное"
+  <->
+  cases(
+    alpha - "бинарное отношение",
+    forall x\, y space x alpha y -> y alpha x -> x = y,
+
+  )
 $
 $
-alpha - "транзитивное"
-<->
-cases(
-	alpha - "бинарное отношение",
-	forall x\, y\, z space x alpha y alpha z -> x alpha z
-)
+  alpha - "транзитивное"
+  <->
+  cases(
+    alpha - "бинарное отношение",
+    forall x\, y\, z space x alpha y alpha z -> x alpha z,
+
+  )
 $
 $
-alpha - beta"-минимальный"
-<->
-cases(alpha - "иррефлексивное", forall x in "dom" beta space x cancel(beta) alpha)
+  alpha - beta"-минимальный"
+  <->
+  cases(
+    alpha - "иррефлексивное",
+    forall x in "dom" beta space x cancel(beta) alpha,
+
+  )
 $
 $
-alpha - beta"-максимальный"
-<->
-cases(alpha - "иррефлексивное", forall x in "rng" beta space alpha cancel(beta) x)
+  alpha - beta"-максимальный"
+  <->
+  cases(
+    alpha - "иррефлексивное",
+    forall x in "rng" beta space alpha cancel(beta) x,
+
+  )
 $
 $ alpha - "предпорядок" <-> cases(alpha - "рефлексивное", alpha - "транзитивное") $
 $ alpha - "строгий порядок" <-> cases(alpha - "иррефлексивное", alpha - "транзитивное") $
 $ alpha - "порядок" <-> cases(alpha - "предпорядок", alpha - "антисимметричное") $
 $ "strict" alpha = alpha without {(x, y) in alpha | x = y} $
 $
-alpha - beta"-нижняя грань" gamma
-<->
-cases(beta - "порядок", forall x in gamma space alpha beta x)
+  alpha - beta"-нижняя грань" gamma
+  <->
+  cases(beta - "порядок", forall x in gamma space alpha beta x)
 $
 $
-alpha - beta"-верхняя грань" gamma
-<->
-cases(beta - "порядок", forall x in gamma space x beta alpha )
+  alpha - beta"-верхняя грань" gamma
+  <->
+  cases(beta - "порядок", forall x in gamma space x beta alpha)
 $
 $ alpha - beta"-наименьший" <-> alpha - beta"-нижняя грань" "dom" beta $
 $ alpha - beta"-наибольший" <-> alpha - beta"-верхняя грань" "dom" beta $
+$
+  alpha - beta"-инфимум" gamma
+  <->
+  alpha - beta arrow.t {x | x - beta"-нижняя грань" gamma}"-наибольший"
+$
+$
+  alpha - beta"-супремум" gamma
+  <->
+  alpha - beta arrow.t {x | x - beta"-верхняя грань" gamma}"-наименьший"
+$
+$
+  alpha - "решётка"
+  <->
+  forall x, y in "dom" alpha
+  cases(exists z - alpha"-инфимум" {x, y}, exists z - alpha"-супремум" {x, y})
+$
+$
+  alpha - "полная решётка"
+  <->
+  forall x subset.eq "dom" alpha
+  cases(exists z - alpha"-инфимум" x, exists z - alpha"-супремум" x)
+$
+$
+  alpha - beta"-цепь"
+  <->
+  cases(
+    beta - "порядок",
+    forall x\, y in alpha cases(delim: "[", x beta y, y beta x),
 
-Точная нижняя грань
+  )
 $
-alpha - beta"-инфимум" gamma
-<->
-alpha - beta arrow.t {x | x - beta"-нижняя грань" gamma}"-наибольший"
 $
+  alpha - beta"-антицепь"
+  <->
+  cases(
+    alpha - "порядок",
+    forall x in alpha space x - "strict" (beta arrow.t alpha)"-минимальный",
 
-Точная верхняя грань
-$
-alpha - beta"-супремум" gamma
-<->
-alpha - beta arrow.t {x | x - beta"-верхняя грань" gamma}"-наименьший"
-$
-
-$
-alpha - "решётка"
-<->
-forall x, y in "dom" alpha
-cases(exists z - alpha"-инфимум" {x, y}, exists z - alpha"-супремум" {x, y})
-$
-$
-alpha - "полная решётка"
-<->
-forall x subset.eq "dom" alpha
-cases(exists z - alpha"-инфимум" x, exists z - alpha"-супремум" x)
-$
-$
-alpha - beta"-цепь"
-<->
-cases(beta - "порядок", forall x\, y in alpha cases(delim: "[", x beta y, y beta x))
-$
-$
-alpha - beta"-антицепь"
-<->
-cases(
-	alpha - "порядок",
-	forall x in alpha space x - "strict" (beta arrow.t alpha)"-минимальный"
-)
+  )
 $
 $ alpha - "линейное" <-> "dom" alpha - alpha"-цепь" $
 $
-alpha - "фундированное"
-<->
-cases(
-	alpha - "порядок",
-	forall x subset.eq "dom" alpha space
-	x != emptyset -> exists y in x space "strict" (alpha arrow.t y)"-минимальный"
-)
+  alpha - "фундированное"
+  <->
+  cases(
+    alpha - "порядок",
+    forall x subset.eq "dom" alpha space
+    x != emptyset -> exists y in x space "strict" (alpha arrow.t y)"-минимальный",
+
+  )
 $
 $ alpha - "полное" <-> cases(alpha - "линейное", alpha - "фундированное") $
 
@@ -275,23 +296,32 @@ $ exists x - "полное" space y = "dom" x $
 
 $ NN = {x | forall y - "индуктивное" space x in y}$
 $ alpha - "эквивалентность" <-> cases(alpha - "предпорядок", alpha - "симметричное") $
-$ alpha - "структура над" beta <-> alpha in (beta^NN)^NN $
 $
-alpha - "гомоморфизм из" beta space "в" space gamma
-<->
-exists x, y
-cases(
-	beta - "структура над" x,
-	gamma - "структура над" y,
-	gamma in y^x,
-	forall z in beta space forall w in NN space (alpha compose z)_w in gamma
-)
+  alpha - "структура над" beta
+  <->
+  cases(
+    exists x space alpha - "функция из" x,
+    forall x in "dom" alpha space exists y space alpha_x subset.eq beta^y,
+
+  )
 $
 $
-alpha - "изоморфизм из" beta space "в" space gamma
-<->
-cases(
-	alpha - "гомоморфизм из" beta space "в" space gamma,
-	"back" alpha - "гомоморфизм из" gamma space "в" space beta
-)
+  alpha - "гомоморфизм из" beta "над" gamma space "в" space delta "над" epsilon
+  <->
+  cases(
+    beta - "структура над" gamma,
+    delta - "структура над" epsilon,
+    alpha in epsilon^gamma,
+    forall x in "dom" beta\, y in beta_x space alpha compose y in delta_x,
+
+  )
+$
+$
+  alpha - "изоморфизм из" beta "над" gamma space "в" space delta "над" epsilon
+  <->
+  cases(
+    alpha - "гомоморфизм из" beta "над" gamma space "в" space delta "над" epsilon,
+    "back" alpha - "гомоморфизм из" delta "над" epsilon space "в" space beta "над" gamma,
+
+  )
 $
